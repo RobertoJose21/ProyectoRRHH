@@ -46,7 +46,7 @@ Partial Class FrmPrincipal
         Me.CONTRATOToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MANTENEDORToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.GERENTEToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.NIVELDEEDUCACIONToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.MEMORANDUMSToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ADELANTODEPRESTAMOSToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.PLANILLASToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.DATOSPLANILLAToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -63,6 +63,7 @@ Partial Class FrmPrincipal
         Me.HORIZONTALToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.VERTICALToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ORGANIZARTODOToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.MANTENEDORToolStripMenuItem2 = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -134,9 +135,10 @@ Partial Class FrmPrincipal
         '
         'MANTENEDORDEEMPLEADOSToolStripMenuItem
         '
+        Me.MANTENEDORDEEMPLEADOSToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.MANTENEDORToolStripMenuItem2})
         Me.MANTENEDORDEEMPLEADOSToolStripMenuItem.Name = "MANTENEDORDEEMPLEADOSToolStripMenuItem"
-        Me.MANTENEDORDEEMPLEADOSToolStripMenuItem.Size = New System.Drawing.Size(348, 30)
-        Me.MANTENEDORDEEMPLEADOSToolStripMenuItem.Text = "MANTENEDOR DE EMPLEADOS"
+        Me.MANTENEDORDEEMPLEADOSToolStripMenuItem.Size = New System.Drawing.Size(314, 30)
+        Me.MANTENEDORDEEMPLEADOSToolStripMenuItem.Text = "EMPLEADOS"
         '
         'EXPERIENCIALABORALToolStripMenuItem
         '
@@ -210,7 +212,7 @@ Partial Class FrmPrincipal
         '
         'MANTENEDORToolStripMenuItem
         '
-        Me.MANTENEDORToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.GERENTEToolStripMenuItem, Me.NIVELDEEDUCACIONToolStripMenuItem, Me.ADELANTODEPRESTAMOSToolStripMenuItem})
+        Me.MANTENEDORToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.GERENTEToolStripMenuItem, Me.MEMORANDUMSToolStripMenuItem, Me.ADELANTODEPRESTAMOSToolStripMenuItem})
         Me.MANTENEDORToolStripMenuItem.Name = "MANTENEDORToolStripMenuItem"
         Me.MANTENEDORToolStripMenuItem.Size = New System.Drawing.Size(106, 29)
         Me.MANTENEDORToolStripMenuItem.Text = "GERENCIA"
@@ -221,11 +223,11 @@ Partial Class FrmPrincipal
         Me.GERENTEToolStripMenuItem.Size = New System.Drawing.Size(318, 30)
         Me.GERENTEToolStripMenuItem.Text = "MANTENEDOR GERENTE"
         '
-        'NIVELDEEDUCACIONToolStripMenuItem
+        'MEMORANDUMSToolStripMenuItem
         '
-        Me.NIVELDEEDUCACIONToolStripMenuItem.Name = "NIVELDEEDUCACIONToolStripMenuItem"
-        Me.NIVELDEEDUCACIONToolStripMenuItem.Size = New System.Drawing.Size(318, 30)
-        Me.NIVELDEEDUCACIONToolStripMenuItem.Text = "MEMORANDUMS"
+        Me.MEMORANDUMSToolStripMenuItem.Name = "MEMORANDUMSToolStripMenuItem"
+        Me.MEMORANDUMSToolStripMenuItem.Size = New System.Drawing.Size(318, 30)
+        Me.MEMORANDUMSToolStripMenuItem.Text = "MEMORANDUMS"
         '
         'ADELANTODEPRESTAMOSToolStripMenuItem
         '
@@ -329,6 +331,12 @@ Partial Class FrmPrincipal
         Me.ORGANIZARTODOToolStripMenuItem.Size = New System.Drawing.Size(250, 30)
         Me.ORGANIZARTODOToolStripMenuItem.Text = "ORGANIZAR TODO"
         '
+        'MANTENEDORToolStripMenuItem2
+        '
+        Me.MANTENEDORToolStripMenuItem2.Name = "MANTENEDORToolStripMenuItem2"
+        Me.MANTENEDORToolStripMenuItem2.Size = New System.Drawing.Size(215, 30)
+        Me.MANTENEDORToolStripMenuItem2.Text = "MANTENEDOR"
+        '
         'FrmPrincipal
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
@@ -370,7 +378,7 @@ Partial Class FrmPrincipal
     Friend WithEvents CONTRATOToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents MANTENEDORToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents GERENTEToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents NIVELDEEDUCACIONToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents MEMORANDUMSToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ADELANTODEPRESTAMOSToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents PLANILLASToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents DATOSPLANILLAToolStripMenuItem As ToolStripMenuItem
@@ -387,4 +395,5 @@ Partial Class FrmPrincipal
     Friend WithEvents HORIZONTALToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents VERTICALToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ORGANIZARTODOToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents MANTENEDORToolStripMenuItem2 As ToolStripMenuItem
 End Class

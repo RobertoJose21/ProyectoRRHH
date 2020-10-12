@@ -77,11 +77,35 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DB_RRHHDataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="Form1.vb">
+    <Compile Include="frmEMPLEADO.Designer.vb">
+      <DependentUpon>frmEMPLEADO.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmEMPLEADO.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.vb">
-      <DependentUpon>Form1.vb</DependentUpon>
+    <Compile Include="frmMEMORANDUMS.Designer.vb">
+      <DependentUpon>frmMEMORANDUMS.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmMEMORANDUMS.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPRINCIPAL.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPRINCIPAL.Designer.vb">
+      <DependentUpon>frmPRINCIPAL.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDATOS_TRIBUTARIOS.Designer.vb">
+      <DependentUpon>frmDATOS_TRIBUTARIOS.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmDATOS_TRIBUTARIOS.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGERENTE.Designer.vb">
+      <DependentUpon>frmGERENTE.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmGERENTE.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmNIVEL_EDUCACION.Designer.vb">
@@ -107,8 +131,20 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.vb</DependentUpon>
+    <EmbeddedResource Include="frmEMPLEADO.resx">
+      <DependentUpon>frmEMPLEADO.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMEMORANDUMS.resx">
+      <DependentUpon>frmMEMORANDUMS.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPRINCIPAL.resx">
+      <DependentUpon>frmPRINCIPAL.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDATOS_TRIBUTARIOS.resx">
+      <DependentUpon>frmDATOS_TRIBUTARIOS.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGERENTE.resx">
+      <DependentUpon>frmGERENTE.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmNIVEL_EDUCACION.resx">
       <DependentUpon>frmNIVEL_EDUCACION.vb</DependentUpon>

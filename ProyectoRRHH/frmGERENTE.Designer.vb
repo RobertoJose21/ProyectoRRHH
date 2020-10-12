@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class frmNIVEL_EDUCACION
+Partial Class frmGERENTE
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
@@ -23,15 +23,15 @@ Partial Class frmNIVEL_EDUCACION
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim IdNivelEducacionLabel As System.Windows.Forms.Label
-        Dim NivelEducacionLabel As System.Windows.Forms.Label
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmNIVEL_EDUCACION))
+        Dim IdGerenteLabel As System.Windows.Forms.Label
+        Dim NombregerenteLabel As System.Windows.Forms.Label
+        Dim AreaGerenteLabel As System.Windows.Forms.Label
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmGERENTE))
         Me.DB_RRHHDataSet = New ProyectoRRHH.DB_RRHHDataSet()
-        Me.NIVEL_EDUCACIONBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.NIVEL_EDUCACIONTableAdapter = New ProyectoRRHH.DB_RRHHDataSetTableAdapters.NIVEL_EDUCACIONTableAdapter()
+        Me.GERENTEBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.GERENTETableAdapter = New ProyectoRRHH.DB_RRHHDataSetTableAdapters.GERENTETableAdapter()
         Me.TableAdapterManager = New ProyectoRRHH.DB_RRHHDataSetTableAdapters.TableAdapterManager()
-        Me.EMPLEADOTableAdapter = New ProyectoRRHH.DB_RRHHDataSetTableAdapters.EMPLEADOTableAdapter()
-        Me.NIVEL_EDUCACIONBindingNavigator = New System.Windows.Forms.BindingNavigator(Me.components)
+        Me.GERENTEBindingNavigator = New System.Windows.Forms.BindingNavigator(Me.components)
         Me.BindingNavigatorAddNewItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorCountItem = New System.Windows.Forms.ToolStripLabel()
         Me.BindingNavigatorDeleteItem = New System.Windows.Forms.ToolStripButton()
@@ -43,54 +43,64 @@ Partial Class frmNIVEL_EDUCACION
         Me.BindingNavigatorMoveNextItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorMoveLastItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorSeparator2 = New System.Windows.Forms.ToolStripSeparator()
-        Me.NIVEL_EDUCACIONBindingNavigatorSaveItem = New System.Windows.Forms.ToolStripButton()
-        Me.IdNivelEducacionTextBox = New System.Windows.Forms.TextBox()
-        Me.NivelEducacionTextBox = New System.Windows.Forms.TextBox()
-        Me.NIVEL_EDUCACIONDataGridView = New System.Windows.Forms.DataGridView()
+        Me.GERENTEBindingNavigatorSaveItem = New System.Windows.Forms.ToolStripButton()
+        Me.IdGerenteTextBox = New System.Windows.Forms.TextBox()
+        Me.NombregerenteTextBox = New System.Windows.Forms.TextBox()
+        Me.AreaGerenteTextBox = New System.Windows.Forms.TextBox()
+        Me.GERENTEDataGridView = New System.Windows.Forms.DataGridView()
         Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.EMPLEADOBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        IdNivelEducacionLabel = New System.Windows.Forms.Label()
-        NivelEducacionLabel = New System.Windows.Forms.Label()
+        Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        IdGerenteLabel = New System.Windows.Forms.Label()
+        NombregerenteLabel = New System.Windows.Forms.Label()
+        AreaGerenteLabel = New System.Windows.Forms.Label()
         CType(Me.DB_RRHHDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.NIVEL_EDUCACIONBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.NIVEL_EDUCACIONBindingNavigator, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.NIVEL_EDUCACIONBindingNavigator.SuspendLayout()
-        CType(Me.NIVEL_EDUCACIONDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.EMPLEADOBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.GERENTEBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.GERENTEBindingNavigator, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.GERENTEBindingNavigator.SuspendLayout()
+        CType(Me.GERENTEDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'IdNivelEducacionLabel
+        'IdGerenteLabel
         '
-        IdNivelEducacionLabel.AutoSize = True
-        IdNivelEducacionLabel.Location = New System.Drawing.Point(274, 79)
-        IdNivelEducacionLabel.Name = "IdNivelEducacionLabel"
-        IdNivelEducacionLabel.Size = New System.Drawing.Size(143, 20)
-        IdNivelEducacionLabel.TabIndex = 1
-        IdNivelEducacionLabel.Text = "Id Nivel Educacion:"
+        IdGerenteLabel.AutoSize = True
+        IdGerenteLabel.Location = New System.Drawing.Point(261, 45)
+        IdGerenteLabel.Name = "IdGerenteLabel"
+        IdGerenteLabel.Size = New System.Drawing.Size(90, 20)
+        IdGerenteLabel.TabIndex = 1
+        IdGerenteLabel.Text = "Id Gerente:"
         '
-        'NivelEducacionLabel
+        'NombregerenteLabel
         '
-        NivelEducacionLabel.AutoSize = True
-        NivelEducacionLabel.Location = New System.Drawing.Point(274, 170)
-        NivelEducacionLabel.Name = "NivelEducacionLabel"
-        NivelEducacionLabel.Size = New System.Drawing.Size(123, 20)
-        NivelEducacionLabel.TabIndex = 3
-        NivelEducacionLabel.Text = "nivel Educacion:"
+        NombregerenteLabel.AutoSize = True
+        NombregerenteLabel.Location = New System.Drawing.Point(261, 105)
+        NombregerenteLabel.Name = "NombregerenteLabel"
+        NombregerenteLabel.Size = New System.Drawing.Size(122, 20)
+        NombregerenteLabel.TabIndex = 3
+        NombregerenteLabel.Text = "nombregerente:"
+        '
+        'AreaGerenteLabel
+        '
+        AreaGerenteLabel.AutoSize = True
+        AreaGerenteLabel.Location = New System.Drawing.Point(261, 160)
+        AreaGerenteLabel.Name = "AreaGerenteLabel"
+        AreaGerenteLabel.Size = New System.Drawing.Size(108, 20)
+        AreaGerenteLabel.TabIndex = 5
+        AreaGerenteLabel.Text = "area Gerente:"
         '
         'DB_RRHHDataSet
         '
         Me.DB_RRHHDataSet.DataSetName = "DB_RRHHDataSet"
         Me.DB_RRHHDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
-        'NIVEL_EDUCACIONBindingSource
+        'GERENTEBindingSource
         '
-        Me.NIVEL_EDUCACIONBindingSource.DataMember = "NIVEL_EDUCACION"
-        Me.NIVEL_EDUCACIONBindingSource.DataSource = Me.DB_RRHHDataSet
+        Me.GERENTEBindingSource.DataMember = "GERENTE"
+        Me.GERENTEBindingSource.DataSource = Me.DB_RRHHDataSet
         '
-        'NIVEL_EDUCACIONTableAdapter
+        'GERENTETableAdapter
         '
-        Me.NIVEL_EDUCACIONTableAdapter.ClearBeforeFill = True
+        Me.GERENTETableAdapter.ClearBeforeFill = True
         '
         'TableAdapterManager
         '
@@ -103,11 +113,11 @@ Partial Class frmNIVEL_EDUCACION
         Me.TableAdapterManager.DATOS_TRIBUTARIOSTableAdapter = Nothing
         Me.TableAdapterManager.DETALLE_BENEFICIOTableAdapter = Nothing
         Me.TableAdapterManager.DISTRITOTableAdapter = Nothing
-        Me.TableAdapterManager.EMPLEADOTableAdapter = Me.EMPLEADOTableAdapter
+        Me.TableAdapterManager.EMPLEADOTableAdapter = Nothing
         Me.TableAdapterManager.EXPERIENCIA_LABORALTableAdapter = Nothing
-        Me.TableAdapterManager.GERENTETableAdapter = Nothing
+        Me.TableAdapterManager.GERENTETableAdapter = Me.GERENTETableAdapter
         Me.TableAdapterManager.MEMORANDUMSTableAdapter = Nothing
-        Me.TableAdapterManager.NIVEL_EDUCACIONTableAdapter = Me.NIVEL_EDUCACIONTableAdapter
+        Me.TableAdapterManager.NIVEL_EDUCACIONTableAdapter = Nothing
         Me.TableAdapterManager.PAGO_PLANILLATableAdapter = Nothing
         Me.TableAdapterManager.PERIODO_LABORALTableAdapter = Nothing
         Me.TableAdapterManager.PLANILLATableAdapter = Nothing
@@ -121,28 +131,24 @@ Partial Class frmNIVEL_EDUCACION
         Me.TableAdapterManager.VACACIONESTableAdapter = Nothing
         Me.TableAdapterManager.VARIACION_SUELDOTableAdapter = Nothing
         '
-        'EMPLEADOTableAdapter
+        'GERENTEBindingNavigator
         '
-        Me.EMPLEADOTableAdapter.ClearBeforeFill = True
-        '
-        'NIVEL_EDUCACIONBindingNavigator
-        '
-        Me.NIVEL_EDUCACIONBindingNavigator.AddNewItem = Me.BindingNavigatorAddNewItem
-        Me.NIVEL_EDUCACIONBindingNavigator.BindingSource = Me.NIVEL_EDUCACIONBindingSource
-        Me.NIVEL_EDUCACIONBindingNavigator.CountItem = Me.BindingNavigatorCountItem
-        Me.NIVEL_EDUCACIONBindingNavigator.DeleteItem = Me.BindingNavigatorDeleteItem
-        Me.NIVEL_EDUCACIONBindingNavigator.ImageScalingSize = New System.Drawing.Size(24, 24)
-        Me.NIVEL_EDUCACIONBindingNavigator.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BindingNavigatorMoveFirstItem, Me.BindingNavigatorMovePreviousItem, Me.BindingNavigatorSeparator, Me.BindingNavigatorPositionItem, Me.BindingNavigatorCountItem, Me.BindingNavigatorSeparator1, Me.BindingNavigatorMoveNextItem, Me.BindingNavigatorMoveLastItem, Me.BindingNavigatorSeparator2, Me.BindingNavigatorAddNewItem, Me.BindingNavigatorDeleteItem, Me.NIVEL_EDUCACIONBindingNavigatorSaveItem})
-        Me.NIVEL_EDUCACIONBindingNavigator.Location = New System.Drawing.Point(0, 0)
-        Me.NIVEL_EDUCACIONBindingNavigator.MoveFirstItem = Me.BindingNavigatorMoveFirstItem
-        Me.NIVEL_EDUCACIONBindingNavigator.MoveLastItem = Me.BindingNavigatorMoveLastItem
-        Me.NIVEL_EDUCACIONBindingNavigator.MoveNextItem = Me.BindingNavigatorMoveNextItem
-        Me.NIVEL_EDUCACIONBindingNavigator.MovePreviousItem = Me.BindingNavigatorMovePreviousItem
-        Me.NIVEL_EDUCACIONBindingNavigator.Name = "NIVEL_EDUCACIONBindingNavigator"
-        Me.NIVEL_EDUCACIONBindingNavigator.PositionItem = Me.BindingNavigatorPositionItem
-        Me.NIVEL_EDUCACIONBindingNavigator.Size = New System.Drawing.Size(943, 31)
-        Me.NIVEL_EDUCACIONBindingNavigator.TabIndex = 0
-        Me.NIVEL_EDUCACIONBindingNavigator.Text = "BindingNavigator1"
+        Me.GERENTEBindingNavigator.AddNewItem = Me.BindingNavigatorAddNewItem
+        Me.GERENTEBindingNavigator.BindingSource = Me.GERENTEBindingSource
+        Me.GERENTEBindingNavigator.CountItem = Me.BindingNavigatorCountItem
+        Me.GERENTEBindingNavigator.DeleteItem = Me.BindingNavigatorDeleteItem
+        Me.GERENTEBindingNavigator.ImageScalingSize = New System.Drawing.Size(24, 24)
+        Me.GERENTEBindingNavigator.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BindingNavigatorMoveFirstItem, Me.BindingNavigatorMovePreviousItem, Me.BindingNavigatorSeparator, Me.BindingNavigatorPositionItem, Me.BindingNavigatorCountItem, Me.BindingNavigatorSeparator1, Me.BindingNavigatorMoveNextItem, Me.BindingNavigatorMoveLastItem, Me.BindingNavigatorSeparator2, Me.BindingNavigatorAddNewItem, Me.BindingNavigatorDeleteItem, Me.GERENTEBindingNavigatorSaveItem})
+        Me.GERENTEBindingNavigator.Location = New System.Drawing.Point(0, 0)
+        Me.GERENTEBindingNavigator.MoveFirstItem = Me.BindingNavigatorMoveFirstItem
+        Me.GERENTEBindingNavigator.MoveLastItem = Me.BindingNavigatorMoveLastItem
+        Me.GERENTEBindingNavigator.MoveNextItem = Me.BindingNavigatorMoveNextItem
+        Me.GERENTEBindingNavigator.MovePreviousItem = Me.BindingNavigatorMovePreviousItem
+        Me.GERENTEBindingNavigator.Name = "GERENTEBindingNavigator"
+        Me.GERENTEBindingNavigator.PositionItem = Me.BindingNavigatorPositionItem
+        Me.GERENTEBindingNavigator.Size = New System.Drawing.Size(937, 31)
+        Me.GERENTEBindingNavigator.TabIndex = 0
+        Me.GERENTEBindingNavigator.Text = "BindingNavigator1"
         '
         'BindingNavigatorAddNewItem
         '
@@ -229,91 +235,106 @@ Partial Class frmNIVEL_EDUCACION
         Me.BindingNavigatorSeparator2.Name = "BindingNavigatorSeparator2"
         Me.BindingNavigatorSeparator2.Size = New System.Drawing.Size(6, 31)
         '
-        'NIVEL_EDUCACIONBindingNavigatorSaveItem
+        'GERENTEBindingNavigatorSaveItem
         '
-        Me.NIVEL_EDUCACIONBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.NIVEL_EDUCACIONBindingNavigatorSaveItem.Image = CType(resources.GetObject("NIVEL_EDUCACIONBindingNavigatorSaveItem.Image"), System.Drawing.Image)
-        Me.NIVEL_EDUCACIONBindingNavigatorSaveItem.Name = "NIVEL_EDUCACIONBindingNavigatorSaveItem"
-        Me.NIVEL_EDUCACIONBindingNavigatorSaveItem.Size = New System.Drawing.Size(28, 28)
-        Me.NIVEL_EDUCACIONBindingNavigatorSaveItem.Text = "Guardar datos"
+        Me.GERENTEBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.GERENTEBindingNavigatorSaveItem.Image = CType(resources.GetObject("GERENTEBindingNavigatorSaveItem.Image"), System.Drawing.Image)
+        Me.GERENTEBindingNavigatorSaveItem.Name = "GERENTEBindingNavigatorSaveItem"
+        Me.GERENTEBindingNavigatorSaveItem.Size = New System.Drawing.Size(28, 28)
+        Me.GERENTEBindingNavigatorSaveItem.Text = "Guardar datos"
         '
-        'IdNivelEducacionTextBox
+        'IdGerenteTextBox
         '
-        Me.IdNivelEducacionTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.NIVEL_EDUCACIONBindingSource, "IdNivelEducacion", True))
-        Me.IdNivelEducacionTextBox.Location = New System.Drawing.Point(489, 79)
-        Me.IdNivelEducacionTextBox.Name = "IdNivelEducacionTextBox"
-        Me.IdNivelEducacionTextBox.Size = New System.Drawing.Size(100, 26)
-        Me.IdNivelEducacionTextBox.TabIndex = 2
+        Me.IdGerenteTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.GERENTEBindingSource, "IdGerente", True))
+        Me.IdGerenteTextBox.Location = New System.Drawing.Point(404, 42)
+        Me.IdGerenteTextBox.Name = "IdGerenteTextBox"
+        Me.IdGerenteTextBox.Size = New System.Drawing.Size(79, 26)
+        Me.IdGerenteTextBox.TabIndex = 2
         '
-        'NivelEducacionTextBox
+        'NombregerenteTextBox
         '
-        Me.NivelEducacionTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.NIVEL_EDUCACIONBindingSource, "nivelEducacion", True))
-        Me.NivelEducacionTextBox.Location = New System.Drawing.Point(489, 170)
-        Me.NivelEducacionTextBox.Name = "NivelEducacionTextBox"
-        Me.NivelEducacionTextBox.Size = New System.Drawing.Size(100, 26)
-        Me.NivelEducacionTextBox.TabIndex = 4
+        Me.NombregerenteTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.GERENTEBindingSource, "nombregerente", True))
+        Me.NombregerenteTextBox.Location = New System.Drawing.Point(404, 102)
+        Me.NombregerenteTextBox.Name = "NombregerenteTextBox"
+        Me.NombregerenteTextBox.Size = New System.Drawing.Size(250, 26)
+        Me.NombregerenteTextBox.TabIndex = 4
         '
-        'NIVEL_EDUCACIONDataGridView
+        'AreaGerenteTextBox
         '
-        Me.NIVEL_EDUCACIONDataGridView.AutoGenerateColumns = False
-        Me.NIVEL_EDUCACIONDataGridView.BackgroundColor = System.Drawing.SystemColors.ActiveCaption
-        Me.NIVEL_EDUCACIONDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.NIVEL_EDUCACIONDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2})
-        Me.NIVEL_EDUCACIONDataGridView.DataSource = Me.NIVEL_EDUCACIONBindingSource
-        Me.NIVEL_EDUCACIONDataGridView.Location = New System.Drawing.Point(205, 234)
-        Me.NIVEL_EDUCACIONDataGridView.Name = "NIVEL_EDUCACIONDataGridView"
-        Me.NIVEL_EDUCACIONDataGridView.RowTemplate.Height = 28
-        Me.NIVEL_EDUCACIONDataGridView.Size = New System.Drawing.Size(479, 238)
-        Me.NIVEL_EDUCACIONDataGridView.TabIndex = 5
+        Me.AreaGerenteTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.GERENTEBindingSource, "areaGerente", True))
+        Me.AreaGerenteTextBox.Location = New System.Drawing.Point(404, 160)
+        Me.AreaGerenteTextBox.Name = "AreaGerenteTextBox"
+        Me.AreaGerenteTextBox.Size = New System.Drawing.Size(140, 26)
+        Me.AreaGerenteTextBox.TabIndex = 6
+        '
+        'GERENTEDataGridView
+        '
+        Me.GERENTEDataGridView.AutoGenerateColumns = False
+        Me.GERENTEDataGridView.BackgroundColor = System.Drawing.SystemColors.ActiveCaption
+        Me.GERENTEDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.GERENTEDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3})
+        Me.GERENTEDataGridView.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.GERENTEDataGridView.DataSource = Me.GERENTEBindingSource
+        Me.GERENTEDataGridView.EnableHeadersVisualStyles = False
+        Me.GERENTEDataGridView.Location = New System.Drawing.Point(94, 216)
+        Me.GERENTEDataGridView.Name = "GERENTEDataGridView"
+        Me.GERENTEDataGridView.RowHeadersVisible = False
+        Me.GERENTEDataGridView.RowTemplate.Height = 28
+        Me.GERENTEDataGridView.Size = New System.Drawing.Size(733, 261)
+        Me.GERENTEDataGridView.TabIndex = 7
         '
         'DataGridViewTextBoxColumn1
         '
-        Me.DataGridViewTextBoxColumn1.DataPropertyName = "IdNivelEducacion"
-        Me.DataGridViewTextBoxColumn1.HeaderText = "IdNivelEducacion"
+        Me.DataGridViewTextBoxColumn1.DataPropertyName = "IdGerente"
+        Me.DataGridViewTextBoxColumn1.HeaderText = "IdGerente"
         Me.DataGridViewTextBoxColumn1.Name = "DataGridViewTextBoxColumn1"
-        Me.DataGridViewTextBoxColumn1.ReadOnly = True
+        Me.DataGridViewTextBoxColumn1.Width = 90
         '
         'DataGridViewTextBoxColumn2
         '
-        Me.DataGridViewTextBoxColumn2.DataPropertyName = "nivelEducacion"
-        Me.DataGridViewTextBoxColumn2.HeaderText = "nivelEducacion"
+        Me.DataGridViewTextBoxColumn2.DataPropertyName = "nombregerente"
+        Me.DataGridViewTextBoxColumn2.HeaderText = "nombregerente"
         Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
+        Me.DataGridViewTextBoxColumn2.Width = 130
         '
-        'EMPLEADOBindingSource
+        'DataGridViewTextBoxColumn3
         '
-        Me.EMPLEADOBindingSource.DataMember = "R_13"
-        Me.EMPLEADOBindingSource.DataSource = Me.NIVEL_EDUCACIONBindingSource
+        Me.DataGridViewTextBoxColumn3.DataPropertyName = "areaGerente"
+        Me.DataGridViewTextBoxColumn3.HeaderText = "areaGerente"
+        Me.DataGridViewTextBoxColumn3.Name = "DataGridViewTextBoxColumn3"
+        Me.DataGridViewTextBoxColumn3.Width = 240
         '
-        'frmNIVEL_EDUCACION
+        'frmGERENTE
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(943, 512)
-        Me.Controls.Add(Me.NIVEL_EDUCACIONDataGridView)
-        Me.Controls.Add(IdNivelEducacionLabel)
-        Me.Controls.Add(Me.IdNivelEducacionTextBox)
-        Me.Controls.Add(NivelEducacionLabel)
-        Me.Controls.Add(Me.NivelEducacionTextBox)
-        Me.Controls.Add(Me.NIVEL_EDUCACIONBindingNavigator)
-        Me.Name = "frmNIVEL_EDUCACION"
-        Me.Text = "NIVELES DE EDUCACION"
+        Me.ClientSize = New System.Drawing.Size(937, 489)
+        Me.Controls.Add(Me.GERENTEDataGridView)
+        Me.Controls.Add(IdGerenteLabel)
+        Me.Controls.Add(Me.IdGerenteTextBox)
+        Me.Controls.Add(NombregerenteLabel)
+        Me.Controls.Add(Me.NombregerenteTextBox)
+        Me.Controls.Add(AreaGerenteLabel)
+        Me.Controls.Add(Me.AreaGerenteTextBox)
+        Me.Controls.Add(Me.GERENTEBindingNavigator)
+        Me.Name = "frmGERENTE"
+        Me.Text = "MANTENEDOR GERENTE"
         CType(Me.DB_RRHHDataSet, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.NIVEL_EDUCACIONBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.NIVEL_EDUCACIONBindingNavigator, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.NIVEL_EDUCACIONBindingNavigator.ResumeLayout(False)
-        Me.NIVEL_EDUCACIONBindingNavigator.PerformLayout()
-        CType(Me.NIVEL_EDUCACIONDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.EMPLEADOBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.GERENTEBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.GERENTEBindingNavigator, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.GERENTEBindingNavigator.ResumeLayout(False)
+        Me.GERENTEBindingNavigator.PerformLayout()
+        CType(Me.GERENTEDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
 
     Friend WithEvents DB_RRHHDataSet As DB_RRHHDataSet
-    Friend WithEvents NIVEL_EDUCACIONBindingSource As BindingSource
-    Friend WithEvents NIVEL_EDUCACIONTableAdapter As DB_RRHHDataSetTableAdapters.NIVEL_EDUCACIONTableAdapter
+    Friend WithEvents GERENTEBindingSource As BindingSource
+    Friend WithEvents GERENTETableAdapter As DB_RRHHDataSetTableAdapters.GERENTETableAdapter
     Friend WithEvents TableAdapterManager As DB_RRHHDataSetTableAdapters.TableAdapterManager
-    Friend WithEvents NIVEL_EDUCACIONBindingNavigator As BindingNavigator
+    Friend WithEvents GERENTEBindingNavigator As BindingNavigator
     Friend WithEvents BindingNavigatorAddNewItem As ToolStripButton
     Friend WithEvents BindingNavigatorCountItem As ToolStripLabel
     Friend WithEvents BindingNavigatorDeleteItem As ToolStripButton
@@ -325,12 +346,12 @@ Partial Class frmNIVEL_EDUCACION
     Friend WithEvents BindingNavigatorMoveNextItem As ToolStripButton
     Friend WithEvents BindingNavigatorMoveLastItem As ToolStripButton
     Friend WithEvents BindingNavigatorSeparator2 As ToolStripSeparator
-    Friend WithEvents NIVEL_EDUCACIONBindingNavigatorSaveItem As ToolStripButton
-    Friend WithEvents IdNivelEducacionTextBox As TextBox
-    Friend WithEvents NivelEducacionTextBox As TextBox
-    Friend WithEvents EMPLEADOTableAdapter As DB_RRHHDataSetTableAdapters.EMPLEADOTableAdapter
-    Friend WithEvents EMPLEADOBindingSource As BindingSource
-    Friend WithEvents NIVEL_EDUCACIONDataGridView As DataGridView
+    Friend WithEvents GERENTEBindingNavigatorSaveItem As ToolStripButton
+    Friend WithEvents IdGerenteTextBox As TextBox
+    Friend WithEvents NombregerenteTextBox As TextBox
+    Friend WithEvents AreaGerenteTextBox As TextBox
+    Friend WithEvents GERENTEDataGridView As DataGridView
     Friend WithEvents DataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn2 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn3 As DataGridViewTextBoxColumn
 End Class
