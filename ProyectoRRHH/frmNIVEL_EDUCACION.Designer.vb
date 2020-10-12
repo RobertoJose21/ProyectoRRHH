@@ -264,10 +264,10 @@ Partial Class frmNIVEL_EDUCACION
         Me.NIVEL_EDUCACIONDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.NIVEL_EDUCACIONDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2})
         Me.NIVEL_EDUCACIONDataGridView.DataSource = Me.NIVEL_EDUCACIONBindingSource
-        Me.NIVEL_EDUCACIONDataGridView.Location = New System.Drawing.Point(289, 248)
+        Me.NIVEL_EDUCACIONDataGridView.Location = New System.Drawing.Point(278, 245)
         Me.NIVEL_EDUCACIONDataGridView.Name = "NIVEL_EDUCACIONDataGridView"
         Me.NIVEL_EDUCACIONDataGridView.RowTemplate.Height = 28
-        Me.NIVEL_EDUCACIONDataGridView.Size = New System.Drawing.Size(300, 220)
+        Me.NIVEL_EDUCACIONDataGridView.Size = New System.Drawing.Size(364, 220)
         Me.NIVEL_EDUCACIONDataGridView.TabIndex = 5
         '
         'DataGridViewTextBoxColumn1
