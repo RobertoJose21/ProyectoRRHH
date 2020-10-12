@@ -84,6 +84,54 @@
       <DependentUpon>Form1.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="FrmArea.Designer.vb">
+      <DependentUpon>FrmArea.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmArea.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmBoleta.Designer.vb">
+      <DependentUpon>FrmBoleta.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmBoleta.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmPagoPlanilla.Designer.vb">
+      <DependentUpon>FrmPagoPlanilla.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmPagoPlanilla.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmPeriodoLaboral.Designer.vb">
+      <DependentUpon>FrmPeriodoLaboral.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmPeriodoLaboral.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmPlanilla.Designer.vb">
+      <DependentUpon>FrmPlanilla.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmPlanilla.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmTipoContrato.Designer.vb">
+      <DependentUpon>FrmTipoContrato.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmTipoContrato.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmTipoTrabajador.Designer.vb">
+      <DependentUpon>FrmTipoTrabajador.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmTipoTrabajador.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmVariacionSueldo.Designer.vb">
+      <DependentUpon>FrmVariacionSueldo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmVariacionSueldo.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -103,6 +151,30 @@
   <ItemGroup>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmArea.resx">
+      <DependentUpon>FrmArea.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmBoleta.resx">
+      <DependentUpon>FrmBoleta.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmPagoPlanilla.resx">
+      <DependentUpon>FrmPagoPlanilla.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmPeriodoLaboral.resx">
+      <DependentUpon>FrmPeriodoLaboral.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmPlanilla.resx">
+      <DependentUpon>FrmPlanilla.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmTipoContrato.resx">
+      <DependentUpon>FrmTipoContrato.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmTipoTrabajador.resx">
+      <DependentUpon>FrmTipoTrabajador.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmVariacionSueldo.resx">
+      <DependentUpon>FrmVariacionSueldo.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
