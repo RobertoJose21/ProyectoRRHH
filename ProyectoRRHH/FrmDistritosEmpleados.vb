@@ -8,7 +8,7 @@ Public Class FrmDistritosEmpleados
             Dim Lector As SqlDataReader
             Dim Fila As ListViewItem
             'Configurando la Conección
-            Cnn.ConnectionString = "server=(local); Integrated Security=true; database=DB_RRHH"
+            Cnn.ConnectionString = "server=(local); Integrated Security=true; database=BD_RecursosHumanos"
             'Configuración alternativa para la Conección
             Cnn.Open()
             Comando.CommandText = "select * from V_DistritoEmpleados"
