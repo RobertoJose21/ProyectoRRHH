@@ -90,6 +90,12 @@
     <Compile Include="FrmArea.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="FrmAsistencia.Designer.vb">
+      <DependentUpon>FrmAsistencia.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmAsistencia.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FrmBeneficioLaboral.Designer.vb">
       <DependentUpon>FrmBeneficioLaboral.vb</DependentUpon>
     </Compile>
@@ -102,16 +108,52 @@
     <Compile Include="FrmBoleta.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="FrmContrato.Designer.vb">
+      <DependentUpon>FrmContrato.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmContrato.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmDatosTributarios.Designer.vb">
+      <DependentUpon>FrmDatosTributarios.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmDatosTributarios.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FrmDistrito.Designer.vb">
       <DependentUpon>FrmDistrito.vb</DependentUpon>
     </Compile>
     <Compile Include="FrmDistrito.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="FrmEmpleado.Designer.vb">
+      <DependentUpon>FrmEmpleado.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmEmpleado.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FrmExperienciaLaboral.Designer.vb">
       <DependentUpon>FrmExperienciaLaboral.vb</DependentUpon>
     </Compile>
     <Compile Include="FrmExperienciaLaboral.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmGerente.Designer.vb">
+      <DependentUpon>FrmGerente.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmGerente.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmMemorandums.Designer.vb">
+      <DependentUpon>FrmMemorandums.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmMemorandums.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmNivelEducacion.Designer.vb">
+      <DependentUpon>FrmNivelEducacion.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmNivelEducacion.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmPagoPlanilla.Designer.vb">
@@ -132,6 +174,30 @@
     <Compile Include="FrmPlanilla.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="FrmPrestamosAdelantados.Designer.vb">
+      <DependentUpon>FrmPrestamosAdelantados.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmPrestamosAdelantados.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmRegimenPensionario.Designer.vb">
+      <DependentUpon>FrmRegimenPensionario.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmRegimenPensionario.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmRegimenSalud.Designer.vb">
+      <DependentUpon>FrmRegimenSalud.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmRegimenSalud.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmTipoAsistencia.Designer.vb">
+      <DependentUpon>FrmTipoAsistencia.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmTipoAsistencia.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FrmTipoContrato.Designer.vb">
       <DependentUpon>FrmTipoContrato.vb</DependentUpon>
     </Compile>
@@ -142,6 +208,12 @@
       <DependentUpon>FrmTipoTrabajador.vb</DependentUpon>
     </Compile>
     <Compile Include="FrmTipoTrabajador.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmVacaciones.Designer.vb">
+      <DependentUpon>FrmVacaciones.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmVacaciones.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmVariacionSueldo.Designer.vb">
@@ -173,17 +245,38 @@
     <EmbeddedResource Include="FrmArea.resx">
       <DependentUpon>FrmArea.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmAsistencia.resx">
+      <DependentUpon>FrmAsistencia.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmBeneficioLaboral.resx">
       <DependentUpon>FrmBeneficioLaboral.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmBoleta.resx">
       <DependentUpon>FrmBoleta.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmContrato.resx">
+      <DependentUpon>FrmContrato.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmDatosTributarios.resx">
+      <DependentUpon>FrmDatosTributarios.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmDistrito.resx">
       <DependentUpon>FrmDistrito.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmEmpleado.resx">
+      <DependentUpon>FrmEmpleado.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmExperienciaLaboral.resx">
       <DependentUpon>FrmExperienciaLaboral.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmGerente.resx">
+      <DependentUpon>FrmGerente.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmMemorandums.resx">
+      <DependentUpon>FrmMemorandums.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmNivelEducacion.resx">
+      <DependentUpon>FrmNivelEducacion.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmPagoPlanilla.resx">
       <DependentUpon>FrmPagoPlanilla.vb</DependentUpon>
@@ -194,11 +287,26 @@
     <EmbeddedResource Include="FrmPlanilla.resx">
       <DependentUpon>FrmPlanilla.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmPrestamosAdelantados.resx">
+      <DependentUpon>FrmPrestamosAdelantados.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmRegimenPensionario.resx">
+      <DependentUpon>FrmRegimenPensionario.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmRegimenSalud.resx">
+      <DependentUpon>FrmRegimenSalud.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmTipoAsistencia.resx">
+      <DependentUpon>FrmTipoAsistencia.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmTipoContrato.resx">
       <DependentUpon>FrmTipoContrato.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmTipoTrabajador.resx">
       <DependentUpon>FrmTipoTrabajador.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmVacaciones.resx">
+      <DependentUpon>FrmVacaciones.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmVariacionSueldo.resx">
       <DependentUpon>FrmVariacionSueldo.vb</DependentUpon>

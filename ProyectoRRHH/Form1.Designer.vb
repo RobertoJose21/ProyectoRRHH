@@ -46,7 +46,6 @@ Partial Class Form1
         Me.CONTRATOToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MANTENEDORToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.GERENTEToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.NIVELDEEDUCACIONToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ADELANTODEPRESTAMOSToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.PLANILLASToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.DATOSPLANILLAToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -63,6 +62,7 @@ Partial Class Form1
         Me.HORIZONTALToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.VERTICALToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ORGANIZARTODOToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.MEMORANDUMSToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -211,7 +211,7 @@ Partial Class Form1
         '
         'MANTENEDORToolStripMenuItem
         '
-        Me.MANTENEDORToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.GERENTEToolStripMenuItem, Me.NIVELDEEDUCACIONToolStripMenuItem, Me.ADELANTODEPRESTAMOSToolStripMenuItem})
+        Me.MANTENEDORToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.GERENTEToolStripMenuItem, Me.ADELANTODEPRESTAMOSToolStripMenuItem, Me.MEMORANDUMSToolStripMenuItem})
         Me.MANTENEDORToolStripMenuItem.Name = "MANTENEDORToolStripMenuItem"
         Me.MANTENEDORToolStripMenuItem.Size = New System.Drawing.Size(90, 24)
         Me.MANTENEDORToolStripMenuItem.Text = "GERENCIA"
@@ -221,12 +221,6 @@ Partial Class Form1
         Me.GERENTEToolStripMenuItem.Name = "GERENTEToolStripMenuItem"
         Me.GERENTEToolStripMenuItem.Size = New System.Drawing.Size(268, 26)
         Me.GERENTEToolStripMenuItem.Text = "MANTENEDOR GERENTE"
-        '
-        'NIVELDEEDUCACIONToolStripMenuItem
-        '
-        Me.NIVELDEEDUCACIONToolStripMenuItem.Name = "NIVELDEEDUCACIONToolStripMenuItem"
-        Me.NIVELDEEDUCACIONToolStripMenuItem.Size = New System.Drawing.Size(268, 26)
-        Me.NIVELDEEDUCACIONToolStripMenuItem.Text = "MEMORANDUMS"
         '
         'ADELANTODEPRESTAMOSToolStripMenuItem
         '
@@ -271,7 +265,7 @@ Partial Class Form1
         '
         Me.MANTENEDORPAGOToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.REGISTROToolStripMenuItem1})
         Me.MANTENEDORPAGOToolStripMenuItem.Name = "MANTENEDORPAGOToolStripMenuItem"
-        Me.MANTENEDORPAGOToolStripMenuItem.Size = New System.Drawing.Size(144, 26)
+        Me.MANTENEDORPAGOToolStripMenuItem.Size = New System.Drawing.Size(181, 26)
         Me.MANTENEDORPAGOToolStripMenuItem.Text = "PAGOS"
         '
         'REGISTROToolStripMenuItem1
@@ -284,7 +278,7 @@ Partial Class Form1
         '
         Me.MANTENEDORDEBOLETASToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.REGISTROToolStripMenuItem, Me.REPORTESToolStripMenuItem})
         Me.MANTENEDORDEBOLETASToolStripMenuItem.Name = "MANTENEDORDEBOLETASToolStripMenuItem"
-        Me.MANTENEDORDEBOLETASToolStripMenuItem.Size = New System.Drawing.Size(144, 26)
+        Me.MANTENEDORDEBOLETASToolStripMenuItem.Size = New System.Drawing.Size(181, 26)
         Me.MANTENEDORDEBOLETASToolStripMenuItem.Text = "BOLETAS"
         '
         'REGISTROToolStripMenuItem
@@ -330,6 +324,12 @@ Partial Class Form1
         Me.ORGANIZARTODOToolStripMenuItem.Size = New System.Drawing.Size(211, 26)
         Me.ORGANIZARTODOToolStripMenuItem.Text = "ORGANIZAR TODO"
         '
+        'MEMORANDUMSToolStripMenuItem
+        '
+        Me.MEMORANDUMSToolStripMenuItem.Name = "MEMORANDUMSToolStripMenuItem"
+        Me.MEMORANDUMSToolStripMenuItem.Size = New System.Drawing.Size(268, 26)
+        Me.MEMORANDUMSToolStripMenuItem.Text = "MEMORANDUMS"
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -372,7 +372,6 @@ Partial Class Form1
     Friend WithEvents CONTRATOToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents MANTENEDORToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents GERENTEToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents NIVELDEEDUCACIONToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ADELANTODEPRESTAMOSToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents PLANILLASToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents DATOSPLANILLAToolStripMenuItem As ToolStripMenuItem
@@ -389,4 +388,5 @@ Partial Class Form1
     Friend WithEvents HORIZONTALToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents VERTICALToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ORGANIZARTODOToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents MEMORANDUMSToolStripMenuItem As ToolStripMenuItem
 End Class
