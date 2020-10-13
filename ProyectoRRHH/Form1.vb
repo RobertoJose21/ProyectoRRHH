@@ -191,7 +191,7 @@
         objReporteBoletas.Show()
     End Sub
 
-    Private Sub MEMORANDUMSBindingNavigatorSaveItem_Click(sender As Object, e As EventArgs) 
+    Private Sub MEMORANDUMSBindingNavigatorSaveItem_Click(sender As Object, e As EventArgs)
         Me.Validate()
         Me.MEMORANDUMSBindingSource.EndEdit()
         Me.TableAdapterManager.UpdateAll(Me.BD_RecursosHumanosDataSet)
