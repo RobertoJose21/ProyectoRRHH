@@ -96,6 +96,12 @@
     <Compile Include="FrmBoleta.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="FrmDistrito.Designer.vb">
+      <DependentUpon>FrmDistrito.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmDistrito.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FrmPagoPlanilla.Designer.vb">
       <DependentUpon>FrmPagoPlanilla.vb</DependentUpon>
     </Compile>
@@ -157,6 +163,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmBoleta.resx">
       <DependentUpon>FrmBoleta.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmDistrito.resx">
+      <DependentUpon>FrmDistrito.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmPagoPlanilla.resx">
       <DependentUpon>FrmPagoPlanilla.vb</DependentUpon>
