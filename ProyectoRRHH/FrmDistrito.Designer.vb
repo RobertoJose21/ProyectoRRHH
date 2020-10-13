@@ -256,7 +256,7 @@ Partial Class FrmDistrito
         Me.DISTRITODataGridView.Location = New System.Drawing.Point(135, 160)
         Me.DISTRITODataGridView.Name = "DISTRITODataGridView"
         Me.DISTRITODataGridView.RowTemplate.Height = 24
-        Me.DISTRITODataGridView.Size = New System.Drawing.Size(401, 220)
+        Me.DISTRITODataGridView.Size = New System.Drawing.Size(363, 220)
         Me.DISTRITODataGridView.TabIndex = 5
         '
         'DataGridViewTextBoxColumn1
