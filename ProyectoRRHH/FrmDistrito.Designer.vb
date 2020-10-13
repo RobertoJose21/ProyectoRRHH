@@ -115,7 +115,7 @@ Partial Class FrmDistrito
         Me.DISTRITOBindingNavigator.MovePreviousItem = Me.BindingNavigatorMovePreviousItem
         Me.DISTRITOBindingNavigator.Name = "DISTRITOBindingNavigator"
         Me.DISTRITOBindingNavigator.PositionItem = Me.BindingNavigatorPositionItem
-        Me.DISTRITOBindingNavigator.Size = New System.Drawing.Size(908, 27)
+        Me.DISTRITOBindingNavigator.Size = New System.Drawing.Size(753, 27)
         Me.DISTRITOBindingNavigator.TabIndex = 0
         Me.DISTRITOBindingNavigator.Text = "BindingNavigator1"
         '
@@ -215,7 +215,7 @@ Partial Class FrmDistrito
         'IdDistritoLabel
         '
         IdDistritoLabel.AutoSize = True
-        IdDistritoLabel.Location = New System.Drawing.Point(221, 57)
+        IdDistritoLabel.Location = New System.Drawing.Point(149, 57)
         IdDistritoLabel.Name = "IdDistritoLabel"
         IdDistritoLabel.Size = New System.Drawing.Size(71, 17)
         IdDistritoLabel.TabIndex = 1
@@ -224,7 +224,7 @@ Partial Class FrmDistrito
         'IdDistritoTextBox
         '
         Me.IdDistritoTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.DISTRITOBindingSource, "IdDistrito", True))
-        Me.IdDistritoTextBox.Location = New System.Drawing.Point(337, 54)
+        Me.IdDistritoTextBox.Location = New System.Drawing.Point(265, 54)
         Me.IdDistritoTextBox.Name = "IdDistritoTextBox"
         Me.IdDistritoTextBox.Size = New System.Drawing.Size(100, 22)
         Me.IdDistritoTextBox.TabIndex = 2
@@ -232,7 +232,7 @@ Partial Class FrmDistrito
         'NombreDistritoLabel
         '
         NombreDistritoLabel.AutoSize = True
-        NombreDistritoLabel.Location = New System.Drawing.Point(221, 96)
+        NombreDistritoLabel.Location = New System.Drawing.Point(149, 96)
         NombreDistritoLabel.Name = "NombreDistritoLabel"
         NombreDistritoLabel.Size = New System.Drawing.Size(110, 17)
         NombreDistritoLabel.TabIndex = 3
@@ -241,7 +241,7 @@ Partial Class FrmDistrito
         'NombreDistritoTextBox
         '
         Me.NombreDistritoTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.DISTRITOBindingSource, "NombreDistrito", True))
-        Me.NombreDistritoTextBox.Location = New System.Drawing.Point(337, 93)
+        Me.NombreDistritoTextBox.Location = New System.Drawing.Point(265, 93)
         Me.NombreDistritoTextBox.Name = "NombreDistritoTextBox"
         Me.NombreDistritoTextBox.Size = New System.Drawing.Size(100, 22)
         Me.NombreDistritoTextBox.TabIndex = 4
@@ -253,10 +253,10 @@ Partial Class FrmDistrito
         Me.DISTRITODataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DISTRITODataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2})
         Me.DISTRITODataGridView.DataSource = Me.DISTRITOBindingSource
-        Me.DISTRITODataGridView.Location = New System.Drawing.Point(135, 160)
+        Me.DISTRITODataGridView.Location = New System.Drawing.Point(28, 147)
         Me.DISTRITODataGridView.Name = "DISTRITODataGridView"
         Me.DISTRITODataGridView.RowTemplate.Height = 24
-        Me.DISTRITODataGridView.Size = New System.Drawing.Size(363, 220)
+        Me.DISTRITODataGridView.Size = New System.Drawing.Size(456, 220)
         Me.DISTRITODataGridView.TabIndex = 5
         '
         'DataGridViewTextBoxColumn1
@@ -271,13 +271,13 @@ Partial Class FrmDistrito
         Me.DataGridViewTextBoxColumn2.DataPropertyName = "NombreDistrito"
         Me.DataGridViewTextBoxColumn2.HeaderText = "NombreDistrito"
         Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
-        Me.DataGridViewTextBoxColumn2.Width = 120
+        Me.DataGridViewTextBoxColumn2.Width = 200
         '
         'FrmDistrito
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(908, 500)
+        Me.ClientSize = New System.Drawing.Size(753, 500)
         Me.Controls.Add(Me.DISTRITODataGridView)
         Me.Controls.Add(IdDistritoLabel)
         Me.Controls.Add(Me.IdDistritoTextBox)

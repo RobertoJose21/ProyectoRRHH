@@ -115,7 +115,7 @@ Partial Class FrmRegimenSalud
         Me.REGIMEN_SALUDBindingNavigator.MovePreviousItem = Me.BindingNavigatorMovePreviousItem
         Me.REGIMEN_SALUDBindingNavigator.Name = "REGIMEN_SALUDBindingNavigator"
         Me.REGIMEN_SALUDBindingNavigator.PositionItem = Me.BindingNavigatorPositionItem
-        Me.REGIMEN_SALUDBindingNavigator.Size = New System.Drawing.Size(904, 27)
+        Me.REGIMEN_SALUDBindingNavigator.Size = New System.Drawing.Size(614, 27)
         Me.REGIMEN_SALUDBindingNavigator.TabIndex = 0
         Me.REGIMEN_SALUDBindingNavigator.Text = "BindingNavigator1"
         '
@@ -215,7 +215,7 @@ Partial Class FrmRegimenSalud
         'InstitucionSaludLabel
         '
         InstitucionSaludLabel.AutoSize = True
-        InstitucionSaludLabel.Location = New System.Drawing.Point(52, 59)
+        InstitucionSaludLabel.Location = New System.Drawing.Point(135, 67)
         InstitucionSaludLabel.Name = "InstitucionSaludLabel"
         InstitucionSaludLabel.Size = New System.Drawing.Size(115, 17)
         InstitucionSaludLabel.TabIndex = 1
@@ -224,7 +224,7 @@ Partial Class FrmRegimenSalud
         'InstitucionSaludTextBox
         '
         Me.InstitucionSaludTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.REGIMEN_SALUDBindingSource, "institucionSalud", True))
-        Me.InstitucionSaludTextBox.Location = New System.Drawing.Point(181, 56)
+        Me.InstitucionSaludTextBox.Location = New System.Drawing.Point(264, 64)
         Me.InstitucionSaludTextBox.Name = "InstitucionSaludTextBox"
         Me.InstitucionSaludTextBox.Size = New System.Drawing.Size(100, 22)
         Me.InstitucionSaludTextBox.TabIndex = 2
@@ -232,7 +232,7 @@ Partial Class FrmRegimenSalud
         'IdRegimenSaludLabel
         '
         IdRegimenSaludLabel.AutoSize = True
-        IdRegimenSaludLabel.Location = New System.Drawing.Point(52, 87)
+        IdRegimenSaludLabel.Location = New System.Drawing.Point(135, 95)
         IdRegimenSaludLabel.Name = "IdRegimenSaludLabel"
         IdRegimenSaludLabel.Size = New System.Drawing.Size(123, 17)
         IdRegimenSaludLabel.TabIndex = 3
@@ -241,7 +241,7 @@ Partial Class FrmRegimenSalud
         'IdRegimenSaludTextBox
         '
         Me.IdRegimenSaludTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.REGIMEN_SALUDBindingSource, "IdRegimenSalud", True))
-        Me.IdRegimenSaludTextBox.Location = New System.Drawing.Point(181, 84)
+        Me.IdRegimenSaludTextBox.Location = New System.Drawing.Point(264, 92)
         Me.IdRegimenSaludTextBox.Name = "IdRegimenSaludTextBox"
         Me.IdRegimenSaludTextBox.Size = New System.Drawing.Size(100, 22)
         Me.IdRegimenSaludTextBox.TabIndex = 4
@@ -256,7 +256,7 @@ Partial Class FrmRegimenSalud
         Me.REGIMEN_SALUDDataGridView.Location = New System.Drawing.Point(44, 137)
         Me.REGIMEN_SALUDDataGridView.Name = "REGIMEN_SALUDDataGridView"
         Me.REGIMEN_SALUDDataGridView.RowTemplate.Height = 24
-        Me.REGIMEN_SALUDDataGridView.Size = New System.Drawing.Size(364, 220)
+        Me.REGIMEN_SALUDDataGridView.Size = New System.Drawing.Size(386, 146)
         Me.REGIMEN_SALUDDataGridView.TabIndex = 5
         '
         'DataGridViewTextBoxColumn1
@@ -278,7 +278,7 @@ Partial Class FrmRegimenSalud
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(904, 511)
+        Me.ClientSize = New System.Drawing.Size(614, 511)
         Me.Controls.Add(Me.REGIMEN_SALUDDataGridView)
         Me.Controls.Add(InstitucionSaludLabel)
         Me.Controls.Add(Me.InstitucionSaludTextBox)

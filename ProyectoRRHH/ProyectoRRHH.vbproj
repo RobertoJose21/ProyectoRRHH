@@ -72,6 +72,11 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BD_RecursosHumanosDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BD_RecursosHumanosDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DB_RRHHDataSet.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -108,6 +113,12 @@
     <Compile Include="FrmBoleta.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="FrmBoletasEmpleados.Designer.vb">
+      <DependentUpon>FrmBoletasEmpleados.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmBoletasEmpleados.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FrmContrato.Designer.vb">
       <DependentUpon>FrmContrato.vb</DependentUpon>
     </Compile>
@@ -126,10 +137,22 @@
     <Compile Include="FrmDistrito.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="FrmDistritosEmpleados.Designer.vb">
+      <DependentUpon>FrmDistritosEmpleados.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmDistritosEmpleados.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FrmEmpleado.Designer.vb">
       <DependentUpon>FrmEmpleado.vb</DependentUpon>
     </Compile>
     <Compile Include="FrmEmpleado.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmEmpleadoSueldoTotal.Designer.vb">
+      <DependentUpon>FrmEmpleadoSueldoTotal.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmEmpleadoSueldoTotal.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmExperienciaLaboral.Designer.vb">
@@ -142,6 +165,12 @@
       <DependentUpon>FrmGerente.vb</DependentUpon>
     </Compile>
     <Compile Include="FrmGerente.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmMemorandumBeneficio.Designer.vb">
+      <DependentUpon>FrmMemorandumBeneficio.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmMemorandumBeneficio.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmMemorandums.Designer.vb">
@@ -254,6 +283,9 @@
     <EmbeddedResource Include="FrmBoleta.resx">
       <DependentUpon>FrmBoleta.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmBoletasEmpleados.resx">
+      <DependentUpon>FrmBoletasEmpleados.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmContrato.resx">
       <DependentUpon>FrmContrato.vb</DependentUpon>
     </EmbeddedResource>
@@ -263,14 +295,23 @@
     <EmbeddedResource Include="FrmDistrito.resx">
       <DependentUpon>FrmDistrito.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmDistritosEmpleados.resx">
+      <DependentUpon>FrmDistritosEmpleados.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmEmpleado.resx">
       <DependentUpon>FrmEmpleado.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmEmpleadoSueldoTotal.resx">
+      <DependentUpon>FrmEmpleadoSueldoTotal.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmExperienciaLaboral.resx">
       <DependentUpon>FrmExperienciaLaboral.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmGerente.resx">
       <DependentUpon>FrmGerente.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmMemorandumBeneficio.resx">
+      <DependentUpon>FrmMemorandumBeneficio.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmMemorandums.resx">
       <DependentUpon>FrmMemorandums.vb</DependentUpon>
@@ -319,6 +360,17 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <None Include="BD_RecursosHumanosDataSet.xsc">
+      <DependentUpon>BD_RecursosHumanosDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="BD_RecursosHumanosDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BD_RecursosHumanosDataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="BD_RecursosHumanosDataSet.xss">
+      <DependentUpon>BD_RecursosHumanosDataSet.xsd</DependentUpon>
+    </None>
     <None Include="DB_RRHHDataSet.xsc">
       <DependentUpon>DB_RRHHDataSet.xsd</DependentUpon>
     </None>

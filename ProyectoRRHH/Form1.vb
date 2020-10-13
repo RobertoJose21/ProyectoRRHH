@@ -164,4 +164,28 @@
         objMemorandums.MdiParent = Me
         objMemorandums.Show()
     End Sub
+
+    Private Sub REPORTESMEMORANDUMSToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles REPORTESMEMORANDUMSToolStripMenuItem.Click
+        Dim objReporteMemorandums As New FrmMemorandumBeneficio
+        objReporteMemorandums.MdiParent = Me
+        objReporteMemorandums.Show()
+    End Sub
+
+    Private Sub REPORTEDEDISTRITOSXEMPLEADOSToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles REPORTEDEDISTRITOSXEMPLEADOSToolStripMenuItem.Click
+        Dim objReporteDistrito As New FrmDistritosEmpleados
+        objReporteDistrito.MdiParent = Me
+        objReporteDistrito.Show()
+    End Sub
+
+    Private Sub REPORTESUELDOSTOTALESToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles REPORTESUELDOSTOTALESToolStripMenuItem.Click
+        Dim objReporteSueldosTotales As New FrmEmpleadoSueldoTotal
+        objReporteSueldosTotales.MdiParent = Me
+        objReporteSueldosTotales.Show()
+    End Sub
+
+    Private Sub REPORTEDEBOLETASToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles REPORTEDEBOLETASToolStripMenuItem.Click
+        Dim objReporteBoletas As New FrmBoletasEmpleados
+        objReporteBoletas.MdiParent = Me
+        objReporteBoletas.Show()
+    End Sub
 End Class

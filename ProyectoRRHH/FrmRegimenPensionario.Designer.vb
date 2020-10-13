@@ -115,7 +115,7 @@ Partial Class FrmRegimenPensionario
         Me.REGIMEN_PENSIONARIOBindingNavigator.MovePreviousItem = Me.BindingNavigatorMovePreviousItem
         Me.REGIMEN_PENSIONARIOBindingNavigator.Name = "REGIMEN_PENSIONARIOBindingNavigator"
         Me.REGIMEN_PENSIONARIOBindingNavigator.PositionItem = Me.BindingNavigatorPositionItem
-        Me.REGIMEN_PENSIONARIOBindingNavigator.Size = New System.Drawing.Size(773, 27)
+        Me.REGIMEN_PENSIONARIOBindingNavigator.Size = New System.Drawing.Size(571, 27)
         Me.REGIMEN_PENSIONARIOBindingNavigator.TabIndex = 0
         Me.REGIMEN_PENSIONARIOBindingNavigator.Text = "BindingNavigator1"
         '
@@ -256,7 +256,7 @@ Partial Class FrmRegimenPensionario
         Me.REGIMEN_PENSIONARIODataGridView.Location = New System.Drawing.Point(43, 129)
         Me.REGIMEN_PENSIONARIODataGridView.Name = "REGIMEN_PENSIONARIODataGridView"
         Me.REGIMEN_PENSIONARIODataGridView.RowTemplate.Height = 24
-        Me.REGIMEN_PENSIONARIODataGridView.Size = New System.Drawing.Size(414, 220)
+        Me.REGIMEN_PENSIONARIODataGridView.Size = New System.Drawing.Size(451, 220)
         Me.REGIMEN_PENSIONARIODataGridView.TabIndex = 5
         '
         'DataGridViewTextBoxColumn1
@@ -278,7 +278,7 @@ Partial Class FrmRegimenPensionario
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(773, 447)
+        Me.ClientSize = New System.Drawing.Size(571, 447)
         Me.Controls.Add(Me.REGIMEN_PENSIONARIODataGridView)
         Me.Controls.Add(InstitucionPensionarioLabel)
         Me.Controls.Add(Me.InstitucionPensionarioTextBox)
