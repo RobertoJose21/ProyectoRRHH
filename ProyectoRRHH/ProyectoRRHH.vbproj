@@ -95,10 +95,10 @@
     <Compile Include="FrmArea.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmAsistencia.Designer.vb">
-      <DependentUpon>FrmAsistencia.vb</DependentUpon>
+    <Compile Include="FrmAsistencias.Designer.vb">
+      <DependentUpon>FrmAsistencias.vb</DependentUpon>
     </Compile>
-    <Compile Include="FrmAsistencia.vb">
+    <Compile Include="FrmAsistencias.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmBeneficioLaboral.Designer.vb">
@@ -123,12 +123,6 @@
       <DependentUpon>FrmContrato.vb</DependentUpon>
     </Compile>
     <Compile Include="FrmContrato.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmContratosEmpleados.Designer.vb">
-      <DependentUpon>FrmContratosEmpleados.vb</DependentUpon>
-    </Compile>
-    <Compile Include="FrmContratosEmpleados.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmDatosTributarios.Designer.vb">
@@ -280,8 +274,8 @@
     <EmbeddedResource Include="FrmArea.resx">
       <DependentUpon>FrmArea.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmAsistencia.resx">
-      <DependentUpon>FrmAsistencia.vb</DependentUpon>
+    <EmbeddedResource Include="FrmAsistencias.resx">
+      <DependentUpon>FrmAsistencias.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmBeneficioLaboral.resx">
       <DependentUpon>FrmBeneficioLaboral.vb</DependentUpon>
@@ -294,9 +288,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmContrato.resx">
       <DependentUpon>FrmContrato.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FrmContratosEmpleados.resx">
-      <DependentUpon>FrmContratosEmpleados.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmDatosTributarios.resx">
       <DependentUpon>FrmDatosTributarios.vb</DependentUpon>

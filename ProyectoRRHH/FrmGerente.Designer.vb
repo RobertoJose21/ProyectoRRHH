@@ -27,27 +27,23 @@ Partial Class FrmGerente
         Dim IdGerenteLabel As System.Windows.Forms.Label
         Dim NombregerenteLabel As System.Windows.Forms.Label
         Dim AreaGerenteLabel As System.Windows.Forms.Label
-        Me.DB_RRHHDataSet = New ProyectoRRHH.DB_RRHHDataSet()
+        Me.BD_RecursosHumanosDataSet = New ProyectoRRHH.BD_RecursosHumanosDataSet()
         Me.GERENTEBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.GERENTETableAdapter = New ProyectoRRHH.DB_RRHHDataSetTableAdapters.GERENTETableAdapter()
-        Me.TableAdapterManager = New ProyectoRRHH.DB_RRHHDataSetTableAdapters.TableAdapterManager()
+        Me.GERENTETableAdapter = New ProyectoRRHH.BD_RecursosHumanosDataSetTableAdapters.GERENTETableAdapter()
+        Me.TableAdapterManager = New ProyectoRRHH.BD_RecursosHumanosDataSetTableAdapters.TableAdapterManager()
         Me.GERENTEBindingNavigator = New System.Windows.Forms.BindingNavigator(Me.components)
-        Me.BindingNavigatorAddNewItem = New System.Windows.Forms.ToolStripButton()
-        Me.BindingNavigatorCountItem = New System.Windows.Forms.ToolStripLabel()
-        Me.BindingNavigatorDeleteItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorMoveFirstItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorMovePreviousItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorSeparator = New System.Windows.Forms.ToolStripSeparator()
         Me.BindingNavigatorPositionItem = New System.Windows.Forms.ToolStripTextBox()
+        Me.BindingNavigatorCountItem = New System.Windows.Forms.ToolStripLabel()
         Me.BindingNavigatorSeparator1 = New System.Windows.Forms.ToolStripSeparator()
         Me.BindingNavigatorMoveNextItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorMoveLastItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorSeparator2 = New System.Windows.Forms.ToolStripSeparator()
+        Me.BindingNavigatorAddNewItem = New System.Windows.Forms.ToolStripButton()
+        Me.BindingNavigatorDeleteItem = New System.Windows.Forms.ToolStripButton()
         Me.GERENTEBindingNavigatorSaveItem = New System.Windows.Forms.ToolStripButton()
-        Me.BD_RecursosHumanosDataSet = New ProyectoRRHH.BD_RecursosHumanosDataSet()
-        Me.GERENTEBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
-        Me.GERENTETableAdapter1 = New ProyectoRRHH.BD_RecursosHumanosDataSetTableAdapters.GERENTETableAdapter()
-        Me.TableAdapterManager1 = New ProyectoRRHH.BD_RecursosHumanosDataSetTableAdapters.TableAdapterManager()
         Me.IdGerenteTextBox = New System.Windows.Forms.TextBox()
         Me.NombregerenteTextBox = New System.Windows.Forms.TextBox()
         Me.AreaGerenteTextBox = New System.Windows.Forms.TextBox()
@@ -58,24 +54,22 @@ Partial Class FrmGerente
         IdGerenteLabel = New System.Windows.Forms.Label()
         NombregerenteLabel = New System.Windows.Forms.Label()
         AreaGerenteLabel = New System.Windows.Forms.Label()
-        CType(Me.DB_RRHHDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.BD_RecursosHumanosDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.GERENTEBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.GERENTEBindingNavigator, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GERENTEBindingNavigator.SuspendLayout()
-        CType(Me.BD_RecursosHumanosDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.GERENTEBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.GERENTEDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'DB_RRHHDataSet
+        'BD_RecursosHumanosDataSet
         '
-        Me.DB_RRHHDataSet.DataSetName = "DB_RRHHDataSet"
-        Me.DB_RRHHDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        Me.BD_RecursosHumanosDataSet.DataSetName = "BD_RecursosHumanosDataSet"
+        Me.BD_RecursosHumanosDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'GERENTEBindingSource
         '
         Me.GERENTEBindingSource.DataMember = "GERENTE"
-        Me.GERENTEBindingSource.DataSource = Me.DB_RRHHDataSet
+        Me.GERENTEBindingSource.DataSource = Me.BD_RecursosHumanosDataSet
         '
         'GERENTETableAdapter
         '
@@ -106,7 +100,7 @@ Partial Class FrmGerente
         Me.TableAdapterManager.TIPO_ASISTENCIATableAdapter = Nothing
         Me.TableAdapterManager.TIPO_CONTRATOTableAdapter = Nothing
         Me.TableAdapterManager.TIPO_TRABAJADORTableAdapter = Nothing
-        Me.TableAdapterManager.UpdateOrder = ProyectoRRHH.DB_RRHHDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
+        Me.TableAdapterManager.UpdateOrder = ProyectoRRHH.BD_RecursosHumanosDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
         Me.TableAdapterManager.VACACIONESTableAdapter = Nothing
         Me.TableAdapterManager.VARIACION_SUELDOTableAdapter = Nothing
         '
@@ -125,34 +119,9 @@ Partial Class FrmGerente
         Me.GERENTEBindingNavigator.MovePreviousItem = Me.BindingNavigatorMovePreviousItem
         Me.GERENTEBindingNavigator.Name = "GERENTEBindingNavigator"
         Me.GERENTEBindingNavigator.PositionItem = Me.BindingNavigatorPositionItem
-        Me.GERENTEBindingNavigator.Size = New System.Drawing.Size(1385, 27)
+        Me.GERENTEBindingNavigator.Size = New System.Drawing.Size(1015, 27)
         Me.GERENTEBindingNavigator.TabIndex = 0
         Me.GERENTEBindingNavigator.Text = "BindingNavigator1"
-        '
-        'BindingNavigatorAddNewItem
-        '
-        Me.BindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorAddNewItem.Image = CType(resources.GetObject("BindingNavigatorAddNewItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorAddNewItem.Name = "BindingNavigatorAddNewItem"
-        Me.BindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorAddNewItem.Size = New System.Drawing.Size(24, 24)
-        Me.BindingNavigatorAddNewItem.Text = "Agregar nuevo"
-        '
-        'BindingNavigatorCountItem
-        '
-        Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
-        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(48, 24)
-        Me.BindingNavigatorCountItem.Text = "de {0}"
-        Me.BindingNavigatorCountItem.ToolTipText = "Número total de elementos"
-        '
-        'BindingNavigatorDeleteItem
-        '
-        Me.BindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorDeleteItem.Image = CType(resources.GetObject("BindingNavigatorDeleteItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorDeleteItem.Name = "BindingNavigatorDeleteItem"
-        Me.BindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorDeleteItem.Size = New System.Drawing.Size(24, 24)
-        Me.BindingNavigatorDeleteItem.Text = "Eliminar"
         '
         'BindingNavigatorMoveFirstItem
         '
@@ -160,7 +129,7 @@ Partial Class FrmGerente
         Me.BindingNavigatorMoveFirstItem.Image = CType(resources.GetObject("BindingNavigatorMoveFirstItem.Image"), System.Drawing.Image)
         Me.BindingNavigatorMoveFirstItem.Name = "BindingNavigatorMoveFirstItem"
         Me.BindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorMoveFirstItem.Size = New System.Drawing.Size(24, 24)
+        Me.BindingNavigatorMoveFirstItem.Size = New System.Drawing.Size(24, 22)
         Me.BindingNavigatorMoveFirstItem.Text = "Mover primero"
         '
         'BindingNavigatorMovePreviousItem
@@ -169,13 +138,13 @@ Partial Class FrmGerente
         Me.BindingNavigatorMovePreviousItem.Image = CType(resources.GetObject("BindingNavigatorMovePreviousItem.Image"), System.Drawing.Image)
         Me.BindingNavigatorMovePreviousItem.Name = "BindingNavigatorMovePreviousItem"
         Me.BindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorMovePreviousItem.Size = New System.Drawing.Size(24, 24)
+        Me.BindingNavigatorMovePreviousItem.Size = New System.Drawing.Size(24, 22)
         Me.BindingNavigatorMovePreviousItem.Text = "Mover anterior"
         '
         'BindingNavigatorSeparator
         '
         Me.BindingNavigatorSeparator.Name = "BindingNavigatorSeparator"
-        Me.BindingNavigatorSeparator.Size = New System.Drawing.Size(6, 27)
+        Me.BindingNavigatorSeparator.Size = New System.Drawing.Size(6, 25)
         '
         'BindingNavigatorPositionItem
         '
@@ -186,10 +155,17 @@ Partial Class FrmGerente
         Me.BindingNavigatorPositionItem.Text = "0"
         Me.BindingNavigatorPositionItem.ToolTipText = "Posición actual"
         '
+        'BindingNavigatorCountItem
+        '
+        Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
+        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(48, 20)
+        Me.BindingNavigatorCountItem.Text = "de {0}"
+        Me.BindingNavigatorCountItem.ToolTipText = "Número total de elementos"
+        '
         'BindingNavigatorSeparator1
         '
-        Me.BindingNavigatorSeparator1.Name = "BindingNavigatorSeparator1"
-        Me.BindingNavigatorSeparator1.Size = New System.Drawing.Size(6, 27)
+        Me.BindingNavigatorSeparator1.Name = "BindingNavigatorSeparator"
+        Me.BindingNavigatorSeparator1.Size = New System.Drawing.Size(6, 6)
         '
         'BindingNavigatorMoveNextItem
         '
@@ -211,64 +187,39 @@ Partial Class FrmGerente
         '
         'BindingNavigatorSeparator2
         '
-        Me.BindingNavigatorSeparator2.Name = "BindingNavigatorSeparator2"
-        Me.BindingNavigatorSeparator2.Size = New System.Drawing.Size(6, 27)
+        Me.BindingNavigatorSeparator2.Name = "BindingNavigatorSeparator"
+        Me.BindingNavigatorSeparator2.Size = New System.Drawing.Size(6, 6)
+        '
+        'BindingNavigatorAddNewItem
+        '
+        Me.BindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.BindingNavigatorAddNewItem.Image = CType(resources.GetObject("BindingNavigatorAddNewItem.Image"), System.Drawing.Image)
+        Me.BindingNavigatorAddNewItem.Name = "BindingNavigatorAddNewItem"
+        Me.BindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = True
+        Me.BindingNavigatorAddNewItem.Size = New System.Drawing.Size(24, 24)
+        Me.BindingNavigatorAddNewItem.Text = "Agregar nuevo"
+        '
+        'BindingNavigatorDeleteItem
+        '
+        Me.BindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.BindingNavigatorDeleteItem.Image = CType(resources.GetObject("BindingNavigatorDeleteItem.Image"), System.Drawing.Image)
+        Me.BindingNavigatorDeleteItem.Name = "BindingNavigatorDeleteItem"
+        Me.BindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = True
+        Me.BindingNavigatorDeleteItem.Size = New System.Drawing.Size(24, 24)
+        Me.BindingNavigatorDeleteItem.Text = "Eliminar"
         '
         'GERENTEBindingNavigatorSaveItem
         '
         Me.GERENTEBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
         Me.GERENTEBindingNavigatorSaveItem.Image = CType(resources.GetObject("GERENTEBindingNavigatorSaveItem.Image"), System.Drawing.Image)
         Me.GERENTEBindingNavigatorSaveItem.Name = "GERENTEBindingNavigatorSaveItem"
-        Me.GERENTEBindingNavigatorSaveItem.Size = New System.Drawing.Size(24, 24)
+        Me.GERENTEBindingNavigatorSaveItem.Size = New System.Drawing.Size(23, 23)
         Me.GERENTEBindingNavigatorSaveItem.Text = "Guardar datos"
-        '
-        'BD_RecursosHumanosDataSet
-        '
-        Me.BD_RecursosHumanosDataSet.DataSetName = "BD_RecursosHumanosDataSet"
-        Me.BD_RecursosHumanosDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'GERENTEBindingSource1
-        '
-        Me.GERENTEBindingSource1.DataMember = "GERENTE"
-        Me.GERENTEBindingSource1.DataSource = Me.BD_RecursosHumanosDataSet
-        '
-        'GERENTETableAdapter1
-        '
-        Me.GERENTETableAdapter1.ClearBeforeFill = True
-        '
-        'TableAdapterManager1
-        '
-        Me.TableAdapterManager1.AREATableAdapter = Nothing
-        Me.TableAdapterManager1.ASISTENCIATableAdapter = Nothing
-        Me.TableAdapterManager1.BackupDataSetBeforeUpdate = False
-        Me.TableAdapterManager1.BENEFICIO_LABORALTableAdapter = Nothing
-        Me.TableAdapterManager1.BOLETATableAdapter = Nothing
-        Me.TableAdapterManager1.CONTRATOTableAdapter = Nothing
-        Me.TableAdapterManager1.DATOS_TRIBUTARIOSTableAdapter = Nothing
-        Me.TableAdapterManager1.DETALLE_BENEFICIOTableAdapter = Nothing
-        Me.TableAdapterManager1.DISTRITOTableAdapter = Nothing
-        Me.TableAdapterManager1.EMPLEADOTableAdapter = Nothing
-        Me.TableAdapterManager1.EXPERIENCIA_LABORALTableAdapter = Nothing
-        Me.TableAdapterManager1.GERENTETableAdapter = Me.GERENTETableAdapter1
-        Me.TableAdapterManager1.MEMORANDUMSTableAdapter = Nothing
-        Me.TableAdapterManager1.NIVEL_EDUCACIONTableAdapter = Nothing
-        Me.TableAdapterManager1.PAGO_PLANILLATableAdapter = Nothing
-        Me.TableAdapterManager1.PERIODO_LABORALTableAdapter = Nothing
-        Me.TableAdapterManager1.PLANILLATableAdapter = Nothing
-        Me.TableAdapterManager1.PRESTAMO_ADELANTOSTableAdapter = Nothing
-        Me.TableAdapterManager1.REGIMEN_PENSIONARIOTableAdapter = Nothing
-        Me.TableAdapterManager1.REGIMEN_SALUDTableAdapter = Nothing
-        Me.TableAdapterManager1.TIPO_ASISTENCIATableAdapter = Nothing
-        Me.TableAdapterManager1.TIPO_CONTRATOTableAdapter = Nothing
-        Me.TableAdapterManager1.TIPO_TRABAJADORTableAdapter = Nothing
-        Me.TableAdapterManager1.UpdateOrder = ProyectoRRHH.BD_RecursosHumanosDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
-        Me.TableAdapterManager1.VACACIONESTableAdapter = Nothing
-        Me.TableAdapterManager1.VARIACION_SUELDOTableAdapter = Nothing
         '
         'IdGerenteLabel
         '
         IdGerenteLabel.AutoSize = True
-        IdGerenteLabel.Location = New System.Drawing.Point(28, 92)
+        IdGerenteLabel.Location = New System.Drawing.Point(12, 41)
         IdGerenteLabel.Name = "IdGerenteLabel"
         IdGerenteLabel.Size = New System.Drawing.Size(79, 17)
         IdGerenteLabel.TabIndex = 1
@@ -276,8 +227,8 @@ Partial Class FrmGerente
         '
         'IdGerenteTextBox
         '
-        Me.IdGerenteTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.GERENTEBindingSource1, "IdGerente", True))
-        Me.IdGerenteTextBox.Location = New System.Drawing.Point(143, 89)
+        Me.IdGerenteTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.GERENTEBindingSource, "IdGerente", True))
+        Me.IdGerenteTextBox.Location = New System.Drawing.Point(127, 38)
         Me.IdGerenteTextBox.Name = "IdGerenteTextBox"
         Me.IdGerenteTextBox.Size = New System.Drawing.Size(100, 22)
         Me.IdGerenteTextBox.TabIndex = 2
@@ -285,7 +236,7 @@ Partial Class FrmGerente
         'NombregerenteLabel
         '
         NombregerenteLabel.AutoSize = True
-        NombregerenteLabel.Location = New System.Drawing.Point(28, 120)
+        NombregerenteLabel.Location = New System.Drawing.Point(12, 69)
         NombregerenteLabel.Name = "NombregerenteLabel"
         NombregerenteLabel.Size = New System.Drawing.Size(109, 17)
         NombregerenteLabel.TabIndex = 3
@@ -293,8 +244,8 @@ Partial Class FrmGerente
         '
         'NombregerenteTextBox
         '
-        Me.NombregerenteTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.GERENTEBindingSource1, "nombregerente", True))
-        Me.NombregerenteTextBox.Location = New System.Drawing.Point(143, 117)
+        Me.NombregerenteTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.GERENTEBindingSource, "nombregerente", True))
+        Me.NombregerenteTextBox.Location = New System.Drawing.Point(127, 66)
         Me.NombregerenteTextBox.Name = "NombregerenteTextBox"
         Me.NombregerenteTextBox.Size = New System.Drawing.Size(100, 22)
         Me.NombregerenteTextBox.TabIndex = 4
@@ -302,7 +253,7 @@ Partial Class FrmGerente
         'AreaGerenteLabel
         '
         AreaGerenteLabel.AutoSize = True
-        AreaGerenteLabel.Location = New System.Drawing.Point(28, 148)
+        AreaGerenteLabel.Location = New System.Drawing.Point(12, 97)
         AreaGerenteLabel.Name = "AreaGerenteLabel"
         AreaGerenteLabel.Size = New System.Drawing.Size(97, 17)
         AreaGerenteLabel.TabIndex = 5
@@ -310,8 +261,8 @@ Partial Class FrmGerente
         '
         'AreaGerenteTextBox
         '
-        Me.AreaGerenteTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.GERENTEBindingSource1, "areaGerente", True))
-        Me.AreaGerenteTextBox.Location = New System.Drawing.Point(143, 145)
+        Me.AreaGerenteTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.GERENTEBindingSource, "areaGerente", True))
+        Me.AreaGerenteTextBox.Location = New System.Drawing.Point(127, 94)
         Me.AreaGerenteTextBox.Name = "AreaGerenteTextBox"
         Me.AreaGerenteTextBox.Size = New System.Drawing.Size(100, 22)
         Me.AreaGerenteTextBox.TabIndex = 6
@@ -322,11 +273,11 @@ Partial Class FrmGerente
         Me.GERENTEDataGridView.BackgroundColor = System.Drawing.SystemColors.ActiveCaption
         Me.GERENTEDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.GERENTEDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3})
-        Me.GERENTEDataGridView.DataSource = Me.GERENTEBindingSource1
-        Me.GERENTEDataGridView.Location = New System.Drawing.Point(296, 60)
+        Me.GERENTEDataGridView.DataSource = Me.GERENTEBindingSource
+        Me.GERENTEDataGridView.Location = New System.Drawing.Point(301, 38)
         Me.GERENTEDataGridView.Name = "GERENTEDataGridView"
         Me.GERENTEDataGridView.RowTemplate.Height = 24
-        Me.GERENTEDataGridView.Size = New System.Drawing.Size(462, 221)
+        Me.GERENTEDataGridView.Size = New System.Drawing.Size(641, 241)
         Me.GERENTEDataGridView.TabIndex = 7
         '
         'DataGridViewTextBoxColumn1
@@ -354,7 +305,7 @@ Partial Class FrmGerente
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1385, 524)
+        Me.ClientSize = New System.Drawing.Size(1015, 392)
         Me.Controls.Add(Me.GERENTEDataGridView)
         Me.Controls.Add(IdGerenteLabel)
         Me.Controls.Add(Me.IdGerenteTextBox)
@@ -365,23 +316,21 @@ Partial Class FrmGerente
         Me.Controls.Add(Me.GERENTEBindingNavigator)
         Me.Name = "FrmGerente"
         Me.Text = "Gerente"
-        CType(Me.DB_RRHHDataSet, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.BD_RecursosHumanosDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.GERENTEBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.GERENTEBindingNavigator, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GERENTEBindingNavigator.ResumeLayout(False)
         Me.GERENTEBindingNavigator.PerformLayout()
-        CType(Me.BD_RecursosHumanosDataSet, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.GERENTEBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.GERENTEDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
 
-    Friend WithEvents DB_RRHHDataSet As DB_RRHHDataSet
+    Friend WithEvents BD_RecursosHumanosDataSet As BD_RecursosHumanosDataSet
     Friend WithEvents GERENTEBindingSource As BindingSource
-    Friend WithEvents GERENTETableAdapter As DB_RRHHDataSetTableAdapters.GERENTETableAdapter
-    Friend WithEvents TableAdapterManager As DB_RRHHDataSetTableAdapters.TableAdapterManager
+    Friend WithEvents GERENTETableAdapter As BD_RecursosHumanosDataSetTableAdapters.GERENTETableAdapter
+    Friend WithEvents TableAdapterManager As BD_RecursosHumanosDataSetTableAdapters.TableAdapterManager
     Friend WithEvents GERENTEBindingNavigator As BindingNavigator
     Friend WithEvents BindingNavigatorAddNewItem As ToolStripButton
     Friend WithEvents BindingNavigatorCountItem As ToolStripLabel
@@ -395,10 +344,6 @@ Partial Class FrmGerente
     Friend WithEvents BindingNavigatorMoveLastItem As ToolStripButton
     Friend WithEvents BindingNavigatorSeparator2 As ToolStripSeparator
     Friend WithEvents GERENTEBindingNavigatorSaveItem As ToolStripButton
-    Friend WithEvents BD_RecursosHumanosDataSet As BD_RecursosHumanosDataSet
-    Friend WithEvents GERENTEBindingSource1 As BindingSource
-    Friend WithEvents GERENTETableAdapter1 As BD_RecursosHumanosDataSetTableAdapters.GERENTETableAdapter
-    Friend WithEvents TableAdapterManager1 As BD_RecursosHumanosDataSetTableAdapters.TableAdapterManager
     Friend WithEvents IdGerenteTextBox As TextBox
     Friend WithEvents NombregerenteTextBox As TextBox
     Friend WithEvents AreaGerenteTextBox As TextBox

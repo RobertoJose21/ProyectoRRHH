@@ -38,27 +38,23 @@ Partial Class FrmEmpleado
         Dim IdRegimenSaludLabel As System.Windows.Forms.Label
         Dim IdRegimenPensionarioLabel As System.Windows.Forms.Label
         Dim IdDistritoLabel As System.Windows.Forms.Label
-        Me.DB_RRHHDataSet = New ProyectoRRHH.DB_RRHHDataSet()
+        Me.BD_RecursosHumanosDataSet = New ProyectoRRHH.BD_RecursosHumanosDataSet()
         Me.EMPLEADOBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.EMPLEADOTableAdapter = New ProyectoRRHH.DB_RRHHDataSetTableAdapters.EMPLEADOTableAdapter()
-        Me.TableAdapterManager = New ProyectoRRHH.DB_RRHHDataSetTableAdapters.TableAdapterManager()
+        Me.EMPLEADOTableAdapter = New ProyectoRRHH.BD_RecursosHumanosDataSetTableAdapters.EMPLEADOTableAdapter()
+        Me.TableAdapterManager = New ProyectoRRHH.BD_RecursosHumanosDataSetTableAdapters.TableAdapterManager()
         Me.EMPLEADOBindingNavigator = New System.Windows.Forms.BindingNavigator(Me.components)
-        Me.BindingNavigatorAddNewItem = New System.Windows.Forms.ToolStripButton()
-        Me.BindingNavigatorCountItem = New System.Windows.Forms.ToolStripLabel()
-        Me.BindingNavigatorDeleteItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorMoveFirstItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorMovePreviousItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorSeparator = New System.Windows.Forms.ToolStripSeparator()
         Me.BindingNavigatorPositionItem = New System.Windows.Forms.ToolStripTextBox()
+        Me.BindingNavigatorCountItem = New System.Windows.Forms.ToolStripLabel()
         Me.BindingNavigatorSeparator1 = New System.Windows.Forms.ToolStripSeparator()
         Me.BindingNavigatorMoveNextItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorMoveLastItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorSeparator2 = New System.Windows.Forms.ToolStripSeparator()
+        Me.BindingNavigatorAddNewItem = New System.Windows.Forms.ToolStripButton()
+        Me.BindingNavigatorDeleteItem = New System.Windows.Forms.ToolStripButton()
         Me.EMPLEADOBindingNavigatorSaveItem = New System.Windows.Forms.ToolStripButton()
-        Me.BD_RecursosHumanosDataSet = New ProyectoRRHH.BD_RecursosHumanosDataSet()
-        Me.EMPLEADOBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
-        Me.EMPLEADOTableAdapter1 = New ProyectoRRHH.BD_RecursosHumanosDataSetTableAdapters.EMPLEADOTableAdapter()
-        Me.TableAdapterManager1 = New ProyectoRRHH.BD_RecursosHumanosDataSetTableAdapters.TableAdapterManager()
         Me.IdEmpleadoTextBox = New System.Windows.Forms.TextBox()
         Me.IdNivelEducacionTextBox = New System.Windows.Forms.TextBox()
         Me.IdDatoTributarioTextBox = New System.Windows.Forms.TextBox()
@@ -102,24 +98,22 @@ Partial Class FrmEmpleado
         IdRegimenSaludLabel = New System.Windows.Forms.Label()
         IdRegimenPensionarioLabel = New System.Windows.Forms.Label()
         IdDistritoLabel = New System.Windows.Forms.Label()
-        CType(Me.DB_RRHHDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.BD_RecursosHumanosDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.EMPLEADOBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.EMPLEADOBindingNavigator, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.EMPLEADOBindingNavigator.SuspendLayout()
-        CType(Me.BD_RecursosHumanosDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.EMPLEADOBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.EMPLEADODataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'DB_RRHHDataSet
+        'BD_RecursosHumanosDataSet
         '
-        Me.DB_RRHHDataSet.DataSetName = "DB_RRHHDataSet"
-        Me.DB_RRHHDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        Me.BD_RecursosHumanosDataSet.DataSetName = "BD_RecursosHumanosDataSet"
+        Me.BD_RecursosHumanosDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'EMPLEADOBindingSource
         '
         Me.EMPLEADOBindingSource.DataMember = "EMPLEADO"
-        Me.EMPLEADOBindingSource.DataSource = Me.DB_RRHHDataSet
+        Me.EMPLEADOBindingSource.DataSource = Me.BD_RecursosHumanosDataSet
         '
         'EMPLEADOTableAdapter
         '
@@ -150,7 +144,7 @@ Partial Class FrmEmpleado
         Me.TableAdapterManager.TIPO_ASISTENCIATableAdapter = Nothing
         Me.TableAdapterManager.TIPO_CONTRATOTableAdapter = Nothing
         Me.TableAdapterManager.TIPO_TRABAJADORTableAdapter = Nothing
-        Me.TableAdapterManager.UpdateOrder = ProyectoRRHH.DB_RRHHDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
+        Me.TableAdapterManager.UpdateOrder = ProyectoRRHH.BD_RecursosHumanosDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
         Me.TableAdapterManager.VACACIONESTableAdapter = Nothing
         Me.TableAdapterManager.VARIACION_SUELDOTableAdapter = Nothing
         '
@@ -169,34 +163,9 @@ Partial Class FrmEmpleado
         Me.EMPLEADOBindingNavigator.MovePreviousItem = Me.BindingNavigatorMovePreviousItem
         Me.EMPLEADOBindingNavigator.Name = "EMPLEADOBindingNavigator"
         Me.EMPLEADOBindingNavigator.PositionItem = Me.BindingNavigatorPositionItem
-        Me.EMPLEADOBindingNavigator.Size = New System.Drawing.Size(1504, 27)
+        Me.EMPLEADOBindingNavigator.Size = New System.Drawing.Size(1734, 27)
         Me.EMPLEADOBindingNavigator.TabIndex = 0
         Me.EMPLEADOBindingNavigator.Text = "BindingNavigator1"
-        '
-        'BindingNavigatorAddNewItem
-        '
-        Me.BindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorAddNewItem.Image = CType(resources.GetObject("BindingNavigatorAddNewItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorAddNewItem.Name = "BindingNavigatorAddNewItem"
-        Me.BindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorAddNewItem.Size = New System.Drawing.Size(24, 24)
-        Me.BindingNavigatorAddNewItem.Text = "Agregar nuevo"
-        '
-        'BindingNavigatorCountItem
-        '
-        Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
-        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(48, 24)
-        Me.BindingNavigatorCountItem.Text = "de {0}"
-        Me.BindingNavigatorCountItem.ToolTipText = "Número total de elementos"
-        '
-        'BindingNavigatorDeleteItem
-        '
-        Me.BindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorDeleteItem.Image = CType(resources.GetObject("BindingNavigatorDeleteItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorDeleteItem.Name = "BindingNavigatorDeleteItem"
-        Me.BindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorDeleteItem.Size = New System.Drawing.Size(24, 24)
-        Me.BindingNavigatorDeleteItem.Text = "Eliminar"
         '
         'BindingNavigatorMoveFirstItem
         '
@@ -204,7 +173,7 @@ Partial Class FrmEmpleado
         Me.BindingNavigatorMoveFirstItem.Image = CType(resources.GetObject("BindingNavigatorMoveFirstItem.Image"), System.Drawing.Image)
         Me.BindingNavigatorMoveFirstItem.Name = "BindingNavigatorMoveFirstItem"
         Me.BindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorMoveFirstItem.Size = New System.Drawing.Size(24, 24)
+        Me.BindingNavigatorMoveFirstItem.Size = New System.Drawing.Size(24, 22)
         Me.BindingNavigatorMoveFirstItem.Text = "Mover primero"
         '
         'BindingNavigatorMovePreviousItem
@@ -213,13 +182,13 @@ Partial Class FrmEmpleado
         Me.BindingNavigatorMovePreviousItem.Image = CType(resources.GetObject("BindingNavigatorMovePreviousItem.Image"), System.Drawing.Image)
         Me.BindingNavigatorMovePreviousItem.Name = "BindingNavigatorMovePreviousItem"
         Me.BindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorMovePreviousItem.Size = New System.Drawing.Size(24, 24)
+        Me.BindingNavigatorMovePreviousItem.Size = New System.Drawing.Size(24, 22)
         Me.BindingNavigatorMovePreviousItem.Text = "Mover anterior"
         '
         'BindingNavigatorSeparator
         '
         Me.BindingNavigatorSeparator.Name = "BindingNavigatorSeparator"
-        Me.BindingNavigatorSeparator.Size = New System.Drawing.Size(6, 27)
+        Me.BindingNavigatorSeparator.Size = New System.Drawing.Size(6, 25)
         '
         'BindingNavigatorPositionItem
         '
@@ -230,10 +199,17 @@ Partial Class FrmEmpleado
         Me.BindingNavigatorPositionItem.Text = "0"
         Me.BindingNavigatorPositionItem.ToolTipText = "Posición actual"
         '
+        'BindingNavigatorCountItem
+        '
+        Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
+        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(48, 20)
+        Me.BindingNavigatorCountItem.Text = "de {0}"
+        Me.BindingNavigatorCountItem.ToolTipText = "Número total de elementos"
+        '
         'BindingNavigatorSeparator1
         '
-        Me.BindingNavigatorSeparator1.Name = "BindingNavigatorSeparator1"
-        Me.BindingNavigatorSeparator1.Size = New System.Drawing.Size(6, 27)
+        Me.BindingNavigatorSeparator1.Name = "BindingNavigatorSeparator"
+        Me.BindingNavigatorSeparator1.Size = New System.Drawing.Size(6, 6)
         '
         'BindingNavigatorMoveNextItem
         '
@@ -255,64 +231,39 @@ Partial Class FrmEmpleado
         '
         'BindingNavigatorSeparator2
         '
-        Me.BindingNavigatorSeparator2.Name = "BindingNavigatorSeparator2"
-        Me.BindingNavigatorSeparator2.Size = New System.Drawing.Size(6, 27)
+        Me.BindingNavigatorSeparator2.Name = "BindingNavigatorSeparator"
+        Me.BindingNavigatorSeparator2.Size = New System.Drawing.Size(6, 6)
+        '
+        'BindingNavigatorAddNewItem
+        '
+        Me.BindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.BindingNavigatorAddNewItem.Image = CType(resources.GetObject("BindingNavigatorAddNewItem.Image"), System.Drawing.Image)
+        Me.BindingNavigatorAddNewItem.Name = "BindingNavigatorAddNewItem"
+        Me.BindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = True
+        Me.BindingNavigatorAddNewItem.Size = New System.Drawing.Size(24, 24)
+        Me.BindingNavigatorAddNewItem.Text = "Agregar nuevo"
+        '
+        'BindingNavigatorDeleteItem
+        '
+        Me.BindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.BindingNavigatorDeleteItem.Image = CType(resources.GetObject("BindingNavigatorDeleteItem.Image"), System.Drawing.Image)
+        Me.BindingNavigatorDeleteItem.Name = "BindingNavigatorDeleteItem"
+        Me.BindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = True
+        Me.BindingNavigatorDeleteItem.Size = New System.Drawing.Size(24, 24)
+        Me.BindingNavigatorDeleteItem.Text = "Eliminar"
         '
         'EMPLEADOBindingNavigatorSaveItem
         '
         Me.EMPLEADOBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
         Me.EMPLEADOBindingNavigatorSaveItem.Image = CType(resources.GetObject("EMPLEADOBindingNavigatorSaveItem.Image"), System.Drawing.Image)
         Me.EMPLEADOBindingNavigatorSaveItem.Name = "EMPLEADOBindingNavigatorSaveItem"
-        Me.EMPLEADOBindingNavigatorSaveItem.Size = New System.Drawing.Size(24, 24)
+        Me.EMPLEADOBindingNavigatorSaveItem.Size = New System.Drawing.Size(23, 23)
         Me.EMPLEADOBindingNavigatorSaveItem.Text = "Guardar datos"
-        '
-        'BD_RecursosHumanosDataSet
-        '
-        Me.BD_RecursosHumanosDataSet.DataSetName = "BD_RecursosHumanosDataSet"
-        Me.BD_RecursosHumanosDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'EMPLEADOBindingSource1
-        '
-        Me.EMPLEADOBindingSource1.DataMember = "EMPLEADO"
-        Me.EMPLEADOBindingSource1.DataSource = Me.BD_RecursosHumanosDataSet
-        '
-        'EMPLEADOTableAdapter1
-        '
-        Me.EMPLEADOTableAdapter1.ClearBeforeFill = True
-        '
-        'TableAdapterManager1
-        '
-        Me.TableAdapterManager1.AREATableAdapter = Nothing
-        Me.TableAdapterManager1.ASISTENCIATableAdapter = Nothing
-        Me.TableAdapterManager1.BackupDataSetBeforeUpdate = False
-        Me.TableAdapterManager1.BENEFICIO_LABORALTableAdapter = Nothing
-        Me.TableAdapterManager1.BOLETATableAdapter = Nothing
-        Me.TableAdapterManager1.CONTRATOTableAdapter = Nothing
-        Me.TableAdapterManager1.DATOS_TRIBUTARIOSTableAdapter = Nothing
-        Me.TableAdapterManager1.DETALLE_BENEFICIOTableAdapter = Nothing
-        Me.TableAdapterManager1.DISTRITOTableAdapter = Nothing
-        Me.TableAdapterManager1.EMPLEADOTableAdapter = Me.EMPLEADOTableAdapter1
-        Me.TableAdapterManager1.EXPERIENCIA_LABORALTableAdapter = Nothing
-        Me.TableAdapterManager1.GERENTETableAdapter = Nothing
-        Me.TableAdapterManager1.MEMORANDUMSTableAdapter = Nothing
-        Me.TableAdapterManager1.NIVEL_EDUCACIONTableAdapter = Nothing
-        Me.TableAdapterManager1.PAGO_PLANILLATableAdapter = Nothing
-        Me.TableAdapterManager1.PERIODO_LABORALTableAdapter = Nothing
-        Me.TableAdapterManager1.PLANILLATableAdapter = Nothing
-        Me.TableAdapterManager1.PRESTAMO_ADELANTOSTableAdapter = Nothing
-        Me.TableAdapterManager1.REGIMEN_PENSIONARIOTableAdapter = Nothing
-        Me.TableAdapterManager1.REGIMEN_SALUDTableAdapter = Nothing
-        Me.TableAdapterManager1.TIPO_ASISTENCIATableAdapter = Nothing
-        Me.TableAdapterManager1.TIPO_CONTRATOTableAdapter = Nothing
-        Me.TableAdapterManager1.TIPO_TRABAJADORTableAdapter = Nothing
-        Me.TableAdapterManager1.UpdateOrder = ProyectoRRHH.BD_RecursosHumanosDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
-        Me.TableAdapterManager1.VACACIONESTableAdapter = Nothing
-        Me.TableAdapterManager1.VARIACION_SUELDOTableAdapter = Nothing
         '
         'IdEmpleadoLabel
         '
         IdEmpleadoLabel.AutoSize = True
-        IdEmpleadoLabel.Location = New System.Drawing.Point(37, 27)
+        IdEmpleadoLabel.Location = New System.Drawing.Point(12, 39)
         IdEmpleadoLabel.Name = "IdEmpleadoLabel"
         IdEmpleadoLabel.Size = New System.Drawing.Size(90, 17)
         IdEmpleadoLabel.TabIndex = 1
@@ -320,8 +271,8 @@ Partial Class FrmEmpleado
         '
         'IdEmpleadoTextBox
         '
-        Me.IdEmpleadoTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.EMPLEADOBindingSource1, "IdEmpleado", True))
-        Me.IdEmpleadoTextBox.Location = New System.Drawing.Point(205, 24)
+        Me.IdEmpleadoTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.EMPLEADOBindingSource, "IdEmpleado", True))
+        Me.IdEmpleadoTextBox.Location = New System.Drawing.Point(180, 36)
         Me.IdEmpleadoTextBox.Name = "IdEmpleadoTextBox"
         Me.IdEmpleadoTextBox.Size = New System.Drawing.Size(200, 22)
         Me.IdEmpleadoTextBox.TabIndex = 2
@@ -329,7 +280,7 @@ Partial Class FrmEmpleado
         'IdNivelEducacionLabel
         '
         IdNivelEducacionLabel.AutoSize = True
-        IdNivelEducacionLabel.Location = New System.Drawing.Point(37, 55)
+        IdNivelEducacionLabel.Location = New System.Drawing.Point(12, 67)
         IdNivelEducacionLabel.Name = "IdNivelEducacionLabel"
         IdNivelEducacionLabel.Size = New System.Drawing.Size(128, 17)
         IdNivelEducacionLabel.TabIndex = 3
@@ -337,8 +288,8 @@ Partial Class FrmEmpleado
         '
         'IdNivelEducacionTextBox
         '
-        Me.IdNivelEducacionTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.EMPLEADOBindingSource1, "IdNivelEducacion", True))
-        Me.IdNivelEducacionTextBox.Location = New System.Drawing.Point(205, 52)
+        Me.IdNivelEducacionTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.EMPLEADOBindingSource, "IdNivelEducacion", True))
+        Me.IdNivelEducacionTextBox.Location = New System.Drawing.Point(180, 64)
         Me.IdNivelEducacionTextBox.Name = "IdNivelEducacionTextBox"
         Me.IdNivelEducacionTextBox.Size = New System.Drawing.Size(200, 22)
         Me.IdNivelEducacionTextBox.TabIndex = 4
@@ -346,7 +297,7 @@ Partial Class FrmEmpleado
         'IdDatoTributarioLabel
         '
         IdDatoTributarioLabel.AutoSize = True
-        IdDatoTributarioLabel.Location = New System.Drawing.Point(37, 83)
+        IdDatoTributarioLabel.Location = New System.Drawing.Point(12, 95)
         IdDatoTributarioLabel.Name = "IdDatoTributarioLabel"
         IdDatoTributarioLabel.Size = New System.Drawing.Size(122, 17)
         IdDatoTributarioLabel.TabIndex = 5
@@ -354,8 +305,8 @@ Partial Class FrmEmpleado
         '
         'IdDatoTributarioTextBox
         '
-        Me.IdDatoTributarioTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.EMPLEADOBindingSource1, "IdDatoTributario", True))
-        Me.IdDatoTributarioTextBox.Location = New System.Drawing.Point(205, 80)
+        Me.IdDatoTributarioTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.EMPLEADOBindingSource, "IdDatoTributario", True))
+        Me.IdDatoTributarioTextBox.Location = New System.Drawing.Point(180, 92)
         Me.IdDatoTributarioTextBox.Name = "IdDatoTributarioTextBox"
         Me.IdDatoTributarioTextBox.Size = New System.Drawing.Size(200, 22)
         Me.IdDatoTributarioTextBox.TabIndex = 6
@@ -363,7 +314,7 @@ Partial Class FrmEmpleado
         'IdVacacionesLabel
         '
         IdVacacionesLabel.AutoSize = True
-        IdVacacionesLabel.Location = New System.Drawing.Point(37, 111)
+        IdVacacionesLabel.Location = New System.Drawing.Point(12, 123)
         IdVacacionesLabel.Name = "IdVacacionesLabel"
         IdVacacionesLabel.Size = New System.Drawing.Size(100, 17)
         IdVacacionesLabel.TabIndex = 7
@@ -371,8 +322,8 @@ Partial Class FrmEmpleado
         '
         'IdVacacionesTextBox
         '
-        Me.IdVacacionesTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.EMPLEADOBindingSource1, "IdVacaciones", True))
-        Me.IdVacacionesTextBox.Location = New System.Drawing.Point(205, 108)
+        Me.IdVacacionesTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.EMPLEADOBindingSource, "IdVacaciones", True))
+        Me.IdVacacionesTextBox.Location = New System.Drawing.Point(180, 120)
         Me.IdVacacionesTextBox.Name = "IdVacacionesTextBox"
         Me.IdVacacionesTextBox.Size = New System.Drawing.Size(200, 22)
         Me.IdVacacionesTextBox.TabIndex = 8
@@ -380,7 +331,7 @@ Partial Class FrmEmpleado
         'NombresLabel
         '
         NombresLabel.AutoSize = True
-        NombresLabel.Location = New System.Drawing.Point(37, 139)
+        NombresLabel.Location = New System.Drawing.Point(12, 151)
         NombresLabel.Name = "NombresLabel"
         NombresLabel.Size = New System.Drawing.Size(67, 17)
         NombresLabel.TabIndex = 9
@@ -388,8 +339,8 @@ Partial Class FrmEmpleado
         '
         'NombresTextBox
         '
-        Me.NombresTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.EMPLEADOBindingSource1, "nombres", True))
-        Me.NombresTextBox.Location = New System.Drawing.Point(205, 136)
+        Me.NombresTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.EMPLEADOBindingSource, "nombres", True))
+        Me.NombresTextBox.Location = New System.Drawing.Point(180, 148)
         Me.NombresTextBox.Name = "NombresTextBox"
         Me.NombresTextBox.Size = New System.Drawing.Size(200, 22)
         Me.NombresTextBox.TabIndex = 10
@@ -397,7 +348,7 @@ Partial Class FrmEmpleado
         'DNILabel
         '
         DNILabel.AutoSize = True
-        DNILabel.Location = New System.Drawing.Point(551, 29)
+        DNILabel.Location = New System.Drawing.Point(12, 179)
         DNILabel.Name = "DNILabel"
         DNILabel.Size = New System.Drawing.Size(35, 17)
         DNILabel.TabIndex = 11
@@ -405,16 +356,16 @@ Partial Class FrmEmpleado
         '
         'DNITextBox
         '
-        Me.DNITextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.EMPLEADOBindingSource1, "DNI", True))
-        Me.DNITextBox.Location = New System.Drawing.Point(719, 26)
+        Me.DNITextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.EMPLEADOBindingSource, "DNI", True))
+        Me.DNITextBox.Location = New System.Drawing.Point(180, 176)
         Me.DNITextBox.Name = "DNITextBox"
-        Me.DNITextBox.Size = New System.Drawing.Size(276, 22)
+        Me.DNITextBox.Size = New System.Drawing.Size(200, 22)
         Me.DNITextBox.TabIndex = 12
         '
         'ApellidosLabel
         '
         ApellidosLabel.AutoSize = True
-        ApellidosLabel.Location = New System.Drawing.Point(551, 57)
+        ApellidosLabel.Location = New System.Drawing.Point(12, 203)
         ApellidosLabel.Name = "ApellidosLabel"
         ApellidosLabel.Size = New System.Drawing.Size(68, 17)
         ApellidosLabel.TabIndex = 13
@@ -422,16 +373,16 @@ Partial Class FrmEmpleado
         '
         'ApellidosTextBox
         '
-        Me.ApellidosTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.EMPLEADOBindingSource1, "apellidos", True))
-        Me.ApellidosTextBox.Location = New System.Drawing.Point(719, 54)
+        Me.ApellidosTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.EMPLEADOBindingSource, "apellidos", True))
+        Me.ApellidosTextBox.Location = New System.Drawing.Point(180, 206)
         Me.ApellidosTextBox.Name = "ApellidosTextBox"
-        Me.ApellidosTextBox.Size = New System.Drawing.Size(276, 22)
+        Me.ApellidosTextBox.Size = New System.Drawing.Size(200, 22)
         Me.ApellidosTextBox.TabIndex = 14
         '
         'FechaNacimientoLabel
         '
         FechaNacimientoLabel.AutoSize = True
-        FechaNacimientoLabel.Location = New System.Drawing.Point(551, 86)
+        FechaNacimientoLabel.Location = New System.Drawing.Point(483, 42)
         FechaNacimientoLabel.Name = "FechaNacimientoLabel"
         FechaNacimientoLabel.Size = New System.Drawing.Size(121, 17)
         FechaNacimientoLabel.TabIndex = 15
@@ -439,16 +390,16 @@ Partial Class FrmEmpleado
         '
         'FechaNacimientoDateTimePicker
         '
-        Me.FechaNacimientoDateTimePicker.DataBindings.Add(New System.Windows.Forms.Binding("Value", Me.EMPLEADOBindingSource1, "fechaNacimiento", True))
-        Me.FechaNacimientoDateTimePicker.Location = New System.Drawing.Point(719, 82)
+        Me.FechaNacimientoDateTimePicker.DataBindings.Add(New System.Windows.Forms.Binding("Value", Me.EMPLEADOBindingSource, "fechaNacimiento", True))
+        Me.FechaNacimientoDateTimePicker.Location = New System.Drawing.Point(651, 38)
         Me.FechaNacimientoDateTimePicker.Name = "FechaNacimientoDateTimePicker"
-        Me.FechaNacimientoDateTimePicker.Size = New System.Drawing.Size(276, 22)
+        Me.FechaNacimientoDateTimePicker.Size = New System.Drawing.Size(200, 22)
         Me.FechaNacimientoDateTimePicker.TabIndex = 16
         '
         'DireccionLabel
         '
         DireccionLabel.AutoSize = True
-        DireccionLabel.Location = New System.Drawing.Point(551, 113)
+        DireccionLabel.Location = New System.Drawing.Point(483, 69)
         DireccionLabel.Name = "DireccionLabel"
         DireccionLabel.Size = New System.Drawing.Size(69, 17)
         DireccionLabel.TabIndex = 17
@@ -456,16 +407,16 @@ Partial Class FrmEmpleado
         '
         'DireccionTextBox
         '
-        Me.DireccionTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.EMPLEADOBindingSource1, "direccion", True))
-        Me.DireccionTextBox.Location = New System.Drawing.Point(719, 110)
+        Me.DireccionTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.EMPLEADOBindingSource, "direccion", True))
+        Me.DireccionTextBox.Location = New System.Drawing.Point(651, 66)
         Me.DireccionTextBox.Name = "DireccionTextBox"
-        Me.DireccionTextBox.Size = New System.Drawing.Size(276, 22)
+        Me.DireccionTextBox.Size = New System.Drawing.Size(200, 22)
         Me.DireccionTextBox.TabIndex = 18
         '
         'TelefonoLabel
         '
         TelefonoLabel.AutoSize = True
-        TelefonoLabel.Location = New System.Drawing.Point(37, 165)
+        TelefonoLabel.Location = New System.Drawing.Point(483, 97)
         TelefonoLabel.Name = "TelefonoLabel"
         TelefonoLabel.Size = New System.Drawing.Size(63, 17)
         TelefonoLabel.TabIndex = 19
@@ -473,8 +424,8 @@ Partial Class FrmEmpleado
         '
         'TelefonoTextBox
         '
-        Me.TelefonoTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.EMPLEADOBindingSource1, "telefono", True))
-        Me.TelefonoTextBox.Location = New System.Drawing.Point(205, 162)
+        Me.TelefonoTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.EMPLEADOBindingSource, "telefono", True))
+        Me.TelefonoTextBox.Location = New System.Drawing.Point(651, 94)
         Me.TelefonoTextBox.Name = "TelefonoTextBox"
         Me.TelefonoTextBox.Size = New System.Drawing.Size(200, 22)
         Me.TelefonoTextBox.TabIndex = 20
@@ -482,7 +433,7 @@ Partial Class FrmEmpleado
         'CorreoLabel
         '
         CorreoLabel.AutoSize = True
-        CorreoLabel.Location = New System.Drawing.Point(36, 193)
+        CorreoLabel.Location = New System.Drawing.Point(483, 125)
         CorreoLabel.Name = "CorreoLabel"
         CorreoLabel.Size = New System.Drawing.Size(53, 17)
         CorreoLabel.TabIndex = 21
@@ -490,8 +441,8 @@ Partial Class FrmEmpleado
         '
         'CorreoTextBox
         '
-        Me.CorreoTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.EMPLEADOBindingSource1, "correo", True))
-        Me.CorreoTextBox.Location = New System.Drawing.Point(204, 190)
+        Me.CorreoTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.EMPLEADOBindingSource, "correo", True))
+        Me.CorreoTextBox.Location = New System.Drawing.Point(651, 122)
         Me.CorreoTextBox.Name = "CorreoTextBox"
         Me.CorreoTextBox.Size = New System.Drawing.Size(200, 22)
         Me.CorreoTextBox.TabIndex = 22
@@ -499,7 +450,7 @@ Partial Class FrmEmpleado
         'IdRegimenSaludLabel
         '
         IdRegimenSaludLabel.AutoSize = True
-        IdRegimenSaludLabel.Location = New System.Drawing.Point(36, 221)
+        IdRegimenSaludLabel.Location = New System.Drawing.Point(483, 153)
         IdRegimenSaludLabel.Name = "IdRegimenSaludLabel"
         IdRegimenSaludLabel.Size = New System.Drawing.Size(123, 17)
         IdRegimenSaludLabel.TabIndex = 23
@@ -507,8 +458,8 @@ Partial Class FrmEmpleado
         '
         'IdRegimenSaludTextBox
         '
-        Me.IdRegimenSaludTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.EMPLEADOBindingSource1, "IdRegimenSalud", True))
-        Me.IdRegimenSaludTextBox.Location = New System.Drawing.Point(204, 218)
+        Me.IdRegimenSaludTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.EMPLEADOBindingSource, "IdRegimenSalud", True))
+        Me.IdRegimenSaludTextBox.Location = New System.Drawing.Point(651, 150)
         Me.IdRegimenSaludTextBox.Name = "IdRegimenSaludTextBox"
         Me.IdRegimenSaludTextBox.Size = New System.Drawing.Size(200, 22)
         Me.IdRegimenSaludTextBox.TabIndex = 24
@@ -516,7 +467,7 @@ Partial Class FrmEmpleado
         'IdRegimenPensionarioLabel
         '
         IdRegimenPensionarioLabel.AutoSize = True
-        IdRegimenPensionarioLabel.Location = New System.Drawing.Point(551, 141)
+        IdRegimenPensionarioLabel.Location = New System.Drawing.Point(483, 181)
         IdRegimenPensionarioLabel.Name = "IdRegimenPensionarioLabel"
         IdRegimenPensionarioLabel.Size = New System.Drawing.Size(162, 17)
         IdRegimenPensionarioLabel.TabIndex = 25
@@ -524,16 +475,16 @@ Partial Class FrmEmpleado
         '
         'IdRegimenPensionarioTextBox
         '
-        Me.IdRegimenPensionarioTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.EMPLEADOBindingSource1, "IdRegimenPensionario", True))
-        Me.IdRegimenPensionarioTextBox.Location = New System.Drawing.Point(719, 138)
+        Me.IdRegimenPensionarioTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.EMPLEADOBindingSource, "IdRegimenPensionario", True))
+        Me.IdRegimenPensionarioTextBox.Location = New System.Drawing.Point(651, 178)
         Me.IdRegimenPensionarioTextBox.Name = "IdRegimenPensionarioTextBox"
-        Me.IdRegimenPensionarioTextBox.Size = New System.Drawing.Size(276, 22)
+        Me.IdRegimenPensionarioTextBox.Size = New System.Drawing.Size(200, 22)
         Me.IdRegimenPensionarioTextBox.TabIndex = 26
         '
         'IdDistritoLabel
         '
         IdDistritoLabel.AutoSize = True
-        IdDistritoLabel.Location = New System.Drawing.Point(551, 169)
+        IdDistritoLabel.Location = New System.Drawing.Point(483, 209)
         IdDistritoLabel.Name = "IdDistritoLabel"
         IdDistritoLabel.Size = New System.Drawing.Size(71, 17)
         IdDistritoLabel.TabIndex = 27
@@ -541,10 +492,10 @@ Partial Class FrmEmpleado
         '
         'IdDistritoTextBox
         '
-        Me.IdDistritoTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.EMPLEADOBindingSource1, "IdDistrito", True))
-        Me.IdDistritoTextBox.Location = New System.Drawing.Point(719, 166)
+        Me.IdDistritoTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.EMPLEADOBindingSource, "IdDistrito", True))
+        Me.IdDistritoTextBox.Location = New System.Drawing.Point(651, 206)
         Me.IdDistritoTextBox.Name = "IdDistritoTextBox"
-        Me.IdDistritoTextBox.Size = New System.Drawing.Size(276, 22)
+        Me.IdDistritoTextBox.Size = New System.Drawing.Size(200, 22)
         Me.IdDistritoTextBox.TabIndex = 28
         '
         'EMPLEADODataGridView
@@ -553,11 +504,11 @@ Partial Class FrmEmpleado
         Me.EMPLEADODataGridView.BackgroundColor = System.Drawing.SystemColors.ActiveCaption
         Me.EMPLEADODataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.EMPLEADODataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3, Me.DataGridViewTextBoxColumn4, Me.DataGridViewTextBoxColumn5, Me.DataGridViewTextBoxColumn6, Me.DataGridViewTextBoxColumn7, Me.DataGridViewTextBoxColumn8, Me.DataGridViewTextBoxColumn9, Me.DataGridViewTextBoxColumn10, Me.DataGridViewTextBoxColumn11, Me.DataGridViewTextBoxColumn12, Me.DataGridViewTextBoxColumn13, Me.DataGridViewTextBoxColumn14})
-        Me.EMPLEADODataGridView.DataSource = Me.EMPLEADOBindingSource1
-        Me.EMPLEADODataGridView.Location = New System.Drawing.Point(40, 241)
+        Me.EMPLEADODataGridView.DataSource = Me.EMPLEADOBindingSource
+        Me.EMPLEADODataGridView.Location = New System.Drawing.Point(0, 244)
         Me.EMPLEADODataGridView.Name = "EMPLEADODataGridView"
         Me.EMPLEADODataGridView.RowTemplate.Height = 24
-        Me.EMPLEADODataGridView.Size = New System.Drawing.Size(1452, 225)
+        Me.EMPLEADODataGridView.Size = New System.Drawing.Size(1734, 279)
         Me.EMPLEADODataGridView.TabIndex = 29
         '
         'DataGridViewTextBoxColumn1
@@ -572,12 +523,14 @@ Partial Class FrmEmpleado
         Me.DataGridViewTextBoxColumn2.DataPropertyName = "IdNivelEducacion"
         Me.DataGridViewTextBoxColumn2.HeaderText = "IdNivelEducacion"
         Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
+        Me.DataGridViewTextBoxColumn2.Width = 150
         '
         'DataGridViewTextBoxColumn3
         '
         Me.DataGridViewTextBoxColumn3.DataPropertyName = "IdDatoTributario"
         Me.DataGridViewTextBoxColumn3.HeaderText = "IdDatoTributario"
         Me.DataGridViewTextBoxColumn3.Name = "DataGridViewTextBoxColumn3"
+        Me.DataGridViewTextBoxColumn3.Width = 150
         '
         'DataGridViewTextBoxColumn4
         '
@@ -608,6 +561,7 @@ Partial Class FrmEmpleado
         Me.DataGridViewTextBoxColumn8.DataPropertyName = "fechaNacimiento"
         Me.DataGridViewTextBoxColumn8.HeaderText = "fechaNacimiento"
         Me.DataGridViewTextBoxColumn8.Name = "DataGridViewTextBoxColumn8"
+        Me.DataGridViewTextBoxColumn8.Width = 150
         '
         'DataGridViewTextBoxColumn9
         '
@@ -632,24 +586,27 @@ Partial Class FrmEmpleado
         Me.DataGridViewTextBoxColumn12.DataPropertyName = "IdRegimenSalud"
         Me.DataGridViewTextBoxColumn12.HeaderText = "IdRegimenSalud"
         Me.DataGridViewTextBoxColumn12.Name = "DataGridViewTextBoxColumn12"
+        Me.DataGridViewTextBoxColumn12.Width = 150
         '
         'DataGridViewTextBoxColumn13
         '
         Me.DataGridViewTextBoxColumn13.DataPropertyName = "IdRegimenPensionario"
         Me.DataGridViewTextBoxColumn13.HeaderText = "IdRegimenPensionario"
         Me.DataGridViewTextBoxColumn13.Name = "DataGridViewTextBoxColumn13"
+        Me.DataGridViewTextBoxColumn13.Width = 150
         '
         'DataGridViewTextBoxColumn14
         '
         Me.DataGridViewTextBoxColumn14.DataPropertyName = "IdDistrito"
         Me.DataGridViewTextBoxColumn14.HeaderText = "IdDistrito"
         Me.DataGridViewTextBoxColumn14.Name = "DataGridViewTextBoxColumn14"
+        Me.DataGridViewTextBoxColumn14.Width = 150
         '
         'FrmEmpleado
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1504, 580)
+        Me.ClientSize = New System.Drawing.Size(1734, 544)
         Me.Controls.Add(Me.EMPLEADODataGridView)
         Me.Controls.Add(IdEmpleadoLabel)
         Me.Controls.Add(Me.IdEmpleadoTextBox)
@@ -682,23 +639,21 @@ Partial Class FrmEmpleado
         Me.Controls.Add(Me.EMPLEADOBindingNavigator)
         Me.Name = "FrmEmpleado"
         Me.Text = "Empleado"
-        CType(Me.DB_RRHHDataSet, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.BD_RecursosHumanosDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.EMPLEADOBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.EMPLEADOBindingNavigator, System.ComponentModel.ISupportInitialize).EndInit()
         Me.EMPLEADOBindingNavigator.ResumeLayout(False)
         Me.EMPLEADOBindingNavigator.PerformLayout()
-        CType(Me.BD_RecursosHumanosDataSet, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.EMPLEADOBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.EMPLEADODataGridView, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
 
-    Friend WithEvents DB_RRHHDataSet As DB_RRHHDataSet
+    Friend WithEvents BD_RecursosHumanosDataSet As BD_RecursosHumanosDataSet
     Friend WithEvents EMPLEADOBindingSource As BindingSource
-    Friend WithEvents EMPLEADOTableAdapter As DB_RRHHDataSetTableAdapters.EMPLEADOTableAdapter
-    Friend WithEvents TableAdapterManager As DB_RRHHDataSetTableAdapters.TableAdapterManager
+    Friend WithEvents EMPLEADOTableAdapter As BD_RecursosHumanosDataSetTableAdapters.EMPLEADOTableAdapter
+    Friend WithEvents TableAdapterManager As BD_RecursosHumanosDataSetTableAdapters.TableAdapterManager
     Friend WithEvents EMPLEADOBindingNavigator As BindingNavigator
     Friend WithEvents BindingNavigatorAddNewItem As ToolStripButton
     Friend WithEvents BindingNavigatorCountItem As ToolStripLabel
@@ -712,10 +667,6 @@ Partial Class FrmEmpleado
     Friend WithEvents BindingNavigatorMoveLastItem As ToolStripButton
     Friend WithEvents BindingNavigatorSeparator2 As ToolStripSeparator
     Friend WithEvents EMPLEADOBindingNavigatorSaveItem As ToolStripButton
-    Friend WithEvents BD_RecursosHumanosDataSet As BD_RecursosHumanosDataSet
-    Friend WithEvents EMPLEADOBindingSource1 As BindingSource
-    Friend WithEvents EMPLEADOTableAdapter1 As BD_RecursosHumanosDataSetTableAdapters.EMPLEADOTableAdapter
-    Friend WithEvents TableAdapterManager1 As BD_RecursosHumanosDataSetTableAdapters.TableAdapterManager
     Friend WithEvents IdEmpleadoTextBox As TextBox
     Friend WithEvents IdNivelEducacionTextBox As TextBox
     Friend WithEvents IdDatoTributarioTextBox As TextBox

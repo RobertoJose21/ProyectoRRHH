@@ -22,6 +22,7 @@ Partial Class Form1
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.COLABORADORToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.NIVELDEEDUCACIÓNToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -67,7 +68,13 @@ Partial Class Form1
         Me.HORIZONTALToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.VERTICALToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ORGANIZARTODOToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.BD_RecursosHumanosDataSet = New ProyectoRRHH.BD_RecursosHumanosDataSet()
+        Me.MEMORANDUMSBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.MEMORANDUMSTableAdapter = New ProyectoRRHH.BD_RecursosHumanosDataSetTableAdapters.MEMORANDUMSTableAdapter()
+        Me.TableAdapterManager = New ProyectoRRHH.BD_RecursosHumanosDataSetTableAdapters.TableAdapterManager()
         Me.MenuStrip1.SuspendLayout()
+        CType(Me.BD_RecursosHumanosDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.MEMORANDUMSBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'MenuStrip1
@@ -216,7 +223,7 @@ Partial Class Form1
         'CONTRATOToolStripMenuItem
         '
         Me.CONTRATOToolStripMenuItem.Name = "CONTRATOToolStripMenuItem"
-        Me.CONTRATOToolStripMenuItem.Size = New System.Drawing.Size(181, 26)
+        Me.CONTRATOToolStripMenuItem.Size = New System.Drawing.Size(159, 26)
         Me.CONTRATOToolStripMenuItem.Text = "CONTRATO"
         '
         'MANTENEDORToolStripMenuItem
@@ -358,6 +365,49 @@ Partial Class Form1
         Me.ORGANIZARTODOToolStripMenuItem.Size = New System.Drawing.Size(211, 26)
         Me.ORGANIZARTODOToolStripMenuItem.Text = "ORGANIZAR TODO"
         '
+        'BD_RecursosHumanosDataSet
+        '
+        Me.BD_RecursosHumanosDataSet.DataSetName = "BD_RecursosHumanosDataSet"
+        Me.BD_RecursosHumanosDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'MEMORANDUMSBindingSource
+        '
+        Me.MEMORANDUMSBindingSource.DataMember = "MEMORANDUMS"
+        Me.MEMORANDUMSBindingSource.DataSource = Me.BD_RecursosHumanosDataSet
+        '
+        'MEMORANDUMSTableAdapter
+        '
+        Me.MEMORANDUMSTableAdapter.ClearBeforeFill = True
+        '
+        'TableAdapterManager
+        '
+        Me.TableAdapterManager.AREATableAdapter = Nothing
+        Me.TableAdapterManager.ASISTENCIATableAdapter = Nothing
+        Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
+        Me.TableAdapterManager.BENEFICIO_LABORALTableAdapter = Nothing
+        Me.TableAdapterManager.BOLETATableAdapter = Nothing
+        Me.TableAdapterManager.CONTRATOTableAdapter = Nothing
+        Me.TableAdapterManager.DATOS_TRIBUTARIOSTableAdapter = Nothing
+        Me.TableAdapterManager.DETALLE_BENEFICIOTableAdapter = Nothing
+        Me.TableAdapterManager.DISTRITOTableAdapter = Nothing
+        Me.TableAdapterManager.EMPLEADOTableAdapter = Nothing
+        Me.TableAdapterManager.EXPERIENCIA_LABORALTableAdapter = Nothing
+        Me.TableAdapterManager.GERENTETableAdapter = Nothing
+        Me.TableAdapterManager.MEMORANDUMSTableAdapter = Me.MEMORANDUMSTableAdapter
+        Me.TableAdapterManager.NIVEL_EDUCACIONTableAdapter = Nothing
+        Me.TableAdapterManager.PAGO_PLANILLATableAdapter = Nothing
+        Me.TableAdapterManager.PERIODO_LABORALTableAdapter = Nothing
+        Me.TableAdapterManager.PLANILLATableAdapter = Nothing
+        Me.TableAdapterManager.PRESTAMO_ADELANTOSTableAdapter = Nothing
+        Me.TableAdapterManager.REGIMEN_PENSIONARIOTableAdapter = Nothing
+        Me.TableAdapterManager.REGIMEN_SALUDTableAdapter = Nothing
+        Me.TableAdapterManager.TIPO_ASISTENCIATableAdapter = Nothing
+        Me.TableAdapterManager.TIPO_CONTRATOTableAdapter = Nothing
+        Me.TableAdapterManager.TIPO_TRABAJADORTableAdapter = Nothing
+        Me.TableAdapterManager.UpdateOrder = ProyectoRRHH.BD_RecursosHumanosDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
+        Me.TableAdapterManager.VACACIONESTableAdapter = Nothing
+        Me.TableAdapterManager.VARIACION_SUELDOTableAdapter = Nothing
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -371,6 +421,8 @@ Partial Class Form1
         Me.Text = "SERVICIO DE RECURSOS HUMANOS DE LA EMPRESA -  EMCOSANI"
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()
+        CType(Me.BD_RecursosHumanosDataSet, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.MEMORANDUMSBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -421,4 +473,8 @@ Partial Class Form1
     Friend WithEvents REPORTEDEDISTRITOSXEMPLEADOSToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents REPORTESUELDOSTOTALESToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents REPORTEDEBOLETASToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents BD_RecursosHumanosDataSet As BD_RecursosHumanosDataSet
+    Friend WithEvents MEMORANDUMSBindingSource As BindingSource
+    Friend WithEvents MEMORANDUMSTableAdapter As BD_RecursosHumanosDataSetTableAdapters.MEMORANDUMSTableAdapter
+    Friend WithEvents TableAdapterManager As BD_RecursosHumanosDataSetTableAdapters.TableAdapterManager
 End Class

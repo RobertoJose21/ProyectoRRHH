@@ -23,14 +23,14 @@ Partial Class FrmBeneficioLaboral
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmBeneficioLaboral))
         Dim IdBeneficioLabel As System.Windows.Forms.Label
         Dim TipoBeneficioLabel As System.Windows.Forms.Label
         Dim MontoBeneficioLabel As System.Windows.Forms.Label
-        Me.DB_RRHHDataSet = New ProyectoRRHH.DB_RRHHDataSet()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmBeneficioLaboral))
+        Me.BD_RecursosHumanosDataSet = New ProyectoRRHH.BD_RecursosHumanosDataSet()
         Me.BENEFICIO_LABORALBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.BENEFICIO_LABORALTableAdapter = New ProyectoRRHH.DB_RRHHDataSetTableAdapters.BENEFICIO_LABORALTableAdapter()
-        Me.TableAdapterManager = New ProyectoRRHH.DB_RRHHDataSetTableAdapters.TableAdapterManager()
+        Me.BENEFICIO_LABORALTableAdapter = New ProyectoRRHH.BD_RecursosHumanosDataSetTableAdapters.BENEFICIO_LABORALTableAdapter()
+        Me.TableAdapterManager = New ProyectoRRHH.BD_RecursosHumanosDataSetTableAdapters.TableAdapterManager()
         Me.BENEFICIO_LABORALBindingNavigator = New System.Windows.Forms.BindingNavigator(Me.components)
         Me.BindingNavigatorAddNewItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorCountItem = New System.Windows.Forms.ToolStripLabel()
@@ -44,10 +44,6 @@ Partial Class FrmBeneficioLaboral
         Me.BindingNavigatorMoveLastItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorSeparator2 = New System.Windows.Forms.ToolStripSeparator()
         Me.BENEFICIO_LABORALBindingNavigatorSaveItem = New System.Windows.Forms.ToolStripButton()
-        Me.BD_RecursosHumanosDataSet = New ProyectoRRHH.BD_RecursosHumanosDataSet()
-        Me.BENEFICIO_LABORALBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
-        Me.BENEFICIO_LABORALTableAdapter1 = New ProyectoRRHH.BD_RecursosHumanosDataSetTableAdapters.BENEFICIO_LABORALTableAdapter()
-        Me.TableAdapterManager1 = New ProyectoRRHH.BD_RecursosHumanosDataSetTableAdapters.TableAdapterManager()
         Me.IdBeneficioTextBox = New System.Windows.Forms.TextBox()
         Me.TipoBeneficioTextBox = New System.Windows.Forms.TextBox()
         Me.MontoBeneficioTextBox = New System.Windows.Forms.TextBox()
@@ -58,24 +54,49 @@ Partial Class FrmBeneficioLaboral
         IdBeneficioLabel = New System.Windows.Forms.Label()
         TipoBeneficioLabel = New System.Windows.Forms.Label()
         MontoBeneficioLabel = New System.Windows.Forms.Label()
-        CType(Me.DB_RRHHDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.BD_RecursosHumanosDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BENEFICIO_LABORALBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BENEFICIO_LABORALBindingNavigator, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.BENEFICIO_LABORALBindingNavigator.SuspendLayout()
-        CType(Me.BD_RecursosHumanosDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.BENEFICIO_LABORALBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BENEFICIO_LABORALDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'DB_RRHHDataSet
+        'IdBeneficioLabel
         '
-        Me.DB_RRHHDataSet.DataSetName = "DB_RRHHDataSet"
-        Me.DB_RRHHDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        IdBeneficioLabel.AutoSize = True
+        IdBeneficioLabel.Location = New System.Drawing.Point(12, 45)
+        IdBeneficioLabel.Name = "IdBeneficioLabel"
+        IdBeneficioLabel.Size = New System.Drawing.Size(85, 17)
+        IdBeneficioLabel.TabIndex = 1
+        IdBeneficioLabel.Text = "Id Beneficio:"
+        '
+        'TipoBeneficioLabel
+        '
+        TipoBeneficioLabel.AutoSize = True
+        TipoBeneficioLabel.Location = New System.Drawing.Point(12, 73)
+        TipoBeneficioLabel.Name = "TipoBeneficioLabel"
+        TipoBeneficioLabel.Size = New System.Drawing.Size(97, 17)
+        TipoBeneficioLabel.TabIndex = 3
+        TipoBeneficioLabel.Text = "tipo Beneficio:"
+        '
+        'MontoBeneficioLabel
+        '
+        MontoBeneficioLabel.AutoSize = True
+        MontoBeneficioLabel.Location = New System.Drawing.Point(12, 101)
+        MontoBeneficioLabel.Name = "MontoBeneficioLabel"
+        MontoBeneficioLabel.Size = New System.Drawing.Size(113, 17)
+        MontoBeneficioLabel.TabIndex = 5
+        MontoBeneficioLabel.Text = "monto Beneficio:"
+        '
+        'BD_RecursosHumanosDataSet
+        '
+        Me.BD_RecursosHumanosDataSet.DataSetName = "BD_RecursosHumanosDataSet"
+        Me.BD_RecursosHumanosDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'BENEFICIO_LABORALBindingSource
         '
         Me.BENEFICIO_LABORALBindingSource.DataMember = "BENEFICIO_LABORAL"
-        Me.BENEFICIO_LABORALBindingSource.DataSource = Me.DB_RRHHDataSet
+        Me.BENEFICIO_LABORALBindingSource.DataSource = Me.BD_RecursosHumanosDataSet
         '
         'BENEFICIO_LABORALTableAdapter
         '
@@ -106,7 +127,7 @@ Partial Class FrmBeneficioLaboral
         Me.TableAdapterManager.TIPO_ASISTENCIATableAdapter = Nothing
         Me.TableAdapterManager.TIPO_CONTRATOTableAdapter = Nothing
         Me.TableAdapterManager.TIPO_TRABAJADORTableAdapter = Nothing
-        Me.TableAdapterManager.UpdateOrder = ProyectoRRHH.DB_RRHHDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
+        Me.TableAdapterManager.UpdateOrder = ProyectoRRHH.BD_RecursosHumanosDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
         Me.TableAdapterManager.VACACIONESTableAdapter = Nothing
         Me.TableAdapterManager.VARIACION_SUELDOTableAdapter = Nothing
         '
@@ -125,7 +146,7 @@ Partial Class FrmBeneficioLaboral
         Me.BENEFICIO_LABORALBindingNavigator.MovePreviousItem = Me.BindingNavigatorMovePreviousItem
         Me.BENEFICIO_LABORALBindingNavigator.Name = "BENEFICIO_LABORALBindingNavigator"
         Me.BENEFICIO_LABORALBindingNavigator.PositionItem = Me.BindingNavigatorPositionItem
-        Me.BENEFICIO_LABORALBindingNavigator.Size = New System.Drawing.Size(707, 27)
+        Me.BENEFICIO_LABORALBindingNavigator.Size = New System.Drawing.Size(1075, 27)
         Me.BENEFICIO_LABORALBindingNavigator.TabIndex = 0
         Me.BENEFICIO_LABORALBindingNavigator.Text = "BindingNavigator1"
         '
@@ -222,96 +243,26 @@ Partial Class FrmBeneficioLaboral
         Me.BENEFICIO_LABORALBindingNavigatorSaveItem.Size = New System.Drawing.Size(24, 24)
         Me.BENEFICIO_LABORALBindingNavigatorSaveItem.Text = "Guardar datos"
         '
-        'BD_RecursosHumanosDataSet
-        '
-        Me.BD_RecursosHumanosDataSet.DataSetName = "BD_RecursosHumanosDataSet"
-        Me.BD_RecursosHumanosDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'BENEFICIO_LABORALBindingSource1
-        '
-        Me.BENEFICIO_LABORALBindingSource1.DataMember = "BENEFICIO_LABORAL"
-        Me.BENEFICIO_LABORALBindingSource1.DataSource = Me.BD_RecursosHumanosDataSet
-        '
-        'BENEFICIO_LABORALTableAdapter1
-        '
-        Me.BENEFICIO_LABORALTableAdapter1.ClearBeforeFill = True
-        '
-        'TableAdapterManager1
-        '
-        Me.TableAdapterManager1.AREATableAdapter = Nothing
-        Me.TableAdapterManager1.ASISTENCIATableAdapter = Nothing
-        Me.TableAdapterManager1.BackupDataSetBeforeUpdate = False
-        Me.TableAdapterManager1.BENEFICIO_LABORALTableAdapter = Me.BENEFICIO_LABORALTableAdapter1
-        Me.TableAdapterManager1.BOLETATableAdapter = Nothing
-        Me.TableAdapterManager1.CONTRATOTableAdapter = Nothing
-        Me.TableAdapterManager1.DATOS_TRIBUTARIOSTableAdapter = Nothing
-        Me.TableAdapterManager1.DETALLE_BENEFICIOTableAdapter = Nothing
-        Me.TableAdapterManager1.DISTRITOTableAdapter = Nothing
-        Me.TableAdapterManager1.EMPLEADOTableAdapter = Nothing
-        Me.TableAdapterManager1.EXPERIENCIA_LABORALTableAdapter = Nothing
-        Me.TableAdapterManager1.GERENTETableAdapter = Nothing
-        Me.TableAdapterManager1.MEMORANDUMSTableAdapter = Nothing
-        Me.TableAdapterManager1.NIVEL_EDUCACIONTableAdapter = Nothing
-        Me.TableAdapterManager1.PAGO_PLANILLATableAdapter = Nothing
-        Me.TableAdapterManager1.PERIODO_LABORALTableAdapter = Nothing
-        Me.TableAdapterManager1.PLANILLATableAdapter = Nothing
-        Me.TableAdapterManager1.PRESTAMO_ADELANTOSTableAdapter = Nothing
-        Me.TableAdapterManager1.REGIMEN_PENSIONARIOTableAdapter = Nothing
-        Me.TableAdapterManager1.REGIMEN_SALUDTableAdapter = Nothing
-        Me.TableAdapterManager1.TIPO_ASISTENCIATableAdapter = Nothing
-        Me.TableAdapterManager1.TIPO_CONTRATOTableAdapter = Nothing
-        Me.TableAdapterManager1.TIPO_TRABAJADORTableAdapter = Nothing
-        Me.TableAdapterManager1.UpdateOrder = ProyectoRRHH.BD_RecursosHumanosDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
-        Me.TableAdapterManager1.VACACIONESTableAdapter = Nothing
-        Me.TableAdapterManager1.VARIACION_SUELDOTableAdapter = Nothing
-        '
-        'IdBeneficioLabel
-        '
-        IdBeneficioLabel.AutoSize = True
-        IdBeneficioLabel.Location = New System.Drawing.Point(164, 56)
-        IdBeneficioLabel.Name = "IdBeneficioLabel"
-        IdBeneficioLabel.Size = New System.Drawing.Size(85, 17)
-        IdBeneficioLabel.TabIndex = 1
-        IdBeneficioLabel.Text = "Id Beneficio:"
-        '
         'IdBeneficioTextBox
         '
-        Me.IdBeneficioTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.BENEFICIO_LABORALBindingSource1, "IdBeneficio", True))
-        Me.IdBeneficioTextBox.Location = New System.Drawing.Point(283, 53)
+        Me.IdBeneficioTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.BENEFICIO_LABORALBindingSource, "IdBeneficio", True))
+        Me.IdBeneficioTextBox.Location = New System.Drawing.Point(131, 42)
         Me.IdBeneficioTextBox.Name = "IdBeneficioTextBox"
         Me.IdBeneficioTextBox.Size = New System.Drawing.Size(100, 22)
         Me.IdBeneficioTextBox.TabIndex = 2
         '
-        'TipoBeneficioLabel
-        '
-        TipoBeneficioLabel.AutoSize = True
-        TipoBeneficioLabel.Location = New System.Drawing.Point(164, 84)
-        TipoBeneficioLabel.Name = "TipoBeneficioLabel"
-        TipoBeneficioLabel.Size = New System.Drawing.Size(97, 17)
-        TipoBeneficioLabel.TabIndex = 3
-        TipoBeneficioLabel.Text = "tipo Beneficio:"
-        '
         'TipoBeneficioTextBox
         '
-        Me.TipoBeneficioTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.BENEFICIO_LABORALBindingSource1, "tipoBeneficio", True))
-        Me.TipoBeneficioTextBox.Location = New System.Drawing.Point(283, 81)
+        Me.TipoBeneficioTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.BENEFICIO_LABORALBindingSource, "tipoBeneficio", True))
+        Me.TipoBeneficioTextBox.Location = New System.Drawing.Point(131, 70)
         Me.TipoBeneficioTextBox.Name = "TipoBeneficioTextBox"
         Me.TipoBeneficioTextBox.Size = New System.Drawing.Size(100, 22)
         Me.TipoBeneficioTextBox.TabIndex = 4
         '
-        'MontoBeneficioLabel
-        '
-        MontoBeneficioLabel.AutoSize = True
-        MontoBeneficioLabel.Location = New System.Drawing.Point(164, 112)
-        MontoBeneficioLabel.Name = "MontoBeneficioLabel"
-        MontoBeneficioLabel.Size = New System.Drawing.Size(113, 17)
-        MontoBeneficioLabel.TabIndex = 5
-        MontoBeneficioLabel.Text = "monto Beneficio:"
-        '
         'MontoBeneficioTextBox
         '
-        Me.MontoBeneficioTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.BENEFICIO_LABORALBindingSource1, "montoBeneficio", True))
-        Me.MontoBeneficioTextBox.Location = New System.Drawing.Point(283, 109)
+        Me.MontoBeneficioTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.BENEFICIO_LABORALBindingSource, "montoBeneficio", True))
+        Me.MontoBeneficioTextBox.Location = New System.Drawing.Point(131, 98)
         Me.MontoBeneficioTextBox.Name = "MontoBeneficioTextBox"
         Me.MontoBeneficioTextBox.Size = New System.Drawing.Size(100, 22)
         Me.MontoBeneficioTextBox.TabIndex = 6
@@ -322,11 +273,11 @@ Partial Class FrmBeneficioLaboral
         Me.BENEFICIO_LABORALDataGridView.BackgroundColor = System.Drawing.SystemColors.ActiveCaption
         Me.BENEFICIO_LABORALDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.BENEFICIO_LABORALDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3})
-        Me.BENEFICIO_LABORALDataGridView.DataSource = Me.BENEFICIO_LABORALBindingSource1
-        Me.BENEFICIO_LABORALDataGridView.Location = New System.Drawing.Point(101, 154)
+        Me.BENEFICIO_LABORALDataGridView.DataSource = Me.BENEFICIO_LABORALBindingSource
+        Me.BENEFICIO_LABORALDataGridView.Location = New System.Drawing.Point(274, 42)
         Me.BENEFICIO_LABORALDataGridView.Name = "BENEFICIO_LABORALDataGridView"
         Me.BENEFICIO_LABORALDataGridView.RowTemplate.Height = 24
-        Me.BENEFICIO_LABORALDataGridView.Size = New System.Drawing.Size(427, 235)
+        Me.BENEFICIO_LABORALDataGridView.Size = New System.Drawing.Size(521, 228)
         Me.BENEFICIO_LABORALDataGridView.TabIndex = 7
         '
         'DataGridViewTextBoxColumn1
@@ -341,6 +292,7 @@ Partial Class FrmBeneficioLaboral
         Me.DataGridViewTextBoxColumn2.DataPropertyName = "tipoBeneficio"
         Me.DataGridViewTextBoxColumn2.HeaderText = "tipoBeneficio"
         Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
+        Me.DataGridViewTextBoxColumn2.Width = 150
         '
         'DataGridViewTextBoxColumn3
         '
@@ -353,7 +305,7 @@ Partial Class FrmBeneficioLaboral
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(707, 517)
+        Me.ClientSize = New System.Drawing.Size(1075, 398)
         Me.Controls.Add(Me.BENEFICIO_LABORALDataGridView)
         Me.Controls.Add(IdBeneficioLabel)
         Me.Controls.Add(Me.IdBeneficioTextBox)
@@ -363,24 +315,22 @@ Partial Class FrmBeneficioLaboral
         Me.Controls.Add(Me.MontoBeneficioTextBox)
         Me.Controls.Add(Me.BENEFICIO_LABORALBindingNavigator)
         Me.Name = "FrmBeneficioLaboral"
-        Me.Text = "Beneficio_Laboral"
-        CType(Me.DB_RRHHDataSet, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Text = "BeneficioLaboral"
+        CType(Me.BD_RecursosHumanosDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.BENEFICIO_LABORALBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.BENEFICIO_LABORALBindingNavigator, System.ComponentModel.ISupportInitialize).EndInit()
         Me.BENEFICIO_LABORALBindingNavigator.ResumeLayout(False)
         Me.BENEFICIO_LABORALBindingNavigator.PerformLayout()
-        CType(Me.BD_RecursosHumanosDataSet, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.BENEFICIO_LABORALBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.BENEFICIO_LABORALDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
 
-    Friend WithEvents DB_RRHHDataSet As DB_RRHHDataSet
+    Friend WithEvents BD_RecursosHumanosDataSet As BD_RecursosHumanosDataSet
     Friend WithEvents BENEFICIO_LABORALBindingSource As BindingSource
-    Friend WithEvents BENEFICIO_LABORALTableAdapter As DB_RRHHDataSetTableAdapters.BENEFICIO_LABORALTableAdapter
-    Friend WithEvents TableAdapterManager As DB_RRHHDataSetTableAdapters.TableAdapterManager
+    Friend WithEvents BENEFICIO_LABORALTableAdapter As BD_RecursosHumanosDataSetTableAdapters.BENEFICIO_LABORALTableAdapter
+    Friend WithEvents TableAdapterManager As BD_RecursosHumanosDataSetTableAdapters.TableAdapterManager
     Friend WithEvents BENEFICIO_LABORALBindingNavigator As BindingNavigator
     Friend WithEvents BindingNavigatorAddNewItem As ToolStripButton
     Friend WithEvents BindingNavigatorCountItem As ToolStripLabel
@@ -394,10 +344,6 @@ Partial Class FrmBeneficioLaboral
     Friend WithEvents BindingNavigatorMoveLastItem As ToolStripButton
     Friend WithEvents BindingNavigatorSeparator2 As ToolStripSeparator
     Friend WithEvents BENEFICIO_LABORALBindingNavigatorSaveItem As ToolStripButton
-    Friend WithEvents BD_RecursosHumanosDataSet As BD_RecursosHumanosDataSet
-    Friend WithEvents BENEFICIO_LABORALBindingSource1 As BindingSource
-    Friend WithEvents BENEFICIO_LABORALTableAdapter1 As BD_RecursosHumanosDataSetTableAdapters.BENEFICIO_LABORALTableAdapter
-    Friend WithEvents TableAdapterManager1 As BD_RecursosHumanosDataSetTableAdapters.TableAdapterManager
     Friend WithEvents IdBeneficioTextBox As TextBox
     Friend WithEvents TipoBeneficioTextBox As TextBox
     Friend WithEvents MontoBeneficioTextBox As TextBox

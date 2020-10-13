@@ -1,5 +1,7 @@
 ﻿Public Class Form1
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        'TODO: esta línea de código carga datos en la tabla 'BD_RecursosHumanosDataSet.MEMORANDUMS' Puede moverla o quitarla según sea necesario.
+        Me.MEMORANDUMSTableAdapter.Fill(Me.BD_RecursosHumanosDataSet.MEMORANDUMS)
 
     End Sub
 
@@ -112,7 +114,7 @@
     End Sub
 
     Private Sub MANTENEDORASISTENCIASToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles MANTENEDORASISTENCIASToolStripMenuItem.Click
-        Dim objAsistencia As New FrmAsistencia
+        Dim objAsistencia As New FrmAsistencias
         objAsistencia.MdiParent = Me
         objAsistencia.Show()
     End Sub
@@ -189,4 +191,10 @@
         objReporteBoletas.Show()
     End Sub
 
+    Private Sub MEMORANDUMSBindingNavigatorSaveItem_Click(sender As Object, e As EventArgs) 
+        Me.Validate()
+        Me.MEMORANDUMSBindingSource.EndEdit()
+        Me.TableAdapterManager.UpdateAll(Me.BD_RecursosHumanosDataSet)
+
+    End Sub
 End Class

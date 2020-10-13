@@ -23,13 +23,13 @@ Partial Class FrmArea
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmArea))
         Dim IdAreaLabel As System.Windows.Forms.Label
         Dim AreaLabel As System.Windows.Forms.Label
-        Me.DB_RRHHDataSet = New ProyectoRRHH.DB_RRHHDataSet()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmArea))
+        Me.BD_RecursosHumanosDataSet = New ProyectoRRHH.BD_RecursosHumanosDataSet()
         Me.AREABindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.AREATableAdapter = New ProyectoRRHH.DB_RRHHDataSetTableAdapters.AREATableAdapter()
-        Me.TableAdapterManager = New ProyectoRRHH.DB_RRHHDataSetTableAdapters.TableAdapterManager()
+        Me.AREATableAdapter = New ProyectoRRHH.BD_RecursosHumanosDataSetTableAdapters.AREATableAdapter()
+        Me.TableAdapterManager = New ProyectoRRHH.BD_RecursosHumanosDataSetTableAdapters.TableAdapterManager()
         Me.AREABindingNavigator = New System.Windows.Forms.BindingNavigator(Me.components)
         Me.BindingNavigatorAddNewItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorCountItem = New System.Windows.Forms.ToolStripLabel()
@@ -43,10 +43,6 @@ Partial Class FrmArea
         Me.BindingNavigatorMoveLastItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorSeparator2 = New System.Windows.Forms.ToolStripSeparator()
         Me.AREABindingNavigatorSaveItem = New System.Windows.Forms.ToolStripButton()
-        Me.BD_RecursosHumanosDataSet = New ProyectoRRHH.BD_RecursosHumanosDataSet()
-        Me.AREABindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
-        Me.AREATableAdapter1 = New ProyectoRRHH.BD_RecursosHumanosDataSetTableAdapters.AREATableAdapter()
-        Me.TableAdapterManager1 = New ProyectoRRHH.BD_RecursosHumanosDataSetTableAdapters.TableAdapterManager()
         Me.IdAreaTextBox = New System.Windows.Forms.TextBox()
         Me.AreaTextBox = New System.Windows.Forms.TextBox()
         Me.AREADataGridView = New System.Windows.Forms.DataGridView()
@@ -54,24 +50,40 @@ Partial Class FrmArea
         Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         IdAreaLabel = New System.Windows.Forms.Label()
         AreaLabel = New System.Windows.Forms.Label()
-        CType(Me.DB_RRHHDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.BD_RecursosHumanosDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.AREABindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.AREABindingNavigator, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.AREABindingNavigator.SuspendLayout()
-        CType(Me.BD_RecursosHumanosDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.AREABindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.AREADataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'DB_RRHHDataSet
+        'IdAreaLabel
         '
-        Me.DB_RRHHDataSet.DataSetName = "DB_RRHHDataSet"
-        Me.DB_RRHHDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        IdAreaLabel.AutoSize = True
+        IdAreaLabel.Location = New System.Drawing.Point(23, 46)
+        IdAreaLabel.Name = "IdAreaLabel"
+        IdAreaLabel.Size = New System.Drawing.Size(57, 17)
+        IdAreaLabel.TabIndex = 1
+        IdAreaLabel.Text = "Id Area:"
+        '
+        'AreaLabel
+        '
+        AreaLabel.AutoSize = True
+        AreaLabel.Location = New System.Drawing.Point(23, 74)
+        AreaLabel.Name = "AreaLabel"
+        AreaLabel.Size = New System.Drawing.Size(41, 17)
+        AreaLabel.TabIndex = 3
+        AreaLabel.Text = "area:"
+        '
+        'BD_RecursosHumanosDataSet
+        '
+        Me.BD_RecursosHumanosDataSet.DataSetName = "BD_RecursosHumanosDataSet"
+        Me.BD_RecursosHumanosDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'AREABindingSource
         '
         Me.AREABindingSource.DataMember = "AREA"
-        Me.AREABindingSource.DataSource = Me.DB_RRHHDataSet
+        Me.AREABindingSource.DataSource = Me.BD_RecursosHumanosDataSet
         '
         'AREATableAdapter
         '
@@ -102,7 +114,7 @@ Partial Class FrmArea
         Me.TableAdapterManager.TIPO_ASISTENCIATableAdapter = Nothing
         Me.TableAdapterManager.TIPO_CONTRATOTableAdapter = Nothing
         Me.TableAdapterManager.TIPO_TRABAJADORTableAdapter = Nothing
-        Me.TableAdapterManager.UpdateOrder = ProyectoRRHH.DB_RRHHDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
+        Me.TableAdapterManager.UpdateOrder = ProyectoRRHH.BD_RecursosHumanosDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
         Me.TableAdapterManager.VACACIONESTableAdapter = Nothing
         Me.TableAdapterManager.VARIACION_SUELDOTableAdapter = Nothing
         '
@@ -121,7 +133,7 @@ Partial Class FrmArea
         Me.AREABindingNavigator.MovePreviousItem = Me.BindingNavigatorMovePreviousItem
         Me.AREABindingNavigator.Name = "AREABindingNavigator"
         Me.AREABindingNavigator.PositionItem = Me.BindingNavigatorPositionItem
-        Me.AREABindingNavigator.Size = New System.Drawing.Size(714, 27)
+        Me.AREABindingNavigator.Size = New System.Drawing.Size(717, 27)
         Me.AREABindingNavigator.TabIndex = 0
         Me.AREABindingNavigator.Text = "BindingNavigator1"
         '
@@ -178,7 +190,7 @@ Partial Class FrmArea
         Me.BindingNavigatorPositionItem.AccessibleName = "Posición"
         Me.BindingNavigatorPositionItem.AutoSize = False
         Me.BindingNavigatorPositionItem.Name = "BindingNavigatorPositionItem"
-        Me.BindingNavigatorPositionItem.Size = New System.Drawing.Size(65, 27)
+        Me.BindingNavigatorPositionItem.Size = New System.Drawing.Size(50, 27)
         Me.BindingNavigatorPositionItem.Text = "0"
         Me.BindingNavigatorPositionItem.ToolTipText = "Posición actual"
         '
@@ -218,79 +230,18 @@ Partial Class FrmArea
         Me.AREABindingNavigatorSaveItem.Size = New System.Drawing.Size(24, 24)
         Me.AREABindingNavigatorSaveItem.Text = "Guardar datos"
         '
-        'BD_RecursosHumanosDataSet
-        '
-        Me.BD_RecursosHumanosDataSet.DataSetName = "BD_RecursosHumanosDataSet"
-        Me.BD_RecursosHumanosDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'AREABindingSource1
-        '
-        Me.AREABindingSource1.DataMember = "AREA"
-        Me.AREABindingSource1.DataSource = Me.BD_RecursosHumanosDataSet
-        '
-        'AREATableAdapter1
-        '
-        Me.AREATableAdapter1.ClearBeforeFill = True
-        '
-        'TableAdapterManager1
-        '
-        Me.TableAdapterManager1.AREATableAdapter = Me.AREATableAdapter1
-        Me.TableAdapterManager1.ASISTENCIATableAdapter = Nothing
-        Me.TableAdapterManager1.BackupDataSetBeforeUpdate = False
-        Me.TableAdapterManager1.BENEFICIO_LABORALTableAdapter = Nothing
-        Me.TableAdapterManager1.BOLETATableAdapter = Nothing
-        Me.TableAdapterManager1.CONTRATOTableAdapter = Nothing
-        Me.TableAdapterManager1.DATOS_TRIBUTARIOSTableAdapter = Nothing
-        Me.TableAdapterManager1.DETALLE_BENEFICIOTableAdapter = Nothing
-        Me.TableAdapterManager1.DISTRITOTableAdapter = Nothing
-        Me.TableAdapterManager1.EMPLEADOTableAdapter = Nothing
-        Me.TableAdapterManager1.EXPERIENCIA_LABORALTableAdapter = Nothing
-        Me.TableAdapterManager1.GERENTETableAdapter = Nothing
-        Me.TableAdapterManager1.MEMORANDUMSTableAdapter = Nothing
-        Me.TableAdapterManager1.NIVEL_EDUCACIONTableAdapter = Nothing
-        Me.TableAdapterManager1.PAGO_PLANILLATableAdapter = Nothing
-        Me.TableAdapterManager1.PERIODO_LABORALTableAdapter = Nothing
-        Me.TableAdapterManager1.PLANILLATableAdapter = Nothing
-        Me.TableAdapterManager1.PRESTAMO_ADELANTOSTableAdapter = Nothing
-        Me.TableAdapterManager1.REGIMEN_PENSIONARIOTableAdapter = Nothing
-        Me.TableAdapterManager1.REGIMEN_SALUDTableAdapter = Nothing
-        Me.TableAdapterManager1.TIPO_ASISTENCIATableAdapter = Nothing
-        Me.TableAdapterManager1.TIPO_CONTRATOTableAdapter = Nothing
-        Me.TableAdapterManager1.TIPO_TRABAJADORTableAdapter = Nothing
-        Me.TableAdapterManager1.UpdateOrder = ProyectoRRHH.BD_RecursosHumanosDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
-        Me.TableAdapterManager1.VACACIONESTableAdapter = Nothing
-        Me.TableAdapterManager1.VARIACION_SUELDOTableAdapter = Nothing
-        '
-        'IdAreaLabel
-        '
-        IdAreaLabel.AutoSize = True
-        IdAreaLabel.Location = New System.Drawing.Point(188, 52)
-        IdAreaLabel.Name = "IdAreaLabel"
-        IdAreaLabel.Size = New System.Drawing.Size(57, 17)
-        IdAreaLabel.TabIndex = 1
-        IdAreaLabel.Text = "Id Area:"
-        '
         'IdAreaTextBox
         '
-        Me.IdAreaTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.AREABindingSource1, "IdArea", True))
-        Me.IdAreaTextBox.Location = New System.Drawing.Point(251, 49)
+        Me.IdAreaTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.AREABindingSource, "IdArea", True))
+        Me.IdAreaTextBox.Location = New System.Drawing.Point(86, 43)
         Me.IdAreaTextBox.Name = "IdAreaTextBox"
         Me.IdAreaTextBox.Size = New System.Drawing.Size(100, 22)
         Me.IdAreaTextBox.TabIndex = 2
         '
-        'AreaLabel
-        '
-        AreaLabel.AutoSize = True
-        AreaLabel.Location = New System.Drawing.Point(188, 80)
-        AreaLabel.Name = "AreaLabel"
-        AreaLabel.Size = New System.Drawing.Size(41, 17)
-        AreaLabel.TabIndex = 3
-        AreaLabel.Text = "area:"
-        '
         'AreaTextBox
         '
-        Me.AreaTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.AREABindingSource1, "area", True))
-        Me.AreaTextBox.Location = New System.Drawing.Point(251, 77)
+        Me.AreaTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.AREABindingSource, "area", True))
+        Me.AreaTextBox.Location = New System.Drawing.Point(86, 71)
         Me.AreaTextBox.Name = "AreaTextBox"
         Me.AreaTextBox.Size = New System.Drawing.Size(100, 22)
         Me.AreaTextBox.TabIndex = 4
@@ -301,11 +252,11 @@ Partial Class FrmArea
         Me.AREADataGridView.BackgroundColor = System.Drawing.SystemColors.ActiveCaption
         Me.AREADataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.AREADataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2})
-        Me.AREADataGridView.DataSource = Me.AREABindingSource1
-        Me.AREADataGridView.Location = New System.Drawing.Point(144, 122)
+        Me.AREADataGridView.DataSource = Me.AREABindingSource
+        Me.AREADataGridView.Location = New System.Drawing.Point(210, 43)
         Me.AREADataGridView.Name = "AREADataGridView"
         Me.AREADataGridView.RowTemplate.Height = 24
-        Me.AREADataGridView.Size = New System.Drawing.Size(300, 220)
+        Me.AREADataGridView.Size = New System.Drawing.Size(314, 216)
         Me.AREADataGridView.TabIndex = 5
         '
         'DataGridViewTextBoxColumn1
@@ -314,45 +265,42 @@ Partial Class FrmArea
         Me.DataGridViewTextBoxColumn1.HeaderText = "IdArea"
         Me.DataGridViewTextBoxColumn1.Name = "DataGridViewTextBoxColumn1"
         Me.DataGridViewTextBoxColumn1.ReadOnly = True
+        Me.DataGridViewTextBoxColumn1.Width = 150
         '
         'DataGridViewTextBoxColumn2
         '
         Me.DataGridViewTextBoxColumn2.DataPropertyName = "area"
         Me.DataGridViewTextBoxColumn2.HeaderText = "area"
         Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
-        Me.DataGridViewTextBoxColumn2.Width = 150
         '
         'FrmArea
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(714, 410)
+        Me.ClientSize = New System.Drawing.Size(717, 379)
         Me.Controls.Add(Me.AREADataGridView)
         Me.Controls.Add(IdAreaLabel)
         Me.Controls.Add(Me.IdAreaTextBox)
         Me.Controls.Add(AreaLabel)
         Me.Controls.Add(Me.AreaTextBox)
         Me.Controls.Add(Me.AREABindingNavigator)
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Name = "FrmArea"
-        Me.Text = "FrmArea"
-        CType(Me.DB_RRHHDataSet, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Text = "Area"
+        CType(Me.BD_RecursosHumanosDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.AREABindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.AREABindingNavigator, System.ComponentModel.ISupportInitialize).EndInit()
         Me.AREABindingNavigator.ResumeLayout(False)
         Me.AREABindingNavigator.PerformLayout()
-        CType(Me.BD_RecursosHumanosDataSet, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.AREABindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.AREADataGridView, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
 
-    Friend WithEvents DB_RRHHDataSet As DB_RRHHDataSet
+    Friend WithEvents BD_RecursosHumanosDataSet As BD_RecursosHumanosDataSet
     Friend WithEvents AREABindingSource As BindingSource
-    Friend WithEvents AREATableAdapter As DB_RRHHDataSetTableAdapters.AREATableAdapter
-    Friend WithEvents TableAdapterManager As DB_RRHHDataSetTableAdapters.TableAdapterManager
+    Friend WithEvents AREATableAdapter As BD_RecursosHumanosDataSetTableAdapters.AREATableAdapter
+    Friend WithEvents TableAdapterManager As BD_RecursosHumanosDataSetTableAdapters.TableAdapterManager
     Friend WithEvents AREABindingNavigator As BindingNavigator
     Friend WithEvents BindingNavigatorAddNewItem As ToolStripButton
     Friend WithEvents BindingNavigatorCountItem As ToolStripLabel
@@ -366,10 +314,6 @@ Partial Class FrmArea
     Friend WithEvents BindingNavigatorMoveLastItem As ToolStripButton
     Friend WithEvents BindingNavigatorSeparator2 As ToolStripSeparator
     Friend WithEvents AREABindingNavigatorSaveItem As ToolStripButton
-    Friend WithEvents BD_RecursosHumanosDataSet As BD_RecursosHumanosDataSet
-    Friend WithEvents AREABindingSource1 As BindingSource
-    Friend WithEvents AREATableAdapter1 As BD_RecursosHumanosDataSetTableAdapters.AREATableAdapter
-    Friend WithEvents TableAdapterManager1 As BD_RecursosHumanosDataSetTableAdapters.TableAdapterManager
     Friend WithEvents IdAreaTextBox As TextBox
     Friend WithEvents AreaTextBox As TextBox
     Friend WithEvents AREADataGridView As DataGridView
