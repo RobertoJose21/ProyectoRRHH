@@ -31,18 +31,22 @@ Partial Class FrmDistrito
         Me.DISTRITOTableAdapter = New ProyectoRRHH.DB_RRHHDataSetTableAdapters.DISTRITOTableAdapter()
         Me.TableAdapterManager = New ProyectoRRHH.DB_RRHHDataSetTableAdapters.TableAdapterManager()
         Me.DISTRITOBindingNavigator = New System.Windows.Forms.BindingNavigator(Me.components)
+        Me.BindingNavigatorAddNewItem = New System.Windows.Forms.ToolStripButton()
+        Me.BindingNavigatorCountItem = New System.Windows.Forms.ToolStripLabel()
+        Me.BindingNavigatorDeleteItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorMoveFirstItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorMovePreviousItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorSeparator = New System.Windows.Forms.ToolStripSeparator()
         Me.BindingNavigatorPositionItem = New System.Windows.Forms.ToolStripTextBox()
-        Me.BindingNavigatorCountItem = New System.Windows.Forms.ToolStripLabel()
         Me.BindingNavigatorSeparator1 = New System.Windows.Forms.ToolStripSeparator()
         Me.BindingNavigatorMoveNextItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorMoveLastItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorSeparator2 = New System.Windows.Forms.ToolStripSeparator()
-        Me.BindingNavigatorAddNewItem = New System.Windows.Forms.ToolStripButton()
-        Me.BindingNavigatorDeleteItem = New System.Windows.Forms.ToolStripButton()
         Me.DISTRITOBindingNavigatorSaveItem = New System.Windows.Forms.ToolStripButton()
+        Me.BD_RecursosHumanosDataSet = New ProyectoRRHH.BD_RecursosHumanosDataSet()
+        Me.DISTRITOBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
+        Me.DISTRITOTableAdapter1 = New ProyectoRRHH.BD_RecursosHumanosDataSetTableAdapters.DISTRITOTableAdapter()
+        Me.TableAdapterManager1 = New ProyectoRRHH.BD_RecursosHumanosDataSetTableAdapters.TableAdapterManager()
         Me.IdDistritoTextBox = New System.Windows.Forms.TextBox()
         Me.NombreDistritoTextBox = New System.Windows.Forms.TextBox()
         Me.DISTRITODataGridView = New System.Windows.Forms.DataGridView()
@@ -54,6 +58,8 @@ Partial Class FrmDistrito
         CType(Me.DISTRITOBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DISTRITOBindingNavigator, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.DISTRITOBindingNavigator.SuspendLayout()
+        CType(Me.BD_RecursosHumanosDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DISTRITOBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DISTRITODataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -119,13 +125,38 @@ Partial Class FrmDistrito
         Me.DISTRITOBindingNavigator.TabIndex = 0
         Me.DISTRITOBindingNavigator.Text = "BindingNavigator1"
         '
+        'BindingNavigatorAddNewItem
+        '
+        Me.BindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.BindingNavigatorAddNewItem.Image = CType(resources.GetObject("BindingNavigatorAddNewItem.Image"), System.Drawing.Image)
+        Me.BindingNavigatorAddNewItem.Name = "BindingNavigatorAddNewItem"
+        Me.BindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = True
+        Me.BindingNavigatorAddNewItem.Size = New System.Drawing.Size(24, 24)
+        Me.BindingNavigatorAddNewItem.Text = "Agregar nuevo"
+        '
+        'BindingNavigatorCountItem
+        '
+        Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
+        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(48, 24)
+        Me.BindingNavigatorCountItem.Text = "de {0}"
+        Me.BindingNavigatorCountItem.ToolTipText = "Número total de elementos"
+        '
+        'BindingNavigatorDeleteItem
+        '
+        Me.BindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.BindingNavigatorDeleteItem.Image = CType(resources.GetObject("BindingNavigatorDeleteItem.Image"), System.Drawing.Image)
+        Me.BindingNavigatorDeleteItem.Name = "BindingNavigatorDeleteItem"
+        Me.BindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = True
+        Me.BindingNavigatorDeleteItem.Size = New System.Drawing.Size(24, 24)
+        Me.BindingNavigatorDeleteItem.Text = "Eliminar"
+        '
         'BindingNavigatorMoveFirstItem
         '
         Me.BindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
         Me.BindingNavigatorMoveFirstItem.Image = CType(resources.GetObject("BindingNavigatorMoveFirstItem.Image"), System.Drawing.Image)
         Me.BindingNavigatorMoveFirstItem.Name = "BindingNavigatorMoveFirstItem"
         Me.BindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorMoveFirstItem.Size = New System.Drawing.Size(24, 22)
+        Me.BindingNavigatorMoveFirstItem.Size = New System.Drawing.Size(24, 24)
         Me.BindingNavigatorMoveFirstItem.Text = "Mover primero"
         '
         'BindingNavigatorMovePreviousItem
@@ -134,13 +165,13 @@ Partial Class FrmDistrito
         Me.BindingNavigatorMovePreviousItem.Image = CType(resources.GetObject("BindingNavigatorMovePreviousItem.Image"), System.Drawing.Image)
         Me.BindingNavigatorMovePreviousItem.Name = "BindingNavigatorMovePreviousItem"
         Me.BindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorMovePreviousItem.Size = New System.Drawing.Size(24, 22)
+        Me.BindingNavigatorMovePreviousItem.Size = New System.Drawing.Size(24, 24)
         Me.BindingNavigatorMovePreviousItem.Text = "Mover anterior"
         '
         'BindingNavigatorSeparator
         '
         Me.BindingNavigatorSeparator.Name = "BindingNavigatorSeparator"
-        Me.BindingNavigatorSeparator.Size = New System.Drawing.Size(6, 25)
+        Me.BindingNavigatorSeparator.Size = New System.Drawing.Size(6, 27)
         '
         'BindingNavigatorPositionItem
         '
@@ -151,17 +182,10 @@ Partial Class FrmDistrito
         Me.BindingNavigatorPositionItem.Text = "0"
         Me.BindingNavigatorPositionItem.ToolTipText = "Posición actual"
         '
-        'BindingNavigatorCountItem
-        '
-        Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
-        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(48, 20)
-        Me.BindingNavigatorCountItem.Text = "de {0}"
-        Me.BindingNavigatorCountItem.ToolTipText = "Número total de elementos"
-        '
         'BindingNavigatorSeparator1
         '
-        Me.BindingNavigatorSeparator1.Name = "BindingNavigatorSeparator"
-        Me.BindingNavigatorSeparator1.Size = New System.Drawing.Size(6, 6)
+        Me.BindingNavigatorSeparator1.Name = "BindingNavigatorSeparator1"
+        Me.BindingNavigatorSeparator1.Size = New System.Drawing.Size(6, 27)
         '
         'BindingNavigatorMoveNextItem
         '
@@ -183,39 +207,64 @@ Partial Class FrmDistrito
         '
         'BindingNavigatorSeparator2
         '
-        Me.BindingNavigatorSeparator2.Name = "BindingNavigatorSeparator"
-        Me.BindingNavigatorSeparator2.Size = New System.Drawing.Size(6, 6)
-        '
-        'BindingNavigatorAddNewItem
-        '
-        Me.BindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorAddNewItem.Image = CType(resources.GetObject("BindingNavigatorAddNewItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorAddNewItem.Name = "BindingNavigatorAddNewItem"
-        Me.BindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorAddNewItem.Size = New System.Drawing.Size(24, 24)
-        Me.BindingNavigatorAddNewItem.Text = "Agregar nuevo"
-        '
-        'BindingNavigatorDeleteItem
-        '
-        Me.BindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorDeleteItem.Image = CType(resources.GetObject("BindingNavigatorDeleteItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorDeleteItem.Name = "BindingNavigatorDeleteItem"
-        Me.BindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorDeleteItem.Size = New System.Drawing.Size(24, 24)
-        Me.BindingNavigatorDeleteItem.Text = "Eliminar"
+        Me.BindingNavigatorSeparator2.Name = "BindingNavigatorSeparator2"
+        Me.BindingNavigatorSeparator2.Size = New System.Drawing.Size(6, 27)
         '
         'DISTRITOBindingNavigatorSaveItem
         '
         Me.DISTRITOBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
         Me.DISTRITOBindingNavigatorSaveItem.Image = CType(resources.GetObject("DISTRITOBindingNavigatorSaveItem.Image"), System.Drawing.Image)
         Me.DISTRITOBindingNavigatorSaveItem.Name = "DISTRITOBindingNavigatorSaveItem"
-        Me.DISTRITOBindingNavigatorSaveItem.Size = New System.Drawing.Size(23, 23)
+        Me.DISTRITOBindingNavigatorSaveItem.Size = New System.Drawing.Size(24, 24)
         Me.DISTRITOBindingNavigatorSaveItem.Text = "Guardar datos"
+        '
+        'BD_RecursosHumanosDataSet
+        '
+        Me.BD_RecursosHumanosDataSet.DataSetName = "BD_RecursosHumanosDataSet"
+        Me.BD_RecursosHumanosDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'DISTRITOBindingSource1
+        '
+        Me.DISTRITOBindingSource1.DataMember = "DISTRITO"
+        Me.DISTRITOBindingSource1.DataSource = Me.BD_RecursosHumanosDataSet
+        '
+        'DISTRITOTableAdapter1
+        '
+        Me.DISTRITOTableAdapter1.ClearBeforeFill = True
+        '
+        'TableAdapterManager1
+        '
+        Me.TableAdapterManager1.AREATableAdapter = Nothing
+        Me.TableAdapterManager1.ASISTENCIATableAdapter = Nothing
+        Me.TableAdapterManager1.BackupDataSetBeforeUpdate = False
+        Me.TableAdapterManager1.BENEFICIO_LABORALTableAdapter = Nothing
+        Me.TableAdapterManager1.BOLETATableAdapter = Nothing
+        Me.TableAdapterManager1.CONTRATOTableAdapter = Nothing
+        Me.TableAdapterManager1.DATOS_TRIBUTARIOSTableAdapter = Nothing
+        Me.TableAdapterManager1.DETALLE_BENEFICIOTableAdapter = Nothing
+        Me.TableAdapterManager1.DISTRITOTableAdapter = Me.DISTRITOTableAdapter1
+        Me.TableAdapterManager1.EMPLEADOTableAdapter = Nothing
+        Me.TableAdapterManager1.EXPERIENCIA_LABORALTableAdapter = Nothing
+        Me.TableAdapterManager1.GERENTETableAdapter = Nothing
+        Me.TableAdapterManager1.MEMORANDUMSTableAdapter = Nothing
+        Me.TableAdapterManager1.NIVEL_EDUCACIONTableAdapter = Nothing
+        Me.TableAdapterManager1.PAGO_PLANILLATableAdapter = Nothing
+        Me.TableAdapterManager1.PERIODO_LABORALTableAdapter = Nothing
+        Me.TableAdapterManager1.PLANILLATableAdapter = Nothing
+        Me.TableAdapterManager1.PRESTAMO_ADELANTOSTableAdapter = Nothing
+        Me.TableAdapterManager1.REGIMEN_PENSIONARIOTableAdapter = Nothing
+        Me.TableAdapterManager1.REGIMEN_SALUDTableAdapter = Nothing
+        Me.TableAdapterManager1.TIPO_ASISTENCIATableAdapter = Nothing
+        Me.TableAdapterManager1.TIPO_CONTRATOTableAdapter = Nothing
+        Me.TableAdapterManager1.TIPO_TRABAJADORTableAdapter = Nothing
+        Me.TableAdapterManager1.UpdateOrder = ProyectoRRHH.BD_RecursosHumanosDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
+        Me.TableAdapterManager1.VACACIONESTableAdapter = Nothing
+        Me.TableAdapterManager1.VARIACION_SUELDOTableAdapter = Nothing
         '
         'IdDistritoLabel
         '
         IdDistritoLabel.AutoSize = True
-        IdDistritoLabel.Location = New System.Drawing.Point(149, 57)
+        IdDistritoLabel.Location = New System.Drawing.Point(115, 65)
         IdDistritoLabel.Name = "IdDistritoLabel"
         IdDistritoLabel.Size = New System.Drawing.Size(71, 17)
         IdDistritoLabel.TabIndex = 1
@@ -223,8 +272,8 @@ Partial Class FrmDistrito
         '
         'IdDistritoTextBox
         '
-        Me.IdDistritoTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.DISTRITOBindingSource, "IdDistrito", True))
-        Me.IdDistritoTextBox.Location = New System.Drawing.Point(265, 54)
+        Me.IdDistritoTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.DISTRITOBindingSource1, "IdDistrito", True))
+        Me.IdDistritoTextBox.Location = New System.Drawing.Point(231, 62)
         Me.IdDistritoTextBox.Name = "IdDistritoTextBox"
         Me.IdDistritoTextBox.Size = New System.Drawing.Size(100, 22)
         Me.IdDistritoTextBox.TabIndex = 2
@@ -232,7 +281,7 @@ Partial Class FrmDistrito
         'NombreDistritoLabel
         '
         NombreDistritoLabel.AutoSize = True
-        NombreDistritoLabel.Location = New System.Drawing.Point(149, 96)
+        NombreDistritoLabel.Location = New System.Drawing.Point(115, 93)
         NombreDistritoLabel.Name = "NombreDistritoLabel"
         NombreDistritoLabel.Size = New System.Drawing.Size(110, 17)
         NombreDistritoLabel.TabIndex = 3
@@ -240,8 +289,8 @@ Partial Class FrmDistrito
         '
         'NombreDistritoTextBox
         '
-        Me.NombreDistritoTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.DISTRITOBindingSource, "NombreDistrito", True))
-        Me.NombreDistritoTextBox.Location = New System.Drawing.Point(265, 93)
+        Me.NombreDistritoTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.DISTRITOBindingSource1, "NombreDistrito", True))
+        Me.NombreDistritoTextBox.Location = New System.Drawing.Point(231, 90)
         Me.NombreDistritoTextBox.Name = "NombreDistritoTextBox"
         Me.NombreDistritoTextBox.Size = New System.Drawing.Size(100, 22)
         Me.NombreDistritoTextBox.TabIndex = 4
@@ -252,11 +301,11 @@ Partial Class FrmDistrito
         Me.DISTRITODataGridView.BackgroundColor = System.Drawing.SystemColors.ActiveCaption
         Me.DISTRITODataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DISTRITODataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2})
-        Me.DISTRITODataGridView.DataSource = Me.DISTRITOBindingSource
-        Me.DISTRITODataGridView.Location = New System.Drawing.Point(28, 147)
+        Me.DISTRITODataGridView.DataSource = Me.DISTRITOBindingSource1
+        Me.DISTRITODataGridView.Location = New System.Drawing.Point(100, 130)
         Me.DISTRITODataGridView.Name = "DISTRITODataGridView"
         Me.DISTRITODataGridView.RowTemplate.Height = 24
-        Me.DISTRITODataGridView.Size = New System.Drawing.Size(456, 220)
+        Me.DISTRITODataGridView.Size = New System.Drawing.Size(333, 220)
         Me.DISTRITODataGridView.TabIndex = 5
         '
         'DataGridViewTextBoxColumn1
@@ -271,7 +320,7 @@ Partial Class FrmDistrito
         Me.DataGridViewTextBoxColumn2.DataPropertyName = "NombreDistrito"
         Me.DataGridViewTextBoxColumn2.HeaderText = "NombreDistrito"
         Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
-        Me.DataGridViewTextBoxColumn2.Width = 200
+        Me.DataGridViewTextBoxColumn2.Width = 150
         '
         'FrmDistrito
         '
@@ -291,6 +340,8 @@ Partial Class FrmDistrito
         CType(Me.DISTRITOBindingNavigator, System.ComponentModel.ISupportInitialize).EndInit()
         Me.DISTRITOBindingNavigator.ResumeLayout(False)
         Me.DISTRITOBindingNavigator.PerformLayout()
+        CType(Me.BD_RecursosHumanosDataSet, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DISTRITOBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DISTRITODataGridView, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
@@ -314,6 +365,10 @@ Partial Class FrmDistrito
     Friend WithEvents BindingNavigatorMoveLastItem As ToolStripButton
     Friend WithEvents BindingNavigatorSeparator2 As ToolStripSeparator
     Friend WithEvents DISTRITOBindingNavigatorSaveItem As ToolStripButton
+    Friend WithEvents BD_RecursosHumanosDataSet As BD_RecursosHumanosDataSet
+    Friend WithEvents DISTRITOBindingSource1 As BindingSource
+    Friend WithEvents DISTRITOTableAdapter1 As BD_RecursosHumanosDataSetTableAdapters.DISTRITOTableAdapter
+    Friend WithEvents TableAdapterManager1 As BD_RecursosHumanosDataSetTableAdapters.TableAdapterManager
     Friend WithEvents IdDistritoTextBox As TextBox
     Friend WithEvents NombreDistritoTextBox As TextBox
     Friend WithEvents DISTRITODataGridView As DataGridView

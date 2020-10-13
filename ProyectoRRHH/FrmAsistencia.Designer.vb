@@ -272,7 +272,7 @@ Partial Class FrmAsistencia
         'IdAsistenciaLabel
         '
         IdAsistenciaLabel.AutoSize = True
-        IdAsistenciaLabel.Location = New System.Drawing.Point(22, 49)
+        IdAsistenciaLabel.Location = New System.Drawing.Point(30, 47)
         IdAsistenciaLabel.Name = "IdAsistenciaLabel"
         IdAsistenciaLabel.Size = New System.Drawing.Size(91, 17)
         IdAsistenciaLabel.TabIndex = 1
@@ -281,15 +281,15 @@ Partial Class FrmAsistencia
         'IdAsistenciaTextBox
         '
         Me.IdAsistenciaTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ASISTENCIABindingSource1, "IdAsistencia", True))
-        Me.IdAsistenciaTextBox.Location = New System.Drawing.Point(151, 46)
+        Me.IdAsistenciaTextBox.Location = New System.Drawing.Point(159, 44)
         Me.IdAsistenciaTextBox.Name = "IdAsistenciaTextBox"
-        Me.IdAsistenciaTextBox.Size = New System.Drawing.Size(276, 22)
+        Me.IdAsistenciaTextBox.Size = New System.Drawing.Size(268, 22)
         Me.IdAsistenciaTextBox.TabIndex = 2
         '
         'IdEmpleadoLabel
         '
         IdEmpleadoLabel.AutoSize = True
-        IdEmpleadoLabel.Location = New System.Drawing.Point(22, 77)
+        IdEmpleadoLabel.Location = New System.Drawing.Point(30, 75)
         IdEmpleadoLabel.Name = "IdEmpleadoLabel"
         IdEmpleadoLabel.Size = New System.Drawing.Size(90, 17)
         IdEmpleadoLabel.TabIndex = 3
@@ -298,15 +298,15 @@ Partial Class FrmAsistencia
         'IdEmpleadoTextBox
         '
         Me.IdEmpleadoTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ASISTENCIABindingSource1, "IdEmpleado", True))
-        Me.IdEmpleadoTextBox.Location = New System.Drawing.Point(151, 74)
+        Me.IdEmpleadoTextBox.Location = New System.Drawing.Point(159, 72)
         Me.IdEmpleadoTextBox.Name = "IdEmpleadoTextBox"
-        Me.IdEmpleadoTextBox.Size = New System.Drawing.Size(276, 22)
+        Me.IdEmpleadoTextBox.Size = New System.Drawing.Size(268, 22)
         Me.IdEmpleadoTextBox.TabIndex = 4
         '
         'FechaLabel
         '
         FechaLabel.AutoSize = True
-        FechaLabel.Location = New System.Drawing.Point(22, 106)
+        FechaLabel.Location = New System.Drawing.Point(30, 104)
         FechaLabel.Name = "FechaLabel"
         FechaLabel.Size = New System.Drawing.Size(47, 17)
         FechaLabel.TabIndex = 5
@@ -315,15 +315,15 @@ Partial Class FrmAsistencia
         'FechaDateTimePicker
         '
         Me.FechaDateTimePicker.DataBindings.Add(New System.Windows.Forms.Binding("Value", Me.ASISTENCIABindingSource1, "fecha", True))
-        Me.FechaDateTimePicker.Location = New System.Drawing.Point(151, 102)
+        Me.FechaDateTimePicker.Location = New System.Drawing.Point(159, 100)
         Me.FechaDateTimePicker.Name = "FechaDateTimePicker"
-        Me.FechaDateTimePicker.Size = New System.Drawing.Size(276, 22)
+        Me.FechaDateTimePicker.Size = New System.Drawing.Size(268, 22)
         Me.FechaDateTimePicker.TabIndex = 6
         '
         'IdTipoAsistenciaLabel
         '
         IdTipoAsistenciaLabel.AutoSize = True
-        IdTipoAsistenciaLabel.Location = New System.Drawing.Point(22, 133)
+        IdTipoAsistenciaLabel.Location = New System.Drawing.Point(30, 131)
         IdTipoAsistenciaLabel.Name = "IdTipoAsistenciaLabel"
         IdTipoAsistenciaLabel.Size = New System.Drawing.Size(123, 17)
         IdTipoAsistenciaLabel.TabIndex = 7
@@ -332,9 +332,9 @@ Partial Class FrmAsistencia
         'IdTipoAsistenciaTextBox
         '
         Me.IdTipoAsistenciaTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ASISTENCIABindingSource1, "IdTipoAsistencia", True))
-        Me.IdTipoAsistenciaTextBox.Location = New System.Drawing.Point(151, 130)
+        Me.IdTipoAsistenciaTextBox.Location = New System.Drawing.Point(159, 128)
         Me.IdTipoAsistenciaTextBox.Name = "IdTipoAsistenciaTextBox"
-        Me.IdTipoAsistenciaTextBox.Size = New System.Drawing.Size(276, 22)
+        Me.IdTipoAsistenciaTextBox.Size = New System.Drawing.Size(268, 22)
         Me.IdTipoAsistenciaTextBox.TabIndex = 8
         '
         'ASISTENCIADataGridView
@@ -344,10 +344,10 @@ Partial Class FrmAsistencia
         Me.ASISTENCIADataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.ASISTENCIADataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3, Me.DataGridViewTextBoxColumn4})
         Me.ASISTENCIADataGridView.DataSource = Me.ASISTENCIABindingSource1
-        Me.ASISTENCIADataGridView.Location = New System.Drawing.Point(465, 46)
+        Me.ASISTENCIADataGridView.Location = New System.Drawing.Point(454, 30)
         Me.ASISTENCIADataGridView.Name = "ASISTENCIADataGridView"
         Me.ASISTENCIADataGridView.RowTemplate.Height = 24
-        Me.ASISTENCIADataGridView.Size = New System.Drawing.Size(489, 231)
+        Me.ASISTENCIADataGridView.Size = New System.Drawing.Size(506, 223)
         Me.ASISTENCIADataGridView.TabIndex = 9
         '
         'DataGridViewTextBoxColumn1

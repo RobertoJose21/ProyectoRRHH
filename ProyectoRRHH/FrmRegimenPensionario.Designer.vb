@@ -31,18 +31,22 @@ Partial Class FrmRegimenPensionario
         Me.REGIMEN_PENSIONARIOTableAdapter = New ProyectoRRHH.DB_RRHHDataSetTableAdapters.REGIMEN_PENSIONARIOTableAdapter()
         Me.TableAdapterManager = New ProyectoRRHH.DB_RRHHDataSetTableAdapters.TableAdapterManager()
         Me.REGIMEN_PENSIONARIOBindingNavigator = New System.Windows.Forms.BindingNavigator(Me.components)
+        Me.BindingNavigatorAddNewItem = New System.Windows.Forms.ToolStripButton()
+        Me.BindingNavigatorCountItem = New System.Windows.Forms.ToolStripLabel()
+        Me.BindingNavigatorDeleteItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorMoveFirstItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorMovePreviousItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorSeparator = New System.Windows.Forms.ToolStripSeparator()
         Me.BindingNavigatorPositionItem = New System.Windows.Forms.ToolStripTextBox()
-        Me.BindingNavigatorCountItem = New System.Windows.Forms.ToolStripLabel()
         Me.BindingNavigatorSeparator1 = New System.Windows.Forms.ToolStripSeparator()
         Me.BindingNavigatorMoveNextItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorMoveLastItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorSeparator2 = New System.Windows.Forms.ToolStripSeparator()
-        Me.BindingNavigatorAddNewItem = New System.Windows.Forms.ToolStripButton()
-        Me.BindingNavigatorDeleteItem = New System.Windows.Forms.ToolStripButton()
         Me.REGIMEN_PENSIONARIOBindingNavigatorSaveItem = New System.Windows.Forms.ToolStripButton()
+        Me.BD_RecursosHumanosDataSet = New ProyectoRRHH.BD_RecursosHumanosDataSet()
+        Me.REGIMEN_PENSIONARIOBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
+        Me.REGIMEN_PENSIONARIOTableAdapter1 = New ProyectoRRHH.BD_RecursosHumanosDataSetTableAdapters.REGIMEN_PENSIONARIOTableAdapter()
+        Me.TableAdapterManager1 = New ProyectoRRHH.BD_RecursosHumanosDataSetTableAdapters.TableAdapterManager()
         Me.InstitucionPensionarioTextBox = New System.Windows.Forms.TextBox()
         Me.IdRegimenPensionarioTextBox = New System.Windows.Forms.TextBox()
         Me.REGIMEN_PENSIONARIODataGridView = New System.Windows.Forms.DataGridView()
@@ -54,6 +58,8 @@ Partial Class FrmRegimenPensionario
         CType(Me.REGIMEN_PENSIONARIOBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.REGIMEN_PENSIONARIOBindingNavigator, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.REGIMEN_PENSIONARIOBindingNavigator.SuspendLayout()
+        CType(Me.BD_RecursosHumanosDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.REGIMEN_PENSIONARIOBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.REGIMEN_PENSIONARIODataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -115,9 +121,34 @@ Partial Class FrmRegimenPensionario
         Me.REGIMEN_PENSIONARIOBindingNavigator.MovePreviousItem = Me.BindingNavigatorMovePreviousItem
         Me.REGIMEN_PENSIONARIOBindingNavigator.Name = "REGIMEN_PENSIONARIOBindingNavigator"
         Me.REGIMEN_PENSIONARIOBindingNavigator.PositionItem = Me.BindingNavigatorPositionItem
-        Me.REGIMEN_PENSIONARIOBindingNavigator.Size = New System.Drawing.Size(571, 27)
+        Me.REGIMEN_PENSIONARIOBindingNavigator.Size = New System.Drawing.Size(740, 27)
         Me.REGIMEN_PENSIONARIOBindingNavigator.TabIndex = 0
         Me.REGIMEN_PENSIONARIOBindingNavigator.Text = "BindingNavigator1"
+        '
+        'BindingNavigatorAddNewItem
+        '
+        Me.BindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.BindingNavigatorAddNewItem.Image = CType(resources.GetObject("BindingNavigatorAddNewItem.Image"), System.Drawing.Image)
+        Me.BindingNavigatorAddNewItem.Name = "BindingNavigatorAddNewItem"
+        Me.BindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = True
+        Me.BindingNavigatorAddNewItem.Size = New System.Drawing.Size(24, 24)
+        Me.BindingNavigatorAddNewItem.Text = "Agregar nuevo"
+        '
+        'BindingNavigatorCountItem
+        '
+        Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
+        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(48, 24)
+        Me.BindingNavigatorCountItem.Text = "de {0}"
+        Me.BindingNavigatorCountItem.ToolTipText = "Número total de elementos"
+        '
+        'BindingNavigatorDeleteItem
+        '
+        Me.BindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.BindingNavigatorDeleteItem.Image = CType(resources.GetObject("BindingNavigatorDeleteItem.Image"), System.Drawing.Image)
+        Me.BindingNavigatorDeleteItem.Name = "BindingNavigatorDeleteItem"
+        Me.BindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = True
+        Me.BindingNavigatorDeleteItem.Size = New System.Drawing.Size(24, 24)
+        Me.BindingNavigatorDeleteItem.Text = "Eliminar"
         '
         'BindingNavigatorMoveFirstItem
         '
@@ -125,7 +156,7 @@ Partial Class FrmRegimenPensionario
         Me.BindingNavigatorMoveFirstItem.Image = CType(resources.GetObject("BindingNavigatorMoveFirstItem.Image"), System.Drawing.Image)
         Me.BindingNavigatorMoveFirstItem.Name = "BindingNavigatorMoveFirstItem"
         Me.BindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorMoveFirstItem.Size = New System.Drawing.Size(24, 22)
+        Me.BindingNavigatorMoveFirstItem.Size = New System.Drawing.Size(24, 24)
         Me.BindingNavigatorMoveFirstItem.Text = "Mover primero"
         '
         'BindingNavigatorMovePreviousItem
@@ -134,13 +165,13 @@ Partial Class FrmRegimenPensionario
         Me.BindingNavigatorMovePreviousItem.Image = CType(resources.GetObject("BindingNavigatorMovePreviousItem.Image"), System.Drawing.Image)
         Me.BindingNavigatorMovePreviousItem.Name = "BindingNavigatorMovePreviousItem"
         Me.BindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorMovePreviousItem.Size = New System.Drawing.Size(24, 22)
+        Me.BindingNavigatorMovePreviousItem.Size = New System.Drawing.Size(24, 24)
         Me.BindingNavigatorMovePreviousItem.Text = "Mover anterior"
         '
         'BindingNavigatorSeparator
         '
         Me.BindingNavigatorSeparator.Name = "BindingNavigatorSeparator"
-        Me.BindingNavigatorSeparator.Size = New System.Drawing.Size(6, 25)
+        Me.BindingNavigatorSeparator.Size = New System.Drawing.Size(6, 27)
         '
         'BindingNavigatorPositionItem
         '
@@ -151,17 +182,10 @@ Partial Class FrmRegimenPensionario
         Me.BindingNavigatorPositionItem.Text = "0"
         Me.BindingNavigatorPositionItem.ToolTipText = "Posición actual"
         '
-        'BindingNavigatorCountItem
-        '
-        Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
-        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(48, 20)
-        Me.BindingNavigatorCountItem.Text = "de {0}"
-        Me.BindingNavigatorCountItem.ToolTipText = "Número total de elementos"
-        '
         'BindingNavigatorSeparator1
         '
-        Me.BindingNavigatorSeparator1.Name = "BindingNavigatorSeparator"
-        Me.BindingNavigatorSeparator1.Size = New System.Drawing.Size(6, 6)
+        Me.BindingNavigatorSeparator1.Name = "BindingNavigatorSeparator1"
+        Me.BindingNavigatorSeparator1.Size = New System.Drawing.Size(6, 27)
         '
         'BindingNavigatorMoveNextItem
         '
@@ -183,39 +207,64 @@ Partial Class FrmRegimenPensionario
         '
         'BindingNavigatorSeparator2
         '
-        Me.BindingNavigatorSeparator2.Name = "BindingNavigatorSeparator"
-        Me.BindingNavigatorSeparator2.Size = New System.Drawing.Size(6, 6)
-        '
-        'BindingNavigatorAddNewItem
-        '
-        Me.BindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorAddNewItem.Image = CType(resources.GetObject("BindingNavigatorAddNewItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorAddNewItem.Name = "BindingNavigatorAddNewItem"
-        Me.BindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorAddNewItem.Size = New System.Drawing.Size(24, 24)
-        Me.BindingNavigatorAddNewItem.Text = "Agregar nuevo"
-        '
-        'BindingNavigatorDeleteItem
-        '
-        Me.BindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorDeleteItem.Image = CType(resources.GetObject("BindingNavigatorDeleteItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorDeleteItem.Name = "BindingNavigatorDeleteItem"
-        Me.BindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorDeleteItem.Size = New System.Drawing.Size(24, 24)
-        Me.BindingNavigatorDeleteItem.Text = "Eliminar"
+        Me.BindingNavigatorSeparator2.Name = "BindingNavigatorSeparator2"
+        Me.BindingNavigatorSeparator2.Size = New System.Drawing.Size(6, 27)
         '
         'REGIMEN_PENSIONARIOBindingNavigatorSaveItem
         '
         Me.REGIMEN_PENSIONARIOBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
         Me.REGIMEN_PENSIONARIOBindingNavigatorSaveItem.Image = CType(resources.GetObject("REGIMEN_PENSIONARIOBindingNavigatorSaveItem.Image"), System.Drawing.Image)
         Me.REGIMEN_PENSIONARIOBindingNavigatorSaveItem.Name = "REGIMEN_PENSIONARIOBindingNavigatorSaveItem"
-        Me.REGIMEN_PENSIONARIOBindingNavigatorSaveItem.Size = New System.Drawing.Size(23, 23)
+        Me.REGIMEN_PENSIONARIOBindingNavigatorSaveItem.Size = New System.Drawing.Size(24, 24)
         Me.REGIMEN_PENSIONARIOBindingNavigatorSaveItem.Text = "Guardar datos"
+        '
+        'BD_RecursosHumanosDataSet
+        '
+        Me.BD_RecursosHumanosDataSet.DataSetName = "BD_RecursosHumanosDataSet"
+        Me.BD_RecursosHumanosDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'REGIMEN_PENSIONARIOBindingSource1
+        '
+        Me.REGIMEN_PENSIONARIOBindingSource1.DataMember = "REGIMEN_PENSIONARIO"
+        Me.REGIMEN_PENSIONARIOBindingSource1.DataSource = Me.BD_RecursosHumanosDataSet
+        '
+        'REGIMEN_PENSIONARIOTableAdapter1
+        '
+        Me.REGIMEN_PENSIONARIOTableAdapter1.ClearBeforeFill = True
+        '
+        'TableAdapterManager1
+        '
+        Me.TableAdapterManager1.AREATableAdapter = Nothing
+        Me.TableAdapterManager1.ASISTENCIATableAdapter = Nothing
+        Me.TableAdapterManager1.BackupDataSetBeforeUpdate = False
+        Me.TableAdapterManager1.BENEFICIO_LABORALTableAdapter = Nothing
+        Me.TableAdapterManager1.BOLETATableAdapter = Nothing
+        Me.TableAdapterManager1.CONTRATOTableAdapter = Nothing
+        Me.TableAdapterManager1.DATOS_TRIBUTARIOSTableAdapter = Nothing
+        Me.TableAdapterManager1.DETALLE_BENEFICIOTableAdapter = Nothing
+        Me.TableAdapterManager1.DISTRITOTableAdapter = Nothing
+        Me.TableAdapterManager1.EMPLEADOTableAdapter = Nothing
+        Me.TableAdapterManager1.EXPERIENCIA_LABORALTableAdapter = Nothing
+        Me.TableAdapterManager1.GERENTETableAdapter = Nothing
+        Me.TableAdapterManager1.MEMORANDUMSTableAdapter = Nothing
+        Me.TableAdapterManager1.NIVEL_EDUCACIONTableAdapter = Nothing
+        Me.TableAdapterManager1.PAGO_PLANILLATableAdapter = Nothing
+        Me.TableAdapterManager1.PERIODO_LABORALTableAdapter = Nothing
+        Me.TableAdapterManager1.PLANILLATableAdapter = Nothing
+        Me.TableAdapterManager1.PRESTAMO_ADELANTOSTableAdapter = Nothing
+        Me.TableAdapterManager1.REGIMEN_PENSIONARIOTableAdapter = Me.REGIMEN_PENSIONARIOTableAdapter1
+        Me.TableAdapterManager1.REGIMEN_SALUDTableAdapter = Nothing
+        Me.TableAdapterManager1.TIPO_ASISTENCIATableAdapter = Nothing
+        Me.TableAdapterManager1.TIPO_CONTRATOTableAdapter = Nothing
+        Me.TableAdapterManager1.TIPO_TRABAJADORTableAdapter = Nothing
+        Me.TableAdapterManager1.UpdateOrder = ProyectoRRHH.BD_RecursosHumanosDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
+        Me.TableAdapterManager1.VACACIONESTableAdapter = Nothing
+        Me.TableAdapterManager1.VARIACION_SUELDOTableAdapter = Nothing
         '
         'InstitucionPensionarioLabel
         '
         InstitucionPensionarioLabel.AutoSize = True
-        InstitucionPensionarioLabel.Location = New System.Drawing.Point(51, 55)
+        InstitucionPensionarioLabel.Location = New System.Drawing.Point(137, 56)
         InstitucionPensionarioLabel.Name = "InstitucionPensionarioLabel"
         InstitucionPensionarioLabel.Size = New System.Drawing.Size(154, 17)
         InstitucionPensionarioLabel.TabIndex = 1
@@ -223,8 +272,8 @@ Partial Class FrmRegimenPensionario
         '
         'InstitucionPensionarioTextBox
         '
-        Me.InstitucionPensionarioTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.REGIMEN_PENSIONARIOBindingSource, "institucionPensionario", True))
-        Me.InstitucionPensionarioTextBox.Location = New System.Drawing.Point(219, 52)
+        Me.InstitucionPensionarioTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.REGIMEN_PENSIONARIOBindingSource1, "institucionPensionario", True))
+        Me.InstitucionPensionarioTextBox.Location = New System.Drawing.Point(305, 53)
         Me.InstitucionPensionarioTextBox.Name = "InstitucionPensionarioTextBox"
         Me.InstitucionPensionarioTextBox.Size = New System.Drawing.Size(100, 22)
         Me.InstitucionPensionarioTextBox.TabIndex = 2
@@ -232,7 +281,7 @@ Partial Class FrmRegimenPensionario
         'IdRegimenPensionarioLabel
         '
         IdRegimenPensionarioLabel.AutoSize = True
-        IdRegimenPensionarioLabel.Location = New System.Drawing.Point(51, 83)
+        IdRegimenPensionarioLabel.Location = New System.Drawing.Point(137, 84)
         IdRegimenPensionarioLabel.Name = "IdRegimenPensionarioLabel"
         IdRegimenPensionarioLabel.Size = New System.Drawing.Size(162, 17)
         IdRegimenPensionarioLabel.TabIndex = 3
@@ -240,8 +289,8 @@ Partial Class FrmRegimenPensionario
         '
         'IdRegimenPensionarioTextBox
         '
-        Me.IdRegimenPensionarioTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.REGIMEN_PENSIONARIOBindingSource, "IdRegimenPensionario", True))
-        Me.IdRegimenPensionarioTextBox.Location = New System.Drawing.Point(219, 80)
+        Me.IdRegimenPensionarioTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.REGIMEN_PENSIONARIOBindingSource1, "IdRegimenPensionario", True))
+        Me.IdRegimenPensionarioTextBox.Location = New System.Drawing.Point(305, 81)
         Me.IdRegimenPensionarioTextBox.Name = "IdRegimenPensionarioTextBox"
         Me.IdRegimenPensionarioTextBox.Size = New System.Drawing.Size(100, 22)
         Me.IdRegimenPensionarioTextBox.TabIndex = 4
@@ -252,11 +301,11 @@ Partial Class FrmRegimenPensionario
         Me.REGIMEN_PENSIONARIODataGridView.BackgroundColor = System.Drawing.SystemColors.ActiveCaption
         Me.REGIMEN_PENSIONARIODataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.REGIMEN_PENSIONARIODataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2})
-        Me.REGIMEN_PENSIONARIODataGridView.DataSource = Me.REGIMEN_PENSIONARIOBindingSource
-        Me.REGIMEN_PENSIONARIODataGridView.Location = New System.Drawing.Point(43, 129)
+        Me.REGIMEN_PENSIONARIODataGridView.DataSource = Me.REGIMEN_PENSIONARIOBindingSource1
+        Me.REGIMEN_PENSIONARIODataGridView.Location = New System.Drawing.Point(115, 125)
         Me.REGIMEN_PENSIONARIODataGridView.Name = "REGIMEN_PENSIONARIODataGridView"
         Me.REGIMEN_PENSIONARIODataGridView.RowTemplate.Height = 24
-        Me.REGIMEN_PENSIONARIODataGridView.Size = New System.Drawing.Size(451, 220)
+        Me.REGIMEN_PENSIONARIODataGridView.Size = New System.Drawing.Size(429, 218)
         Me.REGIMEN_PENSIONARIODataGridView.TabIndex = 5
         '
         'DataGridViewTextBoxColumn1
@@ -272,13 +321,13 @@ Partial Class FrmRegimenPensionario
         Me.DataGridViewTextBoxColumn2.HeaderText = "IdRegimenPensionario"
         Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
         Me.DataGridViewTextBoxColumn2.ReadOnly = True
-        Me.DataGridViewTextBoxColumn2.Width = 160
+        Me.DataGridViewTextBoxColumn2.Width = 150
         '
         'FrmRegimenPensionario
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(571, 447)
+        Me.ClientSize = New System.Drawing.Size(740, 515)
         Me.Controls.Add(Me.REGIMEN_PENSIONARIODataGridView)
         Me.Controls.Add(InstitucionPensionarioLabel)
         Me.Controls.Add(Me.InstitucionPensionarioTextBox)
@@ -292,6 +341,8 @@ Partial Class FrmRegimenPensionario
         CType(Me.REGIMEN_PENSIONARIOBindingNavigator, System.ComponentModel.ISupportInitialize).EndInit()
         Me.REGIMEN_PENSIONARIOBindingNavigator.ResumeLayout(False)
         Me.REGIMEN_PENSIONARIOBindingNavigator.PerformLayout()
+        CType(Me.BD_RecursosHumanosDataSet, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.REGIMEN_PENSIONARIOBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.REGIMEN_PENSIONARIODataGridView, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
@@ -315,6 +366,10 @@ Partial Class FrmRegimenPensionario
     Friend WithEvents BindingNavigatorMoveLastItem As ToolStripButton
     Friend WithEvents BindingNavigatorSeparator2 As ToolStripSeparator
     Friend WithEvents REGIMEN_PENSIONARIOBindingNavigatorSaveItem As ToolStripButton
+    Friend WithEvents BD_RecursosHumanosDataSet As BD_RecursosHumanosDataSet
+    Friend WithEvents REGIMEN_PENSIONARIOBindingSource1 As BindingSource
+    Friend WithEvents REGIMEN_PENSIONARIOTableAdapter1 As BD_RecursosHumanosDataSetTableAdapters.REGIMEN_PENSIONARIOTableAdapter
+    Friend WithEvents TableAdapterManager1 As BD_RecursosHumanosDataSetTableAdapters.TableAdapterManager
     Friend WithEvents InstitucionPensionarioTextBox As TextBox
     Friend WithEvents IdRegimenPensionarioTextBox As TextBox
     Friend WithEvents REGIMEN_PENSIONARIODataGridView As DataGridView

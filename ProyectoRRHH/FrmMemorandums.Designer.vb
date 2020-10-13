@@ -33,18 +33,22 @@ Partial Class FrmMemorandums
         Me.MEMORANDUMSTableAdapter = New ProyectoRRHH.DB_RRHHDataSetTableAdapters.MEMORANDUMSTableAdapter()
         Me.TableAdapterManager = New ProyectoRRHH.DB_RRHHDataSetTableAdapters.TableAdapterManager()
         Me.MEMORANDUMSBindingNavigator = New System.Windows.Forms.BindingNavigator(Me.components)
+        Me.BindingNavigatorAddNewItem = New System.Windows.Forms.ToolStripButton()
+        Me.BindingNavigatorCountItem = New System.Windows.Forms.ToolStripLabel()
+        Me.BindingNavigatorDeleteItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorMoveFirstItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorMovePreviousItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorSeparator = New System.Windows.Forms.ToolStripSeparator()
         Me.BindingNavigatorPositionItem = New System.Windows.Forms.ToolStripTextBox()
-        Me.BindingNavigatorCountItem = New System.Windows.Forms.ToolStripLabel()
         Me.BindingNavigatorSeparator1 = New System.Windows.Forms.ToolStripSeparator()
         Me.BindingNavigatorMoveNextItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorMoveLastItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorSeparator2 = New System.Windows.Forms.ToolStripSeparator()
-        Me.BindingNavigatorAddNewItem = New System.Windows.Forms.ToolStripButton()
-        Me.BindingNavigatorDeleteItem = New System.Windows.Forms.ToolStripButton()
         Me.MEMORANDUMSBindingNavigatorSaveItem = New System.Windows.Forms.ToolStripButton()
+        Me.BD_RecursosHumanosDataSet = New ProyectoRRHH.BD_RecursosHumanosDataSet()
+        Me.MEMORANDUMSBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
+        Me.MEMORANDUMSTableAdapter1 = New ProyectoRRHH.BD_RecursosHumanosDataSetTableAdapters.MEMORANDUMSTableAdapter()
+        Me.TableAdapterManager1 = New ProyectoRRHH.BD_RecursosHumanosDataSetTableAdapters.TableAdapterManager()
         Me.IdMemorandumTextBox = New System.Windows.Forms.TextBox()
         Me.IdGerenteTextBox = New System.Windows.Forms.TextBox()
         Me.IdEmpleadoTextBox = New System.Windows.Forms.TextBox()
@@ -62,6 +66,8 @@ Partial Class FrmMemorandums
         CType(Me.MEMORANDUMSBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.MEMORANDUMSBindingNavigator, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.MEMORANDUMSBindingNavigator.SuspendLayout()
+        CType(Me.BD_RecursosHumanosDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.MEMORANDUMSBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.MEMORANDUMSDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -123,9 +129,34 @@ Partial Class FrmMemorandums
         Me.MEMORANDUMSBindingNavigator.MovePreviousItem = Me.BindingNavigatorMovePreviousItem
         Me.MEMORANDUMSBindingNavigator.Name = "MEMORANDUMSBindingNavigator"
         Me.MEMORANDUMSBindingNavigator.PositionItem = Me.BindingNavigatorPositionItem
-        Me.MEMORANDUMSBindingNavigator.Size = New System.Drawing.Size(975, 27)
+        Me.MEMORANDUMSBindingNavigator.Size = New System.Drawing.Size(1035, 27)
         Me.MEMORANDUMSBindingNavigator.TabIndex = 0
         Me.MEMORANDUMSBindingNavigator.Text = "BindingNavigator1"
+        '
+        'BindingNavigatorAddNewItem
+        '
+        Me.BindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.BindingNavigatorAddNewItem.Image = CType(resources.GetObject("BindingNavigatorAddNewItem.Image"), System.Drawing.Image)
+        Me.BindingNavigatorAddNewItem.Name = "BindingNavigatorAddNewItem"
+        Me.BindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = True
+        Me.BindingNavigatorAddNewItem.Size = New System.Drawing.Size(24, 24)
+        Me.BindingNavigatorAddNewItem.Text = "Agregar nuevo"
+        '
+        'BindingNavigatorCountItem
+        '
+        Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
+        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(48, 24)
+        Me.BindingNavigatorCountItem.Text = "de {0}"
+        Me.BindingNavigatorCountItem.ToolTipText = "Número total de elementos"
+        '
+        'BindingNavigatorDeleteItem
+        '
+        Me.BindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.BindingNavigatorDeleteItem.Image = CType(resources.GetObject("BindingNavigatorDeleteItem.Image"), System.Drawing.Image)
+        Me.BindingNavigatorDeleteItem.Name = "BindingNavigatorDeleteItem"
+        Me.BindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = True
+        Me.BindingNavigatorDeleteItem.Size = New System.Drawing.Size(24, 24)
+        Me.BindingNavigatorDeleteItem.Text = "Eliminar"
         '
         'BindingNavigatorMoveFirstItem
         '
@@ -133,7 +164,7 @@ Partial Class FrmMemorandums
         Me.BindingNavigatorMoveFirstItem.Image = CType(resources.GetObject("BindingNavigatorMoveFirstItem.Image"), System.Drawing.Image)
         Me.BindingNavigatorMoveFirstItem.Name = "BindingNavigatorMoveFirstItem"
         Me.BindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorMoveFirstItem.Size = New System.Drawing.Size(24, 22)
+        Me.BindingNavigatorMoveFirstItem.Size = New System.Drawing.Size(24, 24)
         Me.BindingNavigatorMoveFirstItem.Text = "Mover primero"
         '
         'BindingNavigatorMovePreviousItem
@@ -142,13 +173,13 @@ Partial Class FrmMemorandums
         Me.BindingNavigatorMovePreviousItem.Image = CType(resources.GetObject("BindingNavigatorMovePreviousItem.Image"), System.Drawing.Image)
         Me.BindingNavigatorMovePreviousItem.Name = "BindingNavigatorMovePreviousItem"
         Me.BindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorMovePreviousItem.Size = New System.Drawing.Size(24, 22)
+        Me.BindingNavigatorMovePreviousItem.Size = New System.Drawing.Size(24, 24)
         Me.BindingNavigatorMovePreviousItem.Text = "Mover anterior"
         '
         'BindingNavigatorSeparator
         '
         Me.BindingNavigatorSeparator.Name = "BindingNavigatorSeparator"
-        Me.BindingNavigatorSeparator.Size = New System.Drawing.Size(6, 25)
+        Me.BindingNavigatorSeparator.Size = New System.Drawing.Size(6, 27)
         '
         'BindingNavigatorPositionItem
         '
@@ -159,17 +190,10 @@ Partial Class FrmMemorandums
         Me.BindingNavigatorPositionItem.Text = "0"
         Me.BindingNavigatorPositionItem.ToolTipText = "Posición actual"
         '
-        'BindingNavigatorCountItem
-        '
-        Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
-        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(48, 20)
-        Me.BindingNavigatorCountItem.Text = "de {0}"
-        Me.BindingNavigatorCountItem.ToolTipText = "Número total de elementos"
-        '
         'BindingNavigatorSeparator1
         '
-        Me.BindingNavigatorSeparator1.Name = "BindingNavigatorSeparator"
-        Me.BindingNavigatorSeparator1.Size = New System.Drawing.Size(6, 6)
+        Me.BindingNavigatorSeparator1.Name = "BindingNavigatorSeparator1"
+        Me.BindingNavigatorSeparator1.Size = New System.Drawing.Size(6, 27)
         '
         'BindingNavigatorMoveNextItem
         '
@@ -191,39 +215,64 @@ Partial Class FrmMemorandums
         '
         'BindingNavigatorSeparator2
         '
-        Me.BindingNavigatorSeparator2.Name = "BindingNavigatorSeparator"
-        Me.BindingNavigatorSeparator2.Size = New System.Drawing.Size(6, 6)
-        '
-        'BindingNavigatorAddNewItem
-        '
-        Me.BindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorAddNewItem.Image = CType(resources.GetObject("BindingNavigatorAddNewItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorAddNewItem.Name = "BindingNavigatorAddNewItem"
-        Me.BindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorAddNewItem.Size = New System.Drawing.Size(24, 24)
-        Me.BindingNavigatorAddNewItem.Text = "Agregar nuevo"
-        '
-        'BindingNavigatorDeleteItem
-        '
-        Me.BindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorDeleteItem.Image = CType(resources.GetObject("BindingNavigatorDeleteItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorDeleteItem.Name = "BindingNavigatorDeleteItem"
-        Me.BindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorDeleteItem.Size = New System.Drawing.Size(24, 24)
-        Me.BindingNavigatorDeleteItem.Text = "Eliminar"
+        Me.BindingNavigatorSeparator2.Name = "BindingNavigatorSeparator2"
+        Me.BindingNavigatorSeparator2.Size = New System.Drawing.Size(6, 27)
         '
         'MEMORANDUMSBindingNavigatorSaveItem
         '
         Me.MEMORANDUMSBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
         Me.MEMORANDUMSBindingNavigatorSaveItem.Image = CType(resources.GetObject("MEMORANDUMSBindingNavigatorSaveItem.Image"), System.Drawing.Image)
         Me.MEMORANDUMSBindingNavigatorSaveItem.Name = "MEMORANDUMSBindingNavigatorSaveItem"
-        Me.MEMORANDUMSBindingNavigatorSaveItem.Size = New System.Drawing.Size(23, 23)
+        Me.MEMORANDUMSBindingNavigatorSaveItem.Size = New System.Drawing.Size(24, 24)
         Me.MEMORANDUMSBindingNavigatorSaveItem.Text = "Guardar datos"
+        '
+        'BD_RecursosHumanosDataSet
+        '
+        Me.BD_RecursosHumanosDataSet.DataSetName = "BD_RecursosHumanosDataSet"
+        Me.BD_RecursosHumanosDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'MEMORANDUMSBindingSource1
+        '
+        Me.MEMORANDUMSBindingSource1.DataMember = "MEMORANDUMS"
+        Me.MEMORANDUMSBindingSource1.DataSource = Me.BD_RecursosHumanosDataSet
+        '
+        'MEMORANDUMSTableAdapter1
+        '
+        Me.MEMORANDUMSTableAdapter1.ClearBeforeFill = True
+        '
+        'TableAdapterManager1
+        '
+        Me.TableAdapterManager1.AREATableAdapter = Nothing
+        Me.TableAdapterManager1.ASISTENCIATableAdapter = Nothing
+        Me.TableAdapterManager1.BackupDataSetBeforeUpdate = False
+        Me.TableAdapterManager1.BENEFICIO_LABORALTableAdapter = Nothing
+        Me.TableAdapterManager1.BOLETATableAdapter = Nothing
+        Me.TableAdapterManager1.CONTRATOTableAdapter = Nothing
+        Me.TableAdapterManager1.DATOS_TRIBUTARIOSTableAdapter = Nothing
+        Me.TableAdapterManager1.DETALLE_BENEFICIOTableAdapter = Nothing
+        Me.TableAdapterManager1.DISTRITOTableAdapter = Nothing
+        Me.TableAdapterManager1.EMPLEADOTableAdapter = Nothing
+        Me.TableAdapterManager1.EXPERIENCIA_LABORALTableAdapter = Nothing
+        Me.TableAdapterManager1.GERENTETableAdapter = Nothing
+        Me.TableAdapterManager1.MEMORANDUMSTableAdapter = Me.MEMORANDUMSTableAdapter1
+        Me.TableAdapterManager1.NIVEL_EDUCACIONTableAdapter = Nothing
+        Me.TableAdapterManager1.PAGO_PLANILLATableAdapter = Nothing
+        Me.TableAdapterManager1.PERIODO_LABORALTableAdapter = Nothing
+        Me.TableAdapterManager1.PLANILLATableAdapter = Nothing
+        Me.TableAdapterManager1.PRESTAMO_ADELANTOSTableAdapter = Nothing
+        Me.TableAdapterManager1.REGIMEN_PENSIONARIOTableAdapter = Nothing
+        Me.TableAdapterManager1.REGIMEN_SALUDTableAdapter = Nothing
+        Me.TableAdapterManager1.TIPO_ASISTENCIATableAdapter = Nothing
+        Me.TableAdapterManager1.TIPO_CONTRATOTableAdapter = Nothing
+        Me.TableAdapterManager1.TIPO_TRABAJADORTableAdapter = Nothing
+        Me.TableAdapterManager1.UpdateOrder = ProyectoRRHH.BD_RecursosHumanosDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
+        Me.TableAdapterManager1.VACACIONESTableAdapter = Nothing
+        Me.TableAdapterManager1.VARIACION_SUELDOTableAdapter = Nothing
         '
         'IdMemorandumLabel
         '
         IdMemorandumLabel.AutoSize = True
-        IdMemorandumLabel.Location = New System.Drawing.Point(29, 46)
+        IdMemorandumLabel.Location = New System.Drawing.Point(21, 65)
         IdMemorandumLabel.Name = "IdMemorandumLabel"
         IdMemorandumLabel.Size = New System.Drawing.Size(113, 17)
         IdMemorandumLabel.TabIndex = 1
@@ -231,8 +280,8 @@ Partial Class FrmMemorandums
         '
         'IdMemorandumTextBox
         '
-        Me.IdMemorandumTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MEMORANDUMSBindingSource, "IdMemorandum", True))
-        Me.IdMemorandumTextBox.Location = New System.Drawing.Point(148, 43)
+        Me.IdMemorandumTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MEMORANDUMSBindingSource1, "IdMemorandum", True))
+        Me.IdMemorandumTextBox.Location = New System.Drawing.Point(140, 62)
         Me.IdMemorandumTextBox.Name = "IdMemorandumTextBox"
         Me.IdMemorandumTextBox.Size = New System.Drawing.Size(100, 22)
         Me.IdMemorandumTextBox.TabIndex = 2
@@ -240,7 +289,7 @@ Partial Class FrmMemorandums
         'IdGerenteLabel
         '
         IdGerenteLabel.AutoSize = True
-        IdGerenteLabel.Location = New System.Drawing.Point(29, 74)
+        IdGerenteLabel.Location = New System.Drawing.Point(21, 93)
         IdGerenteLabel.Name = "IdGerenteLabel"
         IdGerenteLabel.Size = New System.Drawing.Size(79, 17)
         IdGerenteLabel.TabIndex = 3
@@ -248,8 +297,8 @@ Partial Class FrmMemorandums
         '
         'IdGerenteTextBox
         '
-        Me.IdGerenteTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MEMORANDUMSBindingSource, "IdGerente", True))
-        Me.IdGerenteTextBox.Location = New System.Drawing.Point(148, 71)
+        Me.IdGerenteTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MEMORANDUMSBindingSource1, "IdGerente", True))
+        Me.IdGerenteTextBox.Location = New System.Drawing.Point(140, 90)
         Me.IdGerenteTextBox.Name = "IdGerenteTextBox"
         Me.IdGerenteTextBox.Size = New System.Drawing.Size(100, 22)
         Me.IdGerenteTextBox.TabIndex = 4
@@ -257,7 +306,7 @@ Partial Class FrmMemorandums
         'IdEmpleadoLabel
         '
         IdEmpleadoLabel.AutoSize = True
-        IdEmpleadoLabel.Location = New System.Drawing.Point(29, 102)
+        IdEmpleadoLabel.Location = New System.Drawing.Point(21, 121)
         IdEmpleadoLabel.Name = "IdEmpleadoLabel"
         IdEmpleadoLabel.Size = New System.Drawing.Size(90, 17)
         IdEmpleadoLabel.TabIndex = 5
@@ -265,8 +314,8 @@ Partial Class FrmMemorandums
         '
         'IdEmpleadoTextBox
         '
-        Me.IdEmpleadoTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MEMORANDUMSBindingSource, "IdEmpleado", True))
-        Me.IdEmpleadoTextBox.Location = New System.Drawing.Point(148, 99)
+        Me.IdEmpleadoTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MEMORANDUMSBindingSource1, "IdEmpleado", True))
+        Me.IdEmpleadoTextBox.Location = New System.Drawing.Point(140, 118)
         Me.IdEmpleadoTextBox.Name = "IdEmpleadoTextBox"
         Me.IdEmpleadoTextBox.Size = New System.Drawing.Size(100, 22)
         Me.IdEmpleadoTextBox.TabIndex = 6
@@ -274,7 +323,7 @@ Partial Class FrmMemorandums
         'DescripcionLabel
         '
         DescripcionLabel.AutoSize = True
-        DescripcionLabel.Location = New System.Drawing.Point(29, 130)
+        DescripcionLabel.Location = New System.Drawing.Point(21, 149)
         DescripcionLabel.Name = "DescripcionLabel"
         DescripcionLabel.Size = New System.Drawing.Size(84, 17)
         DescripcionLabel.TabIndex = 7
@@ -282,8 +331,8 @@ Partial Class FrmMemorandums
         '
         'DescripcionTextBox
         '
-        Me.DescripcionTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MEMORANDUMSBindingSource, "descripcion", True))
-        Me.DescripcionTextBox.Location = New System.Drawing.Point(148, 127)
+        Me.DescripcionTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MEMORANDUMSBindingSource1, "descripcion", True))
+        Me.DescripcionTextBox.Location = New System.Drawing.Point(140, 146)
         Me.DescripcionTextBox.Name = "DescripcionTextBox"
         Me.DescripcionTextBox.Size = New System.Drawing.Size(100, 22)
         Me.DescripcionTextBox.TabIndex = 8
@@ -294,11 +343,11 @@ Partial Class FrmMemorandums
         Me.MEMORANDUMSDataGridView.BackgroundColor = System.Drawing.SystemColors.ActiveCaption
         Me.MEMORANDUMSDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.MEMORANDUMSDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3, Me.DataGridViewTextBoxColumn4})
-        Me.MEMORANDUMSDataGridView.DataSource = Me.MEMORANDUMSBindingSource
-        Me.MEMORANDUMSDataGridView.Location = New System.Drawing.Point(318, 43)
+        Me.MEMORANDUMSDataGridView.DataSource = Me.MEMORANDUMSBindingSource1
+        Me.MEMORANDUMSDataGridView.Location = New System.Drawing.Point(272, 62)
         Me.MEMORANDUMSDataGridView.Name = "MEMORANDUMSDataGridView"
         Me.MEMORANDUMSDataGridView.RowTemplate.Height = 24
-        Me.MEMORANDUMSDataGridView.Size = New System.Drawing.Size(453, 214)
+        Me.MEMORANDUMSDataGridView.Size = New System.Drawing.Size(486, 238)
         Me.MEMORANDUMSDataGridView.TabIndex = 9
         '
         'DataGridViewTextBoxColumn1
@@ -330,7 +379,7 @@ Partial Class FrmMemorandums
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(975, 474)
+        Me.ClientSize = New System.Drawing.Size(1035, 474)
         Me.Controls.Add(Me.MEMORANDUMSDataGridView)
         Me.Controls.Add(IdMemorandumLabel)
         Me.Controls.Add(Me.IdMemorandumTextBox)
@@ -348,6 +397,8 @@ Partial Class FrmMemorandums
         CType(Me.MEMORANDUMSBindingNavigator, System.ComponentModel.ISupportInitialize).EndInit()
         Me.MEMORANDUMSBindingNavigator.ResumeLayout(False)
         Me.MEMORANDUMSBindingNavigator.PerformLayout()
+        CType(Me.BD_RecursosHumanosDataSet, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.MEMORANDUMSBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.MEMORANDUMSDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
@@ -371,6 +422,10 @@ Partial Class FrmMemorandums
     Friend WithEvents BindingNavigatorMoveLastItem As ToolStripButton
     Friend WithEvents BindingNavigatorSeparator2 As ToolStripSeparator
     Friend WithEvents MEMORANDUMSBindingNavigatorSaveItem As ToolStripButton
+    Friend WithEvents BD_RecursosHumanosDataSet As BD_RecursosHumanosDataSet
+    Friend WithEvents MEMORANDUMSBindingSource1 As BindingSource
+    Friend WithEvents MEMORANDUMSTableAdapter1 As BD_RecursosHumanosDataSetTableAdapters.MEMORANDUMSTableAdapter
+    Friend WithEvents TableAdapterManager1 As BD_RecursosHumanosDataSetTableAdapters.TableAdapterManager
     Friend WithEvents IdMemorandumTextBox As TextBox
     Friend WithEvents IdGerenteTextBox As TextBox
     Friend WithEvents IdEmpleadoTextBox As TextBox

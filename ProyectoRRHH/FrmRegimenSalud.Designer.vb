@@ -31,18 +31,22 @@ Partial Class FrmRegimenSalud
         Me.REGIMEN_SALUDTableAdapter = New ProyectoRRHH.DB_RRHHDataSetTableAdapters.REGIMEN_SALUDTableAdapter()
         Me.TableAdapterManager = New ProyectoRRHH.DB_RRHHDataSetTableAdapters.TableAdapterManager()
         Me.REGIMEN_SALUDBindingNavigator = New System.Windows.Forms.BindingNavigator(Me.components)
+        Me.BindingNavigatorAddNewItem = New System.Windows.Forms.ToolStripButton()
+        Me.BindingNavigatorCountItem = New System.Windows.Forms.ToolStripLabel()
+        Me.BindingNavigatorDeleteItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorMoveFirstItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorMovePreviousItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorSeparator = New System.Windows.Forms.ToolStripSeparator()
         Me.BindingNavigatorPositionItem = New System.Windows.Forms.ToolStripTextBox()
-        Me.BindingNavigatorCountItem = New System.Windows.Forms.ToolStripLabel()
         Me.BindingNavigatorSeparator1 = New System.Windows.Forms.ToolStripSeparator()
         Me.BindingNavigatorMoveNextItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorMoveLastItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorSeparator2 = New System.Windows.Forms.ToolStripSeparator()
-        Me.BindingNavigatorAddNewItem = New System.Windows.Forms.ToolStripButton()
-        Me.BindingNavigatorDeleteItem = New System.Windows.Forms.ToolStripButton()
         Me.REGIMEN_SALUDBindingNavigatorSaveItem = New System.Windows.Forms.ToolStripButton()
+        Me.BD_RecursosHumanosDataSet = New ProyectoRRHH.BD_RecursosHumanosDataSet()
+        Me.REGIMEN_SALUDBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
+        Me.REGIMEN_SALUDTableAdapter1 = New ProyectoRRHH.BD_RecursosHumanosDataSetTableAdapters.REGIMEN_SALUDTableAdapter()
+        Me.TableAdapterManager1 = New ProyectoRRHH.BD_RecursosHumanosDataSetTableAdapters.TableAdapterManager()
         Me.InstitucionSaludTextBox = New System.Windows.Forms.TextBox()
         Me.IdRegimenSaludTextBox = New System.Windows.Forms.TextBox()
         Me.REGIMEN_SALUDDataGridView = New System.Windows.Forms.DataGridView()
@@ -54,6 +58,8 @@ Partial Class FrmRegimenSalud
         CType(Me.REGIMEN_SALUDBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.REGIMEN_SALUDBindingNavigator, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.REGIMEN_SALUDBindingNavigator.SuspendLayout()
+        CType(Me.BD_RecursosHumanosDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.REGIMEN_SALUDBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.REGIMEN_SALUDDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -115,9 +121,34 @@ Partial Class FrmRegimenSalud
         Me.REGIMEN_SALUDBindingNavigator.MovePreviousItem = Me.BindingNavigatorMovePreviousItem
         Me.REGIMEN_SALUDBindingNavigator.Name = "REGIMEN_SALUDBindingNavigator"
         Me.REGIMEN_SALUDBindingNavigator.PositionItem = Me.BindingNavigatorPositionItem
-        Me.REGIMEN_SALUDBindingNavigator.Size = New System.Drawing.Size(614, 27)
+        Me.REGIMEN_SALUDBindingNavigator.Size = New System.Drawing.Size(744, 27)
         Me.REGIMEN_SALUDBindingNavigator.TabIndex = 0
         Me.REGIMEN_SALUDBindingNavigator.Text = "BindingNavigator1"
+        '
+        'BindingNavigatorAddNewItem
+        '
+        Me.BindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.BindingNavigatorAddNewItem.Image = CType(resources.GetObject("BindingNavigatorAddNewItem.Image"), System.Drawing.Image)
+        Me.BindingNavigatorAddNewItem.Name = "BindingNavigatorAddNewItem"
+        Me.BindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = True
+        Me.BindingNavigatorAddNewItem.Size = New System.Drawing.Size(24, 24)
+        Me.BindingNavigatorAddNewItem.Text = "Agregar nuevo"
+        '
+        'BindingNavigatorCountItem
+        '
+        Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
+        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(48, 24)
+        Me.BindingNavigatorCountItem.Text = "de {0}"
+        Me.BindingNavigatorCountItem.ToolTipText = "Número total de elementos"
+        '
+        'BindingNavigatorDeleteItem
+        '
+        Me.BindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.BindingNavigatorDeleteItem.Image = CType(resources.GetObject("BindingNavigatorDeleteItem.Image"), System.Drawing.Image)
+        Me.BindingNavigatorDeleteItem.Name = "BindingNavigatorDeleteItem"
+        Me.BindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = True
+        Me.BindingNavigatorDeleteItem.Size = New System.Drawing.Size(24, 24)
+        Me.BindingNavigatorDeleteItem.Text = "Eliminar"
         '
         'BindingNavigatorMoveFirstItem
         '
@@ -125,7 +156,7 @@ Partial Class FrmRegimenSalud
         Me.BindingNavigatorMoveFirstItem.Image = CType(resources.GetObject("BindingNavigatorMoveFirstItem.Image"), System.Drawing.Image)
         Me.BindingNavigatorMoveFirstItem.Name = "BindingNavigatorMoveFirstItem"
         Me.BindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorMoveFirstItem.Size = New System.Drawing.Size(24, 22)
+        Me.BindingNavigatorMoveFirstItem.Size = New System.Drawing.Size(24, 24)
         Me.BindingNavigatorMoveFirstItem.Text = "Mover primero"
         '
         'BindingNavigatorMovePreviousItem
@@ -134,13 +165,13 @@ Partial Class FrmRegimenSalud
         Me.BindingNavigatorMovePreviousItem.Image = CType(resources.GetObject("BindingNavigatorMovePreviousItem.Image"), System.Drawing.Image)
         Me.BindingNavigatorMovePreviousItem.Name = "BindingNavigatorMovePreviousItem"
         Me.BindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorMovePreviousItem.Size = New System.Drawing.Size(24, 22)
+        Me.BindingNavigatorMovePreviousItem.Size = New System.Drawing.Size(24, 24)
         Me.BindingNavigatorMovePreviousItem.Text = "Mover anterior"
         '
         'BindingNavigatorSeparator
         '
         Me.BindingNavigatorSeparator.Name = "BindingNavigatorSeparator"
-        Me.BindingNavigatorSeparator.Size = New System.Drawing.Size(6, 25)
+        Me.BindingNavigatorSeparator.Size = New System.Drawing.Size(6, 27)
         '
         'BindingNavigatorPositionItem
         '
@@ -151,17 +182,10 @@ Partial Class FrmRegimenSalud
         Me.BindingNavigatorPositionItem.Text = "0"
         Me.BindingNavigatorPositionItem.ToolTipText = "Posición actual"
         '
-        'BindingNavigatorCountItem
-        '
-        Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
-        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(48, 20)
-        Me.BindingNavigatorCountItem.Text = "de {0}"
-        Me.BindingNavigatorCountItem.ToolTipText = "Número total de elementos"
-        '
         'BindingNavigatorSeparator1
         '
-        Me.BindingNavigatorSeparator1.Name = "BindingNavigatorSeparator"
-        Me.BindingNavigatorSeparator1.Size = New System.Drawing.Size(6, 6)
+        Me.BindingNavigatorSeparator1.Name = "BindingNavigatorSeparator1"
+        Me.BindingNavigatorSeparator1.Size = New System.Drawing.Size(6, 27)
         '
         'BindingNavigatorMoveNextItem
         '
@@ -183,39 +207,64 @@ Partial Class FrmRegimenSalud
         '
         'BindingNavigatorSeparator2
         '
-        Me.BindingNavigatorSeparator2.Name = "BindingNavigatorSeparator"
-        Me.BindingNavigatorSeparator2.Size = New System.Drawing.Size(6, 6)
-        '
-        'BindingNavigatorAddNewItem
-        '
-        Me.BindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorAddNewItem.Image = CType(resources.GetObject("BindingNavigatorAddNewItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorAddNewItem.Name = "BindingNavigatorAddNewItem"
-        Me.BindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorAddNewItem.Size = New System.Drawing.Size(24, 24)
-        Me.BindingNavigatorAddNewItem.Text = "Agregar nuevo"
-        '
-        'BindingNavigatorDeleteItem
-        '
-        Me.BindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorDeleteItem.Image = CType(resources.GetObject("BindingNavigatorDeleteItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorDeleteItem.Name = "BindingNavigatorDeleteItem"
-        Me.BindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorDeleteItem.Size = New System.Drawing.Size(24, 24)
-        Me.BindingNavigatorDeleteItem.Text = "Eliminar"
+        Me.BindingNavigatorSeparator2.Name = "BindingNavigatorSeparator2"
+        Me.BindingNavigatorSeparator2.Size = New System.Drawing.Size(6, 27)
         '
         'REGIMEN_SALUDBindingNavigatorSaveItem
         '
         Me.REGIMEN_SALUDBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
         Me.REGIMEN_SALUDBindingNavigatorSaveItem.Image = CType(resources.GetObject("REGIMEN_SALUDBindingNavigatorSaveItem.Image"), System.Drawing.Image)
         Me.REGIMEN_SALUDBindingNavigatorSaveItem.Name = "REGIMEN_SALUDBindingNavigatorSaveItem"
-        Me.REGIMEN_SALUDBindingNavigatorSaveItem.Size = New System.Drawing.Size(23, 23)
+        Me.REGIMEN_SALUDBindingNavigatorSaveItem.Size = New System.Drawing.Size(24, 24)
         Me.REGIMEN_SALUDBindingNavigatorSaveItem.Text = "Guardar datos"
+        '
+        'BD_RecursosHumanosDataSet
+        '
+        Me.BD_RecursosHumanosDataSet.DataSetName = "BD_RecursosHumanosDataSet"
+        Me.BD_RecursosHumanosDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'REGIMEN_SALUDBindingSource1
+        '
+        Me.REGIMEN_SALUDBindingSource1.DataMember = "REGIMEN_SALUD"
+        Me.REGIMEN_SALUDBindingSource1.DataSource = Me.BD_RecursosHumanosDataSet
+        '
+        'REGIMEN_SALUDTableAdapter1
+        '
+        Me.REGIMEN_SALUDTableAdapter1.ClearBeforeFill = True
+        '
+        'TableAdapterManager1
+        '
+        Me.TableAdapterManager1.AREATableAdapter = Nothing
+        Me.TableAdapterManager1.ASISTENCIATableAdapter = Nothing
+        Me.TableAdapterManager1.BackupDataSetBeforeUpdate = False
+        Me.TableAdapterManager1.BENEFICIO_LABORALTableAdapter = Nothing
+        Me.TableAdapterManager1.BOLETATableAdapter = Nothing
+        Me.TableAdapterManager1.CONTRATOTableAdapter = Nothing
+        Me.TableAdapterManager1.DATOS_TRIBUTARIOSTableAdapter = Nothing
+        Me.TableAdapterManager1.DETALLE_BENEFICIOTableAdapter = Nothing
+        Me.TableAdapterManager1.DISTRITOTableAdapter = Nothing
+        Me.TableAdapterManager1.EMPLEADOTableAdapter = Nothing
+        Me.TableAdapterManager1.EXPERIENCIA_LABORALTableAdapter = Nothing
+        Me.TableAdapterManager1.GERENTETableAdapter = Nothing
+        Me.TableAdapterManager1.MEMORANDUMSTableAdapter = Nothing
+        Me.TableAdapterManager1.NIVEL_EDUCACIONTableAdapter = Nothing
+        Me.TableAdapterManager1.PAGO_PLANILLATableAdapter = Nothing
+        Me.TableAdapterManager1.PERIODO_LABORALTableAdapter = Nothing
+        Me.TableAdapterManager1.PLANILLATableAdapter = Nothing
+        Me.TableAdapterManager1.PRESTAMO_ADELANTOSTableAdapter = Nothing
+        Me.TableAdapterManager1.REGIMEN_PENSIONARIOTableAdapter = Nothing
+        Me.TableAdapterManager1.REGIMEN_SALUDTableAdapter = Me.REGIMEN_SALUDTableAdapter1
+        Me.TableAdapterManager1.TIPO_ASISTENCIATableAdapter = Nothing
+        Me.TableAdapterManager1.TIPO_CONTRATOTableAdapter = Nothing
+        Me.TableAdapterManager1.TIPO_TRABAJADORTableAdapter = Nothing
+        Me.TableAdapterManager1.UpdateOrder = ProyectoRRHH.BD_RecursosHumanosDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
+        Me.TableAdapterManager1.VACACIONESTableAdapter = Nothing
+        Me.TableAdapterManager1.VARIACION_SUELDOTableAdapter = Nothing
         '
         'InstitucionSaludLabel
         '
         InstitucionSaludLabel.AutoSize = True
-        InstitucionSaludLabel.Location = New System.Drawing.Point(135, 67)
+        InstitucionSaludLabel.Location = New System.Drawing.Point(152, 52)
         InstitucionSaludLabel.Name = "InstitucionSaludLabel"
         InstitucionSaludLabel.Size = New System.Drawing.Size(115, 17)
         InstitucionSaludLabel.TabIndex = 1
@@ -223,8 +272,8 @@ Partial Class FrmRegimenSalud
         '
         'InstitucionSaludTextBox
         '
-        Me.InstitucionSaludTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.REGIMEN_SALUDBindingSource, "institucionSalud", True))
-        Me.InstitucionSaludTextBox.Location = New System.Drawing.Point(264, 64)
+        Me.InstitucionSaludTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.REGIMEN_SALUDBindingSource1, "institucionSalud", True))
+        Me.InstitucionSaludTextBox.Location = New System.Drawing.Point(281, 49)
         Me.InstitucionSaludTextBox.Name = "InstitucionSaludTextBox"
         Me.InstitucionSaludTextBox.Size = New System.Drawing.Size(100, 22)
         Me.InstitucionSaludTextBox.TabIndex = 2
@@ -232,7 +281,7 @@ Partial Class FrmRegimenSalud
         'IdRegimenSaludLabel
         '
         IdRegimenSaludLabel.AutoSize = True
-        IdRegimenSaludLabel.Location = New System.Drawing.Point(135, 95)
+        IdRegimenSaludLabel.Location = New System.Drawing.Point(152, 80)
         IdRegimenSaludLabel.Name = "IdRegimenSaludLabel"
         IdRegimenSaludLabel.Size = New System.Drawing.Size(123, 17)
         IdRegimenSaludLabel.TabIndex = 3
@@ -240,8 +289,8 @@ Partial Class FrmRegimenSalud
         '
         'IdRegimenSaludTextBox
         '
-        Me.IdRegimenSaludTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.REGIMEN_SALUDBindingSource, "IdRegimenSalud", True))
-        Me.IdRegimenSaludTextBox.Location = New System.Drawing.Point(264, 92)
+        Me.IdRegimenSaludTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.REGIMEN_SALUDBindingSource1, "IdRegimenSalud", True))
+        Me.IdRegimenSaludTextBox.Location = New System.Drawing.Point(281, 77)
         Me.IdRegimenSaludTextBox.Name = "IdRegimenSaludTextBox"
         Me.IdRegimenSaludTextBox.Size = New System.Drawing.Size(100, 22)
         Me.IdRegimenSaludTextBox.TabIndex = 4
@@ -252,11 +301,11 @@ Partial Class FrmRegimenSalud
         Me.REGIMEN_SALUDDataGridView.BackgroundColor = System.Drawing.SystemColors.ActiveCaption
         Me.REGIMEN_SALUDDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.REGIMEN_SALUDDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2})
-        Me.REGIMEN_SALUDDataGridView.DataSource = Me.REGIMEN_SALUDBindingSource
-        Me.REGIMEN_SALUDDataGridView.Location = New System.Drawing.Point(44, 137)
+        Me.REGIMEN_SALUDDataGridView.DataSource = Me.REGIMEN_SALUDBindingSource1
+        Me.REGIMEN_SALUDDataGridView.Location = New System.Drawing.Point(126, 136)
         Me.REGIMEN_SALUDDataGridView.Name = "REGIMEN_SALUDDataGridView"
         Me.REGIMEN_SALUDDataGridView.RowTemplate.Height = 24
-        Me.REGIMEN_SALUDDataGridView.Size = New System.Drawing.Size(386, 146)
+        Me.REGIMEN_SALUDDataGridView.Size = New System.Drawing.Size(371, 220)
         Me.REGIMEN_SALUDDataGridView.TabIndex = 5
         '
         'DataGridViewTextBoxColumn1
@@ -278,7 +327,7 @@ Partial Class FrmRegimenSalud
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(614, 511)
+        Me.ClientSize = New System.Drawing.Size(744, 511)
         Me.Controls.Add(Me.REGIMEN_SALUDDataGridView)
         Me.Controls.Add(InstitucionSaludLabel)
         Me.Controls.Add(Me.InstitucionSaludTextBox)
@@ -292,6 +341,8 @@ Partial Class FrmRegimenSalud
         CType(Me.REGIMEN_SALUDBindingNavigator, System.ComponentModel.ISupportInitialize).EndInit()
         Me.REGIMEN_SALUDBindingNavigator.ResumeLayout(False)
         Me.REGIMEN_SALUDBindingNavigator.PerformLayout()
+        CType(Me.BD_RecursosHumanosDataSet, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.REGIMEN_SALUDBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.REGIMEN_SALUDDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
@@ -315,6 +366,10 @@ Partial Class FrmRegimenSalud
     Friend WithEvents BindingNavigatorMoveLastItem As ToolStripButton
     Friend WithEvents BindingNavigatorSeparator2 As ToolStripSeparator
     Friend WithEvents REGIMEN_SALUDBindingNavigatorSaveItem As ToolStripButton
+    Friend WithEvents BD_RecursosHumanosDataSet As BD_RecursosHumanosDataSet
+    Friend WithEvents REGIMEN_SALUDBindingSource1 As BindingSource
+    Friend WithEvents REGIMEN_SALUDTableAdapter1 As BD_RecursosHumanosDataSetTableAdapters.REGIMEN_SALUDTableAdapter
+    Friend WithEvents TableAdapterManager1 As BD_RecursosHumanosDataSetTableAdapters.TableAdapterManager
     Friend WithEvents InstitucionSaludTextBox As TextBox
     Friend WithEvents IdRegimenSaludTextBox As TextBox
     Friend WithEvents REGIMEN_SALUDDataGridView As DataGridView

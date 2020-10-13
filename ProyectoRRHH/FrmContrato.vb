@@ -7,6 +7,8 @@
     End Sub
 
     Private Sub FrmContrato_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        'TODO: esta línea de código carga datos en la tabla 'BD_RecursosHumanosDataSet.CONTRATO' Puede moverla o quitarla según sea necesario.
+        Me.CONTRATOTableAdapter1.Fill(Me.BD_RecursosHumanosDataSet.CONTRATO)
         'TODO: esta línea de código carga datos en la tabla 'DB_RRHHDataSet.CONTRATO' Puede moverla o quitarla según sea necesario.
         Me.CONTRATOTableAdapter.Fill(Me.DB_RRHHDataSet.CONTRATO)
 

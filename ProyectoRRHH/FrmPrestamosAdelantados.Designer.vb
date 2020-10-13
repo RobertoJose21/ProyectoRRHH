@@ -276,7 +276,7 @@ Partial Class FrmPrestamosAdelantados
         'IdPrestamoLabel
         '
         IdPrestamoLabel.AutoSize = True
-        IdPrestamoLabel.Location = New System.Drawing.Point(27, 41)
+        IdPrestamoLabel.Location = New System.Drawing.Point(21, 47)
         IdPrestamoLabel.Name = "IdPrestamoLabel"
         IdPrestamoLabel.Size = New System.Drawing.Size(87, 17)
         IdPrestamoLabel.TabIndex = 1
@@ -285,15 +285,15 @@ Partial Class FrmPrestamosAdelantados
         'IdPrestamoTextBox
         '
         Me.IdPrestamoTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.PRESTAMO_ADELANTOSBindingSource1, "IdPrestamo", True))
-        Me.IdPrestamoTextBox.Location = New System.Drawing.Point(148, 38)
+        Me.IdPrestamoTextBox.Location = New System.Drawing.Point(142, 44)
         Me.IdPrestamoTextBox.Name = "IdPrestamoTextBox"
-        Me.IdPrestamoTextBox.Size = New System.Drawing.Size(264, 22)
+        Me.IdPrestamoTextBox.Size = New System.Drawing.Size(279, 22)
         Me.IdPrestamoTextBox.TabIndex = 2
         '
         'DescripcionLabel
         '
         DescripcionLabel.AutoSize = True
-        DescripcionLabel.Location = New System.Drawing.Point(27, 69)
+        DescripcionLabel.Location = New System.Drawing.Point(21, 75)
         DescripcionLabel.Name = "DescripcionLabel"
         DescripcionLabel.Size = New System.Drawing.Size(84, 17)
         DescripcionLabel.TabIndex = 3
@@ -302,15 +302,15 @@ Partial Class FrmPrestamosAdelantados
         'DescripcionTextBox
         '
         Me.DescripcionTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.PRESTAMO_ADELANTOSBindingSource1, "descripcion", True))
-        Me.DescripcionTextBox.Location = New System.Drawing.Point(148, 66)
+        Me.DescripcionTextBox.Location = New System.Drawing.Point(142, 72)
         Me.DescripcionTextBox.Name = "DescripcionTextBox"
-        Me.DescripcionTextBox.Size = New System.Drawing.Size(264, 22)
+        Me.DescripcionTextBox.Size = New System.Drawing.Size(279, 22)
         Me.DescripcionTextBox.TabIndex = 4
         '
         'MontoPrestamoLabel
         '
         MontoPrestamoLabel.AutoSize = True
-        MontoPrestamoLabel.Location = New System.Drawing.Point(27, 97)
+        MontoPrestamoLabel.Location = New System.Drawing.Point(21, 103)
         MontoPrestamoLabel.Name = "MontoPrestamoLabel"
         MontoPrestamoLabel.Size = New System.Drawing.Size(115, 17)
         MontoPrestamoLabel.TabIndex = 5
@@ -319,15 +319,15 @@ Partial Class FrmPrestamosAdelantados
         'MontoPrestamoTextBox
         '
         Me.MontoPrestamoTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.PRESTAMO_ADELANTOSBindingSource1, "montoPrestamo", True))
-        Me.MontoPrestamoTextBox.Location = New System.Drawing.Point(148, 94)
+        Me.MontoPrestamoTextBox.Location = New System.Drawing.Point(142, 100)
         Me.MontoPrestamoTextBox.Name = "MontoPrestamoTextBox"
-        Me.MontoPrestamoTextBox.Size = New System.Drawing.Size(264, 22)
+        Me.MontoPrestamoTextBox.Size = New System.Drawing.Size(279, 22)
         Me.MontoPrestamoTextBox.TabIndex = 6
         '
         'FechaPrestamoLabel
         '
         FechaPrestamoLabel.AutoSize = True
-        FechaPrestamoLabel.Location = New System.Drawing.Point(27, 126)
+        FechaPrestamoLabel.Location = New System.Drawing.Point(21, 132)
         FechaPrestamoLabel.Name = "FechaPrestamoLabel"
         FechaPrestamoLabel.Size = New System.Drawing.Size(111, 17)
         FechaPrestamoLabel.TabIndex = 7
@@ -336,15 +336,15 @@ Partial Class FrmPrestamosAdelantados
         'FechaPrestamoDateTimePicker
         '
         Me.FechaPrestamoDateTimePicker.DataBindings.Add(New System.Windows.Forms.Binding("Value", Me.PRESTAMO_ADELANTOSBindingSource1, "fechaPrestamo", True))
-        Me.FechaPrestamoDateTimePicker.Location = New System.Drawing.Point(148, 122)
+        Me.FechaPrestamoDateTimePicker.Location = New System.Drawing.Point(142, 128)
         Me.FechaPrestamoDateTimePicker.Name = "FechaPrestamoDateTimePicker"
-        Me.FechaPrestamoDateTimePicker.Size = New System.Drawing.Size(264, 22)
+        Me.FechaPrestamoDateTimePicker.Size = New System.Drawing.Size(279, 22)
         Me.FechaPrestamoDateTimePicker.TabIndex = 8
         '
         'IdContratoLabel
         '
         IdContratoLabel.AutoSize = True
-        IdContratoLabel.Location = New System.Drawing.Point(27, 153)
+        IdContratoLabel.Location = New System.Drawing.Point(21, 159)
         IdContratoLabel.Name = "IdContratoLabel"
         IdContratoLabel.Size = New System.Drawing.Size(81, 17)
         IdContratoLabel.TabIndex = 9
@@ -353,9 +353,9 @@ Partial Class FrmPrestamosAdelantados
         'IdContratoTextBox
         '
         Me.IdContratoTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.PRESTAMO_ADELANTOSBindingSource1, "IdContrato", True))
-        Me.IdContratoTextBox.Location = New System.Drawing.Point(148, 150)
+        Me.IdContratoTextBox.Location = New System.Drawing.Point(142, 156)
         Me.IdContratoTextBox.Name = "IdContratoTextBox"
-        Me.IdContratoTextBox.Size = New System.Drawing.Size(264, 22)
+        Me.IdContratoTextBox.Size = New System.Drawing.Size(279, 22)
         Me.IdContratoTextBox.TabIndex = 10
         '
         'PRESTAMO_ADELANTOSDataGridView
@@ -365,10 +365,10 @@ Partial Class FrmPrestamosAdelantados
         Me.PRESTAMO_ADELANTOSDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.PRESTAMO_ADELANTOSDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3, Me.DataGridViewTextBoxColumn4, Me.DataGridViewTextBoxColumn5})
         Me.PRESTAMO_ADELANTOSDataGridView.DataSource = Me.PRESTAMO_ADELANTOSBindingSource1
-        Me.PRESTAMO_ADELANTOSDataGridView.Location = New System.Drawing.Point(42, 190)
+        Me.PRESTAMO_ADELANTOSDataGridView.Location = New System.Drawing.Point(52, 204)
         Me.PRESTAMO_ADELANTOSDataGridView.Name = "PRESTAMO_ADELANTOSDataGridView"
         Me.PRESTAMO_ADELANTOSDataGridView.RowTemplate.Height = 24
-        Me.PRESTAMO_ADELANTOSDataGridView.Size = New System.Drawing.Size(725, 206)
+        Me.PRESTAMO_ADELANTOSDataGridView.Size = New System.Drawing.Size(645, 236)
         Me.PRESTAMO_ADELANTOSDataGridView.TabIndex = 11
         '
         'DataGridViewTextBoxColumn1
@@ -403,7 +403,6 @@ Partial Class FrmPrestamosAdelantados
         Me.DataGridViewTextBoxColumn5.DataPropertyName = "IdContrato"
         Me.DataGridViewTextBoxColumn5.HeaderText = "IdContrato"
         Me.DataGridViewTextBoxColumn5.Name = "DataGridViewTextBoxColumn5"
-        Me.DataGridViewTextBoxColumn5.Width = 150
         '
         'FrmPrestamosAdelantados
         '

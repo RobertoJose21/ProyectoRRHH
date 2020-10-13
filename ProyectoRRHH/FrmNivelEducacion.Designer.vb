@@ -31,18 +31,22 @@ Partial Class FrmNivelEducacion
         Me.NIVEL_EDUCACIONTableAdapter = New ProyectoRRHH.DB_RRHHDataSetTableAdapters.NIVEL_EDUCACIONTableAdapter()
         Me.TableAdapterManager = New ProyectoRRHH.DB_RRHHDataSetTableAdapters.TableAdapterManager()
         Me.NIVEL_EDUCACIONBindingNavigator = New System.Windows.Forms.BindingNavigator(Me.components)
+        Me.BindingNavigatorAddNewItem = New System.Windows.Forms.ToolStripButton()
+        Me.BindingNavigatorCountItem = New System.Windows.Forms.ToolStripLabel()
+        Me.BindingNavigatorDeleteItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorMoveFirstItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorMovePreviousItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorSeparator = New System.Windows.Forms.ToolStripSeparator()
         Me.BindingNavigatorPositionItem = New System.Windows.Forms.ToolStripTextBox()
-        Me.BindingNavigatorCountItem = New System.Windows.Forms.ToolStripLabel()
         Me.BindingNavigatorSeparator1 = New System.Windows.Forms.ToolStripSeparator()
         Me.BindingNavigatorMoveNextItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorMoveLastItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorSeparator2 = New System.Windows.Forms.ToolStripSeparator()
-        Me.BindingNavigatorAddNewItem = New System.Windows.Forms.ToolStripButton()
-        Me.BindingNavigatorDeleteItem = New System.Windows.Forms.ToolStripButton()
         Me.NIVEL_EDUCACIONBindingNavigatorSaveItem = New System.Windows.Forms.ToolStripButton()
+        Me.BD_RecursosHumanosDataSet = New ProyectoRRHH.BD_RecursosHumanosDataSet()
+        Me.NIVEL_EDUCACIONBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
+        Me.NIVEL_EDUCACIONTableAdapter1 = New ProyectoRRHH.BD_RecursosHumanosDataSetTableAdapters.NIVEL_EDUCACIONTableAdapter()
+        Me.TableAdapterManager1 = New ProyectoRRHH.BD_RecursosHumanosDataSetTableAdapters.TableAdapterManager()
         Me.IdNivelEducacionTextBox = New System.Windows.Forms.TextBox()
         Me.NivelEducacionTextBox = New System.Windows.Forms.TextBox()
         Me.NIVEL_EDUCACIONDataGridView = New System.Windows.Forms.DataGridView()
@@ -54,6 +58,8 @@ Partial Class FrmNivelEducacion
         CType(Me.NIVEL_EDUCACIONBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.NIVEL_EDUCACIONBindingNavigator, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.NIVEL_EDUCACIONBindingNavigator.SuspendLayout()
+        CType(Me.BD_RecursosHumanosDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.NIVEL_EDUCACIONBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.NIVEL_EDUCACIONDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -119,13 +125,38 @@ Partial Class FrmNivelEducacion
         Me.NIVEL_EDUCACIONBindingNavigator.TabIndex = 0
         Me.NIVEL_EDUCACIONBindingNavigator.Text = "BindingNavigator1"
         '
+        'BindingNavigatorAddNewItem
+        '
+        Me.BindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.BindingNavigatorAddNewItem.Image = CType(resources.GetObject("BindingNavigatorAddNewItem.Image"), System.Drawing.Image)
+        Me.BindingNavigatorAddNewItem.Name = "BindingNavigatorAddNewItem"
+        Me.BindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = True
+        Me.BindingNavigatorAddNewItem.Size = New System.Drawing.Size(24, 24)
+        Me.BindingNavigatorAddNewItem.Text = "Agregar nuevo"
+        '
+        'BindingNavigatorCountItem
+        '
+        Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
+        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(48, 24)
+        Me.BindingNavigatorCountItem.Text = "de {0}"
+        Me.BindingNavigatorCountItem.ToolTipText = "Número total de elementos"
+        '
+        'BindingNavigatorDeleteItem
+        '
+        Me.BindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.BindingNavigatorDeleteItem.Image = CType(resources.GetObject("BindingNavigatorDeleteItem.Image"), System.Drawing.Image)
+        Me.BindingNavigatorDeleteItem.Name = "BindingNavigatorDeleteItem"
+        Me.BindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = True
+        Me.BindingNavigatorDeleteItem.Size = New System.Drawing.Size(24, 24)
+        Me.BindingNavigatorDeleteItem.Text = "Eliminar"
+        '
         'BindingNavigatorMoveFirstItem
         '
         Me.BindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
         Me.BindingNavigatorMoveFirstItem.Image = CType(resources.GetObject("BindingNavigatorMoveFirstItem.Image"), System.Drawing.Image)
         Me.BindingNavigatorMoveFirstItem.Name = "BindingNavigatorMoveFirstItem"
         Me.BindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorMoveFirstItem.Size = New System.Drawing.Size(24, 22)
+        Me.BindingNavigatorMoveFirstItem.Size = New System.Drawing.Size(24, 24)
         Me.BindingNavigatorMoveFirstItem.Text = "Mover primero"
         '
         'BindingNavigatorMovePreviousItem
@@ -134,13 +165,13 @@ Partial Class FrmNivelEducacion
         Me.BindingNavigatorMovePreviousItem.Image = CType(resources.GetObject("BindingNavigatorMovePreviousItem.Image"), System.Drawing.Image)
         Me.BindingNavigatorMovePreviousItem.Name = "BindingNavigatorMovePreviousItem"
         Me.BindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorMovePreviousItem.Size = New System.Drawing.Size(24, 22)
+        Me.BindingNavigatorMovePreviousItem.Size = New System.Drawing.Size(24, 24)
         Me.BindingNavigatorMovePreviousItem.Text = "Mover anterior"
         '
         'BindingNavigatorSeparator
         '
         Me.BindingNavigatorSeparator.Name = "BindingNavigatorSeparator"
-        Me.BindingNavigatorSeparator.Size = New System.Drawing.Size(6, 25)
+        Me.BindingNavigatorSeparator.Size = New System.Drawing.Size(6, 27)
         '
         'BindingNavigatorPositionItem
         '
@@ -151,17 +182,10 @@ Partial Class FrmNivelEducacion
         Me.BindingNavigatorPositionItem.Text = "0"
         Me.BindingNavigatorPositionItem.ToolTipText = "Posición actual"
         '
-        'BindingNavigatorCountItem
-        '
-        Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
-        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(48, 20)
-        Me.BindingNavigatorCountItem.Text = "de {0}"
-        Me.BindingNavigatorCountItem.ToolTipText = "Número total de elementos"
-        '
         'BindingNavigatorSeparator1
         '
-        Me.BindingNavigatorSeparator1.Name = "BindingNavigatorSeparator"
-        Me.BindingNavigatorSeparator1.Size = New System.Drawing.Size(6, 6)
+        Me.BindingNavigatorSeparator1.Name = "BindingNavigatorSeparator1"
+        Me.BindingNavigatorSeparator1.Size = New System.Drawing.Size(6, 27)
         '
         'BindingNavigatorMoveNextItem
         '
@@ -183,39 +207,64 @@ Partial Class FrmNivelEducacion
         '
         'BindingNavigatorSeparator2
         '
-        Me.BindingNavigatorSeparator2.Name = "BindingNavigatorSeparator"
-        Me.BindingNavigatorSeparator2.Size = New System.Drawing.Size(6, 6)
-        '
-        'BindingNavigatorAddNewItem
-        '
-        Me.BindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorAddNewItem.Image = CType(resources.GetObject("BindingNavigatorAddNewItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorAddNewItem.Name = "BindingNavigatorAddNewItem"
-        Me.BindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorAddNewItem.Size = New System.Drawing.Size(24, 24)
-        Me.BindingNavigatorAddNewItem.Text = "Agregar nuevo"
-        '
-        'BindingNavigatorDeleteItem
-        '
-        Me.BindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorDeleteItem.Image = CType(resources.GetObject("BindingNavigatorDeleteItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorDeleteItem.Name = "BindingNavigatorDeleteItem"
-        Me.BindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorDeleteItem.Size = New System.Drawing.Size(24, 24)
-        Me.BindingNavigatorDeleteItem.Text = "Eliminar"
+        Me.BindingNavigatorSeparator2.Name = "BindingNavigatorSeparator2"
+        Me.BindingNavigatorSeparator2.Size = New System.Drawing.Size(6, 27)
         '
         'NIVEL_EDUCACIONBindingNavigatorSaveItem
         '
         Me.NIVEL_EDUCACIONBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
         Me.NIVEL_EDUCACIONBindingNavigatorSaveItem.Image = CType(resources.GetObject("NIVEL_EDUCACIONBindingNavigatorSaveItem.Image"), System.Drawing.Image)
         Me.NIVEL_EDUCACIONBindingNavigatorSaveItem.Name = "NIVEL_EDUCACIONBindingNavigatorSaveItem"
-        Me.NIVEL_EDUCACIONBindingNavigatorSaveItem.Size = New System.Drawing.Size(23, 23)
+        Me.NIVEL_EDUCACIONBindingNavigatorSaveItem.Size = New System.Drawing.Size(24, 24)
         Me.NIVEL_EDUCACIONBindingNavigatorSaveItem.Text = "Guardar datos"
+        '
+        'BD_RecursosHumanosDataSet
+        '
+        Me.BD_RecursosHumanosDataSet.DataSetName = "BD_RecursosHumanosDataSet"
+        Me.BD_RecursosHumanosDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'NIVEL_EDUCACIONBindingSource1
+        '
+        Me.NIVEL_EDUCACIONBindingSource1.DataMember = "NIVEL_EDUCACION"
+        Me.NIVEL_EDUCACIONBindingSource1.DataSource = Me.BD_RecursosHumanosDataSet
+        '
+        'NIVEL_EDUCACIONTableAdapter1
+        '
+        Me.NIVEL_EDUCACIONTableAdapter1.ClearBeforeFill = True
+        '
+        'TableAdapterManager1
+        '
+        Me.TableAdapterManager1.AREATableAdapter = Nothing
+        Me.TableAdapterManager1.ASISTENCIATableAdapter = Nothing
+        Me.TableAdapterManager1.BackupDataSetBeforeUpdate = False
+        Me.TableAdapterManager1.BENEFICIO_LABORALTableAdapter = Nothing
+        Me.TableAdapterManager1.BOLETATableAdapter = Nothing
+        Me.TableAdapterManager1.CONTRATOTableAdapter = Nothing
+        Me.TableAdapterManager1.DATOS_TRIBUTARIOSTableAdapter = Nothing
+        Me.TableAdapterManager1.DETALLE_BENEFICIOTableAdapter = Nothing
+        Me.TableAdapterManager1.DISTRITOTableAdapter = Nothing
+        Me.TableAdapterManager1.EMPLEADOTableAdapter = Nothing
+        Me.TableAdapterManager1.EXPERIENCIA_LABORALTableAdapter = Nothing
+        Me.TableAdapterManager1.GERENTETableAdapter = Nothing
+        Me.TableAdapterManager1.MEMORANDUMSTableAdapter = Nothing
+        Me.TableAdapterManager1.NIVEL_EDUCACIONTableAdapter = Me.NIVEL_EDUCACIONTableAdapter1
+        Me.TableAdapterManager1.PAGO_PLANILLATableAdapter = Nothing
+        Me.TableAdapterManager1.PERIODO_LABORALTableAdapter = Nothing
+        Me.TableAdapterManager1.PLANILLATableAdapter = Nothing
+        Me.TableAdapterManager1.PRESTAMO_ADELANTOSTableAdapter = Nothing
+        Me.TableAdapterManager1.REGIMEN_PENSIONARIOTableAdapter = Nothing
+        Me.TableAdapterManager1.REGIMEN_SALUDTableAdapter = Nothing
+        Me.TableAdapterManager1.TIPO_ASISTENCIATableAdapter = Nothing
+        Me.TableAdapterManager1.TIPO_CONTRATOTableAdapter = Nothing
+        Me.TableAdapterManager1.TIPO_TRABAJADORTableAdapter = Nothing
+        Me.TableAdapterManager1.UpdateOrder = ProyectoRRHH.BD_RecursosHumanosDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
+        Me.TableAdapterManager1.VACACIONESTableAdapter = Nothing
+        Me.TableAdapterManager1.VARIACION_SUELDOTableAdapter = Nothing
         '
         'IdNivelEducacionLabel
         '
         IdNivelEducacionLabel.AutoSize = True
-        IdNivelEducacionLabel.Location = New System.Drawing.Point(25, 63)
+        IdNivelEducacionLabel.Location = New System.Drawing.Point(22, 61)
         IdNivelEducacionLabel.Name = "IdNivelEducacionLabel"
         IdNivelEducacionLabel.Size = New System.Drawing.Size(128, 17)
         IdNivelEducacionLabel.TabIndex = 1
@@ -223,8 +272,8 @@ Partial Class FrmNivelEducacion
         '
         'IdNivelEducacionTextBox
         '
-        Me.IdNivelEducacionTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.NIVEL_EDUCACIONBindingSource, "IdNivelEducacion", True))
-        Me.IdNivelEducacionTextBox.Location = New System.Drawing.Point(159, 60)
+        Me.IdNivelEducacionTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.NIVEL_EDUCACIONBindingSource1, "IdNivelEducacion", True))
+        Me.IdNivelEducacionTextBox.Location = New System.Drawing.Point(156, 58)
         Me.IdNivelEducacionTextBox.Name = "IdNivelEducacionTextBox"
         Me.IdNivelEducacionTextBox.Size = New System.Drawing.Size(100, 22)
         Me.IdNivelEducacionTextBox.TabIndex = 2
@@ -232,7 +281,7 @@ Partial Class FrmNivelEducacion
         'NivelEducacionLabel
         '
         NivelEducacionLabel.AutoSize = True
-        NivelEducacionLabel.Location = New System.Drawing.Point(25, 91)
+        NivelEducacionLabel.Location = New System.Drawing.Point(22, 89)
         NivelEducacionLabel.Name = "NivelEducacionLabel"
         NivelEducacionLabel.Size = New System.Drawing.Size(111, 17)
         NivelEducacionLabel.TabIndex = 3
@@ -240,8 +289,8 @@ Partial Class FrmNivelEducacion
         '
         'NivelEducacionTextBox
         '
-        Me.NivelEducacionTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.NIVEL_EDUCACIONBindingSource, "nivelEducacion", True))
-        Me.NivelEducacionTextBox.Location = New System.Drawing.Point(159, 88)
+        Me.NivelEducacionTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.NIVEL_EDUCACIONBindingSource1, "nivelEducacion", True))
+        Me.NivelEducacionTextBox.Location = New System.Drawing.Point(156, 86)
         Me.NivelEducacionTextBox.Name = "NivelEducacionTextBox"
         Me.NivelEducacionTextBox.Size = New System.Drawing.Size(100, 22)
         Me.NivelEducacionTextBox.TabIndex = 4
@@ -252,11 +301,11 @@ Partial Class FrmNivelEducacion
         Me.NIVEL_EDUCACIONDataGridView.BackgroundColor = System.Drawing.SystemColors.ActiveCaption
         Me.NIVEL_EDUCACIONDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.NIVEL_EDUCACIONDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2})
-        Me.NIVEL_EDUCACIONDataGridView.DataSource = Me.NIVEL_EDUCACIONBindingSource
-        Me.NIVEL_EDUCACIONDataGridView.Location = New System.Drawing.Point(317, 63)
+        Me.NIVEL_EDUCACIONDataGridView.DataSource = Me.NIVEL_EDUCACIONBindingSource1
+        Me.NIVEL_EDUCACIONDataGridView.Location = New System.Drawing.Point(315, 58)
         Me.NIVEL_EDUCACIONDataGridView.Name = "NIVEL_EDUCACIONDataGridView"
         Me.NIVEL_EDUCACIONDataGridView.RowTemplate.Height = 24
-        Me.NIVEL_EDUCACIONDataGridView.Size = New System.Drawing.Size(514, 207)
+        Me.NIVEL_EDUCACIONDataGridView.Size = New System.Drawing.Size(437, 210)
         Me.NIVEL_EDUCACIONDataGridView.TabIndex = 5
         '
         'DataGridViewTextBoxColumn1
@@ -272,13 +321,13 @@ Partial Class FrmNivelEducacion
         Me.DataGridViewTextBoxColumn2.DataPropertyName = "nivelEducacion"
         Me.DataGridViewTextBoxColumn2.HeaderText = "nivelEducacion"
         Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
-        Me.DataGridViewTextBoxColumn2.Width = 200
+        Me.DataGridViewTextBoxColumn2.Width = 150
         '
         'FrmNivelEducacion
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1317, 414)
+        Me.ClientSize = New System.Drawing.Size(1317, 428)
         Me.Controls.Add(Me.NIVEL_EDUCACIONDataGridView)
         Me.Controls.Add(IdNivelEducacionLabel)
         Me.Controls.Add(Me.IdNivelEducacionTextBox)
@@ -292,6 +341,8 @@ Partial Class FrmNivelEducacion
         CType(Me.NIVEL_EDUCACIONBindingNavigator, System.ComponentModel.ISupportInitialize).EndInit()
         Me.NIVEL_EDUCACIONBindingNavigator.ResumeLayout(False)
         Me.NIVEL_EDUCACIONBindingNavigator.PerformLayout()
+        CType(Me.BD_RecursosHumanosDataSet, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.NIVEL_EDUCACIONBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.NIVEL_EDUCACIONDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
@@ -315,6 +366,10 @@ Partial Class FrmNivelEducacion
     Friend WithEvents BindingNavigatorMoveLastItem As ToolStripButton
     Friend WithEvents BindingNavigatorSeparator2 As ToolStripSeparator
     Friend WithEvents NIVEL_EDUCACIONBindingNavigatorSaveItem As ToolStripButton
+    Friend WithEvents BD_RecursosHumanosDataSet As BD_RecursosHumanosDataSet
+    Friend WithEvents NIVEL_EDUCACIONBindingSource1 As BindingSource
+    Friend WithEvents NIVEL_EDUCACIONTableAdapter1 As BD_RecursosHumanosDataSetTableAdapters.NIVEL_EDUCACIONTableAdapter
+    Friend WithEvents TableAdapterManager1 As BD_RecursosHumanosDataSetTableAdapters.TableAdapterManager
     Friend WithEvents IdNivelEducacionTextBox As TextBox
     Friend WithEvents NivelEducacionTextBox As TextBox
     Friend WithEvents NIVEL_EDUCACIONDataGridView As DataGridView
