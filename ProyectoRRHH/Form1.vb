@@ -88,7 +88,7 @@
     End Sub
 
     Private Sub BENEFICIOLABORALToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles BENEFICIOLABORALToolStripMenuItem.Click
-        Dim objbeneflaboral As New FrmExperienciaLaboral
+        Dim objbeneflaboral As New FrmBeneficioLaboral
         objbeneflaboral.MdiParent = Me
         objbeneflaboral.Show()
     End Sub

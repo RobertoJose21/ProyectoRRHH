@@ -256,7 +256,7 @@ Partial Class FrmDatosTributarios
         Me.DATOS_TRIBUTARIOSDataGridView.Location = New System.Drawing.Point(352, 64)
         Me.DATOS_TRIBUTARIOSDataGridView.Name = "DATOS_TRIBUTARIOSDataGridView"
         Me.DATOS_TRIBUTARIOSDataGridView.RowTemplate.Height = 24
-        Me.DATOS_TRIBUTARIOSDataGridView.Size = New System.Drawing.Size(300, 220)
+        Me.DATOS_TRIBUTARIOSDataGridView.Size = New System.Drawing.Size(316, 220)
         Me.DATOS_TRIBUTARIOSDataGridView.TabIndex = 5
         '
         'DataGridViewTextBoxColumn1
@@ -265,13 +265,14 @@ Partial Class FrmDatosTributarios
         Me.DataGridViewTextBoxColumn1.HeaderText = "IdDatoTributario"
         Me.DataGridViewTextBoxColumn1.Name = "DataGridViewTextBoxColumn1"
         Me.DataGridViewTextBoxColumn1.ReadOnly = True
-        Me.DataGridViewTextBoxColumn1.Width = 150
+        Me.DataGridViewTextBoxColumn1.Width = 130
         '
         'DataGridViewTextBoxColumn2
         '
         Me.DataGridViewTextBoxColumn2.DataPropertyName = "renta"
         Me.DataGridViewTextBoxColumn2.HeaderText = "renta"
         Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
+        Me.DataGridViewTextBoxColumn2.Width = 120
         '
         'FrmDatosTributarios
         '

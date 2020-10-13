@@ -230,7 +230,7 @@ Partial Class FrmBeneficioLaboral
         Me.IdBeneficioTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.BENEFICIO_LABORALBindingSource, "IdBeneficio", True))
         Me.IdBeneficioTextBox.Location = New System.Drawing.Point(305, 66)
         Me.IdBeneficioTextBox.Name = "IdBeneficioTextBox"
-        Me.IdBeneficioTextBox.Size = New System.Drawing.Size(100, 22)
+        Me.IdBeneficioTextBox.Size = New System.Drawing.Size(169, 22)
         Me.IdBeneficioTextBox.TabIndex = 2
         '
         'TipoBeneficioLabel
@@ -247,7 +247,7 @@ Partial Class FrmBeneficioLaboral
         Me.TipoBeneficioTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.BENEFICIO_LABORALBindingSource, "tipoBeneficio", True))
         Me.TipoBeneficioTextBox.Location = New System.Drawing.Point(305, 94)
         Me.TipoBeneficioTextBox.Name = "TipoBeneficioTextBox"
-        Me.TipoBeneficioTextBox.Size = New System.Drawing.Size(100, 22)
+        Me.TipoBeneficioTextBox.Size = New System.Drawing.Size(169, 22)
         Me.TipoBeneficioTextBox.TabIndex = 4
         '
         'MontoBeneficioLabel
@@ -264,7 +264,7 @@ Partial Class FrmBeneficioLaboral
         Me.MontoBeneficioTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.BENEFICIO_LABORALBindingSource, "montoBeneficio", True))
         Me.MontoBeneficioTextBox.Location = New System.Drawing.Point(305, 122)
         Me.MontoBeneficioTextBox.Name = "MontoBeneficioTextBox"
-        Me.MontoBeneficioTextBox.Size = New System.Drawing.Size(100, 22)
+        Me.MontoBeneficioTextBox.Size = New System.Drawing.Size(169, 22)
         Me.MontoBeneficioTextBox.TabIndex = 6
         '
         'BENEFICIO_LABORALDataGridView
@@ -277,7 +277,7 @@ Partial Class FrmBeneficioLaboral
         Me.BENEFICIO_LABORALDataGridView.Location = New System.Drawing.Point(94, 176)
         Me.BENEFICIO_LABORALDataGridView.Name = "BENEFICIO_LABORALDataGridView"
         Me.BENEFICIO_LABORALDataGridView.RowTemplate.Height = 24
-        Me.BENEFICIO_LABORALDataGridView.Size = New System.Drawing.Size(376, 221)
+        Me.BENEFICIO_LABORALDataGridView.Size = New System.Drawing.Size(434, 179)
         Me.BENEFICIO_LABORALDataGridView.TabIndex = 7
         '
         'DataGridViewTextBoxColumn1
