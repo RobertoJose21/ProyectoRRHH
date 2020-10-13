@@ -102,6 +102,12 @@
     <Compile Include="FrmDistrito.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="FrmExperienciaLaboral.Designer.vb">
+      <DependentUpon>FrmExperienciaLaboral.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmExperienciaLaboral.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FrmPagoPlanilla.Designer.vb">
       <DependentUpon>FrmPagoPlanilla.vb</DependentUpon>
     </Compile>
@@ -166,6 +172,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmDistrito.resx">
       <DependentUpon>FrmDistrito.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmExperienciaLaboral.resx">
+      <DependentUpon>FrmExperienciaLaboral.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmPagoPlanilla.resx">
       <DependentUpon>FrmPagoPlanilla.vb</DependentUpon>
