@@ -77,6 +77,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DB_RRHHDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="frmCONTRATO.Designer.vb">
+      <DependentUpon>frmCONTRATO.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmCONTRATO.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmEMPLEADO.Designer.vb">
       <DependentUpon>frmEMPLEADO.vb</DependentUpon>
     </Compile>
@@ -87,6 +93,12 @@
       <DependentUpon>frmMEMORANDUMS.vb</DependentUpon>
     </Compile>
     <Compile Include="frmMEMORANDUMS.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPRESTAMOS_ADELANTOS.Designer.vb">
+      <DependentUpon>frmPRESTAMOS_ADELANTOS.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmPRESTAMOS_ADELANTOS.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmPRINCIPAL.vb">
@@ -131,11 +143,17 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="frmCONTRATO.resx">
+      <DependentUpon>frmCONTRATO.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmEMPLEADO.resx">
       <DependentUpon>frmEMPLEADO.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmMEMORANDUMS.resx">
       <DependentUpon>frmMEMORANDUMS.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPRESTAMOS_ADELANTOS.resx">
+      <DependentUpon>frmPRESTAMOS_ADELANTOS.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmPRINCIPAL.resx">
       <DependentUpon>frmPRINCIPAL.vb</DependentUpon>

@@ -48,4 +48,16 @@
         objMANTENEDOREMPLEADO.MdiParent = Me
         objMANTENEDOREMPLEADO.Show()
     End Sub
+
+    Private Sub MANTENEDORToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles MANTENEDORToolStripMenuItem1.Click
+        Dim objMANTENEDORCONTRATO As New frmEMPLEADO
+        objMANTENEDORCONTRATO.MdiParent = Me
+        objMANTENEDORCONTRATO.Show()
+    End Sub
+
+    Private Sub ADELANTODEPRESTAMOSToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ADELANTODEPRESTAMOSToolStripMenuItem.Click
+        Dim objADELANTODEPRESTAMOS As New frmPRESTAMOS_ADELANTOS
+        objADELANTODEPRESTAMOS.MdiParent = Me
+        objADELANTODEPRESTAMOS.Show()
+    End Sub
 End Class
