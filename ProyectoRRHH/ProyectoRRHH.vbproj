@@ -90,6 +90,12 @@
     <Compile Include="FrmArea.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="FrmBeneficioLaboral.Designer.vb">
+      <DependentUpon>FrmBeneficioLaboral.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmBeneficioLaboral.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FrmBoleta.Designer.vb">
       <DependentUpon>FrmBoleta.vb</DependentUpon>
     </Compile>
@@ -166,6 +172,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmArea.resx">
       <DependentUpon>FrmArea.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmBeneficioLaboral.resx">
+      <DependentUpon>FrmBeneficioLaboral.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmBoleta.resx">
       <DependentUpon>FrmBoleta.vb</DependentUpon>

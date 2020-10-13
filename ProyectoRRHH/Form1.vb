@@ -54,4 +54,24 @@
         objboleta.MdiParent = Me
         objboleta.Show()
     End Sub
+
+    Private Sub VISTAVENTANASToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles VISTAVENTANASToolStripMenuItem.Click
+
+    End Sub
+
+    Private Sub CASCADAToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CASCADAToolStripMenuItem.Click
+
+    End Sub
+
+    Private Sub HORIZONTALToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles HORIZONTALToolStripMenuItem.Click
+
+    End Sub
+
+    Private Sub VERTICALToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles VERTICALToolStripMenuItem.Click
+
+    End Sub
+
+    Private Sub ORGANIZARTODOToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ORGANIZARTODOToolStripMenuItem.Click
+
+    End Sub
 End Class
