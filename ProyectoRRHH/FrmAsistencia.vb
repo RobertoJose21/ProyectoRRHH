@@ -7,6 +7,8 @@
     End Sub
 
     Private Sub FrmAsistencia_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        'TODO: esta línea de código carga datos en la tabla 'BD_RecursosHumanosDataSet.ASISTENCIA' Puede moverla o quitarla según sea necesario.
+        Me.ASISTENCIATableAdapter1.Fill(Me.BD_RecursosHumanosDataSet.ASISTENCIA)
         'TODO: esta línea de código carga datos en la tabla 'DB_RRHHDataSet.ASISTENCIA' Puede moverla o quitarla según sea necesario.
         Me.ASISTENCIATableAdapter.Fill(Me.DB_RRHHDataSet.ASISTENCIA)
 
