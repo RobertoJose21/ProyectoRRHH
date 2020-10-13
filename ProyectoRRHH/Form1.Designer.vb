@@ -36,6 +36,7 @@ Partial Class Form1
         Me.EXPERIENCIALABORALToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.CONTROLDEASISTENCIASToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MANTENEDORASISTENCIASToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.REPORTEDEDISTRITOSXEMPLEADOSToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.CONTRATACIÓNToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.DATOSPARALACONTRATACIÓNToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.TIPOSDECONTRATOToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -48,25 +49,24 @@ Partial Class Form1
         Me.GERENTEToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ADELANTODEPRESTAMOSToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MEMORANDUMSToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.REPORTESMEMORANDUMSToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.PLANILLASToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.DATOSPLANILLAToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.VARIACIONDELToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MANTENEDORPLANILLAToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.REPORTESUELDOSTOTALESToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.PAGOSBOLETASToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MANTENEDORPAGOToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.REGISTROToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.MANTENEDORDEBOLETASToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.REGISTROToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.REPORTESToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.REPORTEDEBOLETASToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.VISTAVENTANASToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.CASCADAToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.HORIZONTALToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.VERTICALToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ORGANIZARTODOToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.REPORTESMEMORANDUMSToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.REPORTEDEDISTRITOSXEMPLEADOSToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.REPORTESUELDOSTOTALESToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.REPORTEDEBOLETASToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -91,38 +91,38 @@ Partial Class Form1
         'NIVELDEEDUCACIÓNToolStripMenuItem
         '
         Me.NIVELDEEDUCACIÓNToolStripMenuItem.Name = "NIVELDEEDUCACIÓNToolStripMenuItem"
-        Me.NIVELDEEDUCACIÓNToolStripMenuItem.Size = New System.Drawing.Size(295, 26)
+        Me.NIVELDEEDUCACIÓNToolStripMenuItem.Size = New System.Drawing.Size(334, 26)
         Me.NIVELDEEDUCACIÓNToolStripMenuItem.Text = "NIVEL DE EDUCACIÓN"
         '
         'DATOSTRIBUTARIOSToolStripMenuItem
         '
         Me.DATOSTRIBUTARIOSToolStripMenuItem.Name = "DATOSTRIBUTARIOSToolStripMenuItem"
-        Me.DATOSTRIBUTARIOSToolStripMenuItem.Size = New System.Drawing.Size(295, 26)
+        Me.DATOSTRIBUTARIOSToolStripMenuItem.Size = New System.Drawing.Size(334, 26)
         Me.DATOSTRIBUTARIOSToolStripMenuItem.Text = "DATOS TRIBUTARIOS"
         '
         'BENEFICIOLABORALToolStripMenuItem
         '
         Me.BENEFICIOLABORALToolStripMenuItem.Name = "BENEFICIOLABORALToolStripMenuItem"
-        Me.BENEFICIOLABORALToolStripMenuItem.Size = New System.Drawing.Size(295, 26)
+        Me.BENEFICIOLABORALToolStripMenuItem.Size = New System.Drawing.Size(334, 26)
         Me.BENEFICIOLABORALToolStripMenuItem.Text = "BENEFICIO LABORAL"
         '
         'DISTRITOToolStripMenuItem
         '
         Me.DISTRITOToolStripMenuItem.Name = "DISTRITOToolStripMenuItem"
-        Me.DISTRITOToolStripMenuItem.Size = New System.Drawing.Size(295, 26)
+        Me.DISTRITOToolStripMenuItem.Size = New System.Drawing.Size(334, 26)
         Me.DISTRITOToolStripMenuItem.Text = "DISTRITO"
         '
         'VACACIONESToolStripMenuItem
         '
         Me.VACACIONESToolStripMenuItem.Name = "VACACIONESToolStripMenuItem"
-        Me.VACACIONESToolStripMenuItem.Size = New System.Drawing.Size(295, 26)
+        Me.VACACIONESToolStripMenuItem.Size = New System.Drawing.Size(334, 26)
         Me.VACACIONESToolStripMenuItem.Text = "VACACIONES"
         '
         'REGIMENESToolStripMenuItem
         '
         Me.REGIMENESToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.REGIMENSALUDToolStripMenuItem, Me.REGIMENPENSIONARIOToolStripMenuItem})
         Me.REGIMENESToolStripMenuItem.Name = "REGIMENESToolStripMenuItem"
-        Me.REGIMENESToolStripMenuItem.Size = New System.Drawing.Size(295, 26)
+        Me.REGIMENESToolStripMenuItem.Size = New System.Drawing.Size(334, 26)
         Me.REGIMENESToolStripMenuItem.Text = "REGIMENES"
         '
         'REGIMENSALUDToolStripMenuItem
@@ -140,20 +140,20 @@ Partial Class Form1
         'MANTENEDORDEEMPLEADOSToolStripMenuItem
         '
         Me.MANTENEDORDEEMPLEADOSToolStripMenuItem.Name = "MANTENEDORDEEMPLEADOSToolStripMenuItem"
-        Me.MANTENEDORDEEMPLEADOSToolStripMenuItem.Size = New System.Drawing.Size(295, 26)
+        Me.MANTENEDORDEEMPLEADOSToolStripMenuItem.Size = New System.Drawing.Size(334, 26)
         Me.MANTENEDORDEEMPLEADOSToolStripMenuItem.Text = "MANTENEDOR DE EMPLEADOS"
         '
         'EXPERIENCIALABORALToolStripMenuItem
         '
         Me.EXPERIENCIALABORALToolStripMenuItem.Name = "EXPERIENCIALABORALToolStripMenuItem"
-        Me.EXPERIENCIALABORALToolStripMenuItem.Size = New System.Drawing.Size(295, 26)
+        Me.EXPERIENCIALABORALToolStripMenuItem.Size = New System.Drawing.Size(334, 26)
         Me.EXPERIENCIALABORALToolStripMenuItem.Text = "EXPERIENCIA LABORAL"
         '
         'CONTROLDEASISTENCIASToolStripMenuItem
         '
         Me.CONTROLDEASISTENCIASToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.MANTENEDORASISTENCIASToolStripMenuItem})
         Me.CONTROLDEASISTENCIASToolStripMenuItem.Name = "CONTROLDEASISTENCIASToolStripMenuItem"
-        Me.CONTROLDEASISTENCIASToolStripMenuItem.Size = New System.Drawing.Size(295, 26)
+        Me.CONTROLDEASISTENCIASToolStripMenuItem.Size = New System.Drawing.Size(334, 26)
         Me.CONTROLDEASISTENCIASToolStripMenuItem.Text = "CONTROL DE ASISTENCIAS"
         '
         'MANTENEDORASISTENCIASToolStripMenuItem
@@ -161,6 +161,12 @@ Partial Class Form1
         Me.MANTENEDORASISTENCIASToolStripMenuItem.Name = "MANTENEDORASISTENCIASToolStripMenuItem"
         Me.MANTENEDORASISTENCIASToolStripMenuItem.Size = New System.Drawing.Size(276, 26)
         Me.MANTENEDORASISTENCIASToolStripMenuItem.Text = "MANTENEDOR ASISTENCIAS"
+        '
+        'REPORTEDEDISTRITOSXEMPLEADOSToolStripMenuItem
+        '
+        Me.REPORTEDEDISTRITOSXEMPLEADOSToolStripMenuItem.Name = "REPORTEDEDISTRITOSXEMPLEADOSToolStripMenuItem"
+        Me.REPORTEDEDISTRITOSXEMPLEADOSToolStripMenuItem.Size = New System.Drawing.Size(334, 26)
+        Me.REPORTEDEDISTRITOSXEMPLEADOSToolStripMenuItem.Text = "REPORTE DE DISTRITOSXEMPLEADOS"
         '
         'CONTRATACIÓNToolStripMenuItem
         '
@@ -210,7 +216,7 @@ Partial Class Form1
         'CONTRATOToolStripMenuItem
         '
         Me.CONTRATOToolStripMenuItem.Name = "CONTRATOToolStripMenuItem"
-        Me.CONTRATOToolStripMenuItem.Size = New System.Drawing.Size(159, 26)
+        Me.CONTRATOToolStripMenuItem.Size = New System.Drawing.Size(181, 26)
         Me.CONTRATOToolStripMenuItem.Text = "CONTRATO"
         '
         'MANTENEDORToolStripMenuItem
@@ -223,13 +229,13 @@ Partial Class Form1
         'GERENTEToolStripMenuItem
         '
         Me.GERENTEToolStripMenuItem.Name = "GERENTEToolStripMenuItem"
-        Me.GERENTEToolStripMenuItem.Size = New System.Drawing.Size(268, 26)
+        Me.GERENTEToolStripMenuItem.Size = New System.Drawing.Size(275, 26)
         Me.GERENTEToolStripMenuItem.Text = "MANTENEDOR GERENTE"
         '
         'ADELANTODEPRESTAMOSToolStripMenuItem
         '
         Me.ADELANTODEPRESTAMOSToolStripMenuItem.Name = "ADELANTODEPRESTAMOSToolStripMenuItem"
-        Me.ADELANTODEPRESTAMOSToolStripMenuItem.Size = New System.Drawing.Size(268, 26)
+        Me.ADELANTODEPRESTAMOSToolStripMenuItem.Size = New System.Drawing.Size(275, 26)
         Me.ADELANTODEPRESTAMOSToolStripMenuItem.Text = "ADELANTO DE PRESTAMOS"
         '
         'MEMORANDUMSToolStripMenuItem
@@ -237,6 +243,12 @@ Partial Class Form1
         Me.MEMORANDUMSToolStripMenuItem.Name = "MEMORANDUMSToolStripMenuItem"
         Me.MEMORANDUMSToolStripMenuItem.Size = New System.Drawing.Size(275, 26)
         Me.MEMORANDUMSToolStripMenuItem.Text = "MEMORANDUMS"
+        '
+        'REPORTESMEMORANDUMSToolStripMenuItem
+        '
+        Me.REPORTESMEMORANDUMSToolStripMenuItem.Name = "REPORTESMEMORANDUMSToolStripMenuItem"
+        Me.REPORTESMEMORANDUMSToolStripMenuItem.Size = New System.Drawing.Size(275, 26)
+        Me.REPORTESMEMORANDUMSToolStripMenuItem.Text = "REPORTES_MEMORANDUMS"
         '
         'PLANILLASToolStripMenuItem
         '
@@ -249,7 +261,7 @@ Partial Class Form1
         '
         Me.DATOSPLANILLAToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.VARIACIONDELToolStripMenuItem})
         Me.DATOSPLANILLAToolStripMenuItem.Name = "DATOSPLANILLAToolStripMenuItem"
-        Me.DATOSPLANILLAToolStripMenuItem.Size = New System.Drawing.Size(252, 26)
+        Me.DATOSPLANILLAToolStripMenuItem.Size = New System.Drawing.Size(272, 26)
         Me.DATOSPLANILLAToolStripMenuItem.Text = "DATOS PLANILLA"
         '
         'VARIACIONDELToolStripMenuItem
@@ -261,8 +273,14 @@ Partial Class Form1
         'MANTENEDORPLANILLAToolStripMenuItem
         '
         Me.MANTENEDORPLANILLAToolStripMenuItem.Name = "MANTENEDORPLANILLAToolStripMenuItem"
-        Me.MANTENEDORPLANILLAToolStripMenuItem.Size = New System.Drawing.Size(252, 26)
+        Me.MANTENEDORPLANILLAToolStripMenuItem.Size = New System.Drawing.Size(272, 26)
         Me.MANTENEDORPLANILLAToolStripMenuItem.Text = "MANTENEDOR PLANILLA"
+        '
+        'REPORTESUELDOSTOTALESToolStripMenuItem
+        '
+        Me.REPORTESUELDOSTOTALESToolStripMenuItem.Name = "REPORTESUELDOSTOTALESToolStripMenuItem"
+        Me.REPORTESUELDOSTOTALESToolStripMenuItem.Size = New System.Drawing.Size(272, 26)
+        Me.REPORTESUELDOSTOTALESToolStripMenuItem.Text = "REPORTE SUELDOS TOTALES"
         '
         'PAGOSBOLETASToolStripMenuItem
         '
@@ -275,7 +293,7 @@ Partial Class Form1
         '
         Me.MANTENEDORPAGOToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.REGISTROToolStripMenuItem1})
         Me.MANTENEDORPAGOToolStripMenuItem.Name = "MANTENEDORPAGOToolStripMenuItem"
-        Me.MANTENEDORPAGOToolStripMenuItem.Size = New System.Drawing.Size(181, 26)
+        Me.MANTENEDORPAGOToolStripMenuItem.Size = New System.Drawing.Size(231, 26)
         Me.MANTENEDORPAGOToolStripMenuItem.Text = "PAGOS"
         '
         'REGISTROToolStripMenuItem1
@@ -288,7 +306,7 @@ Partial Class Form1
         '
         Me.MANTENEDORDEBOLETASToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.REGISTROToolStripMenuItem, Me.REPORTESToolStripMenuItem})
         Me.MANTENEDORDEBOLETASToolStripMenuItem.Name = "MANTENEDORDEBOLETASToolStripMenuItem"
-        Me.MANTENEDORDEBOLETASToolStripMenuItem.Size = New System.Drawing.Size(181, 26)
+        Me.MANTENEDORDEBOLETASToolStripMenuItem.Size = New System.Drawing.Size(231, 26)
         Me.MANTENEDORDEBOLETASToolStripMenuItem.Text = "BOLETAS"
         '
         'REGISTROToolStripMenuItem
@@ -302,6 +320,12 @@ Partial Class Form1
         Me.REPORTESToolStripMenuItem.Name = "REPORTESToolStripMenuItem"
         Me.REPORTESToolStripMenuItem.Size = New System.Drawing.Size(152, 26)
         Me.REPORTESToolStripMenuItem.Text = "REPORTES"
+        '
+        'REPORTEDEBOLETASToolStripMenuItem
+        '
+        Me.REPORTEDEBOLETASToolStripMenuItem.Name = "REPORTEDEBOLETASToolStripMenuItem"
+        Me.REPORTEDEBOLETASToolStripMenuItem.Size = New System.Drawing.Size(231, 26)
+        Me.REPORTEDEBOLETASToolStripMenuItem.Text = "REPORTE DE BOLETAS"
         '
         'VISTAVENTANASToolStripMenuItem
         '
@@ -333,30 +357,6 @@ Partial Class Form1
         Me.ORGANIZARTODOToolStripMenuItem.Name = "ORGANIZARTODOToolStripMenuItem"
         Me.ORGANIZARTODOToolStripMenuItem.Size = New System.Drawing.Size(211, 26)
         Me.ORGANIZARTODOToolStripMenuItem.Text = "ORGANIZAR TODO"
-        '
-        'REPORTESMEMORANDUMSToolStripMenuItem
-        '
-        Me.REPORTESMEMORANDUMSToolStripMenuItem.Name = "REPORTESMEMORANDUMSToolStripMenuItem"
-        Me.REPORTESMEMORANDUMSToolStripMenuItem.Size = New System.Drawing.Size(275, 26)
-        Me.REPORTESMEMORANDUMSToolStripMenuItem.Text = "REPORTES_MEMORANDUMS"
-        '
-        'REPORTEDEDISTRITOSXEMPLEADOSToolStripMenuItem
-        '
-        Me.REPORTEDEDISTRITOSXEMPLEADOSToolStripMenuItem.Name = "REPORTEDEDISTRITOSXEMPLEADOSToolStripMenuItem"
-        Me.REPORTEDEDISTRITOSXEMPLEADOSToolStripMenuItem.Size = New System.Drawing.Size(334, 26)
-        Me.REPORTEDEDISTRITOSXEMPLEADOSToolStripMenuItem.Text = "REPORTE DE DISTRITOSXEMPLEADOS"
-        '
-        'REPORTESUELDOSTOTALESToolStripMenuItem
-        '
-        Me.REPORTESUELDOSTOTALESToolStripMenuItem.Name = "REPORTESUELDOSTOTALESToolStripMenuItem"
-        Me.REPORTESUELDOSTOTALESToolStripMenuItem.Size = New System.Drawing.Size(272, 26)
-        Me.REPORTESUELDOSTOTALESToolStripMenuItem.Text = "REPORTE SUELDOS TOTALES"
-        '
-        'REPORTEDEBOLETASToolStripMenuItem
-        '
-        Me.REPORTEDEBOLETASToolStripMenuItem.Name = "REPORTEDEBOLETASToolStripMenuItem"
-        Me.REPORTEDEBOLETASToolStripMenuItem.Size = New System.Drawing.Size(231, 26)
-        Me.REPORTEDEBOLETASToolStripMenuItem.Text = "REPORTE DE BOLETAS"
         '
         'Form1
         '

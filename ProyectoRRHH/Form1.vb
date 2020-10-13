@@ -60,19 +60,19 @@
     End Sub
 
     Private Sub CASCADAToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CASCADAToolStripMenuItem.Click
-
+        Me.LayoutMdi(0)
     End Sub
 
     Private Sub HORIZONTALToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles HORIZONTALToolStripMenuItem.Click
-
+        Me.LayoutMdi(1)
     End Sub
 
     Private Sub VERTICALToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles VERTICALToolStripMenuItem.Click
-
+        Me.LayoutMdi(2)
     End Sub
 
     Private Sub ORGANIZARTODOToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ORGANIZARTODOToolStripMenuItem.Click
-
+        Me.LayoutMdi(3)
     End Sub
 
     Private Sub DISTRITOToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles DISTRITOToolStripMenuItem.Click
@@ -188,4 +188,5 @@
         objReporteBoletas.MdiParent = Me
         objReporteBoletas.Show()
     End Sub
+
 End Class
