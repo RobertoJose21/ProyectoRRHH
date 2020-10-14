@@ -23,26 +23,26 @@ Partial Class FrmBoleta
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmBoleta))
         Dim IdBoletaLabel As System.Windows.Forms.Label
         Dim IdPagoPlanillaLabel As System.Windows.Forms.Label
         Dim FechaBoletaLabel As System.Windows.Forms.Label
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmBoleta))
         Me.BD_RecursosHumanosDataSet = New ProyectoRRHH.BD_RecursosHumanosDataSet()
         Me.BOLETABindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.BOLETATableAdapter = New ProyectoRRHH.BD_RecursosHumanosDataSetTableAdapters.BOLETATableAdapter()
         Me.TableAdapterManager = New ProyectoRRHH.BD_RecursosHumanosDataSetTableAdapters.TableAdapterManager()
         Me.BOLETABindingNavigator = New System.Windows.Forms.BindingNavigator(Me.components)
+        Me.BindingNavigatorAddNewItem = New System.Windows.Forms.ToolStripButton()
+        Me.BindingNavigatorCountItem = New System.Windows.Forms.ToolStripLabel()
+        Me.BindingNavigatorDeleteItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorMoveFirstItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorMovePreviousItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorSeparator = New System.Windows.Forms.ToolStripSeparator()
         Me.BindingNavigatorPositionItem = New System.Windows.Forms.ToolStripTextBox()
-        Me.BindingNavigatorCountItem = New System.Windows.Forms.ToolStripLabel()
         Me.BindingNavigatorSeparator1 = New System.Windows.Forms.ToolStripSeparator()
         Me.BindingNavigatorMoveNextItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorMoveLastItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorSeparator2 = New System.Windows.Forms.ToolStripSeparator()
-        Me.BindingNavigatorAddNewItem = New System.Windows.Forms.ToolStripButton()
-        Me.BindingNavigatorDeleteItem = New System.Windows.Forms.ToolStripButton()
         Me.BOLETABindingNavigatorSaveItem = New System.Windows.Forms.ToolStripButton()
         Me.IdBoletaTextBox = New System.Windows.Forms.TextBox()
         Me.IdPagoPlanillaTextBox = New System.Windows.Forms.TextBox()
@@ -60,6 +60,33 @@ Partial Class FrmBoleta
         Me.BOLETABindingNavigator.SuspendLayout()
         CType(Me.BOLETADataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
+        '
+        'IdBoletaLabel
+        '
+        IdBoletaLabel.AutoSize = True
+        IdBoletaLabel.Location = New System.Drawing.Point(159, 42)
+        IdBoletaLabel.Name = "IdBoletaLabel"
+        IdBoletaLabel.Size = New System.Drawing.Size(67, 17)
+        IdBoletaLabel.TabIndex = 1
+        IdBoletaLabel.Text = "Id Boleta:"
+        '
+        'IdPagoPlanillaLabel
+        '
+        IdPagoPlanillaLabel.AutoSize = True
+        IdPagoPlanillaLabel.Location = New System.Drawing.Point(159, 70)
+        IdPagoPlanillaLabel.Name = "IdPagoPlanillaLabel"
+        IdPagoPlanillaLabel.Size = New System.Drawing.Size(109, 17)
+        IdPagoPlanillaLabel.TabIndex = 3
+        IdPagoPlanillaLabel.Text = "Id Pago Planilla:"
+        '
+        'FechaBoletaLabel
+        '
+        FechaBoletaLabel.AutoSize = True
+        FechaBoletaLabel.Location = New System.Drawing.Point(159, 99)
+        FechaBoletaLabel.Name = "FechaBoletaLabel"
+        FechaBoletaLabel.Size = New System.Drawing.Size(95, 17)
+        FechaBoletaLabel.TabIndex = 5
+        FechaBoletaLabel.Text = "Fecha Boleta:"
         '
         'BD_RecursosHumanosDataSet
         '
@@ -123,13 +150,38 @@ Partial Class FrmBoleta
         Me.BOLETABindingNavigator.TabIndex = 0
         Me.BOLETABindingNavigator.Text = "BindingNavigator1"
         '
+        'BindingNavigatorAddNewItem
+        '
+        Me.BindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.BindingNavigatorAddNewItem.Image = CType(resources.GetObject("BindingNavigatorAddNewItem.Image"), System.Drawing.Image)
+        Me.BindingNavigatorAddNewItem.Name = "BindingNavigatorAddNewItem"
+        Me.BindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = True
+        Me.BindingNavigatorAddNewItem.Size = New System.Drawing.Size(24, 24)
+        Me.BindingNavigatorAddNewItem.Text = "Agregar nuevo"
+        '
+        'BindingNavigatorCountItem
+        '
+        Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
+        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(48, 24)
+        Me.BindingNavigatorCountItem.Text = "de {0}"
+        Me.BindingNavigatorCountItem.ToolTipText = "Número total de elementos"
+        '
+        'BindingNavigatorDeleteItem
+        '
+        Me.BindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.BindingNavigatorDeleteItem.Image = CType(resources.GetObject("BindingNavigatorDeleteItem.Image"), System.Drawing.Image)
+        Me.BindingNavigatorDeleteItem.Name = "BindingNavigatorDeleteItem"
+        Me.BindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = True
+        Me.BindingNavigatorDeleteItem.Size = New System.Drawing.Size(24, 24)
+        Me.BindingNavigatorDeleteItem.Text = "Eliminar"
+        '
         'BindingNavigatorMoveFirstItem
         '
         Me.BindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
         Me.BindingNavigatorMoveFirstItem.Image = CType(resources.GetObject("BindingNavigatorMoveFirstItem.Image"), System.Drawing.Image)
         Me.BindingNavigatorMoveFirstItem.Name = "BindingNavigatorMoveFirstItem"
         Me.BindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorMoveFirstItem.Size = New System.Drawing.Size(24, 22)
+        Me.BindingNavigatorMoveFirstItem.Size = New System.Drawing.Size(24, 24)
         Me.BindingNavigatorMoveFirstItem.Text = "Mover primero"
         '
         'BindingNavigatorMovePreviousItem
@@ -138,13 +190,13 @@ Partial Class FrmBoleta
         Me.BindingNavigatorMovePreviousItem.Image = CType(resources.GetObject("BindingNavigatorMovePreviousItem.Image"), System.Drawing.Image)
         Me.BindingNavigatorMovePreviousItem.Name = "BindingNavigatorMovePreviousItem"
         Me.BindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorMovePreviousItem.Size = New System.Drawing.Size(24, 22)
+        Me.BindingNavigatorMovePreviousItem.Size = New System.Drawing.Size(24, 24)
         Me.BindingNavigatorMovePreviousItem.Text = "Mover anterior"
         '
         'BindingNavigatorSeparator
         '
         Me.BindingNavigatorSeparator.Name = "BindingNavigatorSeparator"
-        Me.BindingNavigatorSeparator.Size = New System.Drawing.Size(6, 25)
+        Me.BindingNavigatorSeparator.Size = New System.Drawing.Size(6, 27)
         '
         'BindingNavigatorPositionItem
         '
@@ -155,17 +207,10 @@ Partial Class FrmBoleta
         Me.BindingNavigatorPositionItem.Text = "0"
         Me.BindingNavigatorPositionItem.ToolTipText = "Posición actual"
         '
-        'BindingNavigatorCountItem
-        '
-        Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
-        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(48, 20)
-        Me.BindingNavigatorCountItem.Text = "de {0}"
-        Me.BindingNavigatorCountItem.ToolTipText = "Número total de elementos"
-        '
         'BindingNavigatorSeparator1
         '
-        Me.BindingNavigatorSeparator1.Name = "BindingNavigatorSeparator"
-        Me.BindingNavigatorSeparator1.Size = New System.Drawing.Size(6, 6)
+        Me.BindingNavigatorSeparator1.Name = "BindingNavigatorSeparator1"
+        Me.BindingNavigatorSeparator1.Size = New System.Drawing.Size(6, 27)
         '
         'BindingNavigatorMoveNextItem
         '
@@ -187,82 +232,39 @@ Partial Class FrmBoleta
         '
         'BindingNavigatorSeparator2
         '
-        Me.BindingNavigatorSeparator2.Name = "BindingNavigatorSeparator"
-        Me.BindingNavigatorSeparator2.Size = New System.Drawing.Size(6, 6)
-        '
-        'BindingNavigatorAddNewItem
-        '
-        Me.BindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorAddNewItem.Image = CType(resources.GetObject("BindingNavigatorAddNewItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorAddNewItem.Name = "BindingNavigatorAddNewItem"
-        Me.BindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorAddNewItem.Size = New System.Drawing.Size(24, 24)
-        Me.BindingNavigatorAddNewItem.Text = "Agregar nuevo"
-        '
-        'BindingNavigatorDeleteItem
-        '
-        Me.BindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorDeleteItem.Image = CType(resources.GetObject("BindingNavigatorDeleteItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorDeleteItem.Name = "BindingNavigatorDeleteItem"
-        Me.BindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorDeleteItem.Size = New System.Drawing.Size(24, 24)
-        Me.BindingNavigatorDeleteItem.Text = "Eliminar"
+        Me.BindingNavigatorSeparator2.Name = "BindingNavigatorSeparator2"
+        Me.BindingNavigatorSeparator2.Size = New System.Drawing.Size(6, 27)
         '
         'BOLETABindingNavigatorSaveItem
         '
         Me.BOLETABindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
         Me.BOLETABindingNavigatorSaveItem.Image = CType(resources.GetObject("BOLETABindingNavigatorSaveItem.Image"), System.Drawing.Image)
         Me.BOLETABindingNavigatorSaveItem.Name = "BOLETABindingNavigatorSaveItem"
-        Me.BOLETABindingNavigatorSaveItem.Size = New System.Drawing.Size(23, 23)
+        Me.BOLETABindingNavigatorSaveItem.Size = New System.Drawing.Size(24, 24)
         Me.BOLETABindingNavigatorSaveItem.Text = "Guardar datos"
-        '
-        'IdBoletaLabel
-        '
-        IdBoletaLabel.AutoSize = True
-        IdBoletaLabel.Location = New System.Drawing.Point(33, 45)
-        IdBoletaLabel.Name = "IdBoletaLabel"
-        IdBoletaLabel.Size = New System.Drawing.Size(67, 17)
-        IdBoletaLabel.TabIndex = 1
-        IdBoletaLabel.Text = "Id Boleta:"
         '
         'IdBoletaTextBox
         '
+        Me.IdBoletaTextBox.BackColor = System.Drawing.SystemColors.Info
         Me.IdBoletaTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.BOLETABindingSource, "IdBoleta", True))
-        Me.IdBoletaTextBox.Location = New System.Drawing.Point(148, 42)
+        Me.IdBoletaTextBox.Location = New System.Drawing.Point(274, 39)
         Me.IdBoletaTextBox.Name = "IdBoletaTextBox"
         Me.IdBoletaTextBox.Size = New System.Drawing.Size(266, 22)
         Me.IdBoletaTextBox.TabIndex = 2
         '
-        'IdPagoPlanillaLabel
-        '
-        IdPagoPlanillaLabel.AutoSize = True
-        IdPagoPlanillaLabel.Location = New System.Drawing.Point(33, 73)
-        IdPagoPlanillaLabel.Name = "IdPagoPlanillaLabel"
-        IdPagoPlanillaLabel.Size = New System.Drawing.Size(109, 17)
-        IdPagoPlanillaLabel.TabIndex = 3
-        IdPagoPlanillaLabel.Text = "Id Pago Planilla:"
-        '
         'IdPagoPlanillaTextBox
         '
+        Me.IdPagoPlanillaTextBox.BackColor = System.Drawing.SystemColors.Info
         Me.IdPagoPlanillaTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.BOLETABindingSource, "IdPagoPlanilla", True))
-        Me.IdPagoPlanillaTextBox.Location = New System.Drawing.Point(148, 70)
+        Me.IdPagoPlanillaTextBox.Location = New System.Drawing.Point(274, 67)
         Me.IdPagoPlanillaTextBox.Name = "IdPagoPlanillaTextBox"
         Me.IdPagoPlanillaTextBox.Size = New System.Drawing.Size(266, 22)
         Me.IdPagoPlanillaTextBox.TabIndex = 4
         '
-        'FechaBoletaLabel
-        '
-        FechaBoletaLabel.AutoSize = True
-        FechaBoletaLabel.Location = New System.Drawing.Point(33, 102)
-        FechaBoletaLabel.Name = "FechaBoletaLabel"
-        FechaBoletaLabel.Size = New System.Drawing.Size(91, 17)
-        FechaBoletaLabel.TabIndex = 5
-        FechaBoletaLabel.Text = "fecha Boleta:"
-        '
         'FechaBoletaDateTimePicker
         '
         Me.FechaBoletaDateTimePicker.DataBindings.Add(New System.Windows.Forms.Binding("Value", Me.BOLETABindingSource, "fechaBoleta", True))
-        Me.FechaBoletaDateTimePicker.Location = New System.Drawing.Point(148, 98)
+        Me.FechaBoletaDateTimePicker.Location = New System.Drawing.Point(274, 95)
         Me.FechaBoletaDateTimePicker.Name = "FechaBoletaDateTimePicker"
         Me.FechaBoletaDateTimePicker.Size = New System.Drawing.Size(266, 22)
         Me.FechaBoletaDateTimePicker.TabIndex = 6
@@ -274,7 +276,7 @@ Partial Class FrmBoleta
         Me.BOLETADataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.BOLETADataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3})
         Me.BOLETADataGridView.DataSource = Me.BOLETABindingSource
-        Me.BOLETADataGridView.Location = New System.Drawing.Point(71, 135)
+        Me.BOLETADataGridView.Location = New System.Drawing.Point(101, 136)
         Me.BOLETADataGridView.Name = "BOLETADataGridView"
         Me.BOLETADataGridView.RowTemplate.Height = 24
         Me.BOLETADataGridView.Size = New System.Drawing.Size(544, 233)
@@ -304,6 +306,8 @@ Partial Class FrmBoleta
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
+        Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(901, 432)
         Me.Controls.Add(Me.BOLETADataGridView)
         Me.Controls.Add(IdBoletaLabel)

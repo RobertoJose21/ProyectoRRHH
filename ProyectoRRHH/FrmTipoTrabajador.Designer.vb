@@ -23,9 +23,9 @@ Partial Class FrmTipoTrabajador
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmTipoTrabajador))
         Dim IdTipoTrabajadorLabel As System.Windows.Forms.Label
         Dim TipoTrabajadorLabel As System.Windows.Forms.Label
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmTipoTrabajador))
         Me.DB_RRHHDataSet = New ProyectoRRHH.DB_RRHHDataSet()
         Me.TIPO_TRABAJADORBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.TIPO_TRABAJADORTableAdapter = New ProyectoRRHH.DB_RRHHDataSetTableAdapters.TIPO_TRABAJADORTableAdapter()
@@ -62,6 +62,24 @@ Partial Class FrmTipoTrabajador
         CType(Me.TIPO_TRABAJADORBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TIPO_TRABAJADORDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
+        '
+        'IdTipoTrabajadorLabel
+        '
+        IdTipoTrabajadorLabel.AutoSize = True
+        IdTipoTrabajadorLabel.Location = New System.Drawing.Point(110, 48)
+        IdTipoTrabajadorLabel.Name = "IdTipoTrabajadorLabel"
+        IdTipoTrabajadorLabel.Size = New System.Drawing.Size(129, 17)
+        IdTipoTrabajadorLabel.TabIndex = 1
+        IdTipoTrabajadorLabel.Text = "Id Tipo Trabajador:"
+        '
+        'TipoTrabajadorLabel
+        '
+        TipoTrabajadorLabel.AutoSize = True
+        TipoTrabajadorLabel.Location = New System.Drawing.Point(110, 76)
+        TipoTrabajadorLabel.Name = "TipoTrabajadorLabel"
+        TipoTrabajadorLabel.Size = New System.Drawing.Size(114, 17)
+        TipoTrabajadorLabel.TabIndex = 3
+        TipoTrabajadorLabel.Text = "Tipo Trabajador:"
         '
         'DB_RRHHDataSet
         '
@@ -261,34 +279,18 @@ Partial Class FrmTipoTrabajador
         Me.TableAdapterManager1.VACACIONESTableAdapter = Nothing
         Me.TableAdapterManager1.VARIACION_SUELDOTableAdapter = Nothing
         '
-        'IdTipoTrabajadorLabel
-        '
-        IdTipoTrabajadorLabel.AutoSize = True
-        IdTipoTrabajadorLabel.Location = New System.Drawing.Point(110, 48)
-        IdTipoTrabajadorLabel.Name = "IdTipoTrabajadorLabel"
-        IdTipoTrabajadorLabel.Size = New System.Drawing.Size(129, 17)
-        IdTipoTrabajadorLabel.TabIndex = 1
-        IdTipoTrabajadorLabel.Text = "Id Tipo Trabajador:"
-        '
         'IdTipoTrabajadorTextBox
         '
+        Me.IdTipoTrabajadorTextBox.BackColor = System.Drawing.SystemColors.Info
         Me.IdTipoTrabajadorTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.TIPO_TRABAJADORBindingSource1, "IdTipoTrabajador", True))
         Me.IdTipoTrabajadorTextBox.Location = New System.Drawing.Point(245, 45)
         Me.IdTipoTrabajadorTextBox.Name = "IdTipoTrabajadorTextBox"
         Me.IdTipoTrabajadorTextBox.Size = New System.Drawing.Size(100, 22)
         Me.IdTipoTrabajadorTextBox.TabIndex = 2
         '
-        'TipoTrabajadorLabel
-        '
-        TipoTrabajadorLabel.AutoSize = True
-        TipoTrabajadorLabel.Location = New System.Drawing.Point(110, 76)
-        TipoTrabajadorLabel.Name = "TipoTrabajadorLabel"
-        TipoTrabajadorLabel.Size = New System.Drawing.Size(114, 17)
-        TipoTrabajadorLabel.TabIndex = 3
-        TipoTrabajadorLabel.Text = "Tipo Trabajador:"
-        '
         'TipoTrabajadorTextBox
         '
+        Me.TipoTrabajadorTextBox.BackColor = System.Drawing.SystemColors.Info
         Me.TipoTrabajadorTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.TIPO_TRABAJADORBindingSource1, "TipoTrabajador", True))
         Me.TipoTrabajadorTextBox.Location = New System.Drawing.Point(245, 73)
         Me.TipoTrabajadorTextBox.Name = "TipoTrabajadorTextBox"
@@ -302,7 +304,7 @@ Partial Class FrmTipoTrabajador
         Me.TIPO_TRABAJADORDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.TIPO_TRABAJADORDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2})
         Me.TIPO_TRABAJADORDataGridView.DataSource = Me.TIPO_TRABAJADORBindingSource1
-        Me.TIPO_TRABAJADORDataGridView.Location = New System.Drawing.Point(80, 101)
+        Me.TIPO_TRABAJADORDataGridView.Location = New System.Drawing.Point(81, 113)
         Me.TIPO_TRABAJADORDataGridView.Name = "TIPO_TRABAJADORDataGridView"
         Me.TIPO_TRABAJADORDataGridView.RowTemplate.Height = 24
         Me.TIPO_TRABAJADORDataGridView.Size = New System.Drawing.Size(351, 220)
@@ -327,6 +329,8 @@ Partial Class FrmTipoTrabajador
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
+        Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(687, 450)
         Me.Controls.Add(Me.TIPO_TRABAJADORDataGridView)
         Me.Controls.Add(IdTipoTrabajadorLabel)
@@ -334,9 +338,9 @@ Partial Class FrmTipoTrabajador
         Me.Controls.Add(TipoTrabajadorLabel)
         Me.Controls.Add(Me.TipoTrabajadorTextBox)
         Me.Controls.Add(Me.TIPO_TRABAJADORBindingNavigator)
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "FrmTipoTrabajador"
-        Me.Text = "FrmTipoTrabajador"
+        Me.Text = "TipoDeTrabajador"
         CType(Me.DB_RRHHDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TIPO_TRABAJADORBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TIPO_TRABAJADORBindingNavigator, System.ComponentModel.ISupportInitialize).EndInit()

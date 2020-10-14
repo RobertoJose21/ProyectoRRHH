@@ -23,25 +23,25 @@ Partial Class FrmDatosTributarios
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmDatosTributarios))
         Dim IdDatoTributarioLabel As System.Windows.Forms.Label
         Dim RentaLabel As System.Windows.Forms.Label
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmDatosTributarios))
         Me.BD_RecursosHumanosDataSet = New ProyectoRRHH.BD_RecursosHumanosDataSet()
         Me.DATOS_TRIBUTARIOSBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.DATOS_TRIBUTARIOSTableAdapter = New ProyectoRRHH.BD_RecursosHumanosDataSetTableAdapters.DATOS_TRIBUTARIOSTableAdapter()
         Me.TableAdapterManager = New ProyectoRRHH.BD_RecursosHumanosDataSetTableAdapters.TableAdapterManager()
         Me.DATOS_TRIBUTARIOSBindingNavigator = New System.Windows.Forms.BindingNavigator(Me.components)
+        Me.BindingNavigatorAddNewItem = New System.Windows.Forms.ToolStripButton()
+        Me.BindingNavigatorCountItem = New System.Windows.Forms.ToolStripLabel()
+        Me.BindingNavigatorDeleteItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorMoveFirstItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorMovePreviousItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorSeparator = New System.Windows.Forms.ToolStripSeparator()
         Me.BindingNavigatorPositionItem = New System.Windows.Forms.ToolStripTextBox()
-        Me.BindingNavigatorCountItem = New System.Windows.Forms.ToolStripLabel()
         Me.BindingNavigatorSeparator1 = New System.Windows.Forms.ToolStripSeparator()
         Me.BindingNavigatorMoveNextItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorMoveLastItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorSeparator2 = New System.Windows.Forms.ToolStripSeparator()
-        Me.BindingNavigatorAddNewItem = New System.Windows.Forms.ToolStripButton()
-        Me.BindingNavigatorDeleteItem = New System.Windows.Forms.ToolStripButton()
         Me.DATOS_TRIBUTARIOSBindingNavigatorSaveItem = New System.Windows.Forms.ToolStripButton()
         Me.IdDatoTributarioTextBox = New System.Windows.Forms.TextBox()
         Me.RentaTextBox = New System.Windows.Forms.TextBox()
@@ -56,6 +56,24 @@ Partial Class FrmDatosTributarios
         Me.DATOS_TRIBUTARIOSBindingNavigator.SuspendLayout()
         CType(Me.DATOS_TRIBUTARIOSDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
+        '
+        'IdDatoTributarioLabel
+        '
+        IdDatoTributarioLabel.AutoSize = True
+        IdDatoTributarioLabel.Location = New System.Drawing.Point(307, 48)
+        IdDatoTributarioLabel.Name = "IdDatoTributarioLabel"
+        IdDatoTributarioLabel.Size = New System.Drawing.Size(122, 17)
+        IdDatoTributarioLabel.TabIndex = 1
+        IdDatoTributarioLabel.Text = "Id Dato Tributario:"
+        '
+        'RentaLabel
+        '
+        RentaLabel.AutoSize = True
+        RentaLabel.Location = New System.Drawing.Point(307, 76)
+        RentaLabel.Name = "RentaLabel"
+        RentaLabel.Size = New System.Drawing.Size(50, 17)
+        RentaLabel.TabIndex = 3
+        RentaLabel.Text = "Renta:"
         '
         'BD_RecursosHumanosDataSet
         '
@@ -119,13 +137,38 @@ Partial Class FrmDatosTributarios
         Me.DATOS_TRIBUTARIOSBindingNavigator.TabIndex = 0
         Me.DATOS_TRIBUTARIOSBindingNavigator.Text = "BindingNavigator1"
         '
+        'BindingNavigatorAddNewItem
+        '
+        Me.BindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.BindingNavigatorAddNewItem.Image = CType(resources.GetObject("BindingNavigatorAddNewItem.Image"), System.Drawing.Image)
+        Me.BindingNavigatorAddNewItem.Name = "BindingNavigatorAddNewItem"
+        Me.BindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = True
+        Me.BindingNavigatorAddNewItem.Size = New System.Drawing.Size(24, 24)
+        Me.BindingNavigatorAddNewItem.Text = "Agregar nuevo"
+        '
+        'BindingNavigatorCountItem
+        '
+        Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
+        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(48, 24)
+        Me.BindingNavigatorCountItem.Text = "de {0}"
+        Me.BindingNavigatorCountItem.ToolTipText = "Número total de elementos"
+        '
+        'BindingNavigatorDeleteItem
+        '
+        Me.BindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.BindingNavigatorDeleteItem.Image = CType(resources.GetObject("BindingNavigatorDeleteItem.Image"), System.Drawing.Image)
+        Me.BindingNavigatorDeleteItem.Name = "BindingNavigatorDeleteItem"
+        Me.BindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = True
+        Me.BindingNavigatorDeleteItem.Size = New System.Drawing.Size(24, 24)
+        Me.BindingNavigatorDeleteItem.Text = "Eliminar"
+        '
         'BindingNavigatorMoveFirstItem
         '
         Me.BindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
         Me.BindingNavigatorMoveFirstItem.Image = CType(resources.GetObject("BindingNavigatorMoveFirstItem.Image"), System.Drawing.Image)
         Me.BindingNavigatorMoveFirstItem.Name = "BindingNavigatorMoveFirstItem"
         Me.BindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorMoveFirstItem.Size = New System.Drawing.Size(24, 22)
+        Me.BindingNavigatorMoveFirstItem.Size = New System.Drawing.Size(24, 24)
         Me.BindingNavigatorMoveFirstItem.Text = "Mover primero"
         '
         'BindingNavigatorMovePreviousItem
@@ -134,13 +177,13 @@ Partial Class FrmDatosTributarios
         Me.BindingNavigatorMovePreviousItem.Image = CType(resources.GetObject("BindingNavigatorMovePreviousItem.Image"), System.Drawing.Image)
         Me.BindingNavigatorMovePreviousItem.Name = "BindingNavigatorMovePreviousItem"
         Me.BindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorMovePreviousItem.Size = New System.Drawing.Size(24, 22)
+        Me.BindingNavigatorMovePreviousItem.Size = New System.Drawing.Size(24, 24)
         Me.BindingNavigatorMovePreviousItem.Text = "Mover anterior"
         '
         'BindingNavigatorSeparator
         '
         Me.BindingNavigatorSeparator.Name = "BindingNavigatorSeparator"
-        Me.BindingNavigatorSeparator.Size = New System.Drawing.Size(6, 25)
+        Me.BindingNavigatorSeparator.Size = New System.Drawing.Size(6, 27)
         '
         'BindingNavigatorPositionItem
         '
@@ -151,17 +194,10 @@ Partial Class FrmDatosTributarios
         Me.BindingNavigatorPositionItem.Text = "0"
         Me.BindingNavigatorPositionItem.ToolTipText = "Posición actual"
         '
-        'BindingNavigatorCountItem
-        '
-        Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
-        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(48, 20)
-        Me.BindingNavigatorCountItem.Text = "de {0}"
-        Me.BindingNavigatorCountItem.ToolTipText = "Número total de elementos"
-        '
         'BindingNavigatorSeparator1
         '
-        Me.BindingNavigatorSeparator1.Name = "BindingNavigatorSeparator"
-        Me.BindingNavigatorSeparator1.Size = New System.Drawing.Size(6, 6)
+        Me.BindingNavigatorSeparator1.Name = "BindingNavigatorSeparator1"
+        Me.BindingNavigatorSeparator1.Size = New System.Drawing.Size(6, 27)
         '
         'BindingNavigatorMoveNextItem
         '
@@ -183,67 +219,33 @@ Partial Class FrmDatosTributarios
         '
         'BindingNavigatorSeparator2
         '
-        Me.BindingNavigatorSeparator2.Name = "BindingNavigatorSeparator"
-        Me.BindingNavigatorSeparator2.Size = New System.Drawing.Size(6, 6)
-        '
-        'BindingNavigatorAddNewItem
-        '
-        Me.BindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorAddNewItem.Image = CType(resources.GetObject("BindingNavigatorAddNewItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorAddNewItem.Name = "BindingNavigatorAddNewItem"
-        Me.BindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorAddNewItem.Size = New System.Drawing.Size(24, 24)
-        Me.BindingNavigatorAddNewItem.Text = "Agregar nuevo"
-        '
-        'BindingNavigatorDeleteItem
-        '
-        Me.BindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorDeleteItem.Image = CType(resources.GetObject("BindingNavigatorDeleteItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorDeleteItem.Name = "BindingNavigatorDeleteItem"
-        Me.BindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorDeleteItem.Size = New System.Drawing.Size(24, 24)
-        Me.BindingNavigatorDeleteItem.Text = "Eliminar"
+        Me.BindingNavigatorSeparator2.Name = "BindingNavigatorSeparator2"
+        Me.BindingNavigatorSeparator2.Size = New System.Drawing.Size(6, 27)
         '
         'DATOS_TRIBUTARIOSBindingNavigatorSaveItem
         '
         Me.DATOS_TRIBUTARIOSBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
         Me.DATOS_TRIBUTARIOSBindingNavigatorSaveItem.Image = CType(resources.GetObject("DATOS_TRIBUTARIOSBindingNavigatorSaveItem.Image"), System.Drawing.Image)
         Me.DATOS_TRIBUTARIOSBindingNavigatorSaveItem.Name = "DATOS_TRIBUTARIOSBindingNavigatorSaveItem"
-        Me.DATOS_TRIBUTARIOSBindingNavigatorSaveItem.Size = New System.Drawing.Size(23, 23)
+        Me.DATOS_TRIBUTARIOSBindingNavigatorSaveItem.Size = New System.Drawing.Size(24, 24)
         Me.DATOS_TRIBUTARIOSBindingNavigatorSaveItem.Text = "Guardar datos"
-        '
-        'IdDatoTributarioLabel
-        '
-        IdDatoTributarioLabel.AutoSize = True
-        IdDatoTributarioLabel.Location = New System.Drawing.Point(23, 58)
-        IdDatoTributarioLabel.Name = "IdDatoTributarioLabel"
-        IdDatoTributarioLabel.Size = New System.Drawing.Size(122, 17)
-        IdDatoTributarioLabel.TabIndex = 1
-        IdDatoTributarioLabel.Text = "Id Dato Tributario:"
         '
         'IdDatoTributarioTextBox
         '
+        Me.IdDatoTributarioTextBox.BackColor = System.Drawing.SystemColors.Info
         Me.IdDatoTributarioTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.DATOS_TRIBUTARIOSBindingSource, "IdDatoTributario", True))
-        Me.IdDatoTributarioTextBox.Location = New System.Drawing.Point(151, 55)
+        Me.IdDatoTributarioTextBox.Location = New System.Drawing.Point(435, 45)
         Me.IdDatoTributarioTextBox.Name = "IdDatoTributarioTextBox"
-        Me.IdDatoTributarioTextBox.Size = New System.Drawing.Size(100, 22)
+        Me.IdDatoTributarioTextBox.Size = New System.Drawing.Size(154, 22)
         Me.IdDatoTributarioTextBox.TabIndex = 2
-        '
-        'RentaLabel
-        '
-        RentaLabel.AutoSize = True
-        RentaLabel.Location = New System.Drawing.Point(23, 86)
-        RentaLabel.Name = "RentaLabel"
-        RentaLabel.Size = New System.Drawing.Size(45, 17)
-        RentaLabel.TabIndex = 3
-        RentaLabel.Text = "renta:"
         '
         'RentaTextBox
         '
+        Me.RentaTextBox.BackColor = System.Drawing.SystemColors.Info
         Me.RentaTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.DATOS_TRIBUTARIOSBindingSource, "renta", True))
-        Me.RentaTextBox.Location = New System.Drawing.Point(151, 83)
+        Me.RentaTextBox.Location = New System.Drawing.Point(435, 73)
         Me.RentaTextBox.Name = "RentaTextBox"
-        Me.RentaTextBox.Size = New System.Drawing.Size(100, 22)
+        Me.RentaTextBox.Size = New System.Drawing.Size(154, 22)
         Me.RentaTextBox.TabIndex = 4
         '
         'DATOS_TRIBUTARIOSDataGridView
@@ -253,10 +255,10 @@ Partial Class FrmDatosTributarios
         Me.DATOS_TRIBUTARIOSDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DATOS_TRIBUTARIOSDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2})
         Me.DATOS_TRIBUTARIOSDataGridView.DataSource = Me.DATOS_TRIBUTARIOSBindingSource
-        Me.DATOS_TRIBUTARIOSDataGridView.Location = New System.Drawing.Point(306, 55)
+        Me.DATOS_TRIBUTARIOSDataGridView.Location = New System.Drawing.Point(231, 113)
         Me.DATOS_TRIBUTARIOSDataGridView.Name = "DATOS_TRIBUTARIOSDataGridView"
         Me.DATOS_TRIBUTARIOSDataGridView.RowTemplate.Height = 24
-        Me.DATOS_TRIBUTARIOSDataGridView.Size = New System.Drawing.Size(357, 232)
+        Me.DATOS_TRIBUTARIOSDataGridView.Size = New System.Drawing.Size(422, 228)
         Me.DATOS_TRIBUTARIOSDataGridView.TabIndex = 5
         '
         'DataGridViewTextBoxColumn1
@@ -278,6 +280,8 @@ Partial Class FrmDatosTributarios
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
+        Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(1111, 406)
         Me.Controls.Add(Me.DATOS_TRIBUTARIOSDataGridView)
         Me.Controls.Add(IdDatoTributarioLabel)
@@ -286,7 +290,7 @@ Partial Class FrmDatosTributarios
         Me.Controls.Add(Me.RentaTextBox)
         Me.Controls.Add(Me.DATOS_TRIBUTARIOSBindingNavigator)
         Me.Name = "FrmDatosTributarios"
-        Me.Text = "FrmDatosTributarios"
+        Me.Text = "DatosTributarios"
         CType(Me.BD_RecursosHumanosDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DATOS_TRIBUTARIOSBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DATOS_TRIBUTARIOSBindingNavigator, System.ComponentModel.ISupportInitialize).EndInit()

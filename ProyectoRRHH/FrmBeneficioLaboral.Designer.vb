@@ -64,7 +64,7 @@ Partial Class FrmBeneficioLaboral
         'IdBeneficioLabel
         '
         IdBeneficioLabel.AutoSize = True
-        IdBeneficioLabel.Location = New System.Drawing.Point(12, 45)
+        IdBeneficioLabel.Location = New System.Drawing.Point(324, 42)
         IdBeneficioLabel.Name = "IdBeneficioLabel"
         IdBeneficioLabel.Size = New System.Drawing.Size(85, 17)
         IdBeneficioLabel.TabIndex = 1
@@ -73,20 +73,20 @@ Partial Class FrmBeneficioLaboral
         'TipoBeneficioLabel
         '
         TipoBeneficioLabel.AutoSize = True
-        TipoBeneficioLabel.Location = New System.Drawing.Point(12, 73)
+        TipoBeneficioLabel.Location = New System.Drawing.Point(324, 70)
         TipoBeneficioLabel.Name = "TipoBeneficioLabel"
-        TipoBeneficioLabel.Size = New System.Drawing.Size(97, 17)
+        TipoBeneficioLabel.Size = New System.Drawing.Size(102, 17)
         TipoBeneficioLabel.TabIndex = 3
-        TipoBeneficioLabel.Text = "tipo Beneficio:"
+        TipoBeneficioLabel.Text = "Tipo Beneficio:"
         '
         'MontoBeneficioLabel
         '
         MontoBeneficioLabel.AutoSize = True
-        MontoBeneficioLabel.Location = New System.Drawing.Point(12, 101)
+        MontoBeneficioLabel.Location = New System.Drawing.Point(324, 98)
         MontoBeneficioLabel.Name = "MontoBeneficioLabel"
         MontoBeneficioLabel.Size = New System.Drawing.Size(113, 17)
         MontoBeneficioLabel.TabIndex = 5
-        MontoBeneficioLabel.Text = "monto Beneficio:"
+        MontoBeneficioLabel.Text = "Monto Beneficio:"
         '
         'BD_RecursosHumanosDataSet
         '
@@ -245,26 +245,29 @@ Partial Class FrmBeneficioLaboral
         '
         'IdBeneficioTextBox
         '
+        Me.IdBeneficioTextBox.BackColor = System.Drawing.SystemColors.Info
         Me.IdBeneficioTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.BENEFICIO_LABORALBindingSource, "IdBeneficio", True))
-        Me.IdBeneficioTextBox.Location = New System.Drawing.Point(131, 42)
+        Me.IdBeneficioTextBox.Location = New System.Drawing.Point(443, 39)
         Me.IdBeneficioTextBox.Name = "IdBeneficioTextBox"
-        Me.IdBeneficioTextBox.Size = New System.Drawing.Size(100, 22)
+        Me.IdBeneficioTextBox.Size = New System.Drawing.Size(230, 22)
         Me.IdBeneficioTextBox.TabIndex = 2
         '
         'TipoBeneficioTextBox
         '
+        Me.TipoBeneficioTextBox.BackColor = System.Drawing.SystemColors.Info
         Me.TipoBeneficioTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.BENEFICIO_LABORALBindingSource, "tipoBeneficio", True))
-        Me.TipoBeneficioTextBox.Location = New System.Drawing.Point(131, 70)
+        Me.TipoBeneficioTextBox.Location = New System.Drawing.Point(443, 67)
         Me.TipoBeneficioTextBox.Name = "TipoBeneficioTextBox"
-        Me.TipoBeneficioTextBox.Size = New System.Drawing.Size(100, 22)
+        Me.TipoBeneficioTextBox.Size = New System.Drawing.Size(230, 22)
         Me.TipoBeneficioTextBox.TabIndex = 4
         '
         'MontoBeneficioTextBox
         '
+        Me.MontoBeneficioTextBox.BackColor = System.Drawing.SystemColors.Info
         Me.MontoBeneficioTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.BENEFICIO_LABORALBindingSource, "montoBeneficio", True))
-        Me.MontoBeneficioTextBox.Location = New System.Drawing.Point(131, 98)
+        Me.MontoBeneficioTextBox.Location = New System.Drawing.Point(443, 95)
         Me.MontoBeneficioTextBox.Name = "MontoBeneficioTextBox"
-        Me.MontoBeneficioTextBox.Size = New System.Drawing.Size(100, 22)
+        Me.MontoBeneficioTextBox.Size = New System.Drawing.Size(230, 22)
         Me.MontoBeneficioTextBox.TabIndex = 6
         '
         'BENEFICIO_LABORALDataGridView
@@ -274,7 +277,7 @@ Partial Class FrmBeneficioLaboral
         Me.BENEFICIO_LABORALDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.BENEFICIO_LABORALDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3})
         Me.BENEFICIO_LABORALDataGridView.DataSource = Me.BENEFICIO_LABORALBindingSource
-        Me.BENEFICIO_LABORALDataGridView.Location = New System.Drawing.Point(274, 42)
+        Me.BENEFICIO_LABORALDataGridView.Location = New System.Drawing.Point(244, 132)
         Me.BENEFICIO_LABORALDataGridView.Name = "BENEFICIO_LABORALDataGridView"
         Me.BENEFICIO_LABORALDataGridView.RowTemplate.Height = 24
         Me.BENEFICIO_LABORALDataGridView.Size = New System.Drawing.Size(521, 228)
@@ -305,6 +308,8 @@ Partial Class FrmBeneficioLaboral
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
+        Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(1075, 398)
         Me.Controls.Add(Me.BENEFICIO_LABORALDataGridView)
         Me.Controls.Add(IdBeneficioLabel)

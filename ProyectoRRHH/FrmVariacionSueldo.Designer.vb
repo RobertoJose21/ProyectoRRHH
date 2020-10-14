@@ -23,26 +23,26 @@ Partial Class FrmVariacionSueldo
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmVariacionSueldo))
         Dim IdVariacionSueldoLabel As System.Windows.Forms.Label
         Dim AFPLabel As System.Windows.Forms.Label
         Dim CTSLabel As System.Windows.Forms.Label
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmVariacionSueldo))
         Me.BD_RecursosHumanosDataSet = New ProyectoRRHH.BD_RecursosHumanosDataSet()
         Me.VARIACION_SUELDOBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.VARIACION_SUELDOTableAdapter = New ProyectoRRHH.BD_RecursosHumanosDataSetTableAdapters.VARIACION_SUELDOTableAdapter()
         Me.TableAdapterManager = New ProyectoRRHH.BD_RecursosHumanosDataSetTableAdapters.TableAdapterManager()
         Me.VARIACION_SUELDOBindingNavigator = New System.Windows.Forms.BindingNavigator(Me.components)
+        Me.BindingNavigatorAddNewItem = New System.Windows.Forms.ToolStripButton()
+        Me.BindingNavigatorCountItem = New System.Windows.Forms.ToolStripLabel()
+        Me.BindingNavigatorDeleteItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorMoveFirstItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorMovePreviousItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorSeparator = New System.Windows.Forms.ToolStripSeparator()
         Me.BindingNavigatorPositionItem = New System.Windows.Forms.ToolStripTextBox()
-        Me.BindingNavigatorCountItem = New System.Windows.Forms.ToolStripLabel()
         Me.BindingNavigatorSeparator1 = New System.Windows.Forms.ToolStripSeparator()
         Me.BindingNavigatorMoveNextItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorMoveLastItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorSeparator2 = New System.Windows.Forms.ToolStripSeparator()
-        Me.BindingNavigatorAddNewItem = New System.Windows.Forms.ToolStripButton()
-        Me.BindingNavigatorDeleteItem = New System.Windows.Forms.ToolStripButton()
         Me.VARIACION_SUELDOBindingNavigatorSaveItem = New System.Windows.Forms.ToolStripButton()
         Me.IdVariacionSueldoTextBox = New System.Windows.Forms.TextBox()
         Me.AFPTextBox = New System.Windows.Forms.TextBox()
@@ -60,6 +60,33 @@ Partial Class FrmVariacionSueldo
         Me.VARIACION_SUELDOBindingNavigator.SuspendLayout()
         CType(Me.VARIACION_SUELDODataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
+        '
+        'IdVariacionSueldoLabel
+        '
+        IdVariacionSueldoLabel.AutoSize = True
+        IdVariacionSueldoLabel.Location = New System.Drawing.Point(26, 85)
+        IdVariacionSueldoLabel.Name = "IdVariacionSueldoLabel"
+        IdVariacionSueldoLabel.Size = New System.Drawing.Size(134, 17)
+        IdVariacionSueldoLabel.TabIndex = 1
+        IdVariacionSueldoLabel.Text = "Id Variacion Sueldo:"
+        '
+        'AFPLabel
+        '
+        AFPLabel.AutoSize = True
+        AFPLabel.Location = New System.Drawing.Point(26, 113)
+        AFPLabel.Name = "AFPLabel"
+        AFPLabel.Size = New System.Drawing.Size(38, 17)
+        AFPLabel.TabIndex = 3
+        AFPLabel.Text = "AFP:"
+        '
+        'CTSLabel
+        '
+        CTSLabel.AutoSize = True
+        CTSLabel.Location = New System.Drawing.Point(26, 141)
+        CTSLabel.Name = "CTSLabel"
+        CTSLabel.Size = New System.Drawing.Size(39, 17)
+        CTSLabel.TabIndex = 5
+        CTSLabel.Text = "CTS:"
         '
         'BD_RecursosHumanosDataSet
         '
@@ -123,13 +150,38 @@ Partial Class FrmVariacionSueldo
         Me.VARIACION_SUELDOBindingNavigator.TabIndex = 0
         Me.VARIACION_SUELDOBindingNavigator.Text = "BindingNavigator1"
         '
+        'BindingNavigatorAddNewItem
+        '
+        Me.BindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.BindingNavigatorAddNewItem.Image = CType(resources.GetObject("BindingNavigatorAddNewItem.Image"), System.Drawing.Image)
+        Me.BindingNavigatorAddNewItem.Name = "BindingNavigatorAddNewItem"
+        Me.BindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = True
+        Me.BindingNavigatorAddNewItem.Size = New System.Drawing.Size(24, 24)
+        Me.BindingNavigatorAddNewItem.Text = "Agregar nuevo"
+        '
+        'BindingNavigatorCountItem
+        '
+        Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
+        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(48, 24)
+        Me.BindingNavigatorCountItem.Text = "de {0}"
+        Me.BindingNavigatorCountItem.ToolTipText = "Número total de elementos"
+        '
+        'BindingNavigatorDeleteItem
+        '
+        Me.BindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.BindingNavigatorDeleteItem.Image = CType(resources.GetObject("BindingNavigatorDeleteItem.Image"), System.Drawing.Image)
+        Me.BindingNavigatorDeleteItem.Name = "BindingNavigatorDeleteItem"
+        Me.BindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = True
+        Me.BindingNavigatorDeleteItem.Size = New System.Drawing.Size(24, 24)
+        Me.BindingNavigatorDeleteItem.Text = "Eliminar"
+        '
         'BindingNavigatorMoveFirstItem
         '
         Me.BindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
         Me.BindingNavigatorMoveFirstItem.Image = CType(resources.GetObject("BindingNavigatorMoveFirstItem.Image"), System.Drawing.Image)
         Me.BindingNavigatorMoveFirstItem.Name = "BindingNavigatorMoveFirstItem"
         Me.BindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorMoveFirstItem.Size = New System.Drawing.Size(24, 22)
+        Me.BindingNavigatorMoveFirstItem.Size = New System.Drawing.Size(24, 24)
         Me.BindingNavigatorMoveFirstItem.Text = "Mover primero"
         '
         'BindingNavigatorMovePreviousItem
@@ -138,13 +190,13 @@ Partial Class FrmVariacionSueldo
         Me.BindingNavigatorMovePreviousItem.Image = CType(resources.GetObject("BindingNavigatorMovePreviousItem.Image"), System.Drawing.Image)
         Me.BindingNavigatorMovePreviousItem.Name = "BindingNavigatorMovePreviousItem"
         Me.BindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorMovePreviousItem.Size = New System.Drawing.Size(24, 22)
+        Me.BindingNavigatorMovePreviousItem.Size = New System.Drawing.Size(24, 24)
         Me.BindingNavigatorMovePreviousItem.Text = "Mover anterior"
         '
         'BindingNavigatorSeparator
         '
         Me.BindingNavigatorSeparator.Name = "BindingNavigatorSeparator"
-        Me.BindingNavigatorSeparator.Size = New System.Drawing.Size(6, 25)
+        Me.BindingNavigatorSeparator.Size = New System.Drawing.Size(6, 27)
         '
         'BindingNavigatorPositionItem
         '
@@ -155,17 +207,10 @@ Partial Class FrmVariacionSueldo
         Me.BindingNavigatorPositionItem.Text = "0"
         Me.BindingNavigatorPositionItem.ToolTipText = "Posición actual"
         '
-        'BindingNavigatorCountItem
-        '
-        Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
-        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(48, 20)
-        Me.BindingNavigatorCountItem.Text = "de {0}"
-        Me.BindingNavigatorCountItem.ToolTipText = "Número total de elementos"
-        '
         'BindingNavigatorSeparator1
         '
-        Me.BindingNavigatorSeparator1.Name = "BindingNavigatorSeparator"
-        Me.BindingNavigatorSeparator1.Size = New System.Drawing.Size(6, 6)
+        Me.BindingNavigatorSeparator1.Name = "BindingNavigatorSeparator1"
+        Me.BindingNavigatorSeparator1.Size = New System.Drawing.Size(6, 27)
         '
         'BindingNavigatorMoveNextItem
         '
@@ -187,84 +232,42 @@ Partial Class FrmVariacionSueldo
         '
         'BindingNavigatorSeparator2
         '
-        Me.BindingNavigatorSeparator2.Name = "BindingNavigatorSeparator"
-        Me.BindingNavigatorSeparator2.Size = New System.Drawing.Size(6, 6)
-        '
-        'BindingNavigatorAddNewItem
-        '
-        Me.BindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorAddNewItem.Image = CType(resources.GetObject("BindingNavigatorAddNewItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorAddNewItem.Name = "BindingNavigatorAddNewItem"
-        Me.BindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorAddNewItem.Size = New System.Drawing.Size(24, 24)
-        Me.BindingNavigatorAddNewItem.Text = "Agregar nuevo"
-        '
-        'BindingNavigatorDeleteItem
-        '
-        Me.BindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorDeleteItem.Image = CType(resources.GetObject("BindingNavigatorDeleteItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorDeleteItem.Name = "BindingNavigatorDeleteItem"
-        Me.BindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorDeleteItem.Size = New System.Drawing.Size(24, 24)
-        Me.BindingNavigatorDeleteItem.Text = "Eliminar"
+        Me.BindingNavigatorSeparator2.Name = "BindingNavigatorSeparator2"
+        Me.BindingNavigatorSeparator2.Size = New System.Drawing.Size(6, 27)
         '
         'VARIACION_SUELDOBindingNavigatorSaveItem
         '
         Me.VARIACION_SUELDOBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
         Me.VARIACION_SUELDOBindingNavigatorSaveItem.Image = CType(resources.GetObject("VARIACION_SUELDOBindingNavigatorSaveItem.Image"), System.Drawing.Image)
         Me.VARIACION_SUELDOBindingNavigatorSaveItem.Name = "VARIACION_SUELDOBindingNavigatorSaveItem"
-        Me.VARIACION_SUELDOBindingNavigatorSaveItem.Size = New System.Drawing.Size(23, 23)
+        Me.VARIACION_SUELDOBindingNavigatorSaveItem.Size = New System.Drawing.Size(24, 24)
         Me.VARIACION_SUELDOBindingNavigatorSaveItem.Text = "Guardar datos"
-        '
-        'IdVariacionSueldoLabel
-        '
-        IdVariacionSueldoLabel.AutoSize = True
-        IdVariacionSueldoLabel.Location = New System.Drawing.Point(23, 49)
-        IdVariacionSueldoLabel.Name = "IdVariacionSueldoLabel"
-        IdVariacionSueldoLabel.Size = New System.Drawing.Size(134, 17)
-        IdVariacionSueldoLabel.TabIndex = 1
-        IdVariacionSueldoLabel.Text = "Id Variacion Sueldo:"
         '
         'IdVariacionSueldoTextBox
         '
+        Me.IdVariacionSueldoTextBox.BackColor = System.Drawing.SystemColors.Info
         Me.IdVariacionSueldoTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.VARIACION_SUELDOBindingSource, "IdVariacionSueldo", True))
-        Me.IdVariacionSueldoTextBox.Location = New System.Drawing.Point(163, 46)
+        Me.IdVariacionSueldoTextBox.Location = New System.Drawing.Point(166, 82)
         Me.IdVariacionSueldoTextBox.Name = "IdVariacionSueldoTextBox"
-        Me.IdVariacionSueldoTextBox.Size = New System.Drawing.Size(100, 22)
+        Me.IdVariacionSueldoTextBox.Size = New System.Drawing.Size(168, 22)
         Me.IdVariacionSueldoTextBox.TabIndex = 2
-        '
-        'AFPLabel
-        '
-        AFPLabel.AutoSize = True
-        AFPLabel.Location = New System.Drawing.Point(23, 77)
-        AFPLabel.Name = "AFPLabel"
-        AFPLabel.Size = New System.Drawing.Size(38, 17)
-        AFPLabel.TabIndex = 3
-        AFPLabel.Text = "AFP:"
         '
         'AFPTextBox
         '
+        Me.AFPTextBox.BackColor = System.Drawing.SystemColors.Info
         Me.AFPTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.VARIACION_SUELDOBindingSource, "AFP", True))
-        Me.AFPTextBox.Location = New System.Drawing.Point(163, 74)
+        Me.AFPTextBox.Location = New System.Drawing.Point(166, 110)
         Me.AFPTextBox.Name = "AFPTextBox"
-        Me.AFPTextBox.Size = New System.Drawing.Size(100, 22)
+        Me.AFPTextBox.Size = New System.Drawing.Size(168, 22)
         Me.AFPTextBox.TabIndex = 4
-        '
-        'CTSLabel
-        '
-        CTSLabel.AutoSize = True
-        CTSLabel.Location = New System.Drawing.Point(23, 105)
-        CTSLabel.Name = "CTSLabel"
-        CTSLabel.Size = New System.Drawing.Size(39, 17)
-        CTSLabel.TabIndex = 5
-        CTSLabel.Text = "CTS:"
         '
         'CTSTextBox
         '
+        Me.CTSTextBox.BackColor = System.Drawing.SystemColors.Info
         Me.CTSTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.VARIACION_SUELDOBindingSource, "CTS", True))
-        Me.CTSTextBox.Location = New System.Drawing.Point(163, 102)
+        Me.CTSTextBox.Location = New System.Drawing.Point(166, 138)
         Me.CTSTextBox.Name = "CTSTextBox"
-        Me.CTSTextBox.Size = New System.Drawing.Size(100, 22)
+        Me.CTSTextBox.Size = New System.Drawing.Size(168, 22)
         Me.CTSTextBox.TabIndex = 6
         '
         'VARIACION_SUELDODataGridView
@@ -274,7 +277,7 @@ Partial Class FrmVariacionSueldo
         Me.VARIACION_SUELDODataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.VARIACION_SUELDODataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3})
         Me.VARIACION_SUELDODataGridView.DataSource = Me.VARIACION_SUELDOBindingSource
-        Me.VARIACION_SUELDODataGridView.Location = New System.Drawing.Point(328, 46)
+        Me.VARIACION_SUELDODataGridView.Location = New System.Drawing.Point(371, 48)
         Me.VARIACION_SUELDODataGridView.Name = "VARIACION_SUELDODataGridView"
         Me.VARIACION_SUELDODataGridView.RowTemplate.Height = 24
         Me.VARIACION_SUELDODataGridView.Size = New System.Drawing.Size(431, 220)
@@ -304,6 +307,8 @@ Partial Class FrmVariacionSueldo
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
+        Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(860, 440)
         Me.Controls.Add(Me.VARIACION_SUELDODataGridView)
         Me.Controls.Add(IdVariacionSueldoLabel)

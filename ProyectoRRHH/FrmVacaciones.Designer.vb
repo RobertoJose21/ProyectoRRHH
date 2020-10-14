@@ -23,27 +23,27 @@ Partial Class FrmVacaciones
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmVacaciones))
         Dim IdVacacionesLabel As System.Windows.Forms.Label
         Dim TiempoLaborandoLabel As System.Windows.Forms.Label
         Dim FechaComienzoLabel As System.Windows.Forms.Label
         Dim FechaFinalLabel As System.Windows.Forms.Label
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmVacaciones))
         Me.BD_RecursosHumanosDataSet = New ProyectoRRHH.BD_RecursosHumanosDataSet()
         Me.VACACIONESBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.VACACIONESTableAdapter = New ProyectoRRHH.BD_RecursosHumanosDataSetTableAdapters.VACACIONESTableAdapter()
         Me.TableAdapterManager = New ProyectoRRHH.BD_RecursosHumanosDataSetTableAdapters.TableAdapterManager()
         Me.VACACIONESBindingNavigator = New System.Windows.Forms.BindingNavigator(Me.components)
+        Me.BindingNavigatorAddNewItem = New System.Windows.Forms.ToolStripButton()
+        Me.BindingNavigatorCountItem = New System.Windows.Forms.ToolStripLabel()
+        Me.BindingNavigatorDeleteItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorMoveFirstItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorMovePreviousItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorSeparator = New System.Windows.Forms.ToolStripSeparator()
         Me.BindingNavigatorPositionItem = New System.Windows.Forms.ToolStripTextBox()
-        Me.BindingNavigatorCountItem = New System.Windows.Forms.ToolStripLabel()
         Me.BindingNavigatorSeparator1 = New System.Windows.Forms.ToolStripSeparator()
         Me.BindingNavigatorMoveNextItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorMoveLastItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorSeparator2 = New System.Windows.Forms.ToolStripSeparator()
-        Me.BindingNavigatorAddNewItem = New System.Windows.Forms.ToolStripButton()
-        Me.BindingNavigatorDeleteItem = New System.Windows.Forms.ToolStripButton()
         Me.VACACIONESBindingNavigatorSaveItem = New System.Windows.Forms.ToolStripButton()
         Me.IdVacacionesTextBox = New System.Windows.Forms.TextBox()
         Me.TiempoLaborandoTextBox = New System.Windows.Forms.TextBox()
@@ -64,6 +64,42 @@ Partial Class FrmVacaciones
         Me.VACACIONESBindingNavigator.SuspendLayout()
         CType(Me.VACACIONESDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
+        '
+        'IdVacacionesLabel
+        '
+        IdVacacionesLabel.AutoSize = True
+        IdVacacionesLabel.Location = New System.Drawing.Point(104, 43)
+        IdVacacionesLabel.Name = "IdVacacionesLabel"
+        IdVacacionesLabel.Size = New System.Drawing.Size(100, 17)
+        IdVacacionesLabel.TabIndex = 1
+        IdVacacionesLabel.Text = "Id Vacaciones:"
+        '
+        'TiempoLaborandoLabel
+        '
+        TiempoLaborandoLabel.AutoSize = True
+        TiempoLaborandoLabel.Location = New System.Drawing.Point(104, 71)
+        TiempoLaborandoLabel.Name = "TiempoLaborandoLabel"
+        TiempoLaborandoLabel.Size = New System.Drawing.Size(132, 17)
+        TiempoLaborandoLabel.TabIndex = 3
+        TiempoLaborandoLabel.Text = "Tiempo Laborando:"
+        '
+        'FechaComienzoLabel
+        '
+        FechaComienzoLabel.AutoSize = True
+        FechaComienzoLabel.Location = New System.Drawing.Point(104, 100)
+        FechaComienzoLabel.Name = "FechaComienzoLabel"
+        FechaComienzoLabel.Size = New System.Drawing.Size(117, 17)
+        FechaComienzoLabel.TabIndex = 5
+        FechaComienzoLabel.Text = "Fecha Comienzo:"
+        '
+        'FechaFinalLabel
+        '
+        FechaFinalLabel.AutoSize = True
+        FechaFinalLabel.Location = New System.Drawing.Point(104, 128)
+        FechaFinalLabel.Name = "FechaFinalLabel"
+        FechaFinalLabel.Size = New System.Drawing.Size(85, 17)
+        FechaFinalLabel.TabIndex = 7
+        FechaFinalLabel.Text = "Fecha Final:"
         '
         'BD_RecursosHumanosDataSet
         '
@@ -127,13 +163,38 @@ Partial Class FrmVacaciones
         Me.VACACIONESBindingNavigator.TabIndex = 0
         Me.VACACIONESBindingNavigator.Text = "BindingNavigator1"
         '
+        'BindingNavigatorAddNewItem
+        '
+        Me.BindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.BindingNavigatorAddNewItem.Image = CType(resources.GetObject("BindingNavigatorAddNewItem.Image"), System.Drawing.Image)
+        Me.BindingNavigatorAddNewItem.Name = "BindingNavigatorAddNewItem"
+        Me.BindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = True
+        Me.BindingNavigatorAddNewItem.Size = New System.Drawing.Size(24, 24)
+        Me.BindingNavigatorAddNewItem.Text = "Agregar nuevo"
+        '
+        'BindingNavigatorCountItem
+        '
+        Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
+        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(48, 24)
+        Me.BindingNavigatorCountItem.Text = "de {0}"
+        Me.BindingNavigatorCountItem.ToolTipText = "Número total de elementos"
+        '
+        'BindingNavigatorDeleteItem
+        '
+        Me.BindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.BindingNavigatorDeleteItem.Image = CType(resources.GetObject("BindingNavigatorDeleteItem.Image"), System.Drawing.Image)
+        Me.BindingNavigatorDeleteItem.Name = "BindingNavigatorDeleteItem"
+        Me.BindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = True
+        Me.BindingNavigatorDeleteItem.Size = New System.Drawing.Size(24, 24)
+        Me.BindingNavigatorDeleteItem.Text = "Eliminar"
+        '
         'BindingNavigatorMoveFirstItem
         '
         Me.BindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
         Me.BindingNavigatorMoveFirstItem.Image = CType(resources.GetObject("BindingNavigatorMoveFirstItem.Image"), System.Drawing.Image)
         Me.BindingNavigatorMoveFirstItem.Name = "BindingNavigatorMoveFirstItem"
         Me.BindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorMoveFirstItem.Size = New System.Drawing.Size(24, 22)
+        Me.BindingNavigatorMoveFirstItem.Size = New System.Drawing.Size(24, 24)
         Me.BindingNavigatorMoveFirstItem.Text = "Mover primero"
         '
         'BindingNavigatorMovePreviousItem
@@ -142,13 +203,13 @@ Partial Class FrmVacaciones
         Me.BindingNavigatorMovePreviousItem.Image = CType(resources.GetObject("BindingNavigatorMovePreviousItem.Image"), System.Drawing.Image)
         Me.BindingNavigatorMovePreviousItem.Name = "BindingNavigatorMovePreviousItem"
         Me.BindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorMovePreviousItem.Size = New System.Drawing.Size(24, 22)
+        Me.BindingNavigatorMovePreviousItem.Size = New System.Drawing.Size(24, 24)
         Me.BindingNavigatorMovePreviousItem.Text = "Mover anterior"
         '
         'BindingNavigatorSeparator
         '
         Me.BindingNavigatorSeparator.Name = "BindingNavigatorSeparator"
-        Me.BindingNavigatorSeparator.Size = New System.Drawing.Size(6, 25)
+        Me.BindingNavigatorSeparator.Size = New System.Drawing.Size(6, 27)
         '
         'BindingNavigatorPositionItem
         '
@@ -159,17 +220,10 @@ Partial Class FrmVacaciones
         Me.BindingNavigatorPositionItem.Text = "0"
         Me.BindingNavigatorPositionItem.ToolTipText = "Posición actual"
         '
-        'BindingNavigatorCountItem
-        '
-        Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
-        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(48, 20)
-        Me.BindingNavigatorCountItem.Text = "de {0}"
-        Me.BindingNavigatorCountItem.ToolTipText = "Número total de elementos"
-        '
         'BindingNavigatorSeparator1
         '
-        Me.BindingNavigatorSeparator1.Name = "BindingNavigatorSeparator"
-        Me.BindingNavigatorSeparator1.Size = New System.Drawing.Size(6, 6)
+        Me.BindingNavigatorSeparator1.Name = "BindingNavigatorSeparator1"
+        Me.BindingNavigatorSeparator1.Size = New System.Drawing.Size(6, 27)
         '
         'BindingNavigatorMoveNextItem
         '
@@ -191,99 +245,47 @@ Partial Class FrmVacaciones
         '
         'BindingNavigatorSeparator2
         '
-        Me.BindingNavigatorSeparator2.Name = "BindingNavigatorSeparator"
-        Me.BindingNavigatorSeparator2.Size = New System.Drawing.Size(6, 6)
-        '
-        'BindingNavigatorAddNewItem
-        '
-        Me.BindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorAddNewItem.Image = CType(resources.GetObject("BindingNavigatorAddNewItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorAddNewItem.Name = "BindingNavigatorAddNewItem"
-        Me.BindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorAddNewItem.Size = New System.Drawing.Size(24, 24)
-        Me.BindingNavigatorAddNewItem.Text = "Agregar nuevo"
-        '
-        'BindingNavigatorDeleteItem
-        '
-        Me.BindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorDeleteItem.Image = CType(resources.GetObject("BindingNavigatorDeleteItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorDeleteItem.Name = "BindingNavigatorDeleteItem"
-        Me.BindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorDeleteItem.Size = New System.Drawing.Size(24, 24)
-        Me.BindingNavigatorDeleteItem.Text = "Eliminar"
+        Me.BindingNavigatorSeparator2.Name = "BindingNavigatorSeparator2"
+        Me.BindingNavigatorSeparator2.Size = New System.Drawing.Size(6, 27)
         '
         'VACACIONESBindingNavigatorSaveItem
         '
         Me.VACACIONESBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
         Me.VACACIONESBindingNavigatorSaveItem.Image = CType(resources.GetObject("VACACIONESBindingNavigatorSaveItem.Image"), System.Drawing.Image)
         Me.VACACIONESBindingNavigatorSaveItem.Name = "VACACIONESBindingNavigatorSaveItem"
-        Me.VACACIONESBindingNavigatorSaveItem.Size = New System.Drawing.Size(23, 23)
+        Me.VACACIONESBindingNavigatorSaveItem.Size = New System.Drawing.Size(24, 24)
         Me.VACACIONESBindingNavigatorSaveItem.Text = "Guardar datos"
-        '
-        'IdVacacionesLabel
-        '
-        IdVacacionesLabel.AutoSize = True
-        IdVacacionesLabel.Location = New System.Drawing.Point(21, 43)
-        IdVacacionesLabel.Name = "IdVacacionesLabel"
-        IdVacacionesLabel.Size = New System.Drawing.Size(100, 17)
-        IdVacacionesLabel.TabIndex = 1
-        IdVacacionesLabel.Text = "Id Vacaciones:"
         '
         'IdVacacionesTextBox
         '
+        Me.IdVacacionesTextBox.BackColor = System.Drawing.SystemColors.Info
         Me.IdVacacionesTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.VACACIONESBindingSource, "IdVacaciones", True))
-        Me.IdVacacionesTextBox.Location = New System.Drawing.Point(154, 40)
+        Me.IdVacacionesTextBox.Location = New System.Drawing.Point(237, 40)
         Me.IdVacacionesTextBox.Name = "IdVacacionesTextBox"
         Me.IdVacacionesTextBox.Size = New System.Drawing.Size(256, 22)
         Me.IdVacacionesTextBox.TabIndex = 2
         '
-        'TiempoLaborandoLabel
-        '
-        TiempoLaborandoLabel.AutoSize = True
-        TiempoLaborandoLabel.Location = New System.Drawing.Point(21, 71)
-        TiempoLaborandoLabel.Name = "TiempoLaborandoLabel"
-        TiempoLaborandoLabel.Size = New System.Drawing.Size(127, 17)
-        TiempoLaborandoLabel.TabIndex = 3
-        TiempoLaborandoLabel.Text = "tiempo Laborando:"
-        '
         'TiempoLaborandoTextBox
         '
+        Me.TiempoLaborandoTextBox.BackColor = System.Drawing.SystemColors.Info
         Me.TiempoLaborandoTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.VACACIONESBindingSource, "tiempoLaborando", True))
-        Me.TiempoLaborandoTextBox.Location = New System.Drawing.Point(154, 68)
+        Me.TiempoLaborandoTextBox.Location = New System.Drawing.Point(237, 68)
         Me.TiempoLaborandoTextBox.Name = "TiempoLaborandoTextBox"
         Me.TiempoLaborandoTextBox.Size = New System.Drawing.Size(256, 22)
         Me.TiempoLaborandoTextBox.TabIndex = 4
         '
-        'FechaComienzoLabel
-        '
-        FechaComienzoLabel.AutoSize = True
-        FechaComienzoLabel.Location = New System.Drawing.Point(21, 100)
-        FechaComienzoLabel.Name = "FechaComienzoLabel"
-        FechaComienzoLabel.Size = New System.Drawing.Size(113, 17)
-        FechaComienzoLabel.TabIndex = 5
-        FechaComienzoLabel.Text = "fecha Comienzo:"
-        '
         'FechaComienzoDateTimePicker
         '
         Me.FechaComienzoDateTimePicker.DataBindings.Add(New System.Windows.Forms.Binding("Value", Me.VACACIONESBindingSource, "fechaComienzo", True))
-        Me.FechaComienzoDateTimePicker.Location = New System.Drawing.Point(154, 96)
+        Me.FechaComienzoDateTimePicker.Location = New System.Drawing.Point(237, 96)
         Me.FechaComienzoDateTimePicker.Name = "FechaComienzoDateTimePicker"
         Me.FechaComienzoDateTimePicker.Size = New System.Drawing.Size(256, 22)
         Me.FechaComienzoDateTimePicker.TabIndex = 6
         '
-        'FechaFinalLabel
-        '
-        FechaFinalLabel.AutoSize = True
-        FechaFinalLabel.Location = New System.Drawing.Point(21, 128)
-        FechaFinalLabel.Name = "FechaFinalLabel"
-        FechaFinalLabel.Size = New System.Drawing.Size(81, 17)
-        FechaFinalLabel.TabIndex = 7
-        FechaFinalLabel.Text = "fecha Final:"
-        '
         'FechaFinalDateTimePicker
         '
         Me.FechaFinalDateTimePicker.DataBindings.Add(New System.Windows.Forms.Binding("Value", Me.VACACIONESBindingSource, "fechaFinal", True))
-        Me.FechaFinalDateTimePicker.Location = New System.Drawing.Point(154, 124)
+        Me.FechaFinalDateTimePicker.Location = New System.Drawing.Point(237, 124)
         Me.FechaFinalDateTimePicker.Name = "FechaFinalDateTimePicker"
         Me.FechaFinalDateTimePicker.Size = New System.Drawing.Size(256, 22)
         Me.FechaFinalDateTimePicker.TabIndex = 8
@@ -295,7 +297,7 @@ Partial Class FrmVacaciones
         Me.VACACIONESDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.VACACIONESDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3, Me.DataGridViewTextBoxColumn4})
         Me.VACACIONESDataGridView.DataSource = Me.VACACIONESBindingSource
-        Me.VACACIONESDataGridView.Location = New System.Drawing.Point(24, 182)
+        Me.VACACIONESDataGridView.Location = New System.Drawing.Point(43, 164)
         Me.VACACIONESDataGridView.Name = "VACACIONESDataGridView"
         Me.VACACIONESDataGridView.RowTemplate.Height = 24
         Me.VACACIONESDataGridView.Size = New System.Drawing.Size(621, 201)
@@ -311,21 +313,21 @@ Partial Class FrmVacaciones
         'DataGridViewTextBoxColumn2
         '
         Me.DataGridViewTextBoxColumn2.DataPropertyName = "tiempoLaborando"
-        Me.DataGridViewTextBoxColumn2.HeaderText = "tiempoLaborando"
+        Me.DataGridViewTextBoxColumn2.HeaderText = "TiempoLaborando"
         Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
         Me.DataGridViewTextBoxColumn2.Width = 150
         '
         'DataGridViewTextBoxColumn3
         '
         Me.DataGridViewTextBoxColumn3.DataPropertyName = "fechaComienzo"
-        Me.DataGridViewTextBoxColumn3.HeaderText = "fechaComienzo"
+        Me.DataGridViewTextBoxColumn3.HeaderText = "FechaComienzo"
         Me.DataGridViewTextBoxColumn3.Name = "DataGridViewTextBoxColumn3"
         Me.DataGridViewTextBoxColumn3.Width = 150
         '
         'DataGridViewTextBoxColumn4
         '
         Me.DataGridViewTextBoxColumn4.DataPropertyName = "fechaFinal"
-        Me.DataGridViewTextBoxColumn4.HeaderText = "fechaFinal"
+        Me.DataGridViewTextBoxColumn4.HeaderText = "FechaFinal"
         Me.DataGridViewTextBoxColumn4.Name = "DataGridViewTextBoxColumn4"
         Me.DataGridViewTextBoxColumn4.Width = 150
         '
@@ -333,6 +335,8 @@ Partial Class FrmVacaciones
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
+        Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(873, 449)
         Me.Controls.Add(Me.VACACIONESDataGridView)
         Me.Controls.Add(IdVacacionesLabel)

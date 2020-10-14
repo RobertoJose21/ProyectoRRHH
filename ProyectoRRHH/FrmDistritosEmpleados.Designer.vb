@@ -22,6 +22,7 @@ Partial Class FrmDistritosEmpleados
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmDistritosEmpleados))
         Me.Button1 = New System.Windows.Forms.Button()
         Me.ListView1 = New System.Windows.Forms.ListView()
         Me.ColumnHeader1 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
@@ -33,6 +34,9 @@ Partial Class FrmDistritosEmpleados
         '
         'Button1
         '
+        Me.Button1.BackgroundImage = CType(resources.GetObject("Button1.BackgroundImage"), System.Drawing.Image)
+        Me.Button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.Button1.Font = New System.Drawing.Font("Stencil", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button1.Location = New System.Drawing.Point(437, 12)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(174, 47)
@@ -69,7 +73,7 @@ Partial Class FrmDistritosEmpleados
         '
         'ColumnHeader4
         '
-        Me.ColumnHeader4.Text = "SUEDO"
+        Me.ColumnHeader4.Text = "SUELDO"
         Me.ColumnHeader4.Width = 100
         '
         'ColumnHeader5
@@ -81,6 +85,8 @@ Partial Class FrmDistritosEmpleados
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
+        Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(1102, 475)
         Me.Controls.Add(Me.ListView1)
         Me.Controls.Add(Me.Button1)

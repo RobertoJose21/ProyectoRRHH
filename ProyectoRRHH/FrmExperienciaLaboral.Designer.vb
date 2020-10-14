@@ -23,7 +23,6 @@ Partial Class FrmExperienciaLaboral
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmExperienciaLaboral))
         Dim IdExperienciaLaboralLabel As System.Windows.Forms.Label
         Dim NombreEmpresaLabel As System.Windows.Forms.Label
         Dim PeriodoInicioLabel As System.Windows.Forms.Label
@@ -31,22 +30,23 @@ Partial Class FrmExperienciaLaboral
         Dim CargoAnteriorLabel As System.Windows.Forms.Label
         Dim IdEmpleadoLabel As System.Windows.Forms.Label
         Dim TiempoExperienciaLabel As System.Windows.Forms.Label
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmExperienciaLaboral))
         Me.BD_RecursosHumanosDataSet = New ProyectoRRHH.BD_RecursosHumanosDataSet()
         Me.EXPERIENCIA_LABORALBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.EXPERIENCIA_LABORALTableAdapter = New ProyectoRRHH.BD_RecursosHumanosDataSetTableAdapters.EXPERIENCIA_LABORALTableAdapter()
         Me.TableAdapterManager = New ProyectoRRHH.BD_RecursosHumanosDataSetTableAdapters.TableAdapterManager()
         Me.EXPERIENCIA_LABORALBindingNavigator = New System.Windows.Forms.BindingNavigator(Me.components)
+        Me.BindingNavigatorAddNewItem = New System.Windows.Forms.ToolStripButton()
+        Me.BindingNavigatorCountItem = New System.Windows.Forms.ToolStripLabel()
+        Me.BindingNavigatorDeleteItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorMoveFirstItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorMovePreviousItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorSeparator = New System.Windows.Forms.ToolStripSeparator()
         Me.BindingNavigatorPositionItem = New System.Windows.Forms.ToolStripTextBox()
-        Me.BindingNavigatorCountItem = New System.Windows.Forms.ToolStripLabel()
         Me.BindingNavigatorSeparator1 = New System.Windows.Forms.ToolStripSeparator()
         Me.BindingNavigatorMoveNextItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorMoveLastItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorSeparator2 = New System.Windows.Forms.ToolStripSeparator()
-        Me.BindingNavigatorAddNewItem = New System.Windows.Forms.ToolStripButton()
-        Me.BindingNavigatorDeleteItem = New System.Windows.Forms.ToolStripButton()
         Me.EXPERIENCIA_LABORALBindingNavigatorSaveItem = New System.Windows.Forms.ToolStripButton()
         Me.IdExperienciaLaboralTextBox = New System.Windows.Forms.TextBox()
         Me.NombreEmpresaTextBox = New System.Windows.Forms.TextBox()
@@ -76,6 +76,69 @@ Partial Class FrmExperienciaLaboral
         Me.EXPERIENCIA_LABORALBindingNavigator.SuspendLayout()
         CType(Me.EXPERIENCIA_LABORALDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
+        '
+        'IdExperienciaLaboralLabel
+        '
+        IdExperienciaLaboralLabel.AutoSize = True
+        IdExperienciaLaboralLabel.Location = New System.Drawing.Point(144, 53)
+        IdExperienciaLaboralLabel.Name = "IdExperienciaLaboralLabel"
+        IdExperienciaLaboralLabel.Size = New System.Drawing.Size(152, 17)
+        IdExperienciaLaboralLabel.TabIndex = 1
+        IdExperienciaLaboralLabel.Text = "Id Experiencia Laboral:"
+        '
+        'NombreEmpresaLabel
+        '
+        NombreEmpresaLabel.AutoSize = True
+        NombreEmpresaLabel.Location = New System.Drawing.Point(144, 81)
+        NombreEmpresaLabel.Name = "NombreEmpresaLabel"
+        NombreEmpresaLabel.Size = New System.Drawing.Size(122, 17)
+        NombreEmpresaLabel.TabIndex = 3
+        NombreEmpresaLabel.Text = "Nombre Empresa:"
+        '
+        'PeriodoInicioLabel
+        '
+        PeriodoInicioLabel.AutoSize = True
+        PeriodoInicioLabel.Location = New System.Drawing.Point(144, 110)
+        PeriodoInicioLabel.Name = "PeriodoInicioLabel"
+        PeriodoInicioLabel.Size = New System.Drawing.Size(97, 17)
+        PeriodoInicioLabel.TabIndex = 5
+        PeriodoInicioLabel.Text = "Periodo Inicio:"
+        '
+        'PeriodoTerminoLabel
+        '
+        PeriodoTerminoLabel.AutoSize = True
+        PeriodoTerminoLabel.Location = New System.Drawing.Point(144, 138)
+        PeriodoTerminoLabel.Name = "PeriodoTerminoLabel"
+        PeriodoTerminoLabel.Size = New System.Drawing.Size(117, 17)
+        PeriodoTerminoLabel.TabIndex = 7
+        PeriodoTerminoLabel.Text = "Periodo Termino:"
+        '
+        'CargoAnteriorLabel
+        '
+        CargoAnteriorLabel.AutoSize = True
+        CargoAnteriorLabel.Location = New System.Drawing.Point(686, 56)
+        CargoAnteriorLabel.Name = "CargoAnteriorLabel"
+        CargoAnteriorLabel.Size = New System.Drawing.Size(104, 17)
+        CargoAnteriorLabel.TabIndex = 9
+        CargoAnteriorLabel.Text = "Cargo Anterior:"
+        '
+        'IdEmpleadoLabel
+        '
+        IdEmpleadoLabel.AutoSize = True
+        IdEmpleadoLabel.Location = New System.Drawing.Point(686, 84)
+        IdEmpleadoLabel.Name = "IdEmpleadoLabel"
+        IdEmpleadoLabel.Size = New System.Drawing.Size(90, 17)
+        IdEmpleadoLabel.TabIndex = 11
+        IdEmpleadoLabel.Text = "Id Empleado:"
+        '
+        'TiempoExperienciaLabel
+        '
+        TiempoExperienciaLabel.AutoSize = True
+        TiempoExperienciaLabel.Location = New System.Drawing.Point(686, 112)
+        TiempoExperienciaLabel.Name = "TiempoExperienciaLabel"
+        TiempoExperienciaLabel.Size = New System.Drawing.Size(136, 17)
+        TiempoExperienciaLabel.TabIndex = 13
+        TiempoExperienciaLabel.Text = "Tiempo Experiencia:"
         '
         'BD_RecursosHumanosDataSet
         '
@@ -139,13 +202,38 @@ Partial Class FrmExperienciaLaboral
         Me.EXPERIENCIA_LABORALBindingNavigator.TabIndex = 0
         Me.EXPERIENCIA_LABORALBindingNavigator.Text = "BindingNavigator1"
         '
+        'BindingNavigatorAddNewItem
+        '
+        Me.BindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.BindingNavigatorAddNewItem.Image = CType(resources.GetObject("BindingNavigatorAddNewItem.Image"), System.Drawing.Image)
+        Me.BindingNavigatorAddNewItem.Name = "BindingNavigatorAddNewItem"
+        Me.BindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = True
+        Me.BindingNavigatorAddNewItem.Size = New System.Drawing.Size(24, 24)
+        Me.BindingNavigatorAddNewItem.Text = "Agregar nuevo"
+        '
+        'BindingNavigatorCountItem
+        '
+        Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
+        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(48, 24)
+        Me.BindingNavigatorCountItem.Text = "de {0}"
+        Me.BindingNavigatorCountItem.ToolTipText = "Número total de elementos"
+        '
+        'BindingNavigatorDeleteItem
+        '
+        Me.BindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.BindingNavigatorDeleteItem.Image = CType(resources.GetObject("BindingNavigatorDeleteItem.Image"), System.Drawing.Image)
+        Me.BindingNavigatorDeleteItem.Name = "BindingNavigatorDeleteItem"
+        Me.BindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = True
+        Me.BindingNavigatorDeleteItem.Size = New System.Drawing.Size(24, 24)
+        Me.BindingNavigatorDeleteItem.Text = "Eliminar"
+        '
         'BindingNavigatorMoveFirstItem
         '
         Me.BindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
         Me.BindingNavigatorMoveFirstItem.Image = CType(resources.GetObject("BindingNavigatorMoveFirstItem.Image"), System.Drawing.Image)
         Me.BindingNavigatorMoveFirstItem.Name = "BindingNavigatorMoveFirstItem"
         Me.BindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorMoveFirstItem.Size = New System.Drawing.Size(24, 22)
+        Me.BindingNavigatorMoveFirstItem.Size = New System.Drawing.Size(24, 24)
         Me.BindingNavigatorMoveFirstItem.Text = "Mover primero"
         '
         'BindingNavigatorMovePreviousItem
@@ -154,13 +242,13 @@ Partial Class FrmExperienciaLaboral
         Me.BindingNavigatorMovePreviousItem.Image = CType(resources.GetObject("BindingNavigatorMovePreviousItem.Image"), System.Drawing.Image)
         Me.BindingNavigatorMovePreviousItem.Name = "BindingNavigatorMovePreviousItem"
         Me.BindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorMovePreviousItem.Size = New System.Drawing.Size(24, 22)
+        Me.BindingNavigatorMovePreviousItem.Size = New System.Drawing.Size(24, 24)
         Me.BindingNavigatorMovePreviousItem.Text = "Mover anterior"
         '
         'BindingNavigatorSeparator
         '
         Me.BindingNavigatorSeparator.Name = "BindingNavigatorSeparator"
-        Me.BindingNavigatorSeparator.Size = New System.Drawing.Size(6, 25)
+        Me.BindingNavigatorSeparator.Size = New System.Drawing.Size(6, 27)
         '
         'BindingNavigatorPositionItem
         '
@@ -171,17 +259,10 @@ Partial Class FrmExperienciaLaboral
         Me.BindingNavigatorPositionItem.Text = "0"
         Me.BindingNavigatorPositionItem.ToolTipText = "Posición actual"
         '
-        'BindingNavigatorCountItem
-        '
-        Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
-        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(48, 20)
-        Me.BindingNavigatorCountItem.Text = "de {0}"
-        Me.BindingNavigatorCountItem.ToolTipText = "Número total de elementos"
-        '
         'BindingNavigatorSeparator1
         '
-        Me.BindingNavigatorSeparator1.Name = "BindingNavigatorSeparator"
-        Me.BindingNavigatorSeparator1.Size = New System.Drawing.Size(6, 6)
+        Me.BindingNavigatorSeparator1.Name = "BindingNavigatorSeparator1"
+        Me.BindingNavigatorSeparator1.Size = New System.Drawing.Size(6, 27)
         '
         'BindingNavigatorMoveNextItem
         '
@@ -203,152 +284,76 @@ Partial Class FrmExperienciaLaboral
         '
         'BindingNavigatorSeparator2
         '
-        Me.BindingNavigatorSeparator2.Name = "BindingNavigatorSeparator"
-        Me.BindingNavigatorSeparator2.Size = New System.Drawing.Size(6, 6)
-        '
-        'BindingNavigatorAddNewItem
-        '
-        Me.BindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorAddNewItem.Image = CType(resources.GetObject("BindingNavigatorAddNewItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorAddNewItem.Name = "BindingNavigatorAddNewItem"
-        Me.BindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorAddNewItem.Size = New System.Drawing.Size(24, 24)
-        Me.BindingNavigatorAddNewItem.Text = "Agregar nuevo"
-        '
-        'BindingNavigatorDeleteItem
-        '
-        Me.BindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorDeleteItem.Image = CType(resources.GetObject("BindingNavigatorDeleteItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorDeleteItem.Name = "BindingNavigatorDeleteItem"
-        Me.BindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorDeleteItem.Size = New System.Drawing.Size(24, 24)
-        Me.BindingNavigatorDeleteItem.Text = "Eliminar"
+        Me.BindingNavigatorSeparator2.Name = "BindingNavigatorSeparator2"
+        Me.BindingNavigatorSeparator2.Size = New System.Drawing.Size(6, 27)
         '
         'EXPERIENCIA_LABORALBindingNavigatorSaveItem
         '
         Me.EXPERIENCIA_LABORALBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
         Me.EXPERIENCIA_LABORALBindingNavigatorSaveItem.Image = CType(resources.GetObject("EXPERIENCIA_LABORALBindingNavigatorSaveItem.Image"), System.Drawing.Image)
         Me.EXPERIENCIA_LABORALBindingNavigatorSaveItem.Name = "EXPERIENCIA_LABORALBindingNavigatorSaveItem"
-        Me.EXPERIENCIA_LABORALBindingNavigatorSaveItem.Size = New System.Drawing.Size(23, 23)
+        Me.EXPERIENCIA_LABORALBindingNavigatorSaveItem.Size = New System.Drawing.Size(24, 24)
         Me.EXPERIENCIA_LABORALBindingNavigatorSaveItem.Text = "Guardar datos"
-        '
-        'IdExperienciaLaboralLabel
-        '
-        IdExperienciaLaboralLabel.AutoSize = True
-        IdExperienciaLaboralLabel.Location = New System.Drawing.Point(21, 54)
-        IdExperienciaLaboralLabel.Name = "IdExperienciaLaboralLabel"
-        IdExperienciaLaboralLabel.Size = New System.Drawing.Size(152, 17)
-        IdExperienciaLaboralLabel.TabIndex = 1
-        IdExperienciaLaboralLabel.Text = "Id Experiencia Laboral:"
         '
         'IdExperienciaLaboralTextBox
         '
+        Me.IdExperienciaLaboralTextBox.BackColor = System.Drawing.SystemColors.Info
         Me.IdExperienciaLaboralTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.EXPERIENCIA_LABORALBindingSource, "IdExperienciaLaboral", True))
-        Me.IdExperienciaLaboralTextBox.Location = New System.Drawing.Point(179, 51)
+        Me.IdExperienciaLaboralTextBox.Location = New System.Drawing.Point(302, 50)
         Me.IdExperienciaLaboralTextBox.Name = "IdExperienciaLaboralTextBox"
-        Me.IdExperienciaLaboralTextBox.Size = New System.Drawing.Size(258, 22)
+        Me.IdExperienciaLaboralTextBox.Size = New System.Drawing.Size(272, 22)
         Me.IdExperienciaLaboralTextBox.TabIndex = 2
-        '
-        'NombreEmpresaLabel
-        '
-        NombreEmpresaLabel.AutoSize = True
-        NombreEmpresaLabel.Location = New System.Drawing.Point(21, 82)
-        NombreEmpresaLabel.Name = "NombreEmpresaLabel"
-        NombreEmpresaLabel.Size = New System.Drawing.Size(120, 17)
-        NombreEmpresaLabel.TabIndex = 3
-        NombreEmpresaLabel.Text = "nombre Empresa:"
         '
         'NombreEmpresaTextBox
         '
+        Me.NombreEmpresaTextBox.BackColor = System.Drawing.SystemColors.Info
         Me.NombreEmpresaTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.EXPERIENCIA_LABORALBindingSource, "nombreEmpresa", True))
-        Me.NombreEmpresaTextBox.Location = New System.Drawing.Point(179, 79)
+        Me.NombreEmpresaTextBox.Location = New System.Drawing.Point(302, 78)
         Me.NombreEmpresaTextBox.Name = "NombreEmpresaTextBox"
-        Me.NombreEmpresaTextBox.Size = New System.Drawing.Size(258, 22)
+        Me.NombreEmpresaTextBox.Size = New System.Drawing.Size(272, 22)
         Me.NombreEmpresaTextBox.TabIndex = 4
-        '
-        'PeriodoInicioLabel
-        '
-        PeriodoInicioLabel.AutoSize = True
-        PeriodoInicioLabel.Location = New System.Drawing.Point(21, 111)
-        PeriodoInicioLabel.Name = "PeriodoInicioLabel"
-        PeriodoInicioLabel.Size = New System.Drawing.Size(96, 17)
-        PeriodoInicioLabel.TabIndex = 5
-        PeriodoInicioLabel.Text = "periodo Inicio:"
         '
         'PeriodoInicioDateTimePicker
         '
         Me.PeriodoInicioDateTimePicker.DataBindings.Add(New System.Windows.Forms.Binding("Value", Me.EXPERIENCIA_LABORALBindingSource, "periodoInicio", True))
-        Me.PeriodoInicioDateTimePicker.Location = New System.Drawing.Point(179, 107)
+        Me.PeriodoInicioDateTimePicker.Location = New System.Drawing.Point(302, 106)
         Me.PeriodoInicioDateTimePicker.Name = "PeriodoInicioDateTimePicker"
-        Me.PeriodoInicioDateTimePicker.Size = New System.Drawing.Size(258, 22)
+        Me.PeriodoInicioDateTimePicker.Size = New System.Drawing.Size(272, 22)
         Me.PeriodoInicioDateTimePicker.TabIndex = 6
-        '
-        'PeriodoTerminoLabel
-        '
-        PeriodoTerminoLabel.AutoSize = True
-        PeriodoTerminoLabel.Location = New System.Drawing.Point(21, 139)
-        PeriodoTerminoLabel.Name = "PeriodoTerminoLabel"
-        PeriodoTerminoLabel.Size = New System.Drawing.Size(116, 17)
-        PeriodoTerminoLabel.TabIndex = 7
-        PeriodoTerminoLabel.Text = "periodo Termino:"
         '
         'PeriodoTerminoDateTimePicker
         '
         Me.PeriodoTerminoDateTimePicker.DataBindings.Add(New System.Windows.Forms.Binding("Value", Me.EXPERIENCIA_LABORALBindingSource, "periodoTermino", True))
-        Me.PeriodoTerminoDateTimePicker.Location = New System.Drawing.Point(179, 135)
+        Me.PeriodoTerminoDateTimePicker.Location = New System.Drawing.Point(302, 134)
         Me.PeriodoTerminoDateTimePicker.Name = "PeriodoTerminoDateTimePicker"
-        Me.PeriodoTerminoDateTimePicker.Size = New System.Drawing.Size(258, 22)
+        Me.PeriodoTerminoDateTimePicker.Size = New System.Drawing.Size(272, 22)
         Me.PeriodoTerminoDateTimePicker.TabIndex = 8
-        '
-        'CargoAnteriorLabel
-        '
-        CargoAnteriorLabel.AutoSize = True
-        CargoAnteriorLabel.Location = New System.Drawing.Point(21, 166)
-        CargoAnteriorLabel.Name = "CargoAnteriorLabel"
-        CargoAnteriorLabel.Size = New System.Drawing.Size(102, 17)
-        CargoAnteriorLabel.TabIndex = 9
-        CargoAnteriorLabel.Text = "cargo Anterior:"
         '
         'CargoAnteriorTextBox
         '
+        Me.CargoAnteriorTextBox.BackColor = System.Drawing.SystemColors.Info
         Me.CargoAnteriorTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.EXPERIENCIA_LABORALBindingSource, "cargoAnterior", True))
-        Me.CargoAnteriorTextBox.Location = New System.Drawing.Point(179, 163)
+        Me.CargoAnteriorTextBox.Location = New System.Drawing.Point(844, 53)
         Me.CargoAnteriorTextBox.Name = "CargoAnteriorTextBox"
-        Me.CargoAnteriorTextBox.Size = New System.Drawing.Size(258, 22)
+        Me.CargoAnteriorTextBox.Size = New System.Drawing.Size(270, 22)
         Me.CargoAnteriorTextBox.TabIndex = 10
-        '
-        'IdEmpleadoLabel
-        '
-        IdEmpleadoLabel.AutoSize = True
-        IdEmpleadoLabel.Location = New System.Drawing.Point(21, 194)
-        IdEmpleadoLabel.Name = "IdEmpleadoLabel"
-        IdEmpleadoLabel.Size = New System.Drawing.Size(90, 17)
-        IdEmpleadoLabel.TabIndex = 11
-        IdEmpleadoLabel.Text = "Id Empleado:"
         '
         'IdEmpleadoTextBox
         '
+        Me.IdEmpleadoTextBox.BackColor = System.Drawing.SystemColors.Info
         Me.IdEmpleadoTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.EXPERIENCIA_LABORALBindingSource, "IdEmpleado", True))
-        Me.IdEmpleadoTextBox.Location = New System.Drawing.Point(179, 191)
+        Me.IdEmpleadoTextBox.Location = New System.Drawing.Point(844, 81)
         Me.IdEmpleadoTextBox.Name = "IdEmpleadoTextBox"
-        Me.IdEmpleadoTextBox.Size = New System.Drawing.Size(258, 22)
+        Me.IdEmpleadoTextBox.Size = New System.Drawing.Size(270, 22)
         Me.IdEmpleadoTextBox.TabIndex = 12
-        '
-        'TiempoExperienciaLabel
-        '
-        TiempoExperienciaLabel.AutoSize = True
-        TiempoExperienciaLabel.Location = New System.Drawing.Point(21, 222)
-        TiempoExperienciaLabel.Name = "TiempoExperienciaLabel"
-        TiempoExperienciaLabel.Size = New System.Drawing.Size(136, 17)
-        TiempoExperienciaLabel.TabIndex = 13
-        TiempoExperienciaLabel.Text = "Tiempo Experiencia:"
         '
         'TiempoExperienciaTextBox
         '
+        Me.TiempoExperienciaTextBox.BackColor = System.Drawing.SystemColors.Info
         Me.TiempoExperienciaTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.EXPERIENCIA_LABORALBindingSource, "TiempoExperiencia", True))
-        Me.TiempoExperienciaTextBox.Location = New System.Drawing.Point(179, 219)
+        Me.TiempoExperienciaTextBox.Location = New System.Drawing.Point(844, 109)
         Me.TiempoExperienciaTextBox.Name = "TiempoExperienciaTextBox"
-        Me.TiempoExperienciaTextBox.Size = New System.Drawing.Size(258, 22)
+        Me.TiempoExperienciaTextBox.Size = New System.Drawing.Size(270, 22)
         Me.TiempoExperienciaTextBox.TabIndex = 14
         '
         'EXPERIENCIA_LABORALDataGridView
@@ -358,10 +363,10 @@ Partial Class FrmExperienciaLaboral
         Me.EXPERIENCIA_LABORALDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.EXPERIENCIA_LABORALDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3, Me.DataGridViewTextBoxColumn4, Me.DataGridViewTextBoxColumn5, Me.DataGridViewTextBoxColumn6, Me.DataGridViewTextBoxColumn7})
         Me.EXPERIENCIA_LABORALDataGridView.DataSource = Me.EXPERIENCIA_LABORALBindingSource
-        Me.EXPERIENCIA_LABORALDataGridView.Location = New System.Drawing.Point(454, 51)
+        Me.EXPERIENCIA_LABORALDataGridView.Location = New System.Drawing.Point(147, 175)
         Me.EXPERIENCIA_LABORALDataGridView.Name = "EXPERIENCIA_LABORALDataGridView"
         Me.EXPERIENCIA_LABORALDataGridView.RowTemplate.Height = 24
-        Me.EXPERIENCIA_LABORALDataGridView.Size = New System.Drawing.Size(912, 222)
+        Me.EXPERIENCIA_LABORALDataGridView.Size = New System.Drawing.Size(988, 222)
         Me.EXPERIENCIA_LABORALDataGridView.TabIndex = 15
         '
         'DataGridViewTextBoxColumn1
@@ -370,31 +375,32 @@ Partial Class FrmExperienciaLaboral
         Me.DataGridViewTextBoxColumn1.HeaderText = "IdExperienciaLaboral"
         Me.DataGridViewTextBoxColumn1.Name = "DataGridViewTextBoxColumn1"
         Me.DataGridViewTextBoxColumn1.ReadOnly = True
+        Me.DataGridViewTextBoxColumn1.Width = 150
         '
         'DataGridViewTextBoxColumn2
         '
         Me.DataGridViewTextBoxColumn2.DataPropertyName = "nombreEmpresa"
-        Me.DataGridViewTextBoxColumn2.HeaderText = "nombreEmpresa"
+        Me.DataGridViewTextBoxColumn2.HeaderText = "NombreEmpresa"
         Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
         Me.DataGridViewTextBoxColumn2.Width = 150
         '
         'DataGridViewTextBoxColumn3
         '
         Me.DataGridViewTextBoxColumn3.DataPropertyName = "periodoInicio"
-        Me.DataGridViewTextBoxColumn3.HeaderText = "periodoInicio"
+        Me.DataGridViewTextBoxColumn3.HeaderText = "PeriodoInicio"
         Me.DataGridViewTextBoxColumn3.Name = "DataGridViewTextBoxColumn3"
         '
         'DataGridViewTextBoxColumn4
         '
         Me.DataGridViewTextBoxColumn4.DataPropertyName = "periodoTermino"
-        Me.DataGridViewTextBoxColumn4.HeaderText = "periodoTermino"
+        Me.DataGridViewTextBoxColumn4.HeaderText = "PeriodoTermino"
         Me.DataGridViewTextBoxColumn4.Name = "DataGridViewTextBoxColumn4"
         Me.DataGridViewTextBoxColumn4.Width = 150
         '
         'DataGridViewTextBoxColumn5
         '
         Me.DataGridViewTextBoxColumn5.DataPropertyName = "cargoAnterior"
-        Me.DataGridViewTextBoxColumn5.HeaderText = "cargoAnterior"
+        Me.DataGridViewTextBoxColumn5.HeaderText = "CargoAnterior"
         Me.DataGridViewTextBoxColumn5.Name = "DataGridViewTextBoxColumn5"
         '
         'DataGridViewTextBoxColumn6
@@ -414,7 +420,9 @@ Partial Class FrmExperienciaLaboral
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1420, 376)
+        Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
+        Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.ClientSize = New System.Drawing.Size(1420, 425)
         Me.Controls.Add(Me.EXPERIENCIA_LABORALDataGridView)
         Me.Controls.Add(IdExperienciaLaboralLabel)
         Me.Controls.Add(Me.IdExperienciaLaboralTextBox)

@@ -60,7 +60,7 @@ Partial Class FrmArea
         'IdAreaLabel
         '
         IdAreaLabel.AutoSize = True
-        IdAreaLabel.Location = New System.Drawing.Point(23, 46)
+        IdAreaLabel.Location = New System.Drawing.Point(203, 47)
         IdAreaLabel.Name = "IdAreaLabel"
         IdAreaLabel.Size = New System.Drawing.Size(57, 17)
         IdAreaLabel.TabIndex = 1
@@ -69,11 +69,11 @@ Partial Class FrmArea
         'AreaLabel
         '
         AreaLabel.AutoSize = True
-        AreaLabel.Location = New System.Drawing.Point(23, 74)
+        AreaLabel.Location = New System.Drawing.Point(203, 75)
         AreaLabel.Name = "AreaLabel"
-        AreaLabel.Size = New System.Drawing.Size(41, 17)
+        AreaLabel.Size = New System.Drawing.Size(42, 17)
         AreaLabel.TabIndex = 3
-        AreaLabel.Text = "area:"
+        AreaLabel.Text = "Area:"
         '
         'BD_RecursosHumanosDataSet
         '
@@ -232,18 +232,20 @@ Partial Class FrmArea
         '
         'IdAreaTextBox
         '
+        Me.IdAreaTextBox.BackColor = System.Drawing.SystemColors.Info
         Me.IdAreaTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.AREABindingSource, "IdArea", True))
-        Me.IdAreaTextBox.Location = New System.Drawing.Point(86, 43)
+        Me.IdAreaTextBox.Location = New System.Drawing.Point(266, 44)
         Me.IdAreaTextBox.Name = "IdAreaTextBox"
-        Me.IdAreaTextBox.Size = New System.Drawing.Size(100, 22)
+        Me.IdAreaTextBox.Size = New System.Drawing.Size(211, 22)
         Me.IdAreaTextBox.TabIndex = 2
         '
         'AreaTextBox
         '
+        Me.AreaTextBox.BackColor = System.Drawing.SystemColors.Info
         Me.AreaTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.AREABindingSource, "area", True))
-        Me.AreaTextBox.Location = New System.Drawing.Point(86, 71)
+        Me.AreaTextBox.Location = New System.Drawing.Point(266, 72)
         Me.AreaTextBox.Name = "AreaTextBox"
-        Me.AreaTextBox.Size = New System.Drawing.Size(100, 22)
+        Me.AreaTextBox.Size = New System.Drawing.Size(211, 22)
         Me.AreaTextBox.TabIndex = 4
         '
         'AREADataGridView
@@ -253,10 +255,10 @@ Partial Class FrmArea
         Me.AREADataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.AREADataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2})
         Me.AREADataGridView.DataSource = Me.AREABindingSource
-        Me.AREADataGridView.Location = New System.Drawing.Point(210, 43)
+        Me.AREADataGridView.Location = New System.Drawing.Point(95, 129)
         Me.AREADataGridView.Name = "AREADataGridView"
         Me.AREADataGridView.RowTemplate.Height = 24
-        Me.AREADataGridView.Size = New System.Drawing.Size(314, 216)
+        Me.AREADataGridView.Size = New System.Drawing.Size(468, 220)
         Me.AREADataGridView.TabIndex = 5
         '
         'DataGridViewTextBoxColumn1
@@ -270,13 +272,16 @@ Partial Class FrmArea
         'DataGridViewTextBoxColumn2
         '
         Me.DataGridViewTextBoxColumn2.DataPropertyName = "area"
-        Me.DataGridViewTextBoxColumn2.HeaderText = "area"
+        Me.DataGridViewTextBoxColumn2.HeaderText = "Area"
         Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
+        Me.DataGridViewTextBoxColumn2.Width = 150
         '
         'FrmArea
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
+        Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(717, 379)
         Me.Controls.Add(Me.AREADataGridView)
         Me.Controls.Add(IdAreaLabel)

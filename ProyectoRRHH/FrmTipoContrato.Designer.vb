@@ -23,25 +23,25 @@ Partial Class FrmTipoContrato
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmTipoContrato))
         Dim IdTipoContratoLabel As System.Windows.Forms.Label
         Dim TipoContratoLabel As System.Windows.Forms.Label
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmTipoContrato))
         Me.BD_RecursosHumanosDataSet = New ProyectoRRHH.BD_RecursosHumanosDataSet()
         Me.TIPO_CONTRATOBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.TIPO_CONTRATOTableAdapter = New ProyectoRRHH.BD_RecursosHumanosDataSetTableAdapters.TIPO_CONTRATOTableAdapter()
         Me.TableAdapterManager = New ProyectoRRHH.BD_RecursosHumanosDataSetTableAdapters.TableAdapterManager()
         Me.TIPO_CONTRATOBindingNavigator = New System.Windows.Forms.BindingNavigator(Me.components)
+        Me.BindingNavigatorAddNewItem = New System.Windows.Forms.ToolStripButton()
+        Me.BindingNavigatorCountItem = New System.Windows.Forms.ToolStripLabel()
+        Me.BindingNavigatorDeleteItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorMoveFirstItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorMovePreviousItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorSeparator = New System.Windows.Forms.ToolStripSeparator()
         Me.BindingNavigatorPositionItem = New System.Windows.Forms.ToolStripTextBox()
-        Me.BindingNavigatorCountItem = New System.Windows.Forms.ToolStripLabel()
         Me.BindingNavigatorSeparator1 = New System.Windows.Forms.ToolStripSeparator()
         Me.BindingNavigatorMoveNextItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorMoveLastItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorSeparator2 = New System.Windows.Forms.ToolStripSeparator()
-        Me.BindingNavigatorAddNewItem = New System.Windows.Forms.ToolStripButton()
-        Me.BindingNavigatorDeleteItem = New System.Windows.Forms.ToolStripButton()
         Me.TIPO_CONTRATOBindingNavigatorSaveItem = New System.Windows.Forms.ToolStripButton()
         Me.IdTipoContratoTextBox = New System.Windows.Forms.TextBox()
         Me.TipoContratoTextBox = New System.Windows.Forms.TextBox()
@@ -56,6 +56,24 @@ Partial Class FrmTipoContrato
         Me.TIPO_CONTRATOBindingNavigator.SuspendLayout()
         CType(Me.TIPO_CONTRATODataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
+        '
+        'IdTipoContratoLabel
+        '
+        IdTipoContratoLabel.AutoSize = True
+        IdTipoContratoLabel.Location = New System.Drawing.Point(21, 121)
+        IdTipoContratoLabel.Name = "IdTipoContratoLabel"
+        IdTipoContratoLabel.Size = New System.Drawing.Size(113, 17)
+        IdTipoContratoLabel.TabIndex = 1
+        IdTipoContratoLabel.Text = "Id Tipo Contrato:"
+        '
+        'TipoContratoLabel
+        '
+        TipoContratoLabel.AutoSize = True
+        TipoContratoLabel.Location = New System.Drawing.Point(21, 149)
+        TipoContratoLabel.Name = "TipoContratoLabel"
+        TipoContratoLabel.Size = New System.Drawing.Size(98, 17)
+        TipoContratoLabel.TabIndex = 3
+        TipoContratoLabel.Text = "Tipo Contrato:"
         '
         'BD_RecursosHumanosDataSet
         '
@@ -119,13 +137,38 @@ Partial Class FrmTipoContrato
         Me.TIPO_CONTRATOBindingNavigator.TabIndex = 0
         Me.TIPO_CONTRATOBindingNavigator.Text = "BindingNavigator1"
         '
+        'BindingNavigatorAddNewItem
+        '
+        Me.BindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.BindingNavigatorAddNewItem.Image = CType(resources.GetObject("BindingNavigatorAddNewItem.Image"), System.Drawing.Image)
+        Me.BindingNavigatorAddNewItem.Name = "BindingNavigatorAddNewItem"
+        Me.BindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = True
+        Me.BindingNavigatorAddNewItem.Size = New System.Drawing.Size(24, 24)
+        Me.BindingNavigatorAddNewItem.Text = "Agregar nuevo"
+        '
+        'BindingNavigatorCountItem
+        '
+        Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
+        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(48, 24)
+        Me.BindingNavigatorCountItem.Text = "de {0}"
+        Me.BindingNavigatorCountItem.ToolTipText = "Número total de elementos"
+        '
+        'BindingNavigatorDeleteItem
+        '
+        Me.BindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.BindingNavigatorDeleteItem.Image = CType(resources.GetObject("BindingNavigatorDeleteItem.Image"), System.Drawing.Image)
+        Me.BindingNavigatorDeleteItem.Name = "BindingNavigatorDeleteItem"
+        Me.BindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = True
+        Me.BindingNavigatorDeleteItem.Size = New System.Drawing.Size(24, 24)
+        Me.BindingNavigatorDeleteItem.Text = "Eliminar"
+        '
         'BindingNavigatorMoveFirstItem
         '
         Me.BindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
         Me.BindingNavigatorMoveFirstItem.Image = CType(resources.GetObject("BindingNavigatorMoveFirstItem.Image"), System.Drawing.Image)
         Me.BindingNavigatorMoveFirstItem.Name = "BindingNavigatorMoveFirstItem"
         Me.BindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorMoveFirstItem.Size = New System.Drawing.Size(24, 22)
+        Me.BindingNavigatorMoveFirstItem.Size = New System.Drawing.Size(24, 24)
         Me.BindingNavigatorMoveFirstItem.Text = "Mover primero"
         '
         'BindingNavigatorMovePreviousItem
@@ -134,13 +177,13 @@ Partial Class FrmTipoContrato
         Me.BindingNavigatorMovePreviousItem.Image = CType(resources.GetObject("BindingNavigatorMovePreviousItem.Image"), System.Drawing.Image)
         Me.BindingNavigatorMovePreviousItem.Name = "BindingNavigatorMovePreviousItem"
         Me.BindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorMovePreviousItem.Size = New System.Drawing.Size(24, 22)
+        Me.BindingNavigatorMovePreviousItem.Size = New System.Drawing.Size(24, 24)
         Me.BindingNavigatorMovePreviousItem.Text = "Mover anterior"
         '
         'BindingNavigatorSeparator
         '
         Me.BindingNavigatorSeparator.Name = "BindingNavigatorSeparator"
-        Me.BindingNavigatorSeparator.Size = New System.Drawing.Size(6, 25)
+        Me.BindingNavigatorSeparator.Size = New System.Drawing.Size(6, 27)
         '
         'BindingNavigatorPositionItem
         '
@@ -151,17 +194,10 @@ Partial Class FrmTipoContrato
         Me.BindingNavigatorPositionItem.Text = "0"
         Me.BindingNavigatorPositionItem.ToolTipText = "Posición actual"
         '
-        'BindingNavigatorCountItem
-        '
-        Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
-        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(48, 20)
-        Me.BindingNavigatorCountItem.Text = "de {0}"
-        Me.BindingNavigatorCountItem.ToolTipText = "Número total de elementos"
-        '
         'BindingNavigatorSeparator1
         '
-        Me.BindingNavigatorSeparator1.Name = "BindingNavigatorSeparator"
-        Me.BindingNavigatorSeparator1.Size = New System.Drawing.Size(6, 6)
+        Me.BindingNavigatorSeparator1.Name = "BindingNavigatorSeparator1"
+        Me.BindingNavigatorSeparator1.Size = New System.Drawing.Size(6, 27)
         '
         'BindingNavigatorMoveNextItem
         '
@@ -183,67 +219,33 @@ Partial Class FrmTipoContrato
         '
         'BindingNavigatorSeparator2
         '
-        Me.BindingNavigatorSeparator2.Name = "BindingNavigatorSeparator"
-        Me.BindingNavigatorSeparator2.Size = New System.Drawing.Size(6, 6)
-        '
-        'BindingNavigatorAddNewItem
-        '
-        Me.BindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorAddNewItem.Image = CType(resources.GetObject("BindingNavigatorAddNewItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorAddNewItem.Name = "BindingNavigatorAddNewItem"
-        Me.BindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorAddNewItem.Size = New System.Drawing.Size(24, 24)
-        Me.BindingNavigatorAddNewItem.Text = "Agregar nuevo"
-        '
-        'BindingNavigatorDeleteItem
-        '
-        Me.BindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorDeleteItem.Image = CType(resources.GetObject("BindingNavigatorDeleteItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorDeleteItem.Name = "BindingNavigatorDeleteItem"
-        Me.BindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorDeleteItem.Size = New System.Drawing.Size(24, 24)
-        Me.BindingNavigatorDeleteItem.Text = "Eliminar"
+        Me.BindingNavigatorSeparator2.Name = "BindingNavigatorSeparator2"
+        Me.BindingNavigatorSeparator2.Size = New System.Drawing.Size(6, 27)
         '
         'TIPO_CONTRATOBindingNavigatorSaveItem
         '
         Me.TIPO_CONTRATOBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
         Me.TIPO_CONTRATOBindingNavigatorSaveItem.Image = CType(resources.GetObject("TIPO_CONTRATOBindingNavigatorSaveItem.Image"), System.Drawing.Image)
         Me.TIPO_CONTRATOBindingNavigatorSaveItem.Name = "TIPO_CONTRATOBindingNavigatorSaveItem"
-        Me.TIPO_CONTRATOBindingNavigatorSaveItem.Size = New System.Drawing.Size(23, 23)
+        Me.TIPO_CONTRATOBindingNavigatorSaveItem.Size = New System.Drawing.Size(24, 24)
         Me.TIPO_CONTRATOBindingNavigatorSaveItem.Text = "Guardar datos"
-        '
-        'IdTipoContratoLabel
-        '
-        IdTipoContratoLabel.AutoSize = True
-        IdTipoContratoLabel.Location = New System.Drawing.Point(23, 55)
-        IdTipoContratoLabel.Name = "IdTipoContratoLabel"
-        IdTipoContratoLabel.Size = New System.Drawing.Size(113, 17)
-        IdTipoContratoLabel.TabIndex = 1
-        IdTipoContratoLabel.Text = "Id Tipo Contrato:"
         '
         'IdTipoContratoTextBox
         '
+        Me.IdTipoContratoTextBox.BackColor = System.Drawing.SystemColors.Info
         Me.IdTipoContratoTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.TIPO_CONTRATOBindingSource, "IdTipoContrato", True))
-        Me.IdTipoContratoTextBox.Location = New System.Drawing.Point(142, 52)
+        Me.IdTipoContratoTextBox.Location = New System.Drawing.Point(140, 118)
         Me.IdTipoContratoTextBox.Name = "IdTipoContratoTextBox"
-        Me.IdTipoContratoTextBox.Size = New System.Drawing.Size(100, 22)
+        Me.IdTipoContratoTextBox.Size = New System.Drawing.Size(188, 22)
         Me.IdTipoContratoTextBox.TabIndex = 2
-        '
-        'TipoContratoLabel
-        '
-        TipoContratoLabel.AutoSize = True
-        TipoContratoLabel.Location = New System.Drawing.Point(23, 83)
-        TipoContratoLabel.Name = "TipoContratoLabel"
-        TipoContratoLabel.Size = New System.Drawing.Size(93, 17)
-        TipoContratoLabel.TabIndex = 3
-        TipoContratoLabel.Text = "tipo Contrato:"
         '
         'TipoContratoTextBox
         '
+        Me.TipoContratoTextBox.BackColor = System.Drawing.SystemColors.Info
         Me.TipoContratoTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.TIPO_CONTRATOBindingSource, "tipoContrato", True))
-        Me.TipoContratoTextBox.Location = New System.Drawing.Point(142, 80)
+        Me.TipoContratoTextBox.Location = New System.Drawing.Point(140, 146)
         Me.TipoContratoTextBox.Name = "TipoContratoTextBox"
-        Me.TipoContratoTextBox.Size = New System.Drawing.Size(100, 22)
+        Me.TipoContratoTextBox.Size = New System.Drawing.Size(188, 22)
         Me.TipoContratoTextBox.TabIndex = 4
         '
         'TIPO_CONTRATODataGridView
@@ -253,10 +255,10 @@ Partial Class FrmTipoContrato
         Me.TIPO_CONTRATODataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.TIPO_CONTRATODataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2})
         Me.TIPO_CONTRATODataGridView.DataSource = Me.TIPO_CONTRATOBindingSource
-        Me.TIPO_CONTRATODataGridView.Location = New System.Drawing.Point(287, 52)
+        Me.TIPO_CONTRATODataGridView.Location = New System.Drawing.Point(383, 62)
         Me.TIPO_CONTRATODataGridView.Name = "TIPO_CONTRATODataGridView"
         Me.TIPO_CONTRATODataGridView.RowTemplate.Height = 24
-        Me.TIPO_CONTRATODataGridView.Size = New System.Drawing.Size(366, 202)
+        Me.TIPO_CONTRATODataGridView.Size = New System.Drawing.Size(398, 206)
         Me.TIPO_CONTRATODataGridView.TabIndex = 5
         '
         'DataGridViewTextBoxColumn1
@@ -270,7 +272,7 @@ Partial Class FrmTipoContrato
         'DataGridViewTextBoxColumn2
         '
         Me.DataGridViewTextBoxColumn2.DataPropertyName = "tipoContrato"
-        Me.DataGridViewTextBoxColumn2.HeaderText = "tipoContrato"
+        Me.DataGridViewTextBoxColumn2.HeaderText = "TipoContrato"
         Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
         Me.DataGridViewTextBoxColumn2.Width = 150
         '
@@ -278,6 +280,8 @@ Partial Class FrmTipoContrato
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
+        Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(852, 413)
         Me.Controls.Add(Me.TIPO_CONTRATODataGridView)
         Me.Controls.Add(IdTipoContratoLabel)

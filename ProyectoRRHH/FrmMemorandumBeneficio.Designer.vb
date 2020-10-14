@@ -22,6 +22,7 @@ Partial Class FrmMemorandumBeneficio
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmMemorandumBeneficio))
         Me.Button1 = New System.Windows.Forms.Button()
         Me.ListView1 = New System.Windows.Forms.ListView()
         Me.ColumnHeader1 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
@@ -34,6 +35,9 @@ Partial Class FrmMemorandumBeneficio
         '
         'Button1
         '
+        Me.Button1.BackgroundImage = CType(resources.GetObject("Button1.BackgroundImage"), System.Drawing.Image)
+        Me.Button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.Button1.Font = New System.Drawing.Font("Stencil", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button1.Location = New System.Drawing.Point(531, 82)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(185, 58)
@@ -48,14 +52,14 @@ Partial Class FrmMemorandumBeneficio
         Me.ListView1.GridLines = True
         Me.ListView1.Location = New System.Drawing.Point(30, 160)
         Me.ListView1.Name = "ListView1"
-        Me.ListView1.Size = New System.Drawing.Size(1201, 274)
+        Me.ListView1.Size = New System.Drawing.Size(1240, 274)
         Me.ListView1.TabIndex = 1
         Me.ListView1.UseCompatibleStateImageBehavior = False
         Me.ListView1.View = System.Windows.Forms.View.Details
         '
         'ColumnHeader1
         '
-        Me.ColumnHeader1.Text = "N°DE MEMORANDUMS"
+        Me.ColumnHeader1.Text = "N°DE MEMORANDUM"
         Me.ColumnHeader1.Width = 200
         '
         'ColumnHeader2
@@ -71,7 +75,7 @@ Partial Class FrmMemorandumBeneficio
         'ColumnHeader4
         '
         Me.ColumnHeader4.Text = "DESCRIPCION-MEMORANDUM"
-        Me.ColumnHeader4.Width = 200
+        Me.ColumnHeader4.Width = 250
         '
         'ColumnHeader5
         '
@@ -87,6 +91,8 @@ Partial Class FrmMemorandumBeneficio
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
+        Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(1322, 478)
         Me.Controls.Add(Me.ListView1)
         Me.Controls.Add(Me.Button1)

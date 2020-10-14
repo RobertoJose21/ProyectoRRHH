@@ -23,6 +23,7 @@ Partial Class Form1
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form1))
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.COLABORADORToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.NIVELDEEDUCACIÓNToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -61,7 +62,6 @@ Partial Class Form1
         Me.REGISTROToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.MANTENEDORDEBOLETASToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.REGISTROToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.REPORTESToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.REPORTEDEBOLETASToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.VISTAVENTANASToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.CASCADAToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -311,7 +311,7 @@ Partial Class Form1
         '
         'MANTENEDORDEBOLETASToolStripMenuItem
         '
-        Me.MANTENEDORDEBOLETASToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.REGISTROToolStripMenuItem, Me.REPORTESToolStripMenuItem})
+        Me.MANTENEDORDEBOLETASToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.REGISTROToolStripMenuItem})
         Me.MANTENEDORDEBOLETASToolStripMenuItem.Name = "MANTENEDORDEBOLETASToolStripMenuItem"
         Me.MANTENEDORDEBOLETASToolStripMenuItem.Size = New System.Drawing.Size(231, 26)
         Me.MANTENEDORDEBOLETASToolStripMenuItem.Text = "BOLETAS"
@@ -319,14 +319,8 @@ Partial Class Form1
         'REGISTROToolStripMenuItem
         '
         Me.REGISTROToolStripMenuItem.Name = "REGISTROToolStripMenuItem"
-        Me.REGISTROToolStripMenuItem.Size = New System.Drawing.Size(152, 26)
+        Me.REGISTROToolStripMenuItem.Size = New System.Drawing.Size(151, 26)
         Me.REGISTROToolStripMenuItem.Text = "REGISTRO"
-        '
-        'REPORTESToolStripMenuItem
-        '
-        Me.REPORTESToolStripMenuItem.Name = "REPORTESToolStripMenuItem"
-        Me.REPORTESToolStripMenuItem.Size = New System.Drawing.Size(152, 26)
-        Me.REPORTESToolStripMenuItem.Text = "REPORTES"
         '
         'REPORTEDEBOLETASToolStripMenuItem
         '
@@ -412,6 +406,8 @@ Partial Class Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
+        Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(907, 400)
         Me.Controls.Add(Me.MenuStrip1)
         Me.IsMdiContainer = True
@@ -462,7 +458,6 @@ Partial Class Form1
     Friend WithEvents REGISTROToolStripMenuItem1 As ToolStripMenuItem
     Friend WithEvents MANTENEDORDEBOLETASToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents REGISTROToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents REPORTESToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents VISTAVENTANASToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents CASCADAToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents HORIZONTALToolStripMenuItem As ToolStripMenuItem

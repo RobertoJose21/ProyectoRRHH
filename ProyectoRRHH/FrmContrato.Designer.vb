@@ -23,7 +23,6 @@ Partial Class FrmContrato
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmContrato))
         Dim IdContratoLabel As System.Windows.Forms.Label
         Dim IdPeriodoLaboralLabel As System.Windows.Forms.Label
         Dim HorarioLaboralLabel As System.Windows.Forms.Label
@@ -33,22 +32,23 @@ Partial Class FrmContrato
         Dim IdTipoContratoLabel As System.Windows.Forms.Label
         Dim RegimenLaboralLabel As System.Windows.Forms.Label
         Dim IdAreaLabel As System.Windows.Forms.Label
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmContrato))
         Me.BD_RecursosHumanosDataSet = New ProyectoRRHH.BD_RecursosHumanosDataSet()
         Me.CONTRATOBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.CONTRATOTableAdapter = New ProyectoRRHH.BD_RecursosHumanosDataSetTableAdapters.CONTRATOTableAdapter()
         Me.TableAdapterManager = New ProyectoRRHH.BD_RecursosHumanosDataSetTableAdapters.TableAdapterManager()
         Me.CONTRATOBindingNavigator = New System.Windows.Forms.BindingNavigator(Me.components)
+        Me.BindingNavigatorAddNewItem = New System.Windows.Forms.ToolStripButton()
+        Me.BindingNavigatorCountItem = New System.Windows.Forms.ToolStripLabel()
+        Me.BindingNavigatorDeleteItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorMoveFirstItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorMovePreviousItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorSeparator = New System.Windows.Forms.ToolStripSeparator()
         Me.BindingNavigatorPositionItem = New System.Windows.Forms.ToolStripTextBox()
-        Me.BindingNavigatorCountItem = New System.Windows.Forms.ToolStripLabel()
         Me.BindingNavigatorSeparator1 = New System.Windows.Forms.ToolStripSeparator()
         Me.BindingNavigatorMoveNextItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorMoveLastItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorSeparator2 = New System.Windows.Forms.ToolStripSeparator()
-        Me.BindingNavigatorAddNewItem = New System.Windows.Forms.ToolStripButton()
-        Me.BindingNavigatorDeleteItem = New System.Windows.Forms.ToolStripButton()
         Me.CONTRATOBindingNavigatorSaveItem = New System.Windows.Forms.ToolStripButton()
         Me.IdContratoTextBox = New System.Windows.Forms.TextBox()
         Me.IdPeriodoLaboralTextBox = New System.Windows.Forms.TextBox()
@@ -84,6 +84,87 @@ Partial Class FrmContrato
         Me.CONTRATOBindingNavigator.SuspendLayout()
         CType(Me.CONTRATODataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
+        '
+        'IdContratoLabel
+        '
+        IdContratoLabel.AutoSize = True
+        IdContratoLabel.Location = New System.Drawing.Point(144, 42)
+        IdContratoLabel.Name = "IdContratoLabel"
+        IdContratoLabel.Size = New System.Drawing.Size(81, 17)
+        IdContratoLabel.TabIndex = 1
+        IdContratoLabel.Text = "Id Contrato:"
+        '
+        'IdPeriodoLaboralLabel
+        '
+        IdPeriodoLaboralLabel.AutoSize = True
+        IdPeriodoLaboralLabel.Location = New System.Drawing.Point(144, 70)
+        IdPeriodoLaboralLabel.Name = "IdPeriodoLaboralLabel"
+        IdPeriodoLaboralLabel.Size = New System.Drawing.Size(128, 17)
+        IdPeriodoLaboralLabel.TabIndex = 3
+        IdPeriodoLaboralLabel.Text = "Id Periodo Laboral:"
+        '
+        'HorarioLaboralLabel
+        '
+        HorarioLaboralLabel.AutoSize = True
+        HorarioLaboralLabel.Location = New System.Drawing.Point(144, 98)
+        HorarioLaboralLabel.Name = "HorarioLaboralLabel"
+        HorarioLaboralLabel.Size = New System.Drawing.Size(111, 17)
+        HorarioLaboralLabel.TabIndex = 5
+        HorarioLaboralLabel.Text = "Horario Laboral:"
+        '
+        'IdTipoTrabajadorLabel
+        '
+        IdTipoTrabajadorLabel.AutoSize = True
+        IdTipoTrabajadorLabel.Location = New System.Drawing.Point(144, 126)
+        IdTipoTrabajadorLabel.Name = "IdTipoTrabajadorLabel"
+        IdTipoTrabajadorLabel.Size = New System.Drawing.Size(129, 17)
+        IdTipoTrabajadorLabel.TabIndex = 7
+        IdTipoTrabajadorLabel.Text = "Id Tipo Trabajador:"
+        '
+        'IdEmpleadoLabel
+        '
+        IdEmpleadoLabel.AutoSize = True
+        IdEmpleadoLabel.Location = New System.Drawing.Point(542, 152)
+        IdEmpleadoLabel.Name = "IdEmpleadoLabel"
+        IdEmpleadoLabel.Size = New System.Drawing.Size(90, 17)
+        IdEmpleadoLabel.TabIndex = 17
+        IdEmpleadoLabel.Text = "Id Empleado:"
+        '
+        'SueldoContratoLabel
+        '
+        SueldoContratoLabel.AutoSize = True
+        SueldoContratoLabel.Location = New System.Drawing.Point(542, 124)
+        SueldoContratoLabel.Name = "SueldoContratoLabel"
+        SueldoContratoLabel.Size = New System.Drawing.Size(114, 17)
+        SueldoContratoLabel.TabIndex = 15
+        SueldoContratoLabel.Text = "Sueldo Contrato:"
+        '
+        'IdTipoContratoLabel
+        '
+        IdTipoContratoLabel.AutoSize = True
+        IdTipoContratoLabel.Location = New System.Drawing.Point(542, 96)
+        IdTipoContratoLabel.Name = "IdTipoContratoLabel"
+        IdTipoContratoLabel.Size = New System.Drawing.Size(113, 17)
+        IdTipoContratoLabel.TabIndex = 13
+        IdTipoContratoLabel.Text = "Id Tipo Contrato:"
+        '
+        'RegimenLaboralLabel
+        '
+        RegimenLaboralLabel.AutoSize = True
+        RegimenLaboralLabel.Location = New System.Drawing.Point(542, 68)
+        RegimenLaboralLabel.Name = "RegimenLaboralLabel"
+        RegimenLaboralLabel.Size = New System.Drawing.Size(120, 17)
+        RegimenLaboralLabel.TabIndex = 11
+        RegimenLaboralLabel.Text = "Regimen Laboral:"
+        '
+        'IdAreaLabel
+        '
+        IdAreaLabel.AutoSize = True
+        IdAreaLabel.Location = New System.Drawing.Point(542, 40)
+        IdAreaLabel.Name = "IdAreaLabel"
+        IdAreaLabel.Size = New System.Drawing.Size(57, 17)
+        IdAreaLabel.TabIndex = 9
+        IdAreaLabel.Text = "Id Area:"
         '
         'BD_RecursosHumanosDataSet
         '
@@ -147,13 +228,38 @@ Partial Class FrmContrato
         Me.CONTRATOBindingNavigator.TabIndex = 0
         Me.CONTRATOBindingNavigator.Text = "BindingNavigator1"
         '
+        'BindingNavigatorAddNewItem
+        '
+        Me.BindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.BindingNavigatorAddNewItem.Image = CType(resources.GetObject("BindingNavigatorAddNewItem.Image"), System.Drawing.Image)
+        Me.BindingNavigatorAddNewItem.Name = "BindingNavigatorAddNewItem"
+        Me.BindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = True
+        Me.BindingNavigatorAddNewItem.Size = New System.Drawing.Size(24, 24)
+        Me.BindingNavigatorAddNewItem.Text = "Agregar nuevo"
+        '
+        'BindingNavigatorCountItem
+        '
+        Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
+        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(48, 24)
+        Me.BindingNavigatorCountItem.Text = "de {0}"
+        Me.BindingNavigatorCountItem.ToolTipText = "Número total de elementos"
+        '
+        'BindingNavigatorDeleteItem
+        '
+        Me.BindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.BindingNavigatorDeleteItem.Image = CType(resources.GetObject("BindingNavigatorDeleteItem.Image"), System.Drawing.Image)
+        Me.BindingNavigatorDeleteItem.Name = "BindingNavigatorDeleteItem"
+        Me.BindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = True
+        Me.BindingNavigatorDeleteItem.Size = New System.Drawing.Size(24, 24)
+        Me.BindingNavigatorDeleteItem.Text = "Eliminar"
+        '
         'BindingNavigatorMoveFirstItem
         '
         Me.BindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
         Me.BindingNavigatorMoveFirstItem.Image = CType(resources.GetObject("BindingNavigatorMoveFirstItem.Image"), System.Drawing.Image)
         Me.BindingNavigatorMoveFirstItem.Name = "BindingNavigatorMoveFirstItem"
         Me.BindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorMoveFirstItem.Size = New System.Drawing.Size(24, 22)
+        Me.BindingNavigatorMoveFirstItem.Size = New System.Drawing.Size(24, 24)
         Me.BindingNavigatorMoveFirstItem.Text = "Mover primero"
         '
         'BindingNavigatorMovePreviousItem
@@ -162,13 +268,13 @@ Partial Class FrmContrato
         Me.BindingNavigatorMovePreviousItem.Image = CType(resources.GetObject("BindingNavigatorMovePreviousItem.Image"), System.Drawing.Image)
         Me.BindingNavigatorMovePreviousItem.Name = "BindingNavigatorMovePreviousItem"
         Me.BindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorMovePreviousItem.Size = New System.Drawing.Size(24, 22)
+        Me.BindingNavigatorMovePreviousItem.Size = New System.Drawing.Size(24, 24)
         Me.BindingNavigatorMovePreviousItem.Text = "Mover anterior"
         '
         'BindingNavigatorSeparator
         '
         Me.BindingNavigatorSeparator.Name = "BindingNavigatorSeparator"
-        Me.BindingNavigatorSeparator.Size = New System.Drawing.Size(6, 25)
+        Me.BindingNavigatorSeparator.Size = New System.Drawing.Size(6, 27)
         '
         'BindingNavigatorPositionItem
         '
@@ -179,17 +285,10 @@ Partial Class FrmContrato
         Me.BindingNavigatorPositionItem.Text = "0"
         Me.BindingNavigatorPositionItem.ToolTipText = "Posición actual"
         '
-        'BindingNavigatorCountItem
-        '
-        Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
-        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(48, 20)
-        Me.BindingNavigatorCountItem.Text = "de {0}"
-        Me.BindingNavigatorCountItem.ToolTipText = "Número total de elementos"
-        '
         'BindingNavigatorSeparator1
         '
-        Me.BindingNavigatorSeparator1.Name = "BindingNavigatorSeparator"
-        Me.BindingNavigatorSeparator1.Size = New System.Drawing.Size(6, 6)
+        Me.BindingNavigatorSeparator1.Name = "BindingNavigatorSeparator1"
+        Me.BindingNavigatorSeparator1.Size = New System.Drawing.Size(6, 27)
         '
         'BindingNavigatorMoveNextItem
         '
@@ -211,186 +310,96 @@ Partial Class FrmContrato
         '
         'BindingNavigatorSeparator2
         '
-        Me.BindingNavigatorSeparator2.Name = "BindingNavigatorSeparator"
-        Me.BindingNavigatorSeparator2.Size = New System.Drawing.Size(6, 6)
-        '
-        'BindingNavigatorAddNewItem
-        '
-        Me.BindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorAddNewItem.Image = CType(resources.GetObject("BindingNavigatorAddNewItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorAddNewItem.Name = "BindingNavigatorAddNewItem"
-        Me.BindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorAddNewItem.Size = New System.Drawing.Size(24, 24)
-        Me.BindingNavigatorAddNewItem.Text = "Agregar nuevo"
-        '
-        'BindingNavigatorDeleteItem
-        '
-        Me.BindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorDeleteItem.Image = CType(resources.GetObject("BindingNavigatorDeleteItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorDeleteItem.Name = "BindingNavigatorDeleteItem"
-        Me.BindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorDeleteItem.Size = New System.Drawing.Size(24, 24)
-        Me.BindingNavigatorDeleteItem.Text = "Eliminar"
+        Me.BindingNavigatorSeparator2.Name = "BindingNavigatorSeparator2"
+        Me.BindingNavigatorSeparator2.Size = New System.Drawing.Size(6, 27)
         '
         'CONTRATOBindingNavigatorSaveItem
         '
         Me.CONTRATOBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
         Me.CONTRATOBindingNavigatorSaveItem.Image = CType(resources.GetObject("CONTRATOBindingNavigatorSaveItem.Image"), System.Drawing.Image)
         Me.CONTRATOBindingNavigatorSaveItem.Name = "CONTRATOBindingNavigatorSaveItem"
-        Me.CONTRATOBindingNavigatorSaveItem.Size = New System.Drawing.Size(23, 23)
+        Me.CONTRATOBindingNavigatorSaveItem.Size = New System.Drawing.Size(24, 24)
         Me.CONTRATOBindingNavigatorSaveItem.Text = "Guardar datos"
-        '
-        'IdContratoLabel
-        '
-        IdContratoLabel.AutoSize = True
-        IdContratoLabel.Location = New System.Drawing.Point(252, 43)
-        IdContratoLabel.Name = "IdContratoLabel"
-        IdContratoLabel.Size = New System.Drawing.Size(81, 17)
-        IdContratoLabel.TabIndex = 1
-        IdContratoLabel.Text = "Id Contrato:"
         '
         'IdContratoTextBox
         '
+        Me.IdContratoTextBox.BackColor = System.Drawing.SystemColors.Info
         Me.IdContratoTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.CONTRATOBindingSource, "IdContrato", True))
-        Me.IdContratoTextBox.Location = New System.Drawing.Point(387, 40)
+        Me.IdContratoTextBox.Location = New System.Drawing.Point(279, 39)
         Me.IdContratoTextBox.Name = "IdContratoTextBox"
-        Me.IdContratoTextBox.Size = New System.Drawing.Size(100, 22)
+        Me.IdContratoTextBox.Size = New System.Drawing.Size(151, 22)
         Me.IdContratoTextBox.TabIndex = 2
-        '
-        'IdPeriodoLaboralLabel
-        '
-        IdPeriodoLaboralLabel.AutoSize = True
-        IdPeriodoLaboralLabel.Location = New System.Drawing.Point(252, 71)
-        IdPeriodoLaboralLabel.Name = "IdPeriodoLaboralLabel"
-        IdPeriodoLaboralLabel.Size = New System.Drawing.Size(128, 17)
-        IdPeriodoLaboralLabel.TabIndex = 3
-        IdPeriodoLaboralLabel.Text = "Id Periodo Laboral:"
         '
         'IdPeriodoLaboralTextBox
         '
+        Me.IdPeriodoLaboralTextBox.BackColor = System.Drawing.SystemColors.Info
         Me.IdPeriodoLaboralTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.CONTRATOBindingSource, "IdPeriodoLaboral", True))
-        Me.IdPeriodoLaboralTextBox.Location = New System.Drawing.Point(387, 68)
+        Me.IdPeriodoLaboralTextBox.Location = New System.Drawing.Point(279, 67)
         Me.IdPeriodoLaboralTextBox.Name = "IdPeriodoLaboralTextBox"
-        Me.IdPeriodoLaboralTextBox.Size = New System.Drawing.Size(100, 22)
+        Me.IdPeriodoLaboralTextBox.Size = New System.Drawing.Size(151, 22)
         Me.IdPeriodoLaboralTextBox.TabIndex = 4
-        '
-        'HorarioLaboralLabel
-        '
-        HorarioLaboralLabel.AutoSize = True
-        HorarioLaboralLabel.Location = New System.Drawing.Point(252, 99)
-        HorarioLaboralLabel.Name = "HorarioLaboralLabel"
-        HorarioLaboralLabel.Size = New System.Drawing.Size(109, 17)
-        HorarioLaboralLabel.TabIndex = 5
-        HorarioLaboralLabel.Text = "horario Laboral:"
         '
         'HorarioLaboralTextBox
         '
+        Me.HorarioLaboralTextBox.BackColor = System.Drawing.SystemColors.Info
         Me.HorarioLaboralTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.CONTRATOBindingSource, "horarioLaboral", True))
-        Me.HorarioLaboralTextBox.Location = New System.Drawing.Point(387, 96)
+        Me.HorarioLaboralTextBox.Location = New System.Drawing.Point(279, 95)
         Me.HorarioLaboralTextBox.Name = "HorarioLaboralTextBox"
-        Me.HorarioLaboralTextBox.Size = New System.Drawing.Size(100, 22)
+        Me.HorarioLaboralTextBox.Size = New System.Drawing.Size(151, 22)
         Me.HorarioLaboralTextBox.TabIndex = 6
-        '
-        'IdTipoTrabajadorLabel
-        '
-        IdTipoTrabajadorLabel.AutoSize = True
-        IdTipoTrabajadorLabel.Location = New System.Drawing.Point(252, 127)
-        IdTipoTrabajadorLabel.Name = "IdTipoTrabajadorLabel"
-        IdTipoTrabajadorLabel.Size = New System.Drawing.Size(129, 17)
-        IdTipoTrabajadorLabel.TabIndex = 7
-        IdTipoTrabajadorLabel.Text = "Id Tipo Trabajador:"
         '
         'IdEmpleadoTextBox
         '
+        Me.IdEmpleadoTextBox.BackColor = System.Drawing.SystemColors.Info
         Me.IdEmpleadoTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.CONTRATOBindingSource, "IdEmpleado", True))
         Me.IdEmpleadoTextBox.Location = New System.Drawing.Point(677, 149)
         Me.IdEmpleadoTextBox.Name = "IdEmpleadoTextBox"
-        Me.IdEmpleadoTextBox.Size = New System.Drawing.Size(100, 22)
+        Me.IdEmpleadoTextBox.Size = New System.Drawing.Size(141, 22)
         Me.IdEmpleadoTextBox.TabIndex = 18
-        '
-        'IdEmpleadoLabel
-        '
-        IdEmpleadoLabel.AutoSize = True
-        IdEmpleadoLabel.Location = New System.Drawing.Point(542, 152)
-        IdEmpleadoLabel.Name = "IdEmpleadoLabel"
-        IdEmpleadoLabel.Size = New System.Drawing.Size(90, 17)
-        IdEmpleadoLabel.TabIndex = 17
-        IdEmpleadoLabel.Text = "Id Empleado:"
         '
         'SueldoContratoTextBox
         '
+        Me.SueldoContratoTextBox.BackColor = System.Drawing.SystemColors.Info
         Me.SueldoContratoTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.CONTRATOBindingSource, "sueldoContrato", True))
         Me.SueldoContratoTextBox.Location = New System.Drawing.Point(677, 121)
         Me.SueldoContratoTextBox.Name = "SueldoContratoTextBox"
-        Me.SueldoContratoTextBox.Size = New System.Drawing.Size(100, 22)
+        Me.SueldoContratoTextBox.Size = New System.Drawing.Size(141, 22)
         Me.SueldoContratoTextBox.TabIndex = 16
-        '
-        'SueldoContratoLabel
-        '
-        SueldoContratoLabel.AutoSize = True
-        SueldoContratoLabel.Location = New System.Drawing.Point(542, 124)
-        SueldoContratoLabel.Name = "SueldoContratoLabel"
-        SueldoContratoLabel.Size = New System.Drawing.Size(112, 17)
-        SueldoContratoLabel.TabIndex = 15
-        SueldoContratoLabel.Text = "sueldo Contrato:"
         '
         'IdTipoContratoTextBox
         '
+        Me.IdTipoContratoTextBox.BackColor = System.Drawing.SystemColors.Info
         Me.IdTipoContratoTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.CONTRATOBindingSource, "IdTipoContrato", True))
         Me.IdTipoContratoTextBox.Location = New System.Drawing.Point(677, 93)
         Me.IdTipoContratoTextBox.Name = "IdTipoContratoTextBox"
-        Me.IdTipoContratoTextBox.Size = New System.Drawing.Size(100, 22)
+        Me.IdTipoContratoTextBox.Size = New System.Drawing.Size(141, 22)
         Me.IdTipoContratoTextBox.TabIndex = 14
-        '
-        'IdTipoContratoLabel
-        '
-        IdTipoContratoLabel.AutoSize = True
-        IdTipoContratoLabel.Location = New System.Drawing.Point(542, 96)
-        IdTipoContratoLabel.Name = "IdTipoContratoLabel"
-        IdTipoContratoLabel.Size = New System.Drawing.Size(113, 17)
-        IdTipoContratoLabel.TabIndex = 13
-        IdTipoContratoLabel.Text = "Id Tipo Contrato:"
         '
         'RegimenLaboralTextBox
         '
+        Me.RegimenLaboralTextBox.BackColor = System.Drawing.SystemColors.Info
         Me.RegimenLaboralTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.CONTRATOBindingSource, "regimenLaboral", True))
         Me.RegimenLaboralTextBox.Location = New System.Drawing.Point(677, 65)
         Me.RegimenLaboralTextBox.Name = "RegimenLaboralTextBox"
-        Me.RegimenLaboralTextBox.Size = New System.Drawing.Size(100, 22)
+        Me.RegimenLaboralTextBox.Size = New System.Drawing.Size(141, 22)
         Me.RegimenLaboralTextBox.TabIndex = 12
-        '
-        'RegimenLaboralLabel
-        '
-        RegimenLaboralLabel.AutoSize = True
-        RegimenLaboralLabel.Location = New System.Drawing.Point(542, 68)
-        RegimenLaboralLabel.Name = "RegimenLaboralLabel"
-        RegimenLaboralLabel.Size = New System.Drawing.Size(115, 17)
-        RegimenLaboralLabel.TabIndex = 11
-        RegimenLaboralLabel.Text = "regimen Laboral:"
         '
         'IdAreaTextBox
         '
+        Me.IdAreaTextBox.BackColor = System.Drawing.SystemColors.Info
         Me.IdAreaTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.CONTRATOBindingSource, "IdArea", True))
         Me.IdAreaTextBox.Location = New System.Drawing.Point(677, 37)
         Me.IdAreaTextBox.Name = "IdAreaTextBox"
-        Me.IdAreaTextBox.Size = New System.Drawing.Size(100, 22)
+        Me.IdAreaTextBox.Size = New System.Drawing.Size(141, 22)
         Me.IdAreaTextBox.TabIndex = 10
-        '
-        'IdAreaLabel
-        '
-        IdAreaLabel.AutoSize = True
-        IdAreaLabel.Location = New System.Drawing.Point(542, 40)
-        IdAreaLabel.Name = "IdAreaLabel"
-        IdAreaLabel.Size = New System.Drawing.Size(57, 17)
-        IdAreaLabel.TabIndex = 9
-        IdAreaLabel.Text = "Id Area:"
         '
         'IdTipoTrabajadorTextBox
         '
+        Me.IdTipoTrabajadorTextBox.BackColor = System.Drawing.SystemColors.Info
         Me.IdTipoTrabajadorTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.CONTRATOBindingSource, "IdTipoTrabajador", True))
-        Me.IdTipoTrabajadorTextBox.Location = New System.Drawing.Point(387, 124)
+        Me.IdTipoTrabajadorTextBox.Location = New System.Drawing.Point(279, 123)
         Me.IdTipoTrabajadorTextBox.Name = "IdTipoTrabajadorTextBox"
-        Me.IdTipoTrabajadorTextBox.Size = New System.Drawing.Size(100, 22)
+        Me.IdTipoTrabajadorTextBox.Size = New System.Drawing.Size(151, 22)
         Me.IdTipoTrabajadorTextBox.TabIndex = 8
         '
         'CONTRATODataGridView
@@ -403,7 +412,7 @@ Partial Class FrmContrato
         Me.CONTRATODataGridView.Location = New System.Drawing.Point(12, 177)
         Me.CONTRATODataGridView.Name = "CONTRATODataGridView"
         Me.CONTRATODataGridView.RowTemplate.Height = 24
-        Me.CONTRATODataGridView.Size = New System.Drawing.Size(1266, 260)
+        Me.CONTRATODataGridView.Size = New System.Drawing.Size(1307, 260)
         Me.CONTRATODataGridView.TabIndex = 19
         '
         'DataGridViewTextBoxColumn1
@@ -471,6 +480,8 @@ Partial Class FrmContrato
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
+        Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(1365, 543)
         Me.Controls.Add(Me.CONTRATODataGridView)
         Me.Controls.Add(IdContratoLabel)
@@ -493,7 +504,7 @@ Partial Class FrmContrato
         Me.Controls.Add(Me.IdEmpleadoTextBox)
         Me.Controls.Add(Me.CONTRATOBindingNavigator)
         Me.Name = "FrmContrato"
-        Me.Text = "FrmContrato"
+        Me.Text = "Contrato"
         CType(Me.BD_RecursosHumanosDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.CONTRATOBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.CONTRATOBindingNavigator, System.ComponentModel.ISupportInitialize).EndInit()

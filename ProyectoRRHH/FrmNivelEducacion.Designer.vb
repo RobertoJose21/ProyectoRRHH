@@ -23,25 +23,25 @@ Partial Class FrmNivelEducacion
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmNivelEducacion))
         Dim IdNivelEducacionLabel As System.Windows.Forms.Label
         Dim NivelEducacionLabel As System.Windows.Forms.Label
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmNivelEducacion))
         Me.BD_RecursosHumanosDataSet = New ProyectoRRHH.BD_RecursosHumanosDataSet()
         Me.NIVEL_EDUCACIONBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.NIVEL_EDUCACIONTableAdapter = New ProyectoRRHH.BD_RecursosHumanosDataSetTableAdapters.NIVEL_EDUCACIONTableAdapter()
         Me.TableAdapterManager = New ProyectoRRHH.BD_RecursosHumanosDataSetTableAdapters.TableAdapterManager()
         Me.NIVEL_EDUCACIONBindingNavigator = New System.Windows.Forms.BindingNavigator(Me.components)
+        Me.BindingNavigatorAddNewItem = New System.Windows.Forms.ToolStripButton()
+        Me.BindingNavigatorCountItem = New System.Windows.Forms.ToolStripLabel()
+        Me.BindingNavigatorDeleteItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorMoveFirstItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorMovePreviousItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorSeparator = New System.Windows.Forms.ToolStripSeparator()
         Me.BindingNavigatorPositionItem = New System.Windows.Forms.ToolStripTextBox()
-        Me.BindingNavigatorCountItem = New System.Windows.Forms.ToolStripLabel()
         Me.BindingNavigatorSeparator1 = New System.Windows.Forms.ToolStripSeparator()
         Me.BindingNavigatorMoveNextItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorMoveLastItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorSeparator2 = New System.Windows.Forms.ToolStripSeparator()
-        Me.BindingNavigatorAddNewItem = New System.Windows.Forms.ToolStripButton()
-        Me.BindingNavigatorDeleteItem = New System.Windows.Forms.ToolStripButton()
         Me.NIVEL_EDUCACIONBindingNavigatorSaveItem = New System.Windows.Forms.ToolStripButton()
         Me.IdNivelEducacionTextBox = New System.Windows.Forms.TextBox()
         Me.NivelEducacionTextBox = New System.Windows.Forms.TextBox()
@@ -56,6 +56,24 @@ Partial Class FrmNivelEducacion
         Me.NIVEL_EDUCACIONBindingNavigator.SuspendLayout()
         CType(Me.NIVEL_EDUCACIONDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
+        '
+        'IdNivelEducacionLabel
+        '
+        IdNivelEducacionLabel.AutoSize = True
+        IdNivelEducacionLabel.Location = New System.Drawing.Point(22, 102)
+        IdNivelEducacionLabel.Name = "IdNivelEducacionLabel"
+        IdNivelEducacionLabel.Size = New System.Drawing.Size(128, 17)
+        IdNivelEducacionLabel.TabIndex = 1
+        IdNivelEducacionLabel.Text = "Id Nivel Educacion:"
+        '
+        'NivelEducacionLabel
+        '
+        NivelEducacionLabel.AutoSize = True
+        NivelEducacionLabel.Location = New System.Drawing.Point(22, 130)
+        NivelEducacionLabel.Name = "NivelEducacionLabel"
+        NivelEducacionLabel.Size = New System.Drawing.Size(113, 17)
+        NivelEducacionLabel.TabIndex = 3
+        NivelEducacionLabel.Text = "Nivel Educacion:"
         '
         'BD_RecursosHumanosDataSet
         '
@@ -119,13 +137,38 @@ Partial Class FrmNivelEducacion
         Me.NIVEL_EDUCACIONBindingNavigator.TabIndex = 0
         Me.NIVEL_EDUCACIONBindingNavigator.Text = "BindingNavigator1"
         '
+        'BindingNavigatorAddNewItem
+        '
+        Me.BindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.BindingNavigatorAddNewItem.Image = CType(resources.GetObject("BindingNavigatorAddNewItem.Image"), System.Drawing.Image)
+        Me.BindingNavigatorAddNewItem.Name = "BindingNavigatorAddNewItem"
+        Me.BindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = True
+        Me.BindingNavigatorAddNewItem.Size = New System.Drawing.Size(24, 24)
+        Me.BindingNavigatorAddNewItem.Text = "Agregar nuevo"
+        '
+        'BindingNavigatorCountItem
+        '
+        Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
+        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(48, 24)
+        Me.BindingNavigatorCountItem.Text = "de {0}"
+        Me.BindingNavigatorCountItem.ToolTipText = "Número total de elementos"
+        '
+        'BindingNavigatorDeleteItem
+        '
+        Me.BindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.BindingNavigatorDeleteItem.Image = CType(resources.GetObject("BindingNavigatorDeleteItem.Image"), System.Drawing.Image)
+        Me.BindingNavigatorDeleteItem.Name = "BindingNavigatorDeleteItem"
+        Me.BindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = True
+        Me.BindingNavigatorDeleteItem.Size = New System.Drawing.Size(24, 24)
+        Me.BindingNavigatorDeleteItem.Text = "Eliminar"
+        '
         'BindingNavigatorMoveFirstItem
         '
         Me.BindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
         Me.BindingNavigatorMoveFirstItem.Image = CType(resources.GetObject("BindingNavigatorMoveFirstItem.Image"), System.Drawing.Image)
         Me.BindingNavigatorMoveFirstItem.Name = "BindingNavigatorMoveFirstItem"
         Me.BindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorMoveFirstItem.Size = New System.Drawing.Size(24, 22)
+        Me.BindingNavigatorMoveFirstItem.Size = New System.Drawing.Size(24, 24)
         Me.BindingNavigatorMoveFirstItem.Text = "Mover primero"
         '
         'BindingNavigatorMovePreviousItem
@@ -134,13 +177,13 @@ Partial Class FrmNivelEducacion
         Me.BindingNavigatorMovePreviousItem.Image = CType(resources.GetObject("BindingNavigatorMovePreviousItem.Image"), System.Drawing.Image)
         Me.BindingNavigatorMovePreviousItem.Name = "BindingNavigatorMovePreviousItem"
         Me.BindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorMovePreviousItem.Size = New System.Drawing.Size(24, 22)
+        Me.BindingNavigatorMovePreviousItem.Size = New System.Drawing.Size(24, 24)
         Me.BindingNavigatorMovePreviousItem.Text = "Mover anterior"
         '
         'BindingNavigatorSeparator
         '
         Me.BindingNavigatorSeparator.Name = "BindingNavigatorSeparator"
-        Me.BindingNavigatorSeparator.Size = New System.Drawing.Size(6, 25)
+        Me.BindingNavigatorSeparator.Size = New System.Drawing.Size(6, 27)
         '
         'BindingNavigatorPositionItem
         '
@@ -151,17 +194,10 @@ Partial Class FrmNivelEducacion
         Me.BindingNavigatorPositionItem.Text = "0"
         Me.BindingNavigatorPositionItem.ToolTipText = "Posición actual"
         '
-        'BindingNavigatorCountItem
-        '
-        Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
-        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(48, 20)
-        Me.BindingNavigatorCountItem.Text = "de {0}"
-        Me.BindingNavigatorCountItem.ToolTipText = "Número total de elementos"
-        '
         'BindingNavigatorSeparator1
         '
-        Me.BindingNavigatorSeparator1.Name = "BindingNavigatorSeparator"
-        Me.BindingNavigatorSeparator1.Size = New System.Drawing.Size(6, 6)
+        Me.BindingNavigatorSeparator1.Name = "BindingNavigatorSeparator1"
+        Me.BindingNavigatorSeparator1.Size = New System.Drawing.Size(6, 27)
         '
         'BindingNavigatorMoveNextItem
         '
@@ -183,67 +219,33 @@ Partial Class FrmNivelEducacion
         '
         'BindingNavigatorSeparator2
         '
-        Me.BindingNavigatorSeparator2.Name = "BindingNavigatorSeparator"
-        Me.BindingNavigatorSeparator2.Size = New System.Drawing.Size(6, 6)
-        '
-        'BindingNavigatorAddNewItem
-        '
-        Me.BindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorAddNewItem.Image = CType(resources.GetObject("BindingNavigatorAddNewItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorAddNewItem.Name = "BindingNavigatorAddNewItem"
-        Me.BindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorAddNewItem.Size = New System.Drawing.Size(24, 24)
-        Me.BindingNavigatorAddNewItem.Text = "Agregar nuevo"
-        '
-        'BindingNavigatorDeleteItem
-        '
-        Me.BindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorDeleteItem.Image = CType(resources.GetObject("BindingNavigatorDeleteItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorDeleteItem.Name = "BindingNavigatorDeleteItem"
-        Me.BindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorDeleteItem.Size = New System.Drawing.Size(24, 24)
-        Me.BindingNavigatorDeleteItem.Text = "Eliminar"
+        Me.BindingNavigatorSeparator2.Name = "BindingNavigatorSeparator2"
+        Me.BindingNavigatorSeparator2.Size = New System.Drawing.Size(6, 27)
         '
         'NIVEL_EDUCACIONBindingNavigatorSaveItem
         '
         Me.NIVEL_EDUCACIONBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
         Me.NIVEL_EDUCACIONBindingNavigatorSaveItem.Image = CType(resources.GetObject("NIVEL_EDUCACIONBindingNavigatorSaveItem.Image"), System.Drawing.Image)
         Me.NIVEL_EDUCACIONBindingNavigatorSaveItem.Name = "NIVEL_EDUCACIONBindingNavigatorSaveItem"
-        Me.NIVEL_EDUCACIONBindingNavigatorSaveItem.Size = New System.Drawing.Size(23, 23)
+        Me.NIVEL_EDUCACIONBindingNavigatorSaveItem.Size = New System.Drawing.Size(24, 24)
         Me.NIVEL_EDUCACIONBindingNavigatorSaveItem.Text = "Guardar datos"
-        '
-        'IdNivelEducacionLabel
-        '
-        IdNivelEducacionLabel.AutoSize = True
-        IdNivelEducacionLabel.Location = New System.Drawing.Point(12, 53)
-        IdNivelEducacionLabel.Name = "IdNivelEducacionLabel"
-        IdNivelEducacionLabel.Size = New System.Drawing.Size(128, 17)
-        IdNivelEducacionLabel.TabIndex = 1
-        IdNivelEducacionLabel.Text = "Id Nivel Educacion:"
         '
         'IdNivelEducacionTextBox
         '
+        Me.IdNivelEducacionTextBox.BackColor = System.Drawing.SystemColors.Info
         Me.IdNivelEducacionTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.NIVEL_EDUCACIONBindingSource, "IdNivelEducacion", True))
-        Me.IdNivelEducacionTextBox.Location = New System.Drawing.Point(146, 50)
+        Me.IdNivelEducacionTextBox.Location = New System.Drawing.Point(156, 99)
         Me.IdNivelEducacionTextBox.Name = "IdNivelEducacionTextBox"
-        Me.IdNivelEducacionTextBox.Size = New System.Drawing.Size(100, 22)
+        Me.IdNivelEducacionTextBox.Size = New System.Drawing.Size(126, 22)
         Me.IdNivelEducacionTextBox.TabIndex = 2
-        '
-        'NivelEducacionLabel
-        '
-        NivelEducacionLabel.AutoSize = True
-        NivelEducacionLabel.Location = New System.Drawing.Point(12, 81)
-        NivelEducacionLabel.Name = "NivelEducacionLabel"
-        NivelEducacionLabel.Size = New System.Drawing.Size(111, 17)
-        NivelEducacionLabel.TabIndex = 3
-        NivelEducacionLabel.Text = "nivel Educacion:"
         '
         'NivelEducacionTextBox
         '
+        Me.NivelEducacionTextBox.BackColor = System.Drawing.SystemColors.Info
         Me.NivelEducacionTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.NIVEL_EDUCACIONBindingSource, "nivelEducacion", True))
-        Me.NivelEducacionTextBox.Location = New System.Drawing.Point(146, 78)
+        Me.NivelEducacionTextBox.Location = New System.Drawing.Point(156, 127)
         Me.NivelEducacionTextBox.Name = "NivelEducacionTextBox"
-        Me.NivelEducacionTextBox.Size = New System.Drawing.Size(100, 22)
+        Me.NivelEducacionTextBox.Size = New System.Drawing.Size(126, 22)
         Me.NivelEducacionTextBox.TabIndex = 4
         '
         'NIVEL_EDUCACIONDataGridView
@@ -253,10 +255,10 @@ Partial Class FrmNivelEducacion
         Me.NIVEL_EDUCACIONDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.NIVEL_EDUCACIONDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2})
         Me.NIVEL_EDUCACIONDataGridView.DataSource = Me.NIVEL_EDUCACIONBindingSource
-        Me.NIVEL_EDUCACIONDataGridView.Location = New System.Drawing.Point(293, 41)
+        Me.NIVEL_EDUCACIONDataGridView.Location = New System.Drawing.Point(369, 41)
         Me.NIVEL_EDUCACIONDataGridView.Name = "NIVEL_EDUCACIONDataGridView"
         Me.NIVEL_EDUCACIONDataGridView.RowTemplate.Height = 24
-        Me.NIVEL_EDUCACIONDataGridView.Size = New System.Drawing.Size(358, 220)
+        Me.NIVEL_EDUCACIONDataGridView.Size = New System.Drawing.Size(367, 220)
         Me.NIVEL_EDUCACIONDataGridView.TabIndex = 5
         '
         'DataGridViewTextBoxColumn1
@@ -270,7 +272,7 @@ Partial Class FrmNivelEducacion
         'DataGridViewTextBoxColumn2
         '
         Me.DataGridViewTextBoxColumn2.DataPropertyName = "nivelEducacion"
-        Me.DataGridViewTextBoxColumn2.HeaderText = "nivelEducacion"
+        Me.DataGridViewTextBoxColumn2.HeaderText = "NivelEducacion"
         Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
         Me.DataGridViewTextBoxColumn2.Width = 150
         '
@@ -278,6 +280,8 @@ Partial Class FrmNivelEducacion
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
+        Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(876, 384)
         Me.Controls.Add(Me.NIVEL_EDUCACIONDataGridView)
         Me.Controls.Add(IdNivelEducacionLabel)
