@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class FrmBoletasEmpleados
+Partial Class FrmEmpleadoContrato
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
@@ -22,84 +22,84 @@ Partial Class FrmBoletasEmpleados
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmBoletasEmpleados))
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
         Me.ListView1 = New System.Windows.Forms.ListView()
         Me.ColumnHeader1 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ColumnHeader2 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ColumnHeader3 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ColumnHeader4 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
-        Me.ColumnHeader5 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.SuspendLayout()
         '
-        'Button1
+        'Label1
         '
-        Me.Button1.BackgroundImage = CType(resources.GetObject("Button1.BackgroundImage"), System.Drawing.Image)
-        Me.Button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.Button1.Font = New System.Drawing.Font("Stencil", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.Location = New System.Drawing.Point(470, 31)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(219, 76)
-        Me.Button1.TabIndex = 0
-        Me.Button1.Text = "CONSULTAR"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(197, 54)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(84, 17)
+        Me.Label1.TabIndex = 0
+        Me.Label1.Text = "EMPLEADO"
+        '
+        'ComboBox1
+        '
+        Me.ComboBox1.FormattingEnabled = True
+        Me.ComboBox1.Location = New System.Drawing.Point(335, 51)
+        Me.ComboBox1.Name = "ComboBox1"
+        Me.ComboBox1.Size = New System.Drawing.Size(246, 24)
+        Me.ComboBox1.TabIndex = 1
         '
         'ListView1
         '
-        Me.ListView1.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ColumnHeader1, Me.ColumnHeader2, Me.ColumnHeader3, Me.ColumnHeader4, Me.ColumnHeader5})
+        Me.ListView1.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ColumnHeader1, Me.ColumnHeader2, Me.ColumnHeader3, Me.ColumnHeader4})
         Me.ListView1.FullRowSelect = True
         Me.ListView1.GridLines = True
-        Me.ListView1.Location = New System.Drawing.Point(169, 113)
+        Me.ListView1.Location = New System.Drawing.Point(142, 100)
         Me.ListView1.Name = "ListView1"
-        Me.ListView1.Size = New System.Drawing.Size(855, 343)
-        Me.ListView1.TabIndex = 1
+        Me.ListView1.Size = New System.Drawing.Size(604, 231)
+        Me.ListView1.TabIndex = 2
         Me.ListView1.UseCompatibleStateImageBehavior = False
         Me.ListView1.View = System.Windows.Forms.View.Details
         '
         'ColumnHeader1
         '
-        Me.ColumnHeader1.Text = "N°DE BOLETA"
+        Me.ColumnHeader1.Text = "CODIGO CONTRATO"
         Me.ColumnHeader1.Width = 150
         '
         'ColumnHeader2
         '
-        Me.ColumnHeader2.Text = "FECHA DE BOLETA"
-        Me.ColumnHeader2.Width = 200
+        Me.ColumnHeader2.Text = "HORARIO LABORAL"
+        Me.ColumnHeader2.Width = 150
         '
         'ColumnHeader3
         '
-        Me.ColumnHeader3.Text = "NOMBRES DEL EMPLEADO"
-        Me.ColumnHeader3.Width = 200
+        Me.ColumnHeader3.Text = "REGIMEN LABORAL"
+        Me.ColumnHeader3.Width = 150
         '
         'ColumnHeader4
         '
-        Me.ColumnHeader4.Text = "SUELDO TOTAL"
+        Me.ColumnHeader4.Text = "SUELDO CONTRATO"
         Me.ColumnHeader4.Width = 150
         '
-        'ColumnHeader5
-        '
-        Me.ColumnHeader5.Text = "PLANILLA"
-        Me.ColumnHeader5.Width = 150
-        '
-        'FrmBoletasEmpleados
+        'FrmEmpleadoContrato
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
-        Me.ClientSize = New System.Drawing.Size(1277, 481)
+        Me.ClientSize = New System.Drawing.Size(1028, 439)
         Me.Controls.Add(Me.ListView1)
-        Me.Controls.Add(Me.Button1)
-        Me.Name = "FrmBoletasEmpleados"
-        Me.Text = "BoletasXEmpleados"
+        Me.Controls.Add(Me.ComboBox1)
+        Me.Controls.Add(Me.Label1)
+        Me.Name = "FrmEmpleadoContrato"
+        Me.Text = "EmpleadoContrato"
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
 
-    Friend WithEvents Button1 As Button
+    Friend WithEvents Label1 As Label
+    Friend WithEvents ComboBox1 As ComboBox
     Friend WithEvents ListView1 As ListView
     Friend WithEvents ColumnHeader1 As ColumnHeader
     Friend WithEvents ColumnHeader2 As ColumnHeader
     Friend WithEvents ColumnHeader3 As ColumnHeader
     Friend WithEvents ColumnHeader4 As ColumnHeader
-    Friend WithEvents ColumnHeader5 As ColumnHeader
 End Class

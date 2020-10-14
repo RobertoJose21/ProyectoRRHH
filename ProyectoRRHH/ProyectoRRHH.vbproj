@@ -143,10 +143,28 @@
     <Compile Include="FrmDistritosEmpleados.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="FrmDistritoXEmpleado.Designer.vb">
+      <DependentUpon>FrmDistritoXEmpleado.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmDistritoXEmpleado.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FrmEmpleado.Designer.vb">
       <DependentUpon>FrmEmpleado.vb</DependentUpon>
     </Compile>
     <Compile Include="FrmEmpleado.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmEmpleadoContrato.Designer.vb">
+      <DependentUpon>FrmEmpleadoContrato.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmEmpleadoContrato.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmEmpleadoPlanilla.Designer.vb">
+      <DependentUpon>FrmEmpleadoPlanilla.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmEmpleadoPlanilla.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmEmpleadoSueldoTotal.Designer.vb">
@@ -177,6 +195,12 @@
       <DependentUpon>FrmMemorandums.vb</DependentUpon>
     </Compile>
     <Compile Include="FrmMemorandums.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmMemorandumsEmpleado.Designer.vb">
+      <DependentUpon>FrmMemorandumsEmpleado.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmMemorandumsEmpleado.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmNivelEducacion.Designer.vb">
@@ -298,8 +322,17 @@
     <EmbeddedResource Include="FrmDistritosEmpleados.resx">
       <DependentUpon>FrmDistritosEmpleados.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmDistritoXEmpleado.resx">
+      <DependentUpon>FrmDistritoXEmpleado.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmEmpleado.resx">
       <DependentUpon>FrmEmpleado.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmEmpleadoContrato.resx">
+      <DependentUpon>FrmEmpleadoContrato.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmEmpleadoPlanilla.resx">
+      <DependentUpon>FrmEmpleadoPlanilla.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmEmpleadoSueldoTotal.resx">
       <DependentUpon>FrmEmpleadoSueldoTotal.vb</DependentUpon>
@@ -315,6 +348,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmMemorandums.resx">
       <DependentUpon>FrmMemorandums.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmMemorandumsEmpleado.resx">
+      <DependentUpon>FrmMemorandumsEmpleado.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmNivelEducacion.resx">
       <DependentUpon>FrmNivelEducacion.vb</DependentUpon>

@@ -174,7 +174,7 @@
     End Sub
 
     Private Sub REPORTEDEDISTRITOSXEMPLEADOSToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles REPORTEDEDISTRITOSXEMPLEADOSToolStripMenuItem.Click
-        Dim objReporteDistrito As New FrmDistritosEmpleados
+        Dim objReporteDistrito As New FrmDistritoXEmpleado
         objReporteDistrito.MdiParent = Me
         objReporteDistrito.Show()
     End Sub
