@@ -257,10 +257,16 @@
     <Compile Include="FrmTipoContrato.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmTipoTrabajador.Designer.vb">
-      <DependentUpon>FrmTipoTrabajador.vb</DependentUpon>
+    <Compile Include="FrmTipoPlanilla.Designer.vb">
+      <DependentUpon>FrmTipoPlanilla.vb</DependentUpon>
     </Compile>
-    <Compile Include="FrmTipoTrabajador.vb">
+    <Compile Include="FrmTipoPlanilla.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmTipoTrabajo.Designer.vb">
+      <DependentUpon>FrmTipoTrabajo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmTipoTrabajo.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmVacaciones.Designer.vb">
@@ -379,8 +385,11 @@
     <EmbeddedResource Include="FrmTipoContrato.resx">
       <DependentUpon>FrmTipoContrato.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmTipoTrabajador.resx">
-      <DependentUpon>FrmTipoTrabajador.vb</DependentUpon>
+    <EmbeddedResource Include="FrmTipoPlanilla.resx">
+      <DependentUpon>FrmTipoPlanilla.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmTipoTrabajo.resx">
+      <DependentUpon>FrmTipoTrabajo.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmVacaciones.resx">
       <DependentUpon>FrmVacaciones.vb</DependentUpon>

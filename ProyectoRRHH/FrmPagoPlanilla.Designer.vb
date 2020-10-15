@@ -23,6 +23,7 @@ Partial Class FrmPagoPlanilla
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmPagoPlanilla))
         Dim IdPagoPlanillaLabel As System.Windows.Forms.Label
         Dim IdPlanillaLabel As System.Windows.Forms.Label
         Dim DiasHabilesLabel As System.Windows.Forms.Label
@@ -31,23 +32,22 @@ Partial Class FrmPagoPlanilla
         Dim SueldoTotalLabel As System.Windows.Forms.Label
         Dim MontoAFPLabel As System.Windows.Forms.Label
         Dim MontoCTSLabel As System.Windows.Forms.Label
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmPagoPlanilla))
         Me.BD_RecursosHumanosDataSet = New ProyectoRRHH.BD_RecursosHumanosDataSet()
         Me.PAGO_PLANILLABindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.PAGO_PLANILLATableAdapter = New ProyectoRRHH.BD_RecursosHumanosDataSetTableAdapters.PAGO_PLANILLATableAdapter()
         Me.TableAdapterManager = New ProyectoRRHH.BD_RecursosHumanosDataSetTableAdapters.TableAdapterManager()
         Me.PAGO_PLANILLABindingNavigator = New System.Windows.Forms.BindingNavigator(Me.components)
-        Me.BindingNavigatorAddNewItem = New System.Windows.Forms.ToolStripButton()
-        Me.BindingNavigatorCountItem = New System.Windows.Forms.ToolStripLabel()
-        Me.BindingNavigatorDeleteItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorMoveFirstItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorMovePreviousItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorSeparator = New System.Windows.Forms.ToolStripSeparator()
         Me.BindingNavigatorPositionItem = New System.Windows.Forms.ToolStripTextBox()
+        Me.BindingNavigatorCountItem = New System.Windows.Forms.ToolStripLabel()
         Me.BindingNavigatorSeparator1 = New System.Windows.Forms.ToolStripSeparator()
         Me.BindingNavigatorMoveNextItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorMoveLastItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorSeparator2 = New System.Windows.Forms.ToolStripSeparator()
+        Me.BindingNavigatorAddNewItem = New System.Windows.Forms.ToolStripButton()
+        Me.BindingNavigatorDeleteItem = New System.Windows.Forms.ToolStripButton()
         Me.PAGO_PLANILLABindingNavigatorSaveItem = New System.Windows.Forms.ToolStripButton()
         Me.IdPagoPlanillaTextBox = New System.Windows.Forms.TextBox()
         Me.IdPlanillaTextBox = New System.Windows.Forms.TextBox()
@@ -80,78 +80,6 @@ Partial Class FrmPagoPlanilla
         Me.PAGO_PLANILLABindingNavigator.SuspendLayout()
         CType(Me.PAGO_PLANILLADataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
-        '
-        'IdPagoPlanillaLabel
-        '
-        IdPagoPlanillaLabel.AutoSize = True
-        IdPagoPlanillaLabel.Location = New System.Drawing.Point(23, 43)
-        IdPagoPlanillaLabel.Name = "IdPagoPlanillaLabel"
-        IdPagoPlanillaLabel.Size = New System.Drawing.Size(109, 17)
-        IdPagoPlanillaLabel.TabIndex = 1
-        IdPagoPlanillaLabel.Text = "Id Pago Planilla:"
-        '
-        'IdPlanillaLabel
-        '
-        IdPlanillaLabel.AutoSize = True
-        IdPlanillaLabel.Location = New System.Drawing.Point(23, 71)
-        IdPlanillaLabel.Name = "IdPlanillaLabel"
-        IdPlanillaLabel.Size = New System.Drawing.Size(72, 17)
-        IdPlanillaLabel.TabIndex = 3
-        IdPlanillaLabel.Text = "Id Planilla:"
-        '
-        'DiasHabilesLabel
-        '
-        DiasHabilesLabel.AutoSize = True
-        DiasHabilesLabel.Location = New System.Drawing.Point(23, 99)
-        DiasHabilesLabel.Name = "DiasHabilesLabel"
-        DiasHabilesLabel.Size = New System.Drawing.Size(91, 17)
-        DiasHabilesLabel.TabIndex = 5
-        DiasHabilesLabel.Text = "Dias Habiles:"
-        '
-        'BeneficioTotalLabel
-        '
-        BeneficioTotalLabel.AutoSize = True
-        BeneficioTotalLabel.Location = New System.Drawing.Point(23, 127)
-        BeneficioTotalLabel.Name = "BeneficioTotalLabel"
-        BeneficioTotalLabel.Size = New System.Drawing.Size(106, 17)
-        BeneficioTotalLabel.TabIndex = 7
-        BeneficioTotalLabel.Text = "Beneficio Total:"
-        '
-        'PrestamoLabel
-        '
-        PrestamoLabel.AutoSize = True
-        PrestamoLabel.Location = New System.Drawing.Point(393, 45)
-        PrestamoLabel.Name = "PrestamoLabel"
-        PrestamoLabel.Size = New System.Drawing.Size(72, 17)
-        PrestamoLabel.TabIndex = 9
-        PrestamoLabel.Text = "Prestamo:"
-        '
-        'SueldoTotalLabel
-        '
-        SueldoTotalLabel.AutoSize = True
-        SueldoTotalLabel.Location = New System.Drawing.Point(393, 73)
-        SueldoTotalLabel.Name = "SueldoTotalLabel"
-        SueldoTotalLabel.Size = New System.Drawing.Size(92, 17)
-        SueldoTotalLabel.TabIndex = 11
-        SueldoTotalLabel.Text = "Sueldo Total:"
-        '
-        'MontoAFPLabel
-        '
-        MontoAFPLabel.AutoSize = True
-        MontoAFPLabel.Location = New System.Drawing.Point(393, 101)
-        MontoAFPLabel.Name = "MontoAFPLabel"
-        MontoAFPLabel.Size = New System.Drawing.Size(81, 17)
-        MontoAFPLabel.TabIndex = 13
-        MontoAFPLabel.Text = "Monto AFP:"
-        '
-        'MontoCTSLabel
-        '
-        MontoCTSLabel.AutoSize = True
-        MontoCTSLabel.Location = New System.Drawing.Point(393, 129)
-        MontoCTSLabel.Name = "MontoCTSLabel"
-        MontoCTSLabel.Size = New System.Drawing.Size(82, 17)
-        MontoCTSLabel.TabIndex = 15
-        MontoCTSLabel.Text = "Monto CTS:"
         '
         'BD_RecursosHumanosDataSet
         '
@@ -191,6 +119,7 @@ Partial Class FrmPagoPlanilla
         Me.TableAdapterManager.REGIMEN_SALUDTableAdapter = Nothing
         Me.TableAdapterManager.TIPO_ASISTENCIATableAdapter = Nothing
         Me.TableAdapterManager.TIPO_CONTRATOTableAdapter = Nothing
+        Me.TableAdapterManager.TIPO_PLANILLATableAdapter = Nothing
         Me.TableAdapterManager.TIPO_TRABAJADORTableAdapter = Nothing
         Me.TableAdapterManager.UpdateOrder = ProyectoRRHH.BD_RecursosHumanosDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
         Me.TableAdapterManager.VACACIONESTableAdapter = Nothing
@@ -211,34 +140,9 @@ Partial Class FrmPagoPlanilla
         Me.PAGO_PLANILLABindingNavigator.MovePreviousItem = Me.BindingNavigatorMovePreviousItem
         Me.PAGO_PLANILLABindingNavigator.Name = "PAGO_PLANILLABindingNavigator"
         Me.PAGO_PLANILLABindingNavigator.PositionItem = Me.BindingNavigatorPositionItem
-        Me.PAGO_PLANILLABindingNavigator.Size = New System.Drawing.Size(990, 27)
+        Me.PAGO_PLANILLABindingNavigator.Size = New System.Drawing.Size(1263, 27)
         Me.PAGO_PLANILLABindingNavigator.TabIndex = 0
         Me.PAGO_PLANILLABindingNavigator.Text = "BindingNavigator1"
-        '
-        'BindingNavigatorAddNewItem
-        '
-        Me.BindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorAddNewItem.Image = CType(resources.GetObject("BindingNavigatorAddNewItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorAddNewItem.Name = "BindingNavigatorAddNewItem"
-        Me.BindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorAddNewItem.Size = New System.Drawing.Size(24, 24)
-        Me.BindingNavigatorAddNewItem.Text = "Agregar nuevo"
-        '
-        'BindingNavigatorCountItem
-        '
-        Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
-        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(48, 24)
-        Me.BindingNavigatorCountItem.Text = "de {0}"
-        Me.BindingNavigatorCountItem.ToolTipText = "Número total de elementos"
-        '
-        'BindingNavigatorDeleteItem
-        '
-        Me.BindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorDeleteItem.Image = CType(resources.GetObject("BindingNavigatorDeleteItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorDeleteItem.Name = "BindingNavigatorDeleteItem"
-        Me.BindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorDeleteItem.Size = New System.Drawing.Size(24, 24)
-        Me.BindingNavigatorDeleteItem.Text = "Eliminar"
         '
         'BindingNavigatorMoveFirstItem
         '
@@ -246,7 +150,7 @@ Partial Class FrmPagoPlanilla
         Me.BindingNavigatorMoveFirstItem.Image = CType(resources.GetObject("BindingNavigatorMoveFirstItem.Image"), System.Drawing.Image)
         Me.BindingNavigatorMoveFirstItem.Name = "BindingNavigatorMoveFirstItem"
         Me.BindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorMoveFirstItem.Size = New System.Drawing.Size(24, 24)
+        Me.BindingNavigatorMoveFirstItem.Size = New System.Drawing.Size(24, 22)
         Me.BindingNavigatorMoveFirstItem.Text = "Mover primero"
         '
         'BindingNavigatorMovePreviousItem
@@ -255,13 +159,13 @@ Partial Class FrmPagoPlanilla
         Me.BindingNavigatorMovePreviousItem.Image = CType(resources.GetObject("BindingNavigatorMovePreviousItem.Image"), System.Drawing.Image)
         Me.BindingNavigatorMovePreviousItem.Name = "BindingNavigatorMovePreviousItem"
         Me.BindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorMovePreviousItem.Size = New System.Drawing.Size(24, 24)
+        Me.BindingNavigatorMovePreviousItem.Size = New System.Drawing.Size(24, 22)
         Me.BindingNavigatorMovePreviousItem.Text = "Mover anterior"
         '
         'BindingNavigatorSeparator
         '
         Me.BindingNavigatorSeparator.Name = "BindingNavigatorSeparator"
-        Me.BindingNavigatorSeparator.Size = New System.Drawing.Size(6, 27)
+        Me.BindingNavigatorSeparator.Size = New System.Drawing.Size(6, 25)
         '
         'BindingNavigatorPositionItem
         '
@@ -272,10 +176,17 @@ Partial Class FrmPagoPlanilla
         Me.BindingNavigatorPositionItem.Text = "0"
         Me.BindingNavigatorPositionItem.ToolTipText = "Posición actual"
         '
+        'BindingNavigatorCountItem
+        '
+        Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
+        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(48, 20)
+        Me.BindingNavigatorCountItem.Text = "de {0}"
+        Me.BindingNavigatorCountItem.ToolTipText = "Número total de elementos"
+        '
         'BindingNavigatorSeparator1
         '
-        Me.BindingNavigatorSeparator1.Name = "BindingNavigatorSeparator1"
-        Me.BindingNavigatorSeparator1.Size = New System.Drawing.Size(6, 27)
+        Me.BindingNavigatorSeparator1.Name = "BindingNavigatorSeparator"
+        Me.BindingNavigatorSeparator1.Size = New System.Drawing.Size(6, 6)
         '
         'BindingNavigatorMoveNextItem
         '
@@ -297,87 +208,177 @@ Partial Class FrmPagoPlanilla
         '
         'BindingNavigatorSeparator2
         '
-        Me.BindingNavigatorSeparator2.Name = "BindingNavigatorSeparator2"
-        Me.BindingNavigatorSeparator2.Size = New System.Drawing.Size(6, 27)
+        Me.BindingNavigatorSeparator2.Name = "BindingNavigatorSeparator"
+        Me.BindingNavigatorSeparator2.Size = New System.Drawing.Size(6, 6)
+        '
+        'BindingNavigatorAddNewItem
+        '
+        Me.BindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.BindingNavigatorAddNewItem.Image = CType(resources.GetObject("BindingNavigatorAddNewItem.Image"), System.Drawing.Image)
+        Me.BindingNavigatorAddNewItem.Name = "BindingNavigatorAddNewItem"
+        Me.BindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = True
+        Me.BindingNavigatorAddNewItem.Size = New System.Drawing.Size(24, 24)
+        Me.BindingNavigatorAddNewItem.Text = "Agregar nuevo"
+        '
+        'BindingNavigatorDeleteItem
+        '
+        Me.BindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.BindingNavigatorDeleteItem.Image = CType(resources.GetObject("BindingNavigatorDeleteItem.Image"), System.Drawing.Image)
+        Me.BindingNavigatorDeleteItem.Name = "BindingNavigatorDeleteItem"
+        Me.BindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = True
+        Me.BindingNavigatorDeleteItem.Size = New System.Drawing.Size(24, 24)
+        Me.BindingNavigatorDeleteItem.Text = "Eliminar"
         '
         'PAGO_PLANILLABindingNavigatorSaveItem
         '
         Me.PAGO_PLANILLABindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
         Me.PAGO_PLANILLABindingNavigatorSaveItem.Image = CType(resources.GetObject("PAGO_PLANILLABindingNavigatorSaveItem.Image"), System.Drawing.Image)
         Me.PAGO_PLANILLABindingNavigatorSaveItem.Name = "PAGO_PLANILLABindingNavigatorSaveItem"
-        Me.PAGO_PLANILLABindingNavigatorSaveItem.Size = New System.Drawing.Size(24, 24)
+        Me.PAGO_PLANILLABindingNavigatorSaveItem.Size = New System.Drawing.Size(23, 23)
         Me.PAGO_PLANILLABindingNavigatorSaveItem.Text = "Guardar datos"
+        '
+        'IdPagoPlanillaLabel
+        '
+        IdPagoPlanillaLabel.AutoSize = True
+        IdPagoPlanillaLabel.Location = New System.Drawing.Point(121, 45)
+        IdPagoPlanillaLabel.Name = "IdPagoPlanillaLabel"
+        IdPagoPlanillaLabel.Size = New System.Drawing.Size(109, 17)
+        IdPagoPlanillaLabel.TabIndex = 1
+        IdPagoPlanillaLabel.Text = "Id Pago Planilla:"
         '
         'IdPagoPlanillaTextBox
         '
         Me.IdPagoPlanillaTextBox.BackColor = System.Drawing.SystemColors.Info
         Me.IdPagoPlanillaTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.PAGO_PLANILLABindingSource, "IdPagoPlanilla", True))
-        Me.IdPagoPlanillaTextBox.Location = New System.Drawing.Point(138, 40)
+        Me.IdPagoPlanillaTextBox.Location = New System.Drawing.Point(236, 42)
         Me.IdPagoPlanillaTextBox.Name = "IdPagoPlanillaTextBox"
-        Me.IdPagoPlanillaTextBox.Size = New System.Drawing.Size(157, 22)
+        Me.IdPagoPlanillaTextBox.Size = New System.Drawing.Size(181, 22)
         Me.IdPagoPlanillaTextBox.TabIndex = 2
+        '
+        'IdPlanillaLabel
+        '
+        IdPlanillaLabel.AutoSize = True
+        IdPlanillaLabel.Location = New System.Drawing.Point(121, 73)
+        IdPlanillaLabel.Name = "IdPlanillaLabel"
+        IdPlanillaLabel.Size = New System.Drawing.Size(72, 17)
+        IdPlanillaLabel.TabIndex = 3
+        IdPlanillaLabel.Text = "Id Planilla:"
         '
         'IdPlanillaTextBox
         '
         Me.IdPlanillaTextBox.BackColor = System.Drawing.SystemColors.Info
         Me.IdPlanillaTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.PAGO_PLANILLABindingSource, "IdPlanilla", True))
-        Me.IdPlanillaTextBox.Location = New System.Drawing.Point(138, 68)
+        Me.IdPlanillaTextBox.Location = New System.Drawing.Point(236, 70)
         Me.IdPlanillaTextBox.Name = "IdPlanillaTextBox"
-        Me.IdPlanillaTextBox.Size = New System.Drawing.Size(157, 22)
+        Me.IdPlanillaTextBox.Size = New System.Drawing.Size(181, 22)
         Me.IdPlanillaTextBox.TabIndex = 4
+        '
+        'DiasHabilesLabel
+        '
+        DiasHabilesLabel.AutoSize = True
+        DiasHabilesLabel.Location = New System.Drawing.Point(121, 101)
+        DiasHabilesLabel.Name = "DiasHabilesLabel"
+        DiasHabilesLabel.Size = New System.Drawing.Size(91, 17)
+        DiasHabilesLabel.TabIndex = 5
+        DiasHabilesLabel.Text = "Dias Habiles:"
         '
         'DiasHabilesTextBox
         '
         Me.DiasHabilesTextBox.BackColor = System.Drawing.SystemColors.Info
         Me.DiasHabilesTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.PAGO_PLANILLABindingSource, "DiasHabiles", True))
-        Me.DiasHabilesTextBox.Location = New System.Drawing.Point(138, 96)
+        Me.DiasHabilesTextBox.Location = New System.Drawing.Point(236, 98)
         Me.DiasHabilesTextBox.Name = "DiasHabilesTextBox"
-        Me.DiasHabilesTextBox.Size = New System.Drawing.Size(157, 22)
+        Me.DiasHabilesTextBox.Size = New System.Drawing.Size(181, 22)
         Me.DiasHabilesTextBox.TabIndex = 6
+        '
+        'BeneficioTotalLabel
+        '
+        BeneficioTotalLabel.AutoSize = True
+        BeneficioTotalLabel.Location = New System.Drawing.Point(121, 129)
+        BeneficioTotalLabel.Name = "BeneficioTotalLabel"
+        BeneficioTotalLabel.Size = New System.Drawing.Size(106, 17)
+        BeneficioTotalLabel.TabIndex = 7
+        BeneficioTotalLabel.Text = "Beneficio Total:"
         '
         'BeneficioTotalTextBox
         '
         Me.BeneficioTotalTextBox.BackColor = System.Drawing.SystemColors.Info
         Me.BeneficioTotalTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.PAGO_PLANILLABindingSource, "beneficioTotal", True))
-        Me.BeneficioTotalTextBox.Location = New System.Drawing.Point(138, 124)
+        Me.BeneficioTotalTextBox.Location = New System.Drawing.Point(236, 126)
         Me.BeneficioTotalTextBox.Name = "BeneficioTotalTextBox"
-        Me.BeneficioTotalTextBox.Size = New System.Drawing.Size(157, 22)
+        Me.BeneficioTotalTextBox.Size = New System.Drawing.Size(181, 22)
         Me.BeneficioTotalTextBox.TabIndex = 8
+        '
+        'PrestamoLabel
+        '
+        PrestamoLabel.AutoSize = True
+        PrestamoLabel.Location = New System.Drawing.Point(560, 45)
+        PrestamoLabel.Name = "PrestamoLabel"
+        PrestamoLabel.Size = New System.Drawing.Size(72, 17)
+        PrestamoLabel.TabIndex = 9
+        PrestamoLabel.Text = "Prestamo:"
         '
         'PrestamoTextBox
         '
         Me.PrestamoTextBox.BackColor = System.Drawing.SystemColors.Info
         Me.PrestamoTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.PAGO_PLANILLABindingSource, "Prestamo", True))
-        Me.PrestamoTextBox.Location = New System.Drawing.Point(508, 42)
+        Me.PrestamoTextBox.Location = New System.Drawing.Point(675, 42)
         Me.PrestamoTextBox.Name = "PrestamoTextBox"
-        Me.PrestamoTextBox.Size = New System.Drawing.Size(182, 22)
+        Me.PrestamoTextBox.Size = New System.Drawing.Size(243, 22)
         Me.PrestamoTextBox.TabIndex = 10
+        '
+        'SueldoTotalLabel
+        '
+        SueldoTotalLabel.AutoSize = True
+        SueldoTotalLabel.Location = New System.Drawing.Point(560, 73)
+        SueldoTotalLabel.Name = "SueldoTotalLabel"
+        SueldoTotalLabel.Size = New System.Drawing.Size(92, 17)
+        SueldoTotalLabel.TabIndex = 11
+        SueldoTotalLabel.Text = "Sueldo Total:"
         '
         'SueldoTotalTextBox
         '
         Me.SueldoTotalTextBox.BackColor = System.Drawing.SystemColors.Info
         Me.SueldoTotalTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.PAGO_PLANILLABindingSource, "sueldoTotal", True))
-        Me.SueldoTotalTextBox.Location = New System.Drawing.Point(508, 70)
+        Me.SueldoTotalTextBox.Location = New System.Drawing.Point(675, 70)
         Me.SueldoTotalTextBox.Name = "SueldoTotalTextBox"
-        Me.SueldoTotalTextBox.Size = New System.Drawing.Size(182, 22)
+        Me.SueldoTotalTextBox.Size = New System.Drawing.Size(243, 22)
         Me.SueldoTotalTextBox.TabIndex = 12
+        '
+        'MontoAFPLabel
+        '
+        MontoAFPLabel.AutoSize = True
+        MontoAFPLabel.Location = New System.Drawing.Point(560, 101)
+        MontoAFPLabel.Name = "MontoAFPLabel"
+        MontoAFPLabel.Size = New System.Drawing.Size(81, 17)
+        MontoAFPLabel.TabIndex = 13
+        MontoAFPLabel.Text = "Monto AFP:"
         '
         'MontoAFPTextBox
         '
         Me.MontoAFPTextBox.BackColor = System.Drawing.SystemColors.Info
         Me.MontoAFPTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.PAGO_PLANILLABindingSource, "montoAFP", True))
-        Me.MontoAFPTextBox.Location = New System.Drawing.Point(508, 98)
+        Me.MontoAFPTextBox.Location = New System.Drawing.Point(675, 98)
         Me.MontoAFPTextBox.Name = "MontoAFPTextBox"
-        Me.MontoAFPTextBox.Size = New System.Drawing.Size(182, 22)
+        Me.MontoAFPTextBox.Size = New System.Drawing.Size(243, 22)
         Me.MontoAFPTextBox.TabIndex = 14
+        '
+        'MontoCTSLabel
+        '
+        MontoCTSLabel.AutoSize = True
+        MontoCTSLabel.Location = New System.Drawing.Point(560, 129)
+        MontoCTSLabel.Name = "MontoCTSLabel"
+        MontoCTSLabel.Size = New System.Drawing.Size(82, 17)
+        MontoCTSLabel.TabIndex = 15
+        MontoCTSLabel.Text = "Monto CTS:"
         '
         'MontoCTSTextBox
         '
         Me.MontoCTSTextBox.BackColor = System.Drawing.SystemColors.Info
         Me.MontoCTSTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.PAGO_PLANILLABindingSource, "montoCTS", True))
-        Me.MontoCTSTextBox.Location = New System.Drawing.Point(508, 126)
+        Me.MontoCTSTextBox.Location = New System.Drawing.Point(675, 126)
         Me.MontoCTSTextBox.Name = "MontoCTSTextBox"
-        Me.MontoCTSTextBox.Size = New System.Drawing.Size(182, 22)
+        Me.MontoCTSTextBox.Size = New System.Drawing.Size(243, 22)
         Me.MontoCTSTextBox.TabIndex = 16
         '
         'PAGO_PLANILLADataGridView
@@ -387,10 +388,10 @@ Partial Class FrmPagoPlanilla
         Me.PAGO_PLANILLADataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.PAGO_PLANILLADataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3, Me.DataGridViewTextBoxColumn4, Me.DataGridViewTextBoxColumn5, Me.DataGridViewTextBoxColumn6, Me.DataGridViewTextBoxColumn7, Me.DataGridViewTextBoxColumn8})
         Me.PAGO_PLANILLADataGridView.DataSource = Me.PAGO_PLANILLABindingSource
-        Me.PAGO_PLANILLADataGridView.Location = New System.Drawing.Point(12, 167)
+        Me.PAGO_PLANILLADataGridView.Location = New System.Drawing.Point(124, 182)
         Me.PAGO_PLANILLADataGridView.Name = "PAGO_PLANILLADataGridView"
         Me.PAGO_PLANILLADataGridView.RowTemplate.Height = 24
-        Me.PAGO_PLANILLADataGridView.Size = New System.Drawing.Size(892, 220)
+        Me.PAGO_PLANILLADataGridView.Size = New System.Drawing.Size(904, 236)
         Me.PAGO_PLANILLADataGridView.TabIndex = 17
         '
         'DataGridViewTextBoxColumn1
@@ -449,7 +450,7 @@ Partial Class FrmPagoPlanilla
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.ClientSize = New System.Drawing.Size(990, 491)
+        Me.ClientSize = New System.Drawing.Size(1263, 525)
         Me.Controls.Add(Me.PAGO_PLANILLADataGridView)
         Me.Controls.Add(IdPagoPlanillaLabel)
         Me.Controls.Add(Me.IdPagoPlanillaTextBox)

@@ -23,22 +23,23 @@ Partial Class FrmDistritoXEmpleado
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmDistritoXEmpleado))
         Me.Label1 = New System.Windows.Forms.Label()
         Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.DISTRITOBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.BD_RecursosHumanosDataSet = New ProyectoRRHH.BD_RecursosHumanosDataSet()
         Me.ListView1 = New System.Windows.Forms.ListView()
         Me.ColumnHeader1 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ColumnHeader2 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ColumnHeader3 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ColumnHeader4 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ColumnHeader5 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
-        Me.BD_RecursosHumanosDataSet = New ProyectoRRHH.BD_RecursosHumanosDataSet()
         Me.VApellidosyNombresEmpleadosBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.V_ApellidosyNombresEmpleadosTableAdapter = New ProyectoRRHH.BD_RecursosHumanosDataSetTableAdapters.V_ApellidosyNombresEmpleadosTableAdapter()
-        Me.DISTRITOBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.DISTRITOTableAdapter = New ProyectoRRHH.BD_RecursosHumanosDataSetTableAdapters.DISTRITOTableAdapter()
+        CType(Me.DISTRITOBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BD_RecursosHumanosDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.VApellidosyNombresEmpleadosBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.DISTRITOBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label1
@@ -61,6 +62,16 @@ Partial Class FrmDistritoXEmpleado
         Me.ComboBox1.Size = New System.Drawing.Size(369, 24)
         Me.ComboBox1.TabIndex = 1
         Me.ComboBox1.ValueMember = "NombreDistrito"
+        '
+        'DISTRITOBindingSource
+        '
+        Me.DISTRITOBindingSource.DataMember = "DISTRITO"
+        Me.DISTRITOBindingSource.DataSource = Me.BD_RecursosHumanosDataSet
+        '
+        'BD_RecursosHumanosDataSet
+        '
+        Me.BD_RecursosHumanosDataSet.DataSetName = "BD_RecursosHumanosDataSet"
+        Me.BD_RecursosHumanosDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'ListView1
         '
@@ -99,11 +110,6 @@ Partial Class FrmDistritoXEmpleado
         Me.ColumnHeader5.Text = "AREA"
         Me.ColumnHeader5.Width = 150
         '
-        'BD_RecursosHumanosDataSet
-        '
-        Me.BD_RecursosHumanosDataSet.DataSetName = "BD_RecursosHumanosDataSet"
-        Me.BD_RecursosHumanosDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
         'VApellidosyNombresEmpleadosBindingSource
         '
         Me.VApellidosyNombresEmpleadosBindingSource.DataMember = "V_ApellidosyNombresEmpleados"
@@ -113,11 +119,6 @@ Partial Class FrmDistritoXEmpleado
         '
         Me.V_ApellidosyNombresEmpleadosTableAdapter.ClearBeforeFill = True
         '
-        'DISTRITOBindingSource
-        '
-        Me.DISTRITOBindingSource.DataMember = "DISTRITO"
-        Me.DISTRITOBindingSource.DataSource = Me.BD_RecursosHumanosDataSet
-        '
         'DISTRITOTableAdapter
         '
         Me.DISTRITOTableAdapter.ClearBeforeFill = True
@@ -126,15 +127,17 @@ Partial Class FrmDistritoXEmpleado
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
+        Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(926, 423)
         Me.Controls.Add(Me.ListView1)
         Me.Controls.Add(Me.ComboBox1)
         Me.Controls.Add(Me.Label1)
         Me.Name = "FrmDistritoXEmpleado"
         Me.Text = "DistritoXEmpleado"
+        CType(Me.DISTRITOBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.BD_RecursosHumanosDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.VApellidosyNombresEmpleadosBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.DISTRITOBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

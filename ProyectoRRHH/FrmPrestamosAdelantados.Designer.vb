@@ -23,28 +23,28 @@ Partial Class FrmPrestamosAdelantados
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmPrestamosAdelantados))
         Dim IdPrestamoLabel As System.Windows.Forms.Label
         Dim DescripcionLabel As System.Windows.Forms.Label
         Dim MontoPrestamoLabel As System.Windows.Forms.Label
         Dim FechaPrestamoLabel As System.Windows.Forms.Label
         Dim IdContratoLabel As System.Windows.Forms.Label
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmPrestamosAdelantados))
         Me.BD_RecursosHumanosDataSet = New ProyectoRRHH.BD_RecursosHumanosDataSet()
         Me.PRESTAMO_ADELANTOSBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.PRESTAMO_ADELANTOSTableAdapter = New ProyectoRRHH.BD_RecursosHumanosDataSetTableAdapters.PRESTAMO_ADELANTOSTableAdapter()
         Me.TableAdapterManager = New ProyectoRRHH.BD_RecursosHumanosDataSetTableAdapters.TableAdapterManager()
         Me.PRESTAMO_ADELANTOSBindingNavigator = New System.Windows.Forms.BindingNavigator(Me.components)
-        Me.BindingNavigatorAddNewItem = New System.Windows.Forms.ToolStripButton()
-        Me.BindingNavigatorCountItem = New System.Windows.Forms.ToolStripLabel()
-        Me.BindingNavigatorDeleteItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorMoveFirstItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorMovePreviousItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorSeparator = New System.Windows.Forms.ToolStripSeparator()
         Me.BindingNavigatorPositionItem = New System.Windows.Forms.ToolStripTextBox()
+        Me.BindingNavigatorCountItem = New System.Windows.Forms.ToolStripLabel()
         Me.BindingNavigatorSeparator1 = New System.Windows.Forms.ToolStripSeparator()
         Me.BindingNavigatorMoveNextItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorMoveLastItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorSeparator2 = New System.Windows.Forms.ToolStripSeparator()
+        Me.BindingNavigatorAddNewItem = New System.Windows.Forms.ToolStripButton()
+        Me.BindingNavigatorDeleteItem = New System.Windows.Forms.ToolStripButton()
         Me.PRESTAMO_ADELANTOSBindingNavigatorSaveItem = New System.Windows.Forms.ToolStripButton()
         Me.IdPrestamoTextBox = New System.Windows.Forms.TextBox()
         Me.DescripcionTextBox = New System.Windows.Forms.TextBox()
@@ -68,51 +68,6 @@ Partial Class FrmPrestamosAdelantados
         Me.PRESTAMO_ADELANTOSBindingNavigator.SuspendLayout()
         CType(Me.PRESTAMO_ADELANTOSDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
-        '
-        'IdPrestamoLabel
-        '
-        IdPrestamoLabel.AutoSize = True
-        IdPrestamoLabel.Location = New System.Drawing.Point(57, 46)
-        IdPrestamoLabel.Name = "IdPrestamoLabel"
-        IdPrestamoLabel.Size = New System.Drawing.Size(87, 17)
-        IdPrestamoLabel.TabIndex = 1
-        IdPrestamoLabel.Text = "Id Prestamo:"
-        '
-        'DescripcionLabel
-        '
-        DescripcionLabel.AutoSize = True
-        DescripcionLabel.Location = New System.Drawing.Point(57, 74)
-        DescripcionLabel.Name = "DescripcionLabel"
-        DescripcionLabel.Size = New System.Drawing.Size(86, 17)
-        DescripcionLabel.TabIndex = 3
-        DescripcionLabel.Text = "Descripcion:"
-        '
-        'MontoPrestamoLabel
-        '
-        MontoPrestamoLabel.AutoSize = True
-        MontoPrestamoLabel.Location = New System.Drawing.Point(57, 102)
-        MontoPrestamoLabel.Name = "MontoPrestamoLabel"
-        MontoPrestamoLabel.Size = New System.Drawing.Size(115, 17)
-        MontoPrestamoLabel.TabIndex = 5
-        MontoPrestamoLabel.Text = "Monto Prestamo:"
-        '
-        'FechaPrestamoLabel
-        '
-        FechaPrestamoLabel.AutoSize = True
-        FechaPrestamoLabel.Location = New System.Drawing.Point(57, 131)
-        FechaPrestamoLabel.Name = "FechaPrestamoLabel"
-        FechaPrestamoLabel.Size = New System.Drawing.Size(115, 17)
-        FechaPrestamoLabel.TabIndex = 7
-        FechaPrestamoLabel.Text = "Fecha Prestamo:"
-        '
-        'IdContratoLabel
-        '
-        IdContratoLabel.AutoSize = True
-        IdContratoLabel.Location = New System.Drawing.Point(57, 158)
-        IdContratoLabel.Name = "IdContratoLabel"
-        IdContratoLabel.Size = New System.Drawing.Size(81, 17)
-        IdContratoLabel.TabIndex = 9
-        IdContratoLabel.Text = "Id Contrato:"
         '
         'BD_RecursosHumanosDataSet
         '
@@ -152,6 +107,7 @@ Partial Class FrmPrestamosAdelantados
         Me.TableAdapterManager.REGIMEN_SALUDTableAdapter = Nothing
         Me.TableAdapterManager.TIPO_ASISTENCIATableAdapter = Nothing
         Me.TableAdapterManager.TIPO_CONTRATOTableAdapter = Nothing
+        Me.TableAdapterManager.TIPO_PLANILLATableAdapter = Nothing
         Me.TableAdapterManager.TIPO_TRABAJADORTableAdapter = Nothing
         Me.TableAdapterManager.UpdateOrder = ProyectoRRHH.BD_RecursosHumanosDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
         Me.TableAdapterManager.VACACIONESTableAdapter = Nothing
@@ -172,34 +128,9 @@ Partial Class FrmPrestamosAdelantados
         Me.PRESTAMO_ADELANTOSBindingNavigator.MovePreviousItem = Me.BindingNavigatorMovePreviousItem
         Me.PRESTAMO_ADELANTOSBindingNavigator.Name = "PRESTAMO_ADELANTOSBindingNavigator"
         Me.PRESTAMO_ADELANTOSBindingNavigator.PositionItem = Me.BindingNavigatorPositionItem
-        Me.PRESTAMO_ADELANTOSBindingNavigator.Size = New System.Drawing.Size(893, 27)
+        Me.PRESTAMO_ADELANTOSBindingNavigator.Size = New System.Drawing.Size(850, 27)
         Me.PRESTAMO_ADELANTOSBindingNavigator.TabIndex = 0
         Me.PRESTAMO_ADELANTOSBindingNavigator.Text = "BindingNavigator1"
-        '
-        'BindingNavigatorAddNewItem
-        '
-        Me.BindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorAddNewItem.Image = CType(resources.GetObject("BindingNavigatorAddNewItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorAddNewItem.Name = "BindingNavigatorAddNewItem"
-        Me.BindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorAddNewItem.Size = New System.Drawing.Size(24, 24)
-        Me.BindingNavigatorAddNewItem.Text = "Agregar nuevo"
-        '
-        'BindingNavigatorCountItem
-        '
-        Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
-        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(48, 24)
-        Me.BindingNavigatorCountItem.Text = "de {0}"
-        Me.BindingNavigatorCountItem.ToolTipText = "Número total de elementos"
-        '
-        'BindingNavigatorDeleteItem
-        '
-        Me.BindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorDeleteItem.Image = CType(resources.GetObject("BindingNavigatorDeleteItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorDeleteItem.Name = "BindingNavigatorDeleteItem"
-        Me.BindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorDeleteItem.Size = New System.Drawing.Size(24, 24)
-        Me.BindingNavigatorDeleteItem.Text = "Eliminar"
         '
         'BindingNavigatorMoveFirstItem
         '
@@ -207,7 +138,7 @@ Partial Class FrmPrestamosAdelantados
         Me.BindingNavigatorMoveFirstItem.Image = CType(resources.GetObject("BindingNavigatorMoveFirstItem.Image"), System.Drawing.Image)
         Me.BindingNavigatorMoveFirstItem.Name = "BindingNavigatorMoveFirstItem"
         Me.BindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorMoveFirstItem.Size = New System.Drawing.Size(24, 24)
+        Me.BindingNavigatorMoveFirstItem.Size = New System.Drawing.Size(24, 22)
         Me.BindingNavigatorMoveFirstItem.Text = "Mover primero"
         '
         'BindingNavigatorMovePreviousItem
@@ -216,13 +147,13 @@ Partial Class FrmPrestamosAdelantados
         Me.BindingNavigatorMovePreviousItem.Image = CType(resources.GetObject("BindingNavigatorMovePreviousItem.Image"), System.Drawing.Image)
         Me.BindingNavigatorMovePreviousItem.Name = "BindingNavigatorMovePreviousItem"
         Me.BindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorMovePreviousItem.Size = New System.Drawing.Size(24, 24)
+        Me.BindingNavigatorMovePreviousItem.Size = New System.Drawing.Size(24, 22)
         Me.BindingNavigatorMovePreviousItem.Text = "Mover anterior"
         '
         'BindingNavigatorSeparator
         '
         Me.BindingNavigatorSeparator.Name = "BindingNavigatorSeparator"
-        Me.BindingNavigatorSeparator.Size = New System.Drawing.Size(6, 27)
+        Me.BindingNavigatorSeparator.Size = New System.Drawing.Size(6, 25)
         '
         'BindingNavigatorPositionItem
         '
@@ -233,10 +164,17 @@ Partial Class FrmPrestamosAdelantados
         Me.BindingNavigatorPositionItem.Text = "0"
         Me.BindingNavigatorPositionItem.ToolTipText = "Posición actual"
         '
+        'BindingNavigatorCountItem
+        '
+        Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
+        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(48, 20)
+        Me.BindingNavigatorCountItem.Text = "de {0}"
+        Me.BindingNavigatorCountItem.ToolTipText = "Número total de elementos"
+        '
         'BindingNavigatorSeparator1
         '
-        Me.BindingNavigatorSeparator1.Name = "BindingNavigatorSeparator1"
-        Me.BindingNavigatorSeparator1.Size = New System.Drawing.Size(6, 27)
+        Me.BindingNavigatorSeparator1.Name = "BindingNavigatorSeparator"
+        Me.BindingNavigatorSeparator1.Size = New System.Drawing.Size(6, 6)
         '
         'BindingNavigatorMoveNextItem
         '
@@ -258,59 +196,122 @@ Partial Class FrmPrestamosAdelantados
         '
         'BindingNavigatorSeparator2
         '
-        Me.BindingNavigatorSeparator2.Name = "BindingNavigatorSeparator2"
-        Me.BindingNavigatorSeparator2.Size = New System.Drawing.Size(6, 27)
+        Me.BindingNavigatorSeparator2.Name = "BindingNavigatorSeparator"
+        Me.BindingNavigatorSeparator2.Size = New System.Drawing.Size(6, 6)
+        '
+        'BindingNavigatorAddNewItem
+        '
+        Me.BindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.BindingNavigatorAddNewItem.Image = CType(resources.GetObject("BindingNavigatorAddNewItem.Image"), System.Drawing.Image)
+        Me.BindingNavigatorAddNewItem.Name = "BindingNavigatorAddNewItem"
+        Me.BindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = True
+        Me.BindingNavigatorAddNewItem.Size = New System.Drawing.Size(24, 24)
+        Me.BindingNavigatorAddNewItem.Text = "Agregar nuevo"
+        '
+        'BindingNavigatorDeleteItem
+        '
+        Me.BindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.BindingNavigatorDeleteItem.Image = CType(resources.GetObject("BindingNavigatorDeleteItem.Image"), System.Drawing.Image)
+        Me.BindingNavigatorDeleteItem.Name = "BindingNavigatorDeleteItem"
+        Me.BindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = True
+        Me.BindingNavigatorDeleteItem.Size = New System.Drawing.Size(24, 24)
+        Me.BindingNavigatorDeleteItem.Text = "Eliminar"
         '
         'PRESTAMO_ADELANTOSBindingNavigatorSaveItem
         '
         Me.PRESTAMO_ADELANTOSBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
         Me.PRESTAMO_ADELANTOSBindingNavigatorSaveItem.Image = CType(resources.GetObject("PRESTAMO_ADELANTOSBindingNavigatorSaveItem.Image"), System.Drawing.Image)
         Me.PRESTAMO_ADELANTOSBindingNavigatorSaveItem.Name = "PRESTAMO_ADELANTOSBindingNavigatorSaveItem"
-        Me.PRESTAMO_ADELANTOSBindingNavigatorSaveItem.Size = New System.Drawing.Size(24, 24)
+        Me.PRESTAMO_ADELANTOSBindingNavigatorSaveItem.Size = New System.Drawing.Size(23, 23)
         Me.PRESTAMO_ADELANTOSBindingNavigatorSaveItem.Text = "Guardar datos"
+        '
+        'IdPrestamoLabel
+        '
+        IdPrestamoLabel.AutoSize = True
+        IdPrestamoLabel.Location = New System.Drawing.Point(12, 54)
+        IdPrestamoLabel.Name = "IdPrestamoLabel"
+        IdPrestamoLabel.Size = New System.Drawing.Size(87, 17)
+        IdPrestamoLabel.TabIndex = 1
+        IdPrestamoLabel.Text = "Id Prestamo:"
         '
         'IdPrestamoTextBox
         '
         Me.IdPrestamoTextBox.BackColor = System.Drawing.SystemColors.Info
         Me.IdPrestamoTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.PRESTAMO_ADELANTOSBindingSource, "IdPrestamo", True))
-        Me.IdPrestamoTextBox.Location = New System.Drawing.Point(178, 43)
+        Me.IdPrestamoTextBox.Location = New System.Drawing.Point(133, 51)
         Me.IdPrestamoTextBox.Name = "IdPrestamoTextBox"
-        Me.IdPrestamoTextBox.Size = New System.Drawing.Size(303, 22)
+        Me.IdPrestamoTextBox.Size = New System.Drawing.Size(254, 22)
         Me.IdPrestamoTextBox.TabIndex = 2
+        '
+        'DescripcionLabel
+        '
+        DescripcionLabel.AutoSize = True
+        DescripcionLabel.Location = New System.Drawing.Point(12, 82)
+        DescripcionLabel.Name = "DescripcionLabel"
+        DescripcionLabel.Size = New System.Drawing.Size(86, 17)
+        DescripcionLabel.TabIndex = 3
+        DescripcionLabel.Text = "Descripcion:"
         '
         'DescripcionTextBox
         '
         Me.DescripcionTextBox.BackColor = System.Drawing.SystemColors.Info
         Me.DescripcionTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.PRESTAMO_ADELANTOSBindingSource, "descripcion", True))
-        Me.DescripcionTextBox.Location = New System.Drawing.Point(178, 71)
+        Me.DescripcionTextBox.Location = New System.Drawing.Point(133, 79)
         Me.DescripcionTextBox.Name = "DescripcionTextBox"
-        Me.DescripcionTextBox.Size = New System.Drawing.Size(303, 22)
+        Me.DescripcionTextBox.Size = New System.Drawing.Size(254, 22)
         Me.DescripcionTextBox.TabIndex = 4
+        '
+        'MontoPrestamoLabel
+        '
+        MontoPrestamoLabel.AutoSize = True
+        MontoPrestamoLabel.Location = New System.Drawing.Point(12, 110)
+        MontoPrestamoLabel.Name = "MontoPrestamoLabel"
+        MontoPrestamoLabel.Size = New System.Drawing.Size(115, 17)
+        MontoPrestamoLabel.TabIndex = 5
+        MontoPrestamoLabel.Text = "Monto Prestamo:"
         '
         'MontoPrestamoTextBox
         '
         Me.MontoPrestamoTextBox.BackColor = System.Drawing.SystemColors.Info
         Me.MontoPrestamoTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.PRESTAMO_ADELANTOSBindingSource, "montoPrestamo", True))
-        Me.MontoPrestamoTextBox.Location = New System.Drawing.Point(178, 99)
+        Me.MontoPrestamoTextBox.Location = New System.Drawing.Point(133, 107)
         Me.MontoPrestamoTextBox.Name = "MontoPrestamoTextBox"
-        Me.MontoPrestamoTextBox.Size = New System.Drawing.Size(303, 22)
+        Me.MontoPrestamoTextBox.Size = New System.Drawing.Size(254, 22)
         Me.MontoPrestamoTextBox.TabIndex = 6
+        '
+        'FechaPrestamoLabel
+        '
+        FechaPrestamoLabel.AutoSize = True
+        FechaPrestamoLabel.Location = New System.Drawing.Point(404, 56)
+        FechaPrestamoLabel.Name = "FechaPrestamoLabel"
+        FechaPrestamoLabel.Size = New System.Drawing.Size(115, 17)
+        FechaPrestamoLabel.TabIndex = 7
+        FechaPrestamoLabel.Text = "Fecha Prestamo:"
         '
         'FechaPrestamoDateTimePicker
         '
         Me.FechaPrestamoDateTimePicker.DataBindings.Add(New System.Windows.Forms.Binding("Value", Me.PRESTAMO_ADELANTOSBindingSource, "fechaPrestamo", True))
-        Me.FechaPrestamoDateTimePicker.Location = New System.Drawing.Point(178, 127)
+        Me.FechaPrestamoDateTimePicker.Location = New System.Drawing.Point(525, 52)
         Me.FechaPrestamoDateTimePicker.Name = "FechaPrestamoDateTimePicker"
-        Me.FechaPrestamoDateTimePicker.Size = New System.Drawing.Size(303, 22)
+        Me.FechaPrestamoDateTimePicker.Size = New System.Drawing.Size(265, 22)
         Me.FechaPrestamoDateTimePicker.TabIndex = 8
+        '
+        'IdContratoLabel
+        '
+        IdContratoLabel.AutoSize = True
+        IdContratoLabel.Location = New System.Drawing.Point(404, 83)
+        IdContratoLabel.Name = "IdContratoLabel"
+        IdContratoLabel.Size = New System.Drawing.Size(81, 17)
+        IdContratoLabel.TabIndex = 9
+        IdContratoLabel.Text = "Id Contrato:"
         '
         'IdContratoTextBox
         '
         Me.IdContratoTextBox.BackColor = System.Drawing.SystemColors.Info
         Me.IdContratoTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.PRESTAMO_ADELANTOSBindingSource, "IdContrato", True))
-        Me.IdContratoTextBox.Location = New System.Drawing.Point(178, 155)
+        Me.IdContratoTextBox.Location = New System.Drawing.Point(525, 80)
         Me.IdContratoTextBox.Name = "IdContratoTextBox"
-        Me.IdContratoTextBox.Size = New System.Drawing.Size(303, 22)
+        Me.IdContratoTextBox.Size = New System.Drawing.Size(265, 22)
         Me.IdContratoTextBox.TabIndex = 10
         '
         'PRESTAMO_ADELANTOSDataGridView
@@ -320,10 +321,10 @@ Partial Class FrmPrestamosAdelantados
         Me.PRESTAMO_ADELANTOSDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.PRESTAMO_ADELANTOSDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3, Me.DataGridViewTextBoxColumn4, Me.DataGridViewTextBoxColumn5})
         Me.PRESTAMO_ADELANTOSDataGridView.DataSource = Me.PRESTAMO_ADELANTOSBindingSource
-        Me.PRESTAMO_ADELANTOSDataGridView.Location = New System.Drawing.Point(15, 195)
+        Me.PRESTAMO_ADELANTOSDataGridView.Location = New System.Drawing.Point(47, 151)
         Me.PRESTAMO_ADELANTOSDataGridView.Name = "PRESTAMO_ADELANTOSDataGridView"
         Me.PRESTAMO_ADELANTOSDataGridView.RowTemplate.Height = 24
-        Me.PRESTAMO_ADELANTOSDataGridView.Size = New System.Drawing.Size(672, 207)
+        Me.PRESTAMO_ADELANTOSDataGridView.Size = New System.Drawing.Size(703, 220)
         Me.PRESTAMO_ADELANTOSDataGridView.TabIndex = 11
         '
         'DataGridViewTextBoxColumn1
@@ -338,6 +339,7 @@ Partial Class FrmPrestamosAdelantados
         Me.DataGridViewTextBoxColumn2.DataPropertyName = "descripcion"
         Me.DataGridViewTextBoxColumn2.HeaderText = "Descripcion"
         Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
+        Me.DataGridViewTextBoxColumn2.Width = 150
         '
         'DataGridViewTextBoxColumn3
         '
@@ -365,7 +367,7 @@ Partial Class FrmPrestamosAdelantados
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.ClientSize = New System.Drawing.Size(893, 532)
+        Me.ClientSize = New System.Drawing.Size(850, 441)
         Me.Controls.Add(Me.PRESTAMO_ADELANTOSDataGridView)
         Me.Controls.Add(IdPrestamoLabel)
         Me.Controls.Add(Me.IdPrestamoTextBox)

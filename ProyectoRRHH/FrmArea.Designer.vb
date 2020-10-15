@@ -23,25 +23,25 @@ Partial Class FrmArea
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmArea))
         Dim IdAreaLabel As System.Windows.Forms.Label
         Dim AreaLabel As System.Windows.Forms.Label
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmArea))
         Me.BD_RecursosHumanosDataSet = New ProyectoRRHH.BD_RecursosHumanosDataSet()
         Me.AREABindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.AREATableAdapter = New ProyectoRRHH.BD_RecursosHumanosDataSetTableAdapters.AREATableAdapter()
         Me.TableAdapterManager = New ProyectoRRHH.BD_RecursosHumanosDataSetTableAdapters.TableAdapterManager()
         Me.AREABindingNavigator = New System.Windows.Forms.BindingNavigator(Me.components)
-        Me.BindingNavigatorAddNewItem = New System.Windows.Forms.ToolStripButton()
-        Me.BindingNavigatorCountItem = New System.Windows.Forms.ToolStripLabel()
-        Me.BindingNavigatorDeleteItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorMoveFirstItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorMovePreviousItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorSeparator = New System.Windows.Forms.ToolStripSeparator()
         Me.BindingNavigatorPositionItem = New System.Windows.Forms.ToolStripTextBox()
+        Me.BindingNavigatorCountItem = New System.Windows.Forms.ToolStripLabel()
         Me.BindingNavigatorSeparator1 = New System.Windows.Forms.ToolStripSeparator()
         Me.BindingNavigatorMoveNextItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorMoveLastItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorSeparator2 = New System.Windows.Forms.ToolStripSeparator()
+        Me.BindingNavigatorAddNewItem = New System.Windows.Forms.ToolStripButton()
+        Me.BindingNavigatorDeleteItem = New System.Windows.Forms.ToolStripButton()
         Me.AREABindingNavigatorSaveItem = New System.Windows.Forms.ToolStripButton()
         Me.IdAreaTextBox = New System.Windows.Forms.TextBox()
         Me.AreaTextBox = New System.Windows.Forms.TextBox()
@@ -56,24 +56,6 @@ Partial Class FrmArea
         Me.AREABindingNavigator.SuspendLayout()
         CType(Me.AREADataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
-        '
-        'IdAreaLabel
-        '
-        IdAreaLabel.AutoSize = True
-        IdAreaLabel.Location = New System.Drawing.Point(203, 47)
-        IdAreaLabel.Name = "IdAreaLabel"
-        IdAreaLabel.Size = New System.Drawing.Size(57, 17)
-        IdAreaLabel.TabIndex = 1
-        IdAreaLabel.Text = "Id Area:"
-        '
-        'AreaLabel
-        '
-        AreaLabel.AutoSize = True
-        AreaLabel.Location = New System.Drawing.Point(203, 75)
-        AreaLabel.Name = "AreaLabel"
-        AreaLabel.Size = New System.Drawing.Size(42, 17)
-        AreaLabel.TabIndex = 3
-        AreaLabel.Text = "Area:"
         '
         'BD_RecursosHumanosDataSet
         '
@@ -113,6 +95,7 @@ Partial Class FrmArea
         Me.TableAdapterManager.REGIMEN_SALUDTableAdapter = Nothing
         Me.TableAdapterManager.TIPO_ASISTENCIATableAdapter = Nothing
         Me.TableAdapterManager.TIPO_CONTRATOTableAdapter = Nothing
+        Me.TableAdapterManager.TIPO_PLANILLATableAdapter = Nothing
         Me.TableAdapterManager.TIPO_TRABAJADORTableAdapter = Nothing
         Me.TableAdapterManager.UpdateOrder = ProyectoRRHH.BD_RecursosHumanosDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
         Me.TableAdapterManager.VACACIONESTableAdapter = Nothing
@@ -133,34 +116,9 @@ Partial Class FrmArea
         Me.AREABindingNavigator.MovePreviousItem = Me.BindingNavigatorMovePreviousItem
         Me.AREABindingNavigator.Name = "AREABindingNavigator"
         Me.AREABindingNavigator.PositionItem = Me.BindingNavigatorPositionItem
-        Me.AREABindingNavigator.Size = New System.Drawing.Size(717, 27)
+        Me.AREABindingNavigator.Size = New System.Drawing.Size(709, 27)
         Me.AREABindingNavigator.TabIndex = 0
         Me.AREABindingNavigator.Text = "BindingNavigator1"
-        '
-        'BindingNavigatorAddNewItem
-        '
-        Me.BindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorAddNewItem.Image = CType(resources.GetObject("BindingNavigatorAddNewItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorAddNewItem.Name = "BindingNavigatorAddNewItem"
-        Me.BindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorAddNewItem.Size = New System.Drawing.Size(24, 24)
-        Me.BindingNavigatorAddNewItem.Text = "Agregar nuevo"
-        '
-        'BindingNavigatorCountItem
-        '
-        Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
-        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(48, 24)
-        Me.BindingNavigatorCountItem.Text = "de {0}"
-        Me.BindingNavigatorCountItem.ToolTipText = "Número total de elementos"
-        '
-        'BindingNavigatorDeleteItem
-        '
-        Me.BindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorDeleteItem.Image = CType(resources.GetObject("BindingNavigatorDeleteItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorDeleteItem.Name = "BindingNavigatorDeleteItem"
-        Me.BindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorDeleteItem.Size = New System.Drawing.Size(24, 24)
-        Me.BindingNavigatorDeleteItem.Text = "Eliminar"
         '
         'BindingNavigatorMoveFirstItem
         '
@@ -168,7 +126,7 @@ Partial Class FrmArea
         Me.BindingNavigatorMoveFirstItem.Image = CType(resources.GetObject("BindingNavigatorMoveFirstItem.Image"), System.Drawing.Image)
         Me.BindingNavigatorMoveFirstItem.Name = "BindingNavigatorMoveFirstItem"
         Me.BindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorMoveFirstItem.Size = New System.Drawing.Size(24, 24)
+        Me.BindingNavigatorMoveFirstItem.Size = New System.Drawing.Size(24, 22)
         Me.BindingNavigatorMoveFirstItem.Text = "Mover primero"
         '
         'BindingNavigatorMovePreviousItem
@@ -177,13 +135,13 @@ Partial Class FrmArea
         Me.BindingNavigatorMovePreviousItem.Image = CType(resources.GetObject("BindingNavigatorMovePreviousItem.Image"), System.Drawing.Image)
         Me.BindingNavigatorMovePreviousItem.Name = "BindingNavigatorMovePreviousItem"
         Me.BindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorMovePreviousItem.Size = New System.Drawing.Size(24, 24)
+        Me.BindingNavigatorMovePreviousItem.Size = New System.Drawing.Size(24, 22)
         Me.BindingNavigatorMovePreviousItem.Text = "Mover anterior"
         '
         'BindingNavigatorSeparator
         '
         Me.BindingNavigatorSeparator.Name = "BindingNavigatorSeparator"
-        Me.BindingNavigatorSeparator.Size = New System.Drawing.Size(6, 27)
+        Me.BindingNavigatorSeparator.Size = New System.Drawing.Size(6, 25)
         '
         'BindingNavigatorPositionItem
         '
@@ -194,10 +152,17 @@ Partial Class FrmArea
         Me.BindingNavigatorPositionItem.Text = "0"
         Me.BindingNavigatorPositionItem.ToolTipText = "Posición actual"
         '
+        'BindingNavigatorCountItem
+        '
+        Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
+        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(48, 20)
+        Me.BindingNavigatorCountItem.Text = "de {0}"
+        Me.BindingNavigatorCountItem.ToolTipText = "Número total de elementos"
+        '
         'BindingNavigatorSeparator1
         '
-        Me.BindingNavigatorSeparator1.Name = "BindingNavigatorSeparator1"
-        Me.BindingNavigatorSeparator1.Size = New System.Drawing.Size(6, 27)
+        Me.BindingNavigatorSeparator1.Name = "BindingNavigatorSeparator"
+        Me.BindingNavigatorSeparator1.Size = New System.Drawing.Size(6, 6)
         '
         'BindingNavigatorMoveNextItem
         '
@@ -219,33 +184,69 @@ Partial Class FrmArea
         '
         'BindingNavigatorSeparator2
         '
-        Me.BindingNavigatorSeparator2.Name = "BindingNavigatorSeparator2"
-        Me.BindingNavigatorSeparator2.Size = New System.Drawing.Size(6, 27)
+        Me.BindingNavigatorSeparator2.Name = "BindingNavigatorSeparator"
+        Me.BindingNavigatorSeparator2.Size = New System.Drawing.Size(6, 6)
+        '
+        'BindingNavigatorAddNewItem
+        '
+        Me.BindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.BindingNavigatorAddNewItem.Image = CType(resources.GetObject("BindingNavigatorAddNewItem.Image"), System.Drawing.Image)
+        Me.BindingNavigatorAddNewItem.Name = "BindingNavigatorAddNewItem"
+        Me.BindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = True
+        Me.BindingNavigatorAddNewItem.Size = New System.Drawing.Size(24, 24)
+        Me.BindingNavigatorAddNewItem.Text = "Agregar nuevo"
+        '
+        'BindingNavigatorDeleteItem
+        '
+        Me.BindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.BindingNavigatorDeleteItem.Image = CType(resources.GetObject("BindingNavigatorDeleteItem.Image"), System.Drawing.Image)
+        Me.BindingNavigatorDeleteItem.Name = "BindingNavigatorDeleteItem"
+        Me.BindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = True
+        Me.BindingNavigatorDeleteItem.Size = New System.Drawing.Size(24, 24)
+        Me.BindingNavigatorDeleteItem.Text = "Eliminar"
         '
         'AREABindingNavigatorSaveItem
         '
         Me.AREABindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
         Me.AREABindingNavigatorSaveItem.Image = CType(resources.GetObject("AREABindingNavigatorSaveItem.Image"), System.Drawing.Image)
         Me.AREABindingNavigatorSaveItem.Name = "AREABindingNavigatorSaveItem"
-        Me.AREABindingNavigatorSaveItem.Size = New System.Drawing.Size(24, 24)
+        Me.AREABindingNavigatorSaveItem.Size = New System.Drawing.Size(23, 23)
         Me.AREABindingNavigatorSaveItem.Text = "Guardar datos"
+        '
+        'IdAreaLabel
+        '
+        IdAreaLabel.AutoSize = True
+        IdAreaLabel.Location = New System.Drawing.Point(166, 51)
+        IdAreaLabel.Name = "IdAreaLabel"
+        IdAreaLabel.Size = New System.Drawing.Size(57, 17)
+        IdAreaLabel.TabIndex = 1
+        IdAreaLabel.Text = "Id Area:"
         '
         'IdAreaTextBox
         '
         Me.IdAreaTextBox.BackColor = System.Drawing.SystemColors.Info
         Me.IdAreaTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.AREABindingSource, "IdArea", True))
-        Me.IdAreaTextBox.Location = New System.Drawing.Point(266, 44)
+        Me.IdAreaTextBox.Location = New System.Drawing.Point(229, 48)
         Me.IdAreaTextBox.Name = "IdAreaTextBox"
-        Me.IdAreaTextBox.Size = New System.Drawing.Size(211, 22)
+        Me.IdAreaTextBox.Size = New System.Drawing.Size(251, 22)
         Me.IdAreaTextBox.TabIndex = 2
+        '
+        'AreaLabel
+        '
+        AreaLabel.AutoSize = True
+        AreaLabel.Location = New System.Drawing.Point(166, 79)
+        AreaLabel.Name = "AreaLabel"
+        AreaLabel.Size = New System.Drawing.Size(42, 17)
+        AreaLabel.TabIndex = 3
+        AreaLabel.Text = "Area:"
         '
         'AreaTextBox
         '
         Me.AreaTextBox.BackColor = System.Drawing.SystemColors.Info
         Me.AreaTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.AREABindingSource, "area", True))
-        Me.AreaTextBox.Location = New System.Drawing.Point(266, 72)
+        Me.AreaTextBox.Location = New System.Drawing.Point(229, 76)
         Me.AreaTextBox.Name = "AreaTextBox"
-        Me.AreaTextBox.Size = New System.Drawing.Size(211, 22)
+        Me.AreaTextBox.Size = New System.Drawing.Size(251, 22)
         Me.AreaTextBox.TabIndex = 4
         '
         'AREADataGridView
@@ -255,10 +256,10 @@ Partial Class FrmArea
         Me.AREADataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.AREADataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2})
         Me.AREADataGridView.DataSource = Me.AREABindingSource
-        Me.AREADataGridView.Location = New System.Drawing.Point(95, 129)
+        Me.AREADataGridView.Location = New System.Drawing.Point(169, 117)
         Me.AREADataGridView.Name = "AREADataGridView"
         Me.AREADataGridView.RowTemplate.Height = 24
-        Me.AREADataGridView.Size = New System.Drawing.Size(468, 220)
+        Me.AREADataGridView.Size = New System.Drawing.Size(346, 220)
         Me.AREADataGridView.TabIndex = 5
         '
         'DataGridViewTextBoxColumn1
@@ -267,14 +268,13 @@ Partial Class FrmArea
         Me.DataGridViewTextBoxColumn1.HeaderText = "IdArea"
         Me.DataGridViewTextBoxColumn1.Name = "DataGridViewTextBoxColumn1"
         Me.DataGridViewTextBoxColumn1.ReadOnly = True
-        Me.DataGridViewTextBoxColumn1.Width = 150
         '
         'DataGridViewTextBoxColumn2
         '
         Me.DataGridViewTextBoxColumn2.DataPropertyName = "area"
         Me.DataGridViewTextBoxColumn2.HeaderText = "Area"
         Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
-        Me.DataGridViewTextBoxColumn2.Width = 150
+        Me.DataGridViewTextBoxColumn2.Width = 200
         '
         'FrmArea
         '
@@ -282,7 +282,7 @@ Partial Class FrmArea
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.ClientSize = New System.Drawing.Size(717, 379)
+        Me.ClientSize = New System.Drawing.Size(709, 438)
         Me.Controls.Add(Me.AREADataGridView)
         Me.Controls.Add(IdAreaLabel)
         Me.Controls.Add(Me.IdAreaTextBox)

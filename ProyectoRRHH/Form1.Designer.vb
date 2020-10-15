@@ -57,6 +57,7 @@ Partial Class Form1
         Me.VARIACIONDELToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MANTENEDORPLANILLAToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.REPORTESUELDOSTOTALESToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.REPORTEPLANILLASToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.PAGOSBOLETASToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MANTENEDORPAGOToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.REGISTROToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
@@ -72,6 +73,7 @@ Partial Class Form1
         Me.MEMORANDUMSBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.MEMORANDUMSTableAdapter = New ProyectoRRHH.BD_RecursosHumanosDataSetTableAdapters.MEMORANDUMSTableAdapter()
         Me.TableAdapterManager = New ProyectoRRHH.BD_RecursosHumanosDataSetTableAdapters.TableAdapterManager()
+        Me.TIPODEPLANILLAToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         CType(Me.BD_RecursosHumanosDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.MEMORANDUMSBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -259,7 +261,7 @@ Partial Class Form1
         '
         'PLANILLASToolStripMenuItem
         '
-        Me.PLANILLASToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.DATOSPLANILLAToolStripMenuItem, Me.MANTENEDORPLANILLAToolStripMenuItem, Me.REPORTESUELDOSTOTALESToolStripMenuItem})
+        Me.PLANILLASToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.DATOSPLANILLAToolStripMenuItem, Me.MANTENEDORPLANILLAToolStripMenuItem, Me.REPORTESUELDOSTOTALESToolStripMenuItem, Me.REPORTEPLANILLASToolStripMenuItem, Me.TIPODEPLANILLAToolStripMenuItem})
         Me.PLANILLASToolStripMenuItem.Name = "PLANILLASToolStripMenuItem"
         Me.PLANILLASToolStripMenuItem.Size = New System.Drawing.Size(85, 24)
         Me.PLANILLASToolStripMenuItem.Text = "PLANILLA"
@@ -288,6 +290,12 @@ Partial Class Form1
         Me.REPORTESUELDOSTOTALESToolStripMenuItem.Name = "REPORTESUELDOSTOTALESToolStripMenuItem"
         Me.REPORTESUELDOSTOTALESToolStripMenuItem.Size = New System.Drawing.Size(272, 26)
         Me.REPORTESUELDOSTOTALESToolStripMenuItem.Text = "REPORTE SUELDOS TOTALES"
+        '
+        'REPORTEPLANILLASToolStripMenuItem
+        '
+        Me.REPORTEPLANILLASToolStripMenuItem.Name = "REPORTEPLANILLASToolStripMenuItem"
+        Me.REPORTEPLANILLASToolStripMenuItem.Size = New System.Drawing.Size(272, 26)
+        Me.REPORTEPLANILLASToolStripMenuItem.Text = "REPORTE  PLANILLAS"
         '
         'PAGOSBOLETASToolStripMenuItem
         '
@@ -397,10 +405,17 @@ Partial Class Form1
         Me.TableAdapterManager.REGIMEN_SALUDTableAdapter = Nothing
         Me.TableAdapterManager.TIPO_ASISTENCIATableAdapter = Nothing
         Me.TableAdapterManager.TIPO_CONTRATOTableAdapter = Nothing
+        Me.TableAdapterManager.TIPO_PLANILLATableAdapter = Nothing
         Me.TableAdapterManager.TIPO_TRABAJADORTableAdapter = Nothing
         Me.TableAdapterManager.UpdateOrder = ProyectoRRHH.BD_RecursosHumanosDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
         Me.TableAdapterManager.VACACIONESTableAdapter = Nothing
         Me.TableAdapterManager.VARIACION_SUELDOTableAdapter = Nothing
+        '
+        'TIPODEPLANILLAToolStripMenuItem
+        '
+        Me.TIPODEPLANILLAToolStripMenuItem.Name = "TIPODEPLANILLAToolStripMenuItem"
+        Me.TIPODEPLANILLAToolStripMenuItem.Size = New System.Drawing.Size(272, 26)
+        Me.TIPODEPLANILLAToolStripMenuItem.Text = "TIPO DE PLANILLA"
         '
         'Form1
         '
@@ -472,4 +487,6 @@ Partial Class Form1
     Friend WithEvents MEMORANDUMSBindingSource As BindingSource
     Friend WithEvents MEMORANDUMSTableAdapter As BD_RecursosHumanosDataSetTableAdapters.MEMORANDUMSTableAdapter
     Friend WithEvents TableAdapterManager As BD_RecursosHumanosDataSetTableAdapters.TableAdapterManager
+    Friend WithEvents REPORTEPLANILLASToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents TIPODEPLANILLAToolStripMenuItem As ToolStripMenuItem
 End Class

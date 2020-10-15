@@ -23,27 +23,27 @@ Partial Class FrmAsistencias
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmAsistencias))
         Dim IdAsistenciaLabel As System.Windows.Forms.Label
         Dim IdEmpleadoLabel As System.Windows.Forms.Label
         Dim FechaLabel As System.Windows.Forms.Label
         Dim IdTipoAsistenciaLabel As System.Windows.Forms.Label
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmAsistencias))
         Me.BD_RecursosHumanosDataSet = New ProyectoRRHH.BD_RecursosHumanosDataSet()
         Me.ASISTENCIABindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.ASISTENCIATableAdapter = New ProyectoRRHH.BD_RecursosHumanosDataSetTableAdapters.ASISTENCIATableAdapter()
         Me.TableAdapterManager = New ProyectoRRHH.BD_RecursosHumanosDataSetTableAdapters.TableAdapterManager()
         Me.ASISTENCIABindingNavigator = New System.Windows.Forms.BindingNavigator(Me.components)
-        Me.BindingNavigatorAddNewItem = New System.Windows.Forms.ToolStripButton()
-        Me.BindingNavigatorCountItem = New System.Windows.Forms.ToolStripLabel()
-        Me.BindingNavigatorDeleteItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorMoveFirstItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorMovePreviousItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorSeparator = New System.Windows.Forms.ToolStripSeparator()
         Me.BindingNavigatorPositionItem = New System.Windows.Forms.ToolStripTextBox()
+        Me.BindingNavigatorCountItem = New System.Windows.Forms.ToolStripLabel()
         Me.BindingNavigatorSeparator1 = New System.Windows.Forms.ToolStripSeparator()
         Me.BindingNavigatorMoveNextItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorMoveLastItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorSeparator2 = New System.Windows.Forms.ToolStripSeparator()
+        Me.BindingNavigatorAddNewItem = New System.Windows.Forms.ToolStripButton()
+        Me.BindingNavigatorDeleteItem = New System.Windows.Forms.ToolStripButton()
         Me.ASISTENCIABindingNavigatorSaveItem = New System.Windows.Forms.ToolStripButton()
         Me.IdAsistenciaTextBox = New System.Windows.Forms.TextBox()
         Me.IdEmpleadoTextBox = New System.Windows.Forms.TextBox()
@@ -64,42 +64,6 @@ Partial Class FrmAsistencias
         Me.ASISTENCIABindingNavigator.SuspendLayout()
         CType(Me.ASISTENCIADataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
-        '
-        'IdAsistenciaLabel
-        '
-        IdAsistenciaLabel.AutoSize = True
-        IdAsistenciaLabel.Location = New System.Drawing.Point(12, 46)
-        IdAsistenciaLabel.Name = "IdAsistenciaLabel"
-        IdAsistenciaLabel.Size = New System.Drawing.Size(91, 17)
-        IdAsistenciaLabel.TabIndex = 1
-        IdAsistenciaLabel.Text = "Id Asistencia:"
-        '
-        'IdEmpleadoLabel
-        '
-        IdEmpleadoLabel.AutoSize = True
-        IdEmpleadoLabel.Location = New System.Drawing.Point(12, 74)
-        IdEmpleadoLabel.Name = "IdEmpleadoLabel"
-        IdEmpleadoLabel.Size = New System.Drawing.Size(90, 17)
-        IdEmpleadoLabel.TabIndex = 3
-        IdEmpleadoLabel.Text = "Id Empleado:"
-        '
-        'FechaLabel
-        '
-        FechaLabel.AutoSize = True
-        FechaLabel.Location = New System.Drawing.Point(12, 103)
-        FechaLabel.Name = "FechaLabel"
-        FechaLabel.Size = New System.Drawing.Size(51, 17)
-        FechaLabel.TabIndex = 5
-        FechaLabel.Text = "Fecha:"
-        '
-        'IdTipoAsistenciaLabel
-        '
-        IdTipoAsistenciaLabel.AutoSize = True
-        IdTipoAsistenciaLabel.Location = New System.Drawing.Point(12, 130)
-        IdTipoAsistenciaLabel.Name = "IdTipoAsistenciaLabel"
-        IdTipoAsistenciaLabel.Size = New System.Drawing.Size(123, 17)
-        IdTipoAsistenciaLabel.TabIndex = 7
-        IdTipoAsistenciaLabel.Text = "Id Tipo Asistencia:"
         '
         'BD_RecursosHumanosDataSet
         '
@@ -139,6 +103,7 @@ Partial Class FrmAsistencias
         Me.TableAdapterManager.REGIMEN_SALUDTableAdapter = Nothing
         Me.TableAdapterManager.TIPO_ASISTENCIATableAdapter = Nothing
         Me.TableAdapterManager.TIPO_CONTRATOTableAdapter = Nothing
+        Me.TableAdapterManager.TIPO_PLANILLATableAdapter = Nothing
         Me.TableAdapterManager.TIPO_TRABAJADORTableAdapter = Nothing
         Me.TableAdapterManager.UpdateOrder = ProyectoRRHH.BD_RecursosHumanosDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
         Me.TableAdapterManager.VACACIONESTableAdapter = Nothing
@@ -159,34 +124,9 @@ Partial Class FrmAsistencias
         Me.ASISTENCIABindingNavigator.MovePreviousItem = Me.BindingNavigatorMovePreviousItem
         Me.ASISTENCIABindingNavigator.Name = "ASISTENCIABindingNavigator"
         Me.ASISTENCIABindingNavigator.PositionItem = Me.BindingNavigatorPositionItem
-        Me.ASISTENCIABindingNavigator.Size = New System.Drawing.Size(1243, 27)
+        Me.ASISTENCIABindingNavigator.Size = New System.Drawing.Size(871, 27)
         Me.ASISTENCIABindingNavigator.TabIndex = 0
         Me.ASISTENCIABindingNavigator.Text = "BindingNavigator1"
-        '
-        'BindingNavigatorAddNewItem
-        '
-        Me.BindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorAddNewItem.Image = CType(resources.GetObject("BindingNavigatorAddNewItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorAddNewItem.Name = "BindingNavigatorAddNewItem"
-        Me.BindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorAddNewItem.Size = New System.Drawing.Size(24, 24)
-        Me.BindingNavigatorAddNewItem.Text = "Agregar nuevo"
-        '
-        'BindingNavigatorCountItem
-        '
-        Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
-        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(48, 24)
-        Me.BindingNavigatorCountItem.Text = "de {0}"
-        Me.BindingNavigatorCountItem.ToolTipText = "Número total de elementos"
-        '
-        'BindingNavigatorDeleteItem
-        '
-        Me.BindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorDeleteItem.Image = CType(resources.GetObject("BindingNavigatorDeleteItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorDeleteItem.Name = "BindingNavigatorDeleteItem"
-        Me.BindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorDeleteItem.Size = New System.Drawing.Size(24, 24)
-        Me.BindingNavigatorDeleteItem.Text = "Eliminar"
         '
         'BindingNavigatorMoveFirstItem
         '
@@ -194,7 +134,7 @@ Partial Class FrmAsistencias
         Me.BindingNavigatorMoveFirstItem.Image = CType(resources.GetObject("BindingNavigatorMoveFirstItem.Image"), System.Drawing.Image)
         Me.BindingNavigatorMoveFirstItem.Name = "BindingNavigatorMoveFirstItem"
         Me.BindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorMoveFirstItem.Size = New System.Drawing.Size(24, 24)
+        Me.BindingNavigatorMoveFirstItem.Size = New System.Drawing.Size(24, 22)
         Me.BindingNavigatorMoveFirstItem.Text = "Mover primero"
         '
         'BindingNavigatorMovePreviousItem
@@ -203,13 +143,13 @@ Partial Class FrmAsistencias
         Me.BindingNavigatorMovePreviousItem.Image = CType(resources.GetObject("BindingNavigatorMovePreviousItem.Image"), System.Drawing.Image)
         Me.BindingNavigatorMovePreviousItem.Name = "BindingNavigatorMovePreviousItem"
         Me.BindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorMovePreviousItem.Size = New System.Drawing.Size(24, 24)
+        Me.BindingNavigatorMovePreviousItem.Size = New System.Drawing.Size(24, 22)
         Me.BindingNavigatorMovePreviousItem.Text = "Mover anterior"
         '
         'BindingNavigatorSeparator
         '
         Me.BindingNavigatorSeparator.Name = "BindingNavigatorSeparator"
-        Me.BindingNavigatorSeparator.Size = New System.Drawing.Size(6, 27)
+        Me.BindingNavigatorSeparator.Size = New System.Drawing.Size(6, 25)
         '
         'BindingNavigatorPositionItem
         '
@@ -220,10 +160,17 @@ Partial Class FrmAsistencias
         Me.BindingNavigatorPositionItem.Text = "0"
         Me.BindingNavigatorPositionItem.ToolTipText = "Posición actual"
         '
+        'BindingNavigatorCountItem
+        '
+        Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
+        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(48, 20)
+        Me.BindingNavigatorCountItem.Text = "de {0}"
+        Me.BindingNavigatorCountItem.ToolTipText = "Número total de elementos"
+        '
         'BindingNavigatorSeparator1
         '
-        Me.BindingNavigatorSeparator1.Name = "BindingNavigatorSeparator1"
-        Me.BindingNavigatorSeparator1.Size = New System.Drawing.Size(6, 27)
+        Me.BindingNavigatorSeparator1.Name = "BindingNavigatorSeparator"
+        Me.BindingNavigatorSeparator1.Size = New System.Drawing.Size(6, 6)
         '
         'BindingNavigatorMoveNextItem
         '
@@ -245,51 +192,104 @@ Partial Class FrmAsistencias
         '
         'BindingNavigatorSeparator2
         '
-        Me.BindingNavigatorSeparator2.Name = "BindingNavigatorSeparator2"
-        Me.BindingNavigatorSeparator2.Size = New System.Drawing.Size(6, 27)
+        Me.BindingNavigatorSeparator2.Name = "BindingNavigatorSeparator"
+        Me.BindingNavigatorSeparator2.Size = New System.Drawing.Size(6, 6)
+        '
+        'BindingNavigatorAddNewItem
+        '
+        Me.BindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.BindingNavigatorAddNewItem.Image = CType(resources.GetObject("BindingNavigatorAddNewItem.Image"), System.Drawing.Image)
+        Me.BindingNavigatorAddNewItem.Name = "BindingNavigatorAddNewItem"
+        Me.BindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = True
+        Me.BindingNavigatorAddNewItem.Size = New System.Drawing.Size(24, 24)
+        Me.BindingNavigatorAddNewItem.Text = "Agregar nuevo"
+        '
+        'BindingNavigatorDeleteItem
+        '
+        Me.BindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.BindingNavigatorDeleteItem.Image = CType(resources.GetObject("BindingNavigatorDeleteItem.Image"), System.Drawing.Image)
+        Me.BindingNavigatorDeleteItem.Name = "BindingNavigatorDeleteItem"
+        Me.BindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = True
+        Me.BindingNavigatorDeleteItem.Size = New System.Drawing.Size(24, 24)
+        Me.BindingNavigatorDeleteItem.Text = "Eliminar"
         '
         'ASISTENCIABindingNavigatorSaveItem
         '
         Me.ASISTENCIABindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
         Me.ASISTENCIABindingNavigatorSaveItem.Image = CType(resources.GetObject("ASISTENCIABindingNavigatorSaveItem.Image"), System.Drawing.Image)
         Me.ASISTENCIABindingNavigatorSaveItem.Name = "ASISTENCIABindingNavigatorSaveItem"
-        Me.ASISTENCIABindingNavigatorSaveItem.Size = New System.Drawing.Size(24, 24)
+        Me.ASISTENCIABindingNavigatorSaveItem.Size = New System.Drawing.Size(23, 23)
         Me.ASISTENCIABindingNavigatorSaveItem.Text = "Guardar datos"
+        '
+        'IdAsistenciaLabel
+        '
+        IdAsistenciaLabel.AutoSize = True
+        IdAsistenciaLabel.Location = New System.Drawing.Point(12, 41)
+        IdAsistenciaLabel.Name = "IdAsistenciaLabel"
+        IdAsistenciaLabel.Size = New System.Drawing.Size(91, 17)
+        IdAsistenciaLabel.TabIndex = 1
+        IdAsistenciaLabel.Text = "Id Asistencia:"
         '
         'IdAsistenciaTextBox
         '
         Me.IdAsistenciaTextBox.BackColor = System.Drawing.SystemColors.Info
         Me.IdAsistenciaTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ASISTENCIABindingSource, "IdAsistencia", True))
-        Me.IdAsistenciaTextBox.Location = New System.Drawing.Point(141, 43)
+        Me.IdAsistenciaTextBox.Location = New System.Drawing.Point(141, 38)
         Me.IdAsistenciaTextBox.Name = "IdAsistenciaTextBox"
-        Me.IdAsistenciaTextBox.Size = New System.Drawing.Size(267, 22)
+        Me.IdAsistenciaTextBox.Size = New System.Drawing.Size(224, 22)
         Me.IdAsistenciaTextBox.TabIndex = 2
+        '
+        'IdEmpleadoLabel
+        '
+        IdEmpleadoLabel.AutoSize = True
+        IdEmpleadoLabel.Location = New System.Drawing.Point(12, 69)
+        IdEmpleadoLabel.Name = "IdEmpleadoLabel"
+        IdEmpleadoLabel.Size = New System.Drawing.Size(90, 17)
+        IdEmpleadoLabel.TabIndex = 3
+        IdEmpleadoLabel.Text = "Id Empleado:"
         '
         'IdEmpleadoTextBox
         '
         Me.IdEmpleadoTextBox.BackColor = System.Drawing.SystemColors.Info
         Me.IdEmpleadoTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ASISTENCIABindingSource, "IdEmpleado", True))
-        Me.IdEmpleadoTextBox.Location = New System.Drawing.Point(141, 71)
+        Me.IdEmpleadoTextBox.Location = New System.Drawing.Point(141, 66)
         Me.IdEmpleadoTextBox.Name = "IdEmpleadoTextBox"
-        Me.IdEmpleadoTextBox.Size = New System.Drawing.Size(267, 22)
+        Me.IdEmpleadoTextBox.Size = New System.Drawing.Size(224, 22)
         Me.IdEmpleadoTextBox.TabIndex = 4
+        '
+        'FechaLabel
+        '
+        FechaLabel.AutoSize = True
+        FechaLabel.Location = New System.Drawing.Point(427, 43)
+        FechaLabel.Name = "FechaLabel"
+        FechaLabel.Size = New System.Drawing.Size(51, 17)
+        FechaLabel.TabIndex = 5
+        FechaLabel.Text = "Fecha:"
         '
         'FechaDateTimePicker
         '
-        Me.FechaDateTimePicker.CalendarMonthBackground = System.Drawing.SystemColors.Info
         Me.FechaDateTimePicker.DataBindings.Add(New System.Windows.Forms.Binding("Value", Me.ASISTENCIABindingSource, "fecha", True))
-        Me.FechaDateTimePicker.Location = New System.Drawing.Point(141, 99)
+        Me.FechaDateTimePicker.Location = New System.Drawing.Point(556, 39)
         Me.FechaDateTimePicker.Name = "FechaDateTimePicker"
-        Me.FechaDateTimePicker.Size = New System.Drawing.Size(267, 22)
+        Me.FechaDateTimePicker.Size = New System.Drawing.Size(271, 22)
         Me.FechaDateTimePicker.TabIndex = 6
+        '
+        'IdTipoAsistenciaLabel
+        '
+        IdTipoAsistenciaLabel.AutoSize = True
+        IdTipoAsistenciaLabel.Location = New System.Drawing.Point(427, 70)
+        IdTipoAsistenciaLabel.Name = "IdTipoAsistenciaLabel"
+        IdTipoAsistenciaLabel.Size = New System.Drawing.Size(123, 17)
+        IdTipoAsistenciaLabel.TabIndex = 7
+        IdTipoAsistenciaLabel.Text = "Id Tipo Asistencia:"
         '
         'IdTipoAsistenciaTextBox
         '
         Me.IdTipoAsistenciaTextBox.BackColor = System.Drawing.SystemColors.Info
         Me.IdTipoAsistenciaTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ASISTENCIABindingSource, "IdTipoAsistencia", True))
-        Me.IdTipoAsistenciaTextBox.Location = New System.Drawing.Point(141, 127)
+        Me.IdTipoAsistenciaTextBox.Location = New System.Drawing.Point(556, 67)
         Me.IdTipoAsistenciaTextBox.Name = "IdTipoAsistenciaTextBox"
-        Me.IdTipoAsistenciaTextBox.Size = New System.Drawing.Size(267, 22)
+        Me.IdTipoAsistenciaTextBox.Size = New System.Drawing.Size(271, 22)
         Me.IdTipoAsistenciaTextBox.TabIndex = 8
         '
         'ASISTENCIADataGridView
@@ -299,10 +299,10 @@ Partial Class FrmAsistencias
         Me.ASISTENCIADataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.ASISTENCIADataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3, Me.DataGridViewTextBoxColumn4})
         Me.ASISTENCIADataGridView.DataSource = Me.ASISTENCIABindingSource
-        Me.ASISTENCIADataGridView.Location = New System.Drawing.Point(432, 43)
+        Me.ASISTENCIADataGridView.Location = New System.Drawing.Point(127, 147)
         Me.ASISTENCIADataGridView.Name = "ASISTENCIADataGridView"
         Me.ASISTENCIADataGridView.RowTemplate.Height = 24
-        Me.ASISTENCIADataGridView.Size = New System.Drawing.Size(593, 249)
+        Me.ASISTENCIADataGridView.Size = New System.Drawing.Size(545, 220)
         Me.ASISTENCIADataGridView.TabIndex = 9
         '
         'DataGridViewTextBoxColumn1
@@ -321,8 +321,9 @@ Partial Class FrmAsistencias
         'DataGridViewTextBoxColumn3
         '
         Me.DataGridViewTextBoxColumn3.DataPropertyName = "fecha"
-        Me.DataGridViewTextBoxColumn3.HeaderText = "fecha"
+        Me.DataGridViewTextBoxColumn3.HeaderText = "Fecha"
         Me.DataGridViewTextBoxColumn3.Name = "DataGridViewTextBoxColumn3"
+        Me.DataGridViewTextBoxColumn3.Width = 150
         '
         'DataGridViewTextBoxColumn4
         '
@@ -337,7 +338,7 @@ Partial Class FrmAsistencias
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.ClientSize = New System.Drawing.Size(1243, 383)
+        Me.ClientSize = New System.Drawing.Size(871, 460)
         Me.Controls.Add(Me.ASISTENCIADataGridView)
         Me.Controls.Add(IdAsistenciaLabel)
         Me.Controls.Add(Me.IdAsistenciaTextBox)

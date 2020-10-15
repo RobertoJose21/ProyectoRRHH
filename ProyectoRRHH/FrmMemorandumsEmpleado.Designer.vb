@@ -23,6 +23,7 @@ Partial Class FrmMemorandumsEmpleado
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmMemorandumsEmpleado))
         Me.ListView1 = New System.Windows.Forms.ListView()
         Me.ColumnHeader1 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ColumnHeader2 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
@@ -30,11 +31,11 @@ Partial Class FrmMemorandumsEmpleado
         Me.ColumnHeader4 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.Label1 = New System.Windows.Forms.Label()
         Me.ComboBox1 = New System.Windows.Forms.ComboBox()
-        Me.BD_RecursosHumanosDataSet = New ProyectoRRHH.BD_RecursosHumanosDataSet()
         Me.VApellidosyNombresEmpleadosBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.BD_RecursosHumanosDataSet = New ProyectoRRHH.BD_RecursosHumanosDataSet()
         Me.V_ApellidosyNombresEmpleadosTableAdapter = New ProyectoRRHH.BD_RecursosHumanosDataSetTableAdapters.V_ApellidosyNombresEmpleadosTableAdapter()
-        CType(Me.BD_RecursosHumanosDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.VApellidosyNombresEmpleadosBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.BD_RecursosHumanosDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'ListView1
@@ -90,15 +91,15 @@ Partial Class FrmMemorandumsEmpleado
         Me.ComboBox1.TabIndex = 2
         Me.ComboBox1.ValueMember = "Empleados"
         '
-        'BD_RecursosHumanosDataSet
-        '
-        Me.BD_RecursosHumanosDataSet.DataSetName = "BD_RecursosHumanosDataSet"
-        Me.BD_RecursosHumanosDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
         'VApellidosyNombresEmpleadosBindingSource
         '
         Me.VApellidosyNombresEmpleadosBindingSource.DataMember = "V_ApellidosyNombresEmpleados"
         Me.VApellidosyNombresEmpleadosBindingSource.DataSource = Me.BD_RecursosHumanosDataSet
+        '
+        'BD_RecursosHumanosDataSet
+        '
+        Me.BD_RecursosHumanosDataSet.DataSetName = "BD_RecursosHumanosDataSet"
+        Me.BD_RecursosHumanosDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'V_ApellidosyNombresEmpleadosTableAdapter
         '
@@ -108,14 +109,16 @@ Partial Class FrmMemorandumsEmpleado
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
+        Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(880, 546)
         Me.Controls.Add(Me.ComboBox1)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.ListView1)
         Me.Name = "FrmMemorandumsEmpleado"
         Me.Text = "MemorandumsEmpleado"
-        CType(Me.BD_RecursosHumanosDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.VApellidosyNombresEmpleadosBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.BD_RecursosHumanosDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

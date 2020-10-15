@@ -23,26 +23,26 @@ Partial Class FrmBeneficioLaboral
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmBeneficioLaboral))
         Dim IdBeneficioLabel As System.Windows.Forms.Label
         Dim TipoBeneficioLabel As System.Windows.Forms.Label
         Dim MontoBeneficioLabel As System.Windows.Forms.Label
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmBeneficioLaboral))
         Me.BD_RecursosHumanosDataSet = New ProyectoRRHH.BD_RecursosHumanosDataSet()
         Me.BENEFICIO_LABORALBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.BENEFICIO_LABORALTableAdapter = New ProyectoRRHH.BD_RecursosHumanosDataSetTableAdapters.BENEFICIO_LABORALTableAdapter()
         Me.TableAdapterManager = New ProyectoRRHH.BD_RecursosHumanosDataSetTableAdapters.TableAdapterManager()
         Me.BENEFICIO_LABORALBindingNavigator = New System.Windows.Forms.BindingNavigator(Me.components)
-        Me.BindingNavigatorAddNewItem = New System.Windows.Forms.ToolStripButton()
-        Me.BindingNavigatorCountItem = New System.Windows.Forms.ToolStripLabel()
-        Me.BindingNavigatorDeleteItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorMoveFirstItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorMovePreviousItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorSeparator = New System.Windows.Forms.ToolStripSeparator()
         Me.BindingNavigatorPositionItem = New System.Windows.Forms.ToolStripTextBox()
+        Me.BindingNavigatorCountItem = New System.Windows.Forms.ToolStripLabel()
         Me.BindingNavigatorSeparator1 = New System.Windows.Forms.ToolStripSeparator()
         Me.BindingNavigatorMoveNextItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorMoveLastItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorSeparator2 = New System.Windows.Forms.ToolStripSeparator()
+        Me.BindingNavigatorAddNewItem = New System.Windows.Forms.ToolStripButton()
+        Me.BindingNavigatorDeleteItem = New System.Windows.Forms.ToolStripButton()
         Me.BENEFICIO_LABORALBindingNavigatorSaveItem = New System.Windows.Forms.ToolStripButton()
         Me.IdBeneficioTextBox = New System.Windows.Forms.TextBox()
         Me.TipoBeneficioTextBox = New System.Windows.Forms.TextBox()
@@ -60,33 +60,6 @@ Partial Class FrmBeneficioLaboral
         Me.BENEFICIO_LABORALBindingNavigator.SuspendLayout()
         CType(Me.BENEFICIO_LABORALDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
-        '
-        'IdBeneficioLabel
-        '
-        IdBeneficioLabel.AutoSize = True
-        IdBeneficioLabel.Location = New System.Drawing.Point(324, 42)
-        IdBeneficioLabel.Name = "IdBeneficioLabel"
-        IdBeneficioLabel.Size = New System.Drawing.Size(85, 17)
-        IdBeneficioLabel.TabIndex = 1
-        IdBeneficioLabel.Text = "Id Beneficio:"
-        '
-        'TipoBeneficioLabel
-        '
-        TipoBeneficioLabel.AutoSize = True
-        TipoBeneficioLabel.Location = New System.Drawing.Point(324, 70)
-        TipoBeneficioLabel.Name = "TipoBeneficioLabel"
-        TipoBeneficioLabel.Size = New System.Drawing.Size(102, 17)
-        TipoBeneficioLabel.TabIndex = 3
-        TipoBeneficioLabel.Text = "Tipo Beneficio:"
-        '
-        'MontoBeneficioLabel
-        '
-        MontoBeneficioLabel.AutoSize = True
-        MontoBeneficioLabel.Location = New System.Drawing.Point(324, 98)
-        MontoBeneficioLabel.Name = "MontoBeneficioLabel"
-        MontoBeneficioLabel.Size = New System.Drawing.Size(113, 17)
-        MontoBeneficioLabel.TabIndex = 5
-        MontoBeneficioLabel.Text = "Monto Beneficio:"
         '
         'BD_RecursosHumanosDataSet
         '
@@ -126,6 +99,7 @@ Partial Class FrmBeneficioLaboral
         Me.TableAdapterManager.REGIMEN_SALUDTableAdapter = Nothing
         Me.TableAdapterManager.TIPO_ASISTENCIATableAdapter = Nothing
         Me.TableAdapterManager.TIPO_CONTRATOTableAdapter = Nothing
+        Me.TableAdapterManager.TIPO_PLANILLATableAdapter = Nothing
         Me.TableAdapterManager.TIPO_TRABAJADORTableAdapter = Nothing
         Me.TableAdapterManager.UpdateOrder = ProyectoRRHH.BD_RecursosHumanosDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
         Me.TableAdapterManager.VACACIONESTableAdapter = Nothing
@@ -146,34 +120,9 @@ Partial Class FrmBeneficioLaboral
         Me.BENEFICIO_LABORALBindingNavigator.MovePreviousItem = Me.BindingNavigatorMovePreviousItem
         Me.BENEFICIO_LABORALBindingNavigator.Name = "BENEFICIO_LABORALBindingNavigator"
         Me.BENEFICIO_LABORALBindingNavigator.PositionItem = Me.BindingNavigatorPositionItem
-        Me.BENEFICIO_LABORALBindingNavigator.Size = New System.Drawing.Size(1075, 27)
+        Me.BENEFICIO_LABORALBindingNavigator.Size = New System.Drawing.Size(920, 27)
         Me.BENEFICIO_LABORALBindingNavigator.TabIndex = 0
         Me.BENEFICIO_LABORALBindingNavigator.Text = "BindingNavigator1"
-        '
-        'BindingNavigatorAddNewItem
-        '
-        Me.BindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorAddNewItem.Image = CType(resources.GetObject("BindingNavigatorAddNewItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorAddNewItem.Name = "BindingNavigatorAddNewItem"
-        Me.BindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorAddNewItem.Size = New System.Drawing.Size(24, 24)
-        Me.BindingNavigatorAddNewItem.Text = "Agregar nuevo"
-        '
-        'BindingNavigatorCountItem
-        '
-        Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
-        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(48, 24)
-        Me.BindingNavigatorCountItem.Text = "de {0}"
-        Me.BindingNavigatorCountItem.ToolTipText = "Número total de elementos"
-        '
-        'BindingNavigatorDeleteItem
-        '
-        Me.BindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorDeleteItem.Image = CType(resources.GetObject("BindingNavigatorDeleteItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorDeleteItem.Name = "BindingNavigatorDeleteItem"
-        Me.BindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorDeleteItem.Size = New System.Drawing.Size(24, 24)
-        Me.BindingNavigatorDeleteItem.Text = "Eliminar"
         '
         'BindingNavigatorMoveFirstItem
         '
@@ -181,7 +130,7 @@ Partial Class FrmBeneficioLaboral
         Me.BindingNavigatorMoveFirstItem.Image = CType(resources.GetObject("BindingNavigatorMoveFirstItem.Image"), System.Drawing.Image)
         Me.BindingNavigatorMoveFirstItem.Name = "BindingNavigatorMoveFirstItem"
         Me.BindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorMoveFirstItem.Size = New System.Drawing.Size(24, 24)
+        Me.BindingNavigatorMoveFirstItem.Size = New System.Drawing.Size(24, 22)
         Me.BindingNavigatorMoveFirstItem.Text = "Mover primero"
         '
         'BindingNavigatorMovePreviousItem
@@ -190,13 +139,13 @@ Partial Class FrmBeneficioLaboral
         Me.BindingNavigatorMovePreviousItem.Image = CType(resources.GetObject("BindingNavigatorMovePreviousItem.Image"), System.Drawing.Image)
         Me.BindingNavigatorMovePreviousItem.Name = "BindingNavigatorMovePreviousItem"
         Me.BindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorMovePreviousItem.Size = New System.Drawing.Size(24, 24)
+        Me.BindingNavigatorMovePreviousItem.Size = New System.Drawing.Size(24, 22)
         Me.BindingNavigatorMovePreviousItem.Text = "Mover anterior"
         '
         'BindingNavigatorSeparator
         '
         Me.BindingNavigatorSeparator.Name = "BindingNavigatorSeparator"
-        Me.BindingNavigatorSeparator.Size = New System.Drawing.Size(6, 27)
+        Me.BindingNavigatorSeparator.Size = New System.Drawing.Size(6, 25)
         '
         'BindingNavigatorPositionItem
         '
@@ -207,10 +156,17 @@ Partial Class FrmBeneficioLaboral
         Me.BindingNavigatorPositionItem.Text = "0"
         Me.BindingNavigatorPositionItem.ToolTipText = "Posición actual"
         '
+        'BindingNavigatorCountItem
+        '
+        Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
+        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(48, 20)
+        Me.BindingNavigatorCountItem.Text = "de {0}"
+        Me.BindingNavigatorCountItem.ToolTipText = "Número total de elementos"
+        '
         'BindingNavigatorSeparator1
         '
-        Me.BindingNavigatorSeparator1.Name = "BindingNavigatorSeparator1"
-        Me.BindingNavigatorSeparator1.Size = New System.Drawing.Size(6, 27)
+        Me.BindingNavigatorSeparator1.Name = "BindingNavigatorSeparator"
+        Me.BindingNavigatorSeparator1.Size = New System.Drawing.Size(6, 6)
         '
         'BindingNavigatorMoveNextItem
         '
@@ -232,42 +188,87 @@ Partial Class FrmBeneficioLaboral
         '
         'BindingNavigatorSeparator2
         '
-        Me.BindingNavigatorSeparator2.Name = "BindingNavigatorSeparator2"
-        Me.BindingNavigatorSeparator2.Size = New System.Drawing.Size(6, 27)
+        Me.BindingNavigatorSeparator2.Name = "BindingNavigatorSeparator"
+        Me.BindingNavigatorSeparator2.Size = New System.Drawing.Size(6, 6)
+        '
+        'BindingNavigatorAddNewItem
+        '
+        Me.BindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.BindingNavigatorAddNewItem.Image = CType(resources.GetObject("BindingNavigatorAddNewItem.Image"), System.Drawing.Image)
+        Me.BindingNavigatorAddNewItem.Name = "BindingNavigatorAddNewItem"
+        Me.BindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = True
+        Me.BindingNavigatorAddNewItem.Size = New System.Drawing.Size(24, 24)
+        Me.BindingNavigatorAddNewItem.Text = "Agregar nuevo"
+        '
+        'BindingNavigatorDeleteItem
+        '
+        Me.BindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.BindingNavigatorDeleteItem.Image = CType(resources.GetObject("BindingNavigatorDeleteItem.Image"), System.Drawing.Image)
+        Me.BindingNavigatorDeleteItem.Name = "BindingNavigatorDeleteItem"
+        Me.BindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = True
+        Me.BindingNavigatorDeleteItem.Size = New System.Drawing.Size(24, 24)
+        Me.BindingNavigatorDeleteItem.Text = "Eliminar"
         '
         'BENEFICIO_LABORALBindingNavigatorSaveItem
         '
         Me.BENEFICIO_LABORALBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
         Me.BENEFICIO_LABORALBindingNavigatorSaveItem.Image = CType(resources.GetObject("BENEFICIO_LABORALBindingNavigatorSaveItem.Image"), System.Drawing.Image)
         Me.BENEFICIO_LABORALBindingNavigatorSaveItem.Name = "BENEFICIO_LABORALBindingNavigatorSaveItem"
-        Me.BENEFICIO_LABORALBindingNavigatorSaveItem.Size = New System.Drawing.Size(24, 24)
+        Me.BENEFICIO_LABORALBindingNavigatorSaveItem.Size = New System.Drawing.Size(23, 23)
         Me.BENEFICIO_LABORALBindingNavigatorSaveItem.Text = "Guardar datos"
+        '
+        'IdBeneficioLabel
+        '
+        IdBeneficioLabel.AutoSize = True
+        IdBeneficioLabel.Location = New System.Drawing.Point(12, 116)
+        IdBeneficioLabel.Name = "IdBeneficioLabel"
+        IdBeneficioLabel.Size = New System.Drawing.Size(85, 17)
+        IdBeneficioLabel.TabIndex = 1
+        IdBeneficioLabel.Text = "Id Beneficio:"
         '
         'IdBeneficioTextBox
         '
         Me.IdBeneficioTextBox.BackColor = System.Drawing.SystemColors.Info
         Me.IdBeneficioTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.BENEFICIO_LABORALBindingSource, "IdBeneficio", True))
-        Me.IdBeneficioTextBox.Location = New System.Drawing.Point(443, 39)
+        Me.IdBeneficioTextBox.Location = New System.Drawing.Point(131, 113)
         Me.IdBeneficioTextBox.Name = "IdBeneficioTextBox"
-        Me.IdBeneficioTextBox.Size = New System.Drawing.Size(230, 22)
+        Me.IdBeneficioTextBox.Size = New System.Drawing.Size(183, 22)
         Me.IdBeneficioTextBox.TabIndex = 2
+        '
+        'TipoBeneficioLabel
+        '
+        TipoBeneficioLabel.AutoSize = True
+        TipoBeneficioLabel.Location = New System.Drawing.Point(12, 144)
+        TipoBeneficioLabel.Name = "TipoBeneficioLabel"
+        TipoBeneficioLabel.Size = New System.Drawing.Size(102, 17)
+        TipoBeneficioLabel.TabIndex = 3
+        TipoBeneficioLabel.Text = "Tipo Beneficio:"
         '
         'TipoBeneficioTextBox
         '
         Me.TipoBeneficioTextBox.BackColor = System.Drawing.SystemColors.Info
         Me.TipoBeneficioTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.BENEFICIO_LABORALBindingSource, "tipoBeneficio", True))
-        Me.TipoBeneficioTextBox.Location = New System.Drawing.Point(443, 67)
+        Me.TipoBeneficioTextBox.Location = New System.Drawing.Point(131, 141)
         Me.TipoBeneficioTextBox.Name = "TipoBeneficioTextBox"
-        Me.TipoBeneficioTextBox.Size = New System.Drawing.Size(230, 22)
+        Me.TipoBeneficioTextBox.Size = New System.Drawing.Size(183, 22)
         Me.TipoBeneficioTextBox.TabIndex = 4
+        '
+        'MontoBeneficioLabel
+        '
+        MontoBeneficioLabel.AutoSize = True
+        MontoBeneficioLabel.Location = New System.Drawing.Point(12, 172)
+        MontoBeneficioLabel.Name = "MontoBeneficioLabel"
+        MontoBeneficioLabel.Size = New System.Drawing.Size(113, 17)
+        MontoBeneficioLabel.TabIndex = 5
+        MontoBeneficioLabel.Text = "Monto Beneficio:"
         '
         'MontoBeneficioTextBox
         '
         Me.MontoBeneficioTextBox.BackColor = System.Drawing.SystemColors.Info
         Me.MontoBeneficioTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.BENEFICIO_LABORALBindingSource, "montoBeneficio", True))
-        Me.MontoBeneficioTextBox.Location = New System.Drawing.Point(443, 95)
+        Me.MontoBeneficioTextBox.Location = New System.Drawing.Point(131, 169)
         Me.MontoBeneficioTextBox.Name = "MontoBeneficioTextBox"
-        Me.MontoBeneficioTextBox.Size = New System.Drawing.Size(230, 22)
+        Me.MontoBeneficioTextBox.Size = New System.Drawing.Size(183, 22)
         Me.MontoBeneficioTextBox.TabIndex = 6
         '
         'BENEFICIO_LABORALDataGridView
@@ -277,10 +278,10 @@ Partial Class FrmBeneficioLaboral
         Me.BENEFICIO_LABORALDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.BENEFICIO_LABORALDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3})
         Me.BENEFICIO_LABORALDataGridView.DataSource = Me.BENEFICIO_LABORALBindingSource
-        Me.BENEFICIO_LABORALDataGridView.Location = New System.Drawing.Point(244, 132)
+        Me.BENEFICIO_LABORALDataGridView.Location = New System.Drawing.Point(345, 76)
         Me.BENEFICIO_LABORALDataGridView.Name = "BENEFICIO_LABORALDataGridView"
         Me.BENEFICIO_LABORALDataGridView.RowTemplate.Height = 24
-        Me.BENEFICIO_LABORALDataGridView.Size = New System.Drawing.Size(521, 228)
+        Me.BENEFICIO_LABORALDataGridView.Size = New System.Drawing.Size(493, 220)
         Me.BENEFICIO_LABORALDataGridView.TabIndex = 7
         '
         'DataGridViewTextBoxColumn1
@@ -293,14 +294,14 @@ Partial Class FrmBeneficioLaboral
         'DataGridViewTextBoxColumn2
         '
         Me.DataGridViewTextBoxColumn2.DataPropertyName = "tipoBeneficio"
-        Me.DataGridViewTextBoxColumn2.HeaderText = "tipoBeneficio"
+        Me.DataGridViewTextBoxColumn2.HeaderText = "TipoBeneficio"
         Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
         Me.DataGridViewTextBoxColumn2.Width = 150
         '
         'DataGridViewTextBoxColumn3
         '
         Me.DataGridViewTextBoxColumn3.DataPropertyName = "montoBeneficio"
-        Me.DataGridViewTextBoxColumn3.HeaderText = "montoBeneficio"
+        Me.DataGridViewTextBoxColumn3.HeaderText = "MontoBeneficio"
         Me.DataGridViewTextBoxColumn3.Name = "DataGridViewTextBoxColumn3"
         Me.DataGridViewTextBoxColumn3.Width = 150
         '
@@ -310,7 +311,7 @@ Partial Class FrmBeneficioLaboral
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.ClientSize = New System.Drawing.Size(1075, 398)
+        Me.ClientSize = New System.Drawing.Size(920, 448)
         Me.Controls.Add(Me.BENEFICIO_LABORALDataGridView)
         Me.Controls.Add(IdBeneficioLabel)
         Me.Controls.Add(Me.IdBeneficioTextBox)

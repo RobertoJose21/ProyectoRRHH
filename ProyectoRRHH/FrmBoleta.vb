@@ -11,4 +11,8 @@
         Me.BOLETATableAdapter.Fill(Me.BD_RecursosHumanosDataSet.BOLETA)
 
     End Sub
+
+    Private Sub BOLETADataGridView_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles BOLETADataGridView.CellContentClick
+
+    End Sub
 End Class

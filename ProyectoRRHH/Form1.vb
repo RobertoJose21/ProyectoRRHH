@@ -18,7 +18,7 @@
     End Sub
 
     Private Sub TIPODETRABAJADORToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles TIPODETRABAJADORToolStripMenuItem.Click
-        Dim objtipotrabajador As New FrmTipoTrabajador
+        Dim objtipotrabajador As New FrmTipoTrabajo
         objtipotrabajador.MdiParent = Me
         objtipotrabajador.Show()
     End Sub
@@ -168,7 +168,7 @@
     End Sub
 
     Private Sub REPORTESMEMORANDUMSToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles REPORTESMEMORANDUMSToolStripMenuItem.Click
-        Dim objReporteMemorandums As New FrmMemorandumBeneficio
+        Dim objReporteMemorandums As New FrmMemorandumsEmpleado 'PUEDE IR ESTE TAMBIÉN FrmMemorandumBeneficio
         objReporteMemorandums.MdiParent = Me
         objReporteMemorandums.Show()
     End Sub
@@ -196,5 +196,17 @@
         Me.MEMORANDUMSBindingSource.EndEdit()
         Me.TableAdapterManager.UpdateAll(Me.BD_RecursosHumanosDataSet)
 
+    End Sub
+
+    Private Sub REPORTEPLANILLASToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles REPORTEPLANILLASToolStripMenuItem.Click
+        Dim objREPORTEPLANILLAS As New FrmEmpleadoPlanilla
+        objREPORTEPLANILLAS.MdiParent = Me
+        objREPORTEPLANILLAS.Show()
+    End Sub
+
+    Private Sub TIPODEPLANILLAToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles TIPODEPLANILLAToolStripMenuItem.Click
+        Dim objREPORTEPLANILLAS As New FrmTipoPlanilla
+        objREPORTEPLANILLAS.MdiParent = Me
+        objREPORTEPLANILLAS.Show()
     End Sub
 End Class

@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class FrmDatosTributarios
+Partial Class FrmTipoPlanilla
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
@@ -23,14 +23,14 @@ Partial Class FrmDatosTributarios
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmDatosTributarios))
-        Dim IdDatoTributarioLabel As System.Windows.Forms.Label
-        Dim RentaLabel As System.Windows.Forms.Label
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmTipoPlanilla))
+        Dim IdTipoPlanillaLabel As System.Windows.Forms.Label
+        Dim TipoPlanillaLabel As System.Windows.Forms.Label
         Me.BD_RecursosHumanosDataSet = New ProyectoRRHH.BD_RecursosHumanosDataSet()
-        Me.DATOS_TRIBUTARIOSBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.DATOS_TRIBUTARIOSTableAdapter = New ProyectoRRHH.BD_RecursosHumanosDataSetTableAdapters.DATOS_TRIBUTARIOSTableAdapter()
+        Me.TIPO_PLANILLABindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.TIPO_PLANILLATableAdapter = New ProyectoRRHH.BD_RecursosHumanosDataSetTableAdapters.TIPO_PLANILLATableAdapter()
         Me.TableAdapterManager = New ProyectoRRHH.BD_RecursosHumanosDataSetTableAdapters.TableAdapterManager()
-        Me.DATOS_TRIBUTARIOSBindingNavigator = New System.Windows.Forms.BindingNavigator(Me.components)
+        Me.TIPO_PLANILLABindingNavigator = New System.Windows.Forms.BindingNavigator(Me.components)
         Me.BindingNavigatorMoveFirstItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorMovePreviousItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorSeparator = New System.Windows.Forms.ToolStripSeparator()
@@ -42,19 +42,19 @@ Partial Class FrmDatosTributarios
         Me.BindingNavigatorSeparator2 = New System.Windows.Forms.ToolStripSeparator()
         Me.BindingNavigatorAddNewItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorDeleteItem = New System.Windows.Forms.ToolStripButton()
-        Me.DATOS_TRIBUTARIOSBindingNavigatorSaveItem = New System.Windows.Forms.ToolStripButton()
-        Me.IdDatoTributarioTextBox = New System.Windows.Forms.TextBox()
-        Me.RentaTextBox = New System.Windows.Forms.TextBox()
-        Me.DATOS_TRIBUTARIOSDataGridView = New System.Windows.Forms.DataGridView()
+        Me.TIPO_PLANILLABindingNavigatorSaveItem = New System.Windows.Forms.ToolStripButton()
+        Me.IdTipoPlanillaTextBox = New System.Windows.Forms.TextBox()
+        Me.TipoPlanillaTextBox = New System.Windows.Forms.TextBox()
+        Me.TIPO_PLANILLADataGridView = New System.Windows.Forms.DataGridView()
         Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        IdDatoTributarioLabel = New System.Windows.Forms.Label()
-        RentaLabel = New System.Windows.Forms.Label()
+        IdTipoPlanillaLabel = New System.Windows.Forms.Label()
+        TipoPlanillaLabel = New System.Windows.Forms.Label()
         CType(Me.BD_RecursosHumanosDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.DATOS_TRIBUTARIOSBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.DATOS_TRIBUTARIOSBindingNavigator, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.DATOS_TRIBUTARIOSBindingNavigator.SuspendLayout()
-        CType(Me.DATOS_TRIBUTARIOSDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TIPO_PLANILLABindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TIPO_PLANILLABindingNavigator, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.TIPO_PLANILLABindingNavigator.SuspendLayout()
+        CType(Me.TIPO_PLANILLADataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'BD_RecursosHumanosDataSet
@@ -62,14 +62,14 @@ Partial Class FrmDatosTributarios
         Me.BD_RecursosHumanosDataSet.DataSetName = "BD_RecursosHumanosDataSet"
         Me.BD_RecursosHumanosDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
-        'DATOS_TRIBUTARIOSBindingSource
+        'TIPO_PLANILLABindingSource
         '
-        Me.DATOS_TRIBUTARIOSBindingSource.DataMember = "DATOS_TRIBUTARIOS"
-        Me.DATOS_TRIBUTARIOSBindingSource.DataSource = Me.BD_RecursosHumanosDataSet
+        Me.TIPO_PLANILLABindingSource.DataMember = "TIPO_PLANILLA"
+        Me.TIPO_PLANILLABindingSource.DataSource = Me.BD_RecursosHumanosDataSet
         '
-        'DATOS_TRIBUTARIOSTableAdapter
+        'TIPO_PLANILLATableAdapter
         '
-        Me.DATOS_TRIBUTARIOSTableAdapter.ClearBeforeFill = True
+        Me.TIPO_PLANILLATableAdapter.ClearBeforeFill = True
         '
         'TableAdapterManager
         '
@@ -79,7 +79,7 @@ Partial Class FrmDatosTributarios
         Me.TableAdapterManager.BENEFICIO_LABORALTableAdapter = Nothing
         Me.TableAdapterManager.BOLETATableAdapter = Nothing
         Me.TableAdapterManager.CONTRATOTableAdapter = Nothing
-        Me.TableAdapterManager.DATOS_TRIBUTARIOSTableAdapter = Me.DATOS_TRIBUTARIOSTableAdapter
+        Me.TableAdapterManager.DATOS_TRIBUTARIOSTableAdapter = Nothing
         Me.TableAdapterManager.DETALLE_BENEFICIOTableAdapter = Nothing
         Me.TableAdapterManager.DISTRITOTableAdapter = Nothing
         Me.TableAdapterManager.EMPLEADOTableAdapter = Nothing
@@ -95,30 +95,30 @@ Partial Class FrmDatosTributarios
         Me.TableAdapterManager.REGIMEN_SALUDTableAdapter = Nothing
         Me.TableAdapterManager.TIPO_ASISTENCIATableAdapter = Nothing
         Me.TableAdapterManager.TIPO_CONTRATOTableAdapter = Nothing
-        Me.TableAdapterManager.TIPO_PLANILLATableAdapter = Nothing
+        Me.TableAdapterManager.TIPO_PLANILLATableAdapter = Me.TIPO_PLANILLATableAdapter
         Me.TableAdapterManager.TIPO_TRABAJADORTableAdapter = Nothing
         Me.TableAdapterManager.UpdateOrder = ProyectoRRHH.BD_RecursosHumanosDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
         Me.TableAdapterManager.VACACIONESTableAdapter = Nothing
         Me.TableAdapterManager.VARIACION_SUELDOTableAdapter = Nothing
         '
-        'DATOS_TRIBUTARIOSBindingNavigator
+        'TIPO_PLANILLABindingNavigator
         '
-        Me.DATOS_TRIBUTARIOSBindingNavigator.AddNewItem = Me.BindingNavigatorAddNewItem
-        Me.DATOS_TRIBUTARIOSBindingNavigator.BindingSource = Me.DATOS_TRIBUTARIOSBindingSource
-        Me.DATOS_TRIBUTARIOSBindingNavigator.CountItem = Me.BindingNavigatorCountItem
-        Me.DATOS_TRIBUTARIOSBindingNavigator.DeleteItem = Me.BindingNavigatorDeleteItem
-        Me.DATOS_TRIBUTARIOSBindingNavigator.ImageScalingSize = New System.Drawing.Size(20, 20)
-        Me.DATOS_TRIBUTARIOSBindingNavigator.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BindingNavigatorMoveFirstItem, Me.BindingNavigatorMovePreviousItem, Me.BindingNavigatorSeparator, Me.BindingNavigatorPositionItem, Me.BindingNavigatorCountItem, Me.BindingNavigatorSeparator1, Me.BindingNavigatorMoveNextItem, Me.BindingNavigatorMoveLastItem, Me.BindingNavigatorSeparator2, Me.BindingNavigatorAddNewItem, Me.BindingNavigatorDeleteItem, Me.DATOS_TRIBUTARIOSBindingNavigatorSaveItem})
-        Me.DATOS_TRIBUTARIOSBindingNavigator.Location = New System.Drawing.Point(0, 0)
-        Me.DATOS_TRIBUTARIOSBindingNavigator.MoveFirstItem = Me.BindingNavigatorMoveFirstItem
-        Me.DATOS_TRIBUTARIOSBindingNavigator.MoveLastItem = Me.BindingNavigatorMoveLastItem
-        Me.DATOS_TRIBUTARIOSBindingNavigator.MoveNextItem = Me.BindingNavigatorMoveNextItem
-        Me.DATOS_TRIBUTARIOSBindingNavigator.MovePreviousItem = Me.BindingNavigatorMovePreviousItem
-        Me.DATOS_TRIBUTARIOSBindingNavigator.Name = "DATOS_TRIBUTARIOSBindingNavigator"
-        Me.DATOS_TRIBUTARIOSBindingNavigator.PositionItem = Me.BindingNavigatorPositionItem
-        Me.DATOS_TRIBUTARIOSBindingNavigator.Size = New System.Drawing.Size(908, 27)
-        Me.DATOS_TRIBUTARIOSBindingNavigator.TabIndex = 0
-        Me.DATOS_TRIBUTARIOSBindingNavigator.Text = "BindingNavigator1"
+        Me.TIPO_PLANILLABindingNavigator.AddNewItem = Me.BindingNavigatorAddNewItem
+        Me.TIPO_PLANILLABindingNavigator.BindingSource = Me.TIPO_PLANILLABindingSource
+        Me.TIPO_PLANILLABindingNavigator.CountItem = Me.BindingNavigatorCountItem
+        Me.TIPO_PLANILLABindingNavigator.DeleteItem = Me.BindingNavigatorDeleteItem
+        Me.TIPO_PLANILLABindingNavigator.ImageScalingSize = New System.Drawing.Size(20, 20)
+        Me.TIPO_PLANILLABindingNavigator.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BindingNavigatorMoveFirstItem, Me.BindingNavigatorMovePreviousItem, Me.BindingNavigatorSeparator, Me.BindingNavigatorPositionItem, Me.BindingNavigatorCountItem, Me.BindingNavigatorSeparator1, Me.BindingNavigatorMoveNextItem, Me.BindingNavigatorMoveLastItem, Me.BindingNavigatorSeparator2, Me.BindingNavigatorAddNewItem, Me.BindingNavigatorDeleteItem, Me.TIPO_PLANILLABindingNavigatorSaveItem})
+        Me.TIPO_PLANILLABindingNavigator.Location = New System.Drawing.Point(0, 0)
+        Me.TIPO_PLANILLABindingNavigator.MoveFirstItem = Me.BindingNavigatorMoveFirstItem
+        Me.TIPO_PLANILLABindingNavigator.MoveLastItem = Me.BindingNavigatorMoveLastItem
+        Me.TIPO_PLANILLABindingNavigator.MoveNextItem = Me.BindingNavigatorMoveNextItem
+        Me.TIPO_PLANILLABindingNavigator.MovePreviousItem = Me.BindingNavigatorMovePreviousItem
+        Me.TIPO_PLANILLABindingNavigator.Name = "TIPO_PLANILLABindingNavigator"
+        Me.TIPO_PLANILLABindingNavigator.PositionItem = Me.BindingNavigatorPositionItem
+        Me.TIPO_PLANILLABindingNavigator.Size = New System.Drawing.Size(829, 27)
+        Me.TIPO_PLANILLABindingNavigator.TabIndex = 0
+        Me.TIPO_PLANILLABindingNavigator.Text = "BindingNavigator1"
         '
         'BindingNavigatorMoveFirstItem
         '
@@ -205,109 +205,106 @@ Partial Class FrmDatosTributarios
         Me.BindingNavigatorDeleteItem.Size = New System.Drawing.Size(24, 24)
         Me.BindingNavigatorDeleteItem.Text = "Eliminar"
         '
-        'DATOS_TRIBUTARIOSBindingNavigatorSaveItem
+        'TIPO_PLANILLABindingNavigatorSaveItem
         '
-        Me.DATOS_TRIBUTARIOSBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.DATOS_TRIBUTARIOSBindingNavigatorSaveItem.Image = CType(resources.GetObject("DATOS_TRIBUTARIOSBindingNavigatorSaveItem.Image"), System.Drawing.Image)
-        Me.DATOS_TRIBUTARIOSBindingNavigatorSaveItem.Name = "DATOS_TRIBUTARIOSBindingNavigatorSaveItem"
-        Me.DATOS_TRIBUTARIOSBindingNavigatorSaveItem.Size = New System.Drawing.Size(23, 23)
-        Me.DATOS_TRIBUTARIOSBindingNavigatorSaveItem.Text = "Guardar datos"
+        Me.TIPO_PLANILLABindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.TIPO_PLANILLABindingNavigatorSaveItem.Image = CType(resources.GetObject("TIPO_PLANILLABindingNavigatorSaveItem.Image"), System.Drawing.Image)
+        Me.TIPO_PLANILLABindingNavigatorSaveItem.Name = "TIPO_PLANILLABindingNavigatorSaveItem"
+        Me.TIPO_PLANILLABindingNavigatorSaveItem.Size = New System.Drawing.Size(23, 23)
+        Me.TIPO_PLANILLABindingNavigatorSaveItem.Text = "Guardar datos"
         '
-        'IdDatoTributarioLabel
+        'IdTipoPlanillaLabel
         '
-        IdDatoTributarioLabel.AutoSize = True
-        IdDatoTributarioLabel.Location = New System.Drawing.Point(22, 119)
-        IdDatoTributarioLabel.Name = "IdDatoTributarioLabel"
-        IdDatoTributarioLabel.Size = New System.Drawing.Size(122, 17)
-        IdDatoTributarioLabel.TabIndex = 1
-        IdDatoTributarioLabel.Text = "Id Dato Tributario:"
+        IdTipoPlanillaLabel.AutoSize = True
+        IdTipoPlanillaLabel.Location = New System.Drawing.Point(275, 62)
+        IdTipoPlanillaLabel.Name = "IdTipoPlanillaLabel"
+        IdTipoPlanillaLabel.Size = New System.Drawing.Size(104, 17)
+        IdTipoPlanillaLabel.TabIndex = 1
+        IdTipoPlanillaLabel.Text = "Id Tipo Planilla:"
         '
-        'IdDatoTributarioTextBox
+        'IdTipoPlanillaTextBox
         '
-        Me.IdDatoTributarioTextBox.BackColor = System.Drawing.SystemColors.Info
-        Me.IdDatoTributarioTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.DATOS_TRIBUTARIOSBindingSource, "IdDatoTributario", True))
-        Me.IdDatoTributarioTextBox.Location = New System.Drawing.Point(150, 116)
-        Me.IdDatoTributarioTextBox.Name = "IdDatoTributarioTextBox"
-        Me.IdDatoTributarioTextBox.Size = New System.Drawing.Size(143, 22)
-        Me.IdDatoTributarioTextBox.TabIndex = 2
+        Me.IdTipoPlanillaTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.TIPO_PLANILLABindingSource, "IdTipoPlanilla", True))
+        Me.IdTipoPlanillaTextBox.Location = New System.Drawing.Point(385, 59)
+        Me.IdTipoPlanillaTextBox.Name = "IdTipoPlanillaTextBox"
+        Me.IdTipoPlanillaTextBox.Size = New System.Drawing.Size(139, 22)
+        Me.IdTipoPlanillaTextBox.TabIndex = 2
         '
-        'RentaLabel
+        'TipoPlanillaLabel
         '
-        RentaLabel.AutoSize = True
-        RentaLabel.Location = New System.Drawing.Point(22, 147)
-        RentaLabel.Name = "RentaLabel"
-        RentaLabel.Size = New System.Drawing.Size(50, 17)
-        RentaLabel.TabIndex = 3
-        RentaLabel.Text = "Renta:"
+        TipoPlanillaLabel.AutoSize = True
+        TipoPlanillaLabel.Location = New System.Drawing.Point(275, 90)
+        TipoPlanillaLabel.Name = "TipoPlanillaLabel"
+        TipoPlanillaLabel.Size = New System.Drawing.Size(89, 17)
+        TipoPlanillaLabel.TabIndex = 3
+        TipoPlanillaLabel.Text = "Tipo Planilla:"
         '
-        'RentaTextBox
+        'TipoPlanillaTextBox
         '
-        Me.RentaTextBox.BackColor = System.Drawing.SystemColors.Info
-        Me.RentaTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.DATOS_TRIBUTARIOSBindingSource, "renta", True))
-        Me.RentaTextBox.Location = New System.Drawing.Point(150, 144)
-        Me.RentaTextBox.Name = "RentaTextBox"
-        Me.RentaTextBox.Size = New System.Drawing.Size(143, 22)
-        Me.RentaTextBox.TabIndex = 4
+        Me.TipoPlanillaTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.TIPO_PLANILLABindingSource, "tipoPlanilla", True))
+        Me.TipoPlanillaTextBox.Location = New System.Drawing.Point(385, 87)
+        Me.TipoPlanillaTextBox.Name = "TipoPlanillaTextBox"
+        Me.TipoPlanillaTextBox.Size = New System.Drawing.Size(139, 22)
+        Me.TipoPlanillaTextBox.TabIndex = 4
         '
-        'DATOS_TRIBUTARIOSDataGridView
+        'TIPO_PLANILLADataGridView
         '
-        Me.DATOS_TRIBUTARIOSDataGridView.AutoGenerateColumns = False
-        Me.DATOS_TRIBUTARIOSDataGridView.BackgroundColor = System.Drawing.SystemColors.ActiveCaption
-        Me.DATOS_TRIBUTARIOSDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DATOS_TRIBUTARIOSDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2})
-        Me.DATOS_TRIBUTARIOSDataGridView.DataSource = Me.DATOS_TRIBUTARIOSBindingSource
-        Me.DATOS_TRIBUTARIOSDataGridView.Location = New System.Drawing.Point(388, 85)
-        Me.DATOS_TRIBUTARIOSDataGridView.Name = "DATOS_TRIBUTARIOSDataGridView"
-        Me.DATOS_TRIBUTARIOSDataGridView.RowTemplate.Height = 24
-        Me.DATOS_TRIBUTARIOSDataGridView.Size = New System.Drawing.Size(353, 220)
-        Me.DATOS_TRIBUTARIOSDataGridView.TabIndex = 5
+        Me.TIPO_PLANILLADataGridView.AutoGenerateColumns = False
+        Me.TIPO_PLANILLADataGridView.BackgroundColor = System.Drawing.SystemColors.ActiveCaption
+        Me.TIPO_PLANILLADataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.TIPO_PLANILLADataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2})
+        Me.TIPO_PLANILLADataGridView.DataSource = Me.TIPO_PLANILLABindingSource
+        Me.TIPO_PLANILLADataGridView.Location = New System.Drawing.Point(224, 129)
+        Me.TIPO_PLANILLADataGridView.Name = "TIPO_PLANILLADataGridView"
+        Me.TIPO_PLANILLADataGridView.RowTemplate.Height = 24
+        Me.TIPO_PLANILLADataGridView.Size = New System.Drawing.Size(372, 212)
+        Me.TIPO_PLANILLADataGridView.TabIndex = 5
         '
         'DataGridViewTextBoxColumn1
         '
-        Me.DataGridViewTextBoxColumn1.DataPropertyName = "IdDatoTributario"
-        Me.DataGridViewTextBoxColumn1.HeaderText = "IdDatoTributario"
+        Me.DataGridViewTextBoxColumn1.DataPropertyName = "IdTipoPlanilla"
+        Me.DataGridViewTextBoxColumn1.HeaderText = "IdTipoPlanilla"
         Me.DataGridViewTextBoxColumn1.Name = "DataGridViewTextBoxColumn1"
         Me.DataGridViewTextBoxColumn1.ReadOnly = True
-        Me.DataGridViewTextBoxColumn1.Width = 150
         '
         'DataGridViewTextBoxColumn2
         '
-        Me.DataGridViewTextBoxColumn2.DataPropertyName = "renta"
-        Me.DataGridViewTextBoxColumn2.HeaderText = "Renta"
+        Me.DataGridViewTextBoxColumn2.DataPropertyName = "tipoPlanilla"
+        Me.DataGridViewTextBoxColumn2.HeaderText = "TipoPlanilla"
         Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
         Me.DataGridViewTextBoxColumn2.Width = 150
         '
-        'FrmDatosTributarios
+        'FrmTipoPlanilla
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.ClientSize = New System.Drawing.Size(908, 430)
-        Me.Controls.Add(Me.DATOS_TRIBUTARIOSDataGridView)
-        Me.Controls.Add(IdDatoTributarioLabel)
-        Me.Controls.Add(Me.IdDatoTributarioTextBox)
-        Me.Controls.Add(RentaLabel)
-        Me.Controls.Add(Me.RentaTextBox)
-        Me.Controls.Add(Me.DATOS_TRIBUTARIOSBindingNavigator)
-        Me.Name = "FrmDatosTributarios"
-        Me.Text = "DatosTributarios"
+        Me.ClientSize = New System.Drawing.Size(829, 433)
+        Me.Controls.Add(Me.TIPO_PLANILLADataGridView)
+        Me.Controls.Add(IdTipoPlanillaLabel)
+        Me.Controls.Add(Me.IdTipoPlanillaTextBox)
+        Me.Controls.Add(TipoPlanillaLabel)
+        Me.Controls.Add(Me.TipoPlanillaTextBox)
+        Me.Controls.Add(Me.TIPO_PLANILLABindingNavigator)
+        Me.Name = "FrmTipoPlanilla"
+        Me.Text = "TipoPlanilla"
         CType(Me.BD_RecursosHumanosDataSet, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.DATOS_TRIBUTARIOSBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.DATOS_TRIBUTARIOSBindingNavigator, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.DATOS_TRIBUTARIOSBindingNavigator.ResumeLayout(False)
-        Me.DATOS_TRIBUTARIOSBindingNavigator.PerformLayout()
-        CType(Me.DATOS_TRIBUTARIOSDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TIPO_PLANILLABindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TIPO_PLANILLABindingNavigator, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.TIPO_PLANILLABindingNavigator.ResumeLayout(False)
+        Me.TIPO_PLANILLABindingNavigator.PerformLayout()
+        CType(Me.TIPO_PLANILLADataGridView, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
 
     Friend WithEvents BD_RecursosHumanosDataSet As BD_RecursosHumanosDataSet
-    Friend WithEvents DATOS_TRIBUTARIOSBindingSource As BindingSource
-    Friend WithEvents DATOS_TRIBUTARIOSTableAdapter As BD_RecursosHumanosDataSetTableAdapters.DATOS_TRIBUTARIOSTableAdapter
+    Friend WithEvents TIPO_PLANILLABindingSource As BindingSource
+    Friend WithEvents TIPO_PLANILLATableAdapter As BD_RecursosHumanosDataSetTableAdapters.TIPO_PLANILLATableAdapter
     Friend WithEvents TableAdapterManager As BD_RecursosHumanosDataSetTableAdapters.TableAdapterManager
-    Friend WithEvents DATOS_TRIBUTARIOSBindingNavigator As BindingNavigator
+    Friend WithEvents TIPO_PLANILLABindingNavigator As BindingNavigator
     Friend WithEvents BindingNavigatorAddNewItem As ToolStripButton
     Friend WithEvents BindingNavigatorCountItem As ToolStripLabel
     Friend WithEvents BindingNavigatorDeleteItem As ToolStripButton
@@ -319,10 +316,10 @@ Partial Class FrmDatosTributarios
     Friend WithEvents BindingNavigatorMoveNextItem As ToolStripButton
     Friend WithEvents BindingNavigatorMoveLastItem As ToolStripButton
     Friend WithEvents BindingNavigatorSeparator2 As ToolStripSeparator
-    Friend WithEvents DATOS_TRIBUTARIOSBindingNavigatorSaveItem As ToolStripButton
-    Friend WithEvents IdDatoTributarioTextBox As TextBox
-    Friend WithEvents RentaTextBox As TextBox
-    Friend WithEvents DATOS_TRIBUTARIOSDataGridView As DataGridView
+    Friend WithEvents TIPO_PLANILLABindingNavigatorSaveItem As ToolStripButton
+    Friend WithEvents IdTipoPlanillaTextBox As TextBox
+    Friend WithEvents TipoPlanillaTextBox As TextBox
+    Friend WithEvents TIPO_PLANILLADataGridView As DataGridView
     Friend WithEvents DataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn2 As DataGridViewTextBoxColumn
 End Class
