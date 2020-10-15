@@ -11,4 +11,6 @@
         Me.ASISTENCIATableAdapter.Fill(Me.BD_RecursosHumanosDataSet.ASISTENCIA)
 
     End Sub
+
+
 End Class

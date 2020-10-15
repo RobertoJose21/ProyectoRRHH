@@ -209,4 +209,10 @@
         objREPORTEPLANILLAS.MdiParent = Me
         objREPORTEPLANILLAS.Show()
     End Sub
+
+    Private Sub TIPOSDEASISTENCIASToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles TIPOSDEASISTENCIASToolStripMenuItem.Click
+        Dim objTIPOSDEASISTENCIAS As New FrmTipoAsistencia
+        objTIPOSDEASISTENCIAS.MdiParent = Me
+        objTIPOSDEASISTENCIAS.Show()
+    End Sub
 End Class
